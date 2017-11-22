@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Hydeout
+title:            EyeOneU
 tagline:          'A Jekyll theme'
 description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
 url:              https://fongandrew.github.io/hydeout
@@ -13,9 +13,9 @@ baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
-author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+author:           Kim Kyunghee
+  name:           'Kyunghee Kim'
+  url:            
 
 paginate:         5
 # paginate_path:    '/page:num'
