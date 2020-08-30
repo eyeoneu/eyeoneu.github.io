@@ -35,6 +35,8 @@ mark {background-color:#ff9; color:#111; font-style:italic; font-weight:bold;}
 del {text-decoration: line-through;}
 abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
 hr {display: block; height: 1px; border: 0; border-top: 1px solid #d6d6d6; margin: 50px; padding: 0;}
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select::-ms-expand { display: none; }
 input, select {color: #111; vertical-align: middle; line-height: normal; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0;}
 input, textarea, button, select .btn {box-sizing: border-box; -webkit-box-sizing: border-box;}
 textarea {resize: none; border: 1px solid #999;}

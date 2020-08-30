@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="../@resource/css/reset.css">
-	<link rel="stylesheet" href="../@resource/css/selectric.css">
+	<!-- <link rel="stylesheet" href="../@resource/css/selectric.css"> -->
 	<link rel="stylesheet" href="../@resource/css/common.css">
 	<link rel="stylesheet" href="../@resource/css/layout.css">
 	<script src="../@resource/js/jquery-1.12.4.min.js"></script>
-	<script src="../@resource/js/jquery.selectric.js"></script>
+	<!-- <script src="../@resource/js/jquery.selectric.js"></script> -->
 	<script src="../@resource/js/common.js"></script>
 </head>
 <body>
@@ -237,14 +237,17 @@
 							<div class="input-wrap">
 								<label for="select1" class="req">State</label>
 								<div class="insert input-text">
-									<select name="" id="select1">
-										<option value=""></option>
-										<option value="">2</option>
-										<option value="">3</option>
-										<option value="">4</option>
-										<option value="">5</option>
-										<option value="">6</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="select1">
+											<option value=""></option>
+											<option value="">2</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+											<option value="">6</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 									<p class="alert-desc">State/Region is required</p>
 									<p class="alert-desc">only for US and Canadian addresses.</p>
 								</div>
@@ -252,14 +255,17 @@
 							<div class="input-wrap">
 								<label for="select2">Country</label>
 								<div class="insert input-text">
-									<select name="" id="select2">
-										<option value=""></option>
-										<option value="">2</option>
-										<option value="">3</option>
-										<option value="">4</option>
-										<option value="">5</option>
-										<option value="">6</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="select2">
+											<option value=""></option>
+											<option value="">2</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+											<option value="">6</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -307,11 +313,11 @@
 						I require my order(s) to be private labeled (Blind shipping)
 						<input type="checkbox" id="yes2">
 						<span class="chk-mark"></span>
-						<div class="ques-box">
-							<a class="ico-ques">?</a>
-							<div class="ques-txt" style="width: 375px;">By check this box, your package will be unbranded. No invoice is enclosed, the sender name will be replaced by your information, however the departure destination must be MorningPrint's address due to the policy of delivery company. </div>
-						</div>
 					</label>
+					<div class="ques-box">
+						<a class="ico-ques">?</a>
+						<div class="ques-txt" style="width: 375px;">By check this box, your package will be unbranded. No invoice is enclosed, the sender name will be replaced by your information, however the departure destination must be MorningPrint's address due to the policy of delivery company. </div>
+					</div>
 				</div>
 			</div>
             <div class="tbl-wrap lg type02 my-product view-pc">
@@ -482,31 +488,37 @@
 						</div>
 						<div class="field type02">
 							<div class="input-wrap">
-								<label for="select1" class="req">State</label>
+								<label for="select3" class="req">State</label>
 								<div class="insert input-text">
-									<select name="" id="select1">
-										<option value=""></option>
-										<option value="">2</option>
-										<option value="">3</option>
-										<option value="">4</option>
-										<option value="">5</option>
-										<option value="">6</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="select3">
+											<option value=""></option>
+											<option value="">2</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+											<option value="">6</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 									<p class="alert-desc">State/Region is required</p>
 									<p class="alert-desc">only for US and Canadian addresses.</p>
 								</div>
 							</div>
 							<div class="input-wrap">
-								<label for="select2">Country</label>
+								<label for="select4">Country</label>
 								<div class="insert input-text">
-									<select name="" id="select2">
-										<option value=""></option>
-										<option value="">2</option>
-										<option value="">3</option>
-										<option value="">4</option>
-										<option value="">5</option>
-										<option value="">6</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="select4">
+											<option value=""></option>
+											<option value="">2</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+											<option value="">6</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -570,35 +582,43 @@
 										<label for="select1">Expiration Date</label>
 										<div class="insert input-text">
 											<div class="select-wrap type02">
-												<select name="" id="select2">
-													<option value="">01</option>
-													<option value="">02</option>
-													<option value="">03</option>
-													<option value="">04</option>
-													<option value="">05</option>
-													<option value="">06</option>
-												</select>
+												<div class="select-box">
+													<select name="" id="">
+														<option value="">01</option>
+														<option value="">02</option>
+														<option value="">03</option>
+														<option value="">04</option>
+														<option value="">05</option>
+														<option value="">06</option>
+													</select>
+													<span class="ico-arrow"></span>
+												</div>
 												<span class="view-pc">/</span>
-												<select name="" id="select3">
-													<option value="">2020</option>
-													<option value="">2021</option>
-													<option value="">2022</option>
-													<option value="">2023</option>
-													<option value="">2024</option>
-													<option value="">2025</option>
-												</select>
+												<div class="select-box">
+													<select name="" id="">
+														<option value="">2020</option>
+														<option value="">2021</option>
+														<option value="">2022</option>
+														<option value="">2023</option>
+														<option value="">2024</option>
+														<option value="">2025</option>
+													</select>
+													<span class="ico-arrow"></span>
+												</div>
 											</div>
 											<p class="alert-desc">(ex. 06/2008)</p>
 										</div>
 									</div>
 									<div class="input-wrap">
-										<label for="code">
-											CCV/CVC 
+										<div class="label">
+											<label for="code">
+												CCV/CVC 
+											</label>
 											<div class="ques-box">
 												<a class="ico-ques">?</a>
-												<div class="ques-txt" style="width: 150px; display: none;">info text.</div>
+												<div class="ques-txt" style="width: 150px;">info text.</div>
 											</div>
-										</label>
+										</div>
 										<div class="insert input-text">
 											<input type="text" placeholder="" id="code" value="">
 										</div>
@@ -713,7 +733,7 @@
 <script>
 
 	$(function() {
-		$('select').selectric();
+		// $('select').selectric();
 	});
 
 </script>

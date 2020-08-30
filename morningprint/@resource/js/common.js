@@ -5,65 +5,6 @@ $(function(){
 		return this;
 	};
 
-	var main = $('.main-wrap');
-	var mainSec = main.find('section');
-	var mainBG = main.find('.main-bg');
-	var sectionLen = mainSec.length;
-	var sectionCnt = 0;
-
-	$(window).on('load', function(){
-		$('.main-sec1').addClass('on');
-		$('body').addClass('onload');
-
-	});
-
-	var mainSectionMoveEvent;
-	sectionInterval();
-	
-	//section autoplay
-	function sectionInterval(status){
-		clearInterval(mainSectionMoveEvent);
-
-		if(status == 'prev'){
-			sectionCountEvent(-1);
-		}else if(status == 'next'){
-			sectionCountEvent(1);
-		}
-
-		mainSectionMoveEvent = setInterval(function(){
-			sectionCountEvent(1);
-		}, 9000);
-	}
-
-	function autoPlay(){
-		$('.section-count .active').text('0' + (sectionCnt == sectionLen ? sectionCnt : sectionCnt+1) );
-		$('.progress .bar').css('width', (sectionCnt + 1) * 25 + '%');
-	}
-
-	//count
-	function sectionCountEvent(count){
-		if(sectionCnt < sectionLen){
-			mainBG.removeClass('on');
-			mainSec.removeClass('on');
-			sectionCnt = sectionCnt + count;
-
-			if(sectionCnt == sectionLen){
-				sectionCnt = 0;
-			}else if(sectionCnt < 0){
-				sectionCnt = sectionLen-1;
-			}
-			mainBG.eq(sectionCnt).addClass('on');
-			mainSec.eq(sectionCnt).addClass('on');
-
-			autoPlay();
-		}
-	}
-	
-	$('.carousel-btn').on('click', function(){
-		var carouselBtnVal = $(this).val();
-		sectionInterval(carouselBtnVal);
-	});
-
 	// my 아이콘
 	$('.account-wrap a').on('click', function () {
 		var myList = $(this).siblings('.my-list');
@@ -100,20 +41,14 @@ $(function(){
 			$('.btn-all').css('display','block');
 		}
 	});
-	
-	// gnb 색상
-	$('.gnb > li').mouseover(function(){
-		$(this).siblings('li').addClass('out');
-	})
-	$('.gnb > li').mouseout(function(){
-		$(this).siblings('li').removeClass('out');
-	});
+
 
 	// 스크롤
 	$(window).scroll(function(){
 		var nowScrollTop = $(this).scrollTop();
 		var headerHeight = $('header').outerHeight();
 		var footerPosTop = $(document).height() - $(window).height() - $('footer').outerHeight() + 180;
+		var btnCartHeight = $('header').outerHeight() + $('.main-wrap').outerHeight()
 		
 		if(nowScrollTop > footerPosTop){
 			$('.btn-top-wrap').css('bottom', (nowScrollTop - footerPosTop) + 100 +'px');
@@ -125,6 +60,12 @@ $(function(){
 			$('.btn-top-wrap').addClass('visible');
 		}else{
 			$('.btn-top-wrap').removeClass('visible');
+		}
+
+		if(nowScrollTop > btnCartHeight){
+			$('.btn-cart-wrap').addClass('fix');
+		}else{
+			$('.btn-cart-wrap').removeClass('fix');
 		}
 
 	});
@@ -165,10 +106,10 @@ $(function(){
 			slideUp();
 		} else {
 			slideUp();
-			$(this).addClass('on').next().slideDown(100, 'linear');
+			$(this).addClass('on').next().slideDown();
 		}
 		function slideUp() {
-			$('.slide-togg > dt, .slide-togg > .dt').removeClass('on').next().slideUp(100, 'linear');
+			$('.slide-togg > dt, .slide-togg > .dt').removeClass('on').next().slideUp();
 		};
 	});
 
@@ -182,6 +123,10 @@ $(function(){
 	$status.html('<b>' + i + '</b> /' + slick.slideCount);
 	});
 
+	// toggle
+	$('.ico-ques').on('click', function () {
+		$(this).siblings('.ques-txt').toggleClass('active');
+	});
 
 
 });
@@ -213,5 +158,43 @@ function openLayer(el) {
 	});
 }
 
+// 브라우저 사이즈에 따라 class 부여
+$(document).ready(function () {
+	var winWidth = 0;
+
+   function setWidthSize(){
+		winWidth = window.innerWidth;
+		if(winWidth <= 960){
+			$('.ques-box').addClass('togg-box');
+			$('.ques-box').removeClass('hover-box');
+
+			$('.gnb > li').on('click', function () {
+				if ($(this).hasClass('active')) {
+					slideUp();
+				} else {
+					slideUp();
+					$(this).addClass('active').children('.depth02').slideDown();
+				}
+				function slideUp() {
+					$('.gnb > li').removeClass('active').children('.depth02').slideUp();
+				};
+			});
+		} else {
+			$('.ques-box').addClass('hover-box');
+			$('.ques-box').removeClass('togg-box');
+
+			$('.gnb > li').mouseover(function(){
+				$(this).addClass('active');
+				$(this).siblings('li').addClass('out');
+			})
+			$('.gnb > li').mouseout(function(){
+				$(this).removeClass('active');
+				$(this).siblings('li').removeClass('out');
+			});
+		}
+	}
+	setWidthSize();
+	$(window).resize(setWidthSize);
+});
 
 

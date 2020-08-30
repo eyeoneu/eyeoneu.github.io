@@ -7,13 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="../@resource/css/reset.css">
-	<link rel="stylesheet" href="../@resource/css/selectric.css">
+	<!-- <link rel="stylesheet" href="../@resource/css/selectric.css"> -->
 	<link rel="stylesheet" href="../@resource/css/slick.css">
 	<link rel="stylesheet" href="../@resource/css/slick-theme.css">
 	<link rel="stylesheet" href="../@resource/css/common.css">
 	<link rel="stylesheet" href="../@resource/css/layout.css">
 	<script src="../@resource/js/jquery-1.12.4.min.js"></script>
-	<script src="../@resource/js/jquery.selectric.js"></script>
+	<!-- <script src="../@resource/js/jquery.selectric.js"></script> -->
 	<script src="../@resource/js/slick.js"></script>
 	<script src="../@resource/js/common.js"></script>
 </head>
@@ -202,12 +202,16 @@
 						<span>Production</span>
 						<button class="ico-show"></button>
 					</dt>
-					<dd>1 business day (not including shipping / Finishing options)</dd>
+					<dd>
+						<div>1 business day (not including shipping / Finishing options)</div>
+					</dd>
 					<dt>
 						<span>Material</span>
 						<button class="ico-show"></button>
 					</dt>
-					<dd>aaa</dd>
+					<dd>
+						<div>aaa</div>
+					</dd>
 				</dl>
 				<p class="product-detail2 view-pc">10pt / 250gsm / uncoated</p>
 			</div>
@@ -223,32 +227,44 @@
 						<dd>
 							<ul>
 								<li>
-									<select name="" id="">
-										<option value="">3.55” X 1.80”  /  90mm X 45mm (Slim)</option>
-										<option value="">2</option>
-										<option value="">3</option>
-										<option value="">4</option>
-										<option value="">5</option>
-										<option value="">6</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">3.55” X 1.80”  /  90mm X 45mm (Slim)</option>
+											<option value="">2</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+											<option value="">6</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Color</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Color</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Color</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Color</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Color</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Color</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 							</ul>
 						</dd>
@@ -258,40 +274,58 @@
 						<dd>
 							<ul>
 								<li>
-									<select name="" id="">
-										<option value="">Foil 1</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Foil 1</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Foil 2</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Foil 2</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Embossing</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Embossing</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Raised Ink</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Raised Ink</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Round Cornered</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Round Cornered</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 								<li>
-									<select name="" id="">
-										<option value="">Punched</option>
-										<option value="">2</option>
-									</select>
+									<div class="select-box">
+										<select name="" id="">
+											<option value="">Punched</option>
+											<option value="">2</option>
+										</select>
+										<span class="ico-arrow"></span>
+									</div>
 								</li>
 							</ul>
 						</dd>
@@ -310,19 +344,23 @@
 					</ul>
 				</div>
 				<div class="btn-wrap type01">
-					<button type="button" class="btn md type03 arrow">ADD TO CART</button>
+					<button type="button" class="btn md type03 arrow" onclick="openLayer('layerSelectType');">ADD TO CART</button>
 				</div>
 				<dl class="product-detail slide-togg type01 view-m">
 					<dt>
 						<span>Production</span>
 						<button class="ico-show"></button>
 					</dt>
-					<dd>1 business day (not including shipping / Finishing options)</dd>
+					<dd>
+						<div>1 business day (not including shipping / Finishing options)</div>
+					</dd>
 					<dt>
 						<span>Material</span>
 						<button class="ico-show"></button>
 					</dt>
-					<dd>aaa</dd>
+					<dd>
+						<div>aaa</div>
+					</dd>
 				</dl>
 			</div>
 		</div>
@@ -642,6 +680,46 @@
 	<!-- footer -->
 	<footer class="active">
 		<div class="footer-wrap">
+			<div class="my-page" style="display: none;">
+				<div class="my-info">
+					<h3>Hello! <span>Morning Print</span></h3>
+					<a href="#" class="logout view-m">LOGOUT</a>
+				</div>
+				<div class="my-icon">
+					<a href="#">
+						<span class="ico-mem"></span>
+						<span>My Account</span>
+					</a>
+					<a href="#">
+						<span class="ico-porf"></span>
+						<span>Portfolio</span>
+					</a>
+					<a href="#">
+						<span class="ico-cart-m"></span>
+						<span>Cart</span>
+					</a>
+					<a href="#">
+						<span class="ico-order"></span>
+						<span>Order History</span>
+					</a>
+				</div>
+			</div>
+			<div class="my-page status-logout">
+				<div class="my-icon">
+					<a href="#">
+						<span class="ico-cart-m"></span>
+						<span>Cart</span>
+					</a>
+					<a href="#">
+						<span class="ico-mem"></span>
+						<span>Join</span>
+					</a>
+					<a href="#">
+						<span class="ico-login"></span>
+						<span>Login</span>
+					</a>
+				</div>
+			</div>
 			<ul class="gnb">
 				<li class="company">
 					<a href="#" class="depth01"><span>Company</span></a>
@@ -718,10 +796,136 @@
 </div>
 <!--// wrap -->
 
+<!-- 팝업 -->
+<div class="popup pop-select-type" id="layerSelectType">
+	<div class="pop-wrap">
+		<div class="popup-header">
+			<div class="pop-tit">select your type!</div>
+			<a href="javascript:void(0);" class="pop-close"></a>
+		</div>
+		<div class="popup-body">
+			<div class="popup-cont">
+				<ul class="select-type">
+					<li>
+						<span class="img"><img src="../@resource/images/common/select-our.png" alt=""></span>
+						<p class="tit">Choose from our Designs</p>
+						<p class="sub">You can choose from over 1,000 designs and edit your choice Additionally, logosand pictures can be inserted.</p>
+					</li>
+					<li>
+						<span class="img"><img src="../@resource/images/common/select-custom.png" alt=""></span>
+						<p class="tit">Customize Designs</p>
+						<p class="sub">Design and edit your business cards online.</p>
+					</li>
+					<li onclick="openLayer('layerImgUpload');">
+						<span class="img"><img src="../@resource/images/common/select-upload.png" alt=""></span>
+						<p class="tit">Upload a Complete Design</p>
+						<p class="sub">Upload your own design file & We will print it for you. It’s very easy! You can upload psd, ai, cdr, pdf file.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="btn-wrap type02 sm reverse">
+			<button type="button" class="btn md type01">BACK</button>
+			<button type="button" class="btn md type03">NEXT STEP</button>
+		</div>
+	</div>
+</div>
+
+<div class="popup pop-img-upload" id="layerImgUpload">
+	<div class="pop-wrapper">
+		<div class="grid-img">
+			<div class="upload-preview">
+				<img src="../@resource/images/@temp/upload.png" alt="">
+				<span class="ico-close"></span>
+			</div>
+			<div class="upload-file">
+				<span class="ico-upload"></span>
+				<p>Back design file</p>
+				<button type="button" class="btn sm type02">UPLOAD</button>
+			</div>
+		</div>
+		<div class="grid-cont">
+			<div class="popup-header">
+				<div class="pop-tit">Upload File</div>
+				<p>Please red the instruction before upload your file</p>
+				<a href="javascript:void(0);" class="pop-close"></a>
+			</div>
+			<div class="popup-body">
+				<div class="popup-cont">
+					<p>
+						<span class="num">01.</span>
+						<span class="txt">Supporting File format</span>
+					</p>
+					<ul class="format-list">
+						<li>
+							<span class="format-pdf"></span>
+							<span>*.pdf</span>
+						</li>
+						<li>
+							<span class="format-ai"></span>
+							<span>*.ai</span>
+						</li>
+						<li>
+							<span class="format-eps"></span>
+							<span>*.eps</span>
+						</li>
+						<li>
+							<span class="format-psd"></span>
+							<span>*.psd</span>
+						</li>
+						<li>
+							<span class="format-bmp"></span>
+							<span>*.bmp</span>
+						</li>
+						<li>
+							<span class="format-gif"></span>
+							<span>*.gif</span>
+						</li>
+						<li>
+							<span class="format-jpg"></span>
+							<span>*.jpg</span>
+						</li>
+						<li>
+							<span class="format-png"></span>
+							<span>*.png</span>
+						</li>
+						<li>
+							<span class="format-pic"></span>
+							<span>*.pic(pic, p
+								ct, ps)</span></li>
+						<li>
+							<span class="format-cdr"></span>
+							<span>*.cdr(clk)
+
+							</span></li>
+					</ul>
+					<p>
+						<span class="num">02.</span>
+						<span class="txt">Create outlines for your text</span>
+					</p>
+					<p>
+						<span class="num">03.</span>
+						<span class="txt">Resolution over 300dpi</span>
+					</p>
+					<p>
+						<span class="num">04.</span>
+						<span class="txt">CMYK / We use the industry standard CMYK 4-color process printing, and do not print PMS or Spot color link.</span>
+					</p>
+				</div>
+			</div>
+			<div class="btn-wrap type04 reverse">
+				<button type="button" class="btn md type01 back">BACK</button>
+				<button type="button" class="btn md type03">UPLOAD COMPLETE DESIGNS</button>
+			</div>
+		</div>
+	</div>
+</div> 
+<!-- // 팝업 -->
+
 <script>
 
 $(function() {
-	$('select').selectric();
+	// $('select').selectric();
 });
 
 $(document).on('ready', function() {
