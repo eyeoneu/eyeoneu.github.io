@@ -58,8 +58,12 @@ $(function(){
 
 		if(nowScrollTop > headerHeight){
 			$('.btn-top-wrap').addClass('visible');
+			$('.checkout-wrap').addClass('fix');
+			$('footer').addClass('active');
 		}else{
 			$('.btn-top-wrap').removeClass('visible');
+			$('.checkout-wrap').removeClass('fix');
+			$('footer').removeClass('active');
 		}
 
 		if(nowScrollTop > btnCartHeight){
@@ -89,16 +93,16 @@ $(function(){
 	})
 
 	// 체크아웃
-	$('.my-product .chk-wrap label').on('click', function () {
-		var chkBox = $(this).children('input');
-		if(chkBox.is(":checked")){
-			$('.checkout-wrap').addClass('active');
-			$('footer').addClass('active');
-		} else {
-			$('.checkout-wrap').removeClass('active');
-			$('footer').removeClass('active');
-		}
-	});
+	// $('.my-product .chk-wrap label').on('click', function () {
+	// 	var chkBox = $(this).children('input');
+	// 	if(chkBox.is(":checked")){
+	// 		$('.checkout-wrap').addClass('active');
+	// 		$('footer').addClass('active');
+	// 	} else {
+	// 		$('.checkout-wrap').removeClass('active');
+	// 		$('footer').removeClass('active');
+	// 	}
+	// });
 
 	// 메뉴슬라이드
 	$('.slide-togg > dt, .slide-togg > .dt').on('click', function () {

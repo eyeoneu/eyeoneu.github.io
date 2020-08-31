@@ -446,7 +446,7 @@
 				</div>
 			</div>
             <div class="btn-wrap type02 lg btn-coupon">
-                <button type="button" class="btn sm type02">Coupon Registration</button>
+                <button type="button" class="btn sm type02" onclick="openLayer('layerCoupon');">Coupon Registration</button>
                 <button type="button" class="btn sm type04 btn-del">Delete all product</button>
             </div>
             <div class="tbl-view-total">
@@ -547,6 +547,27 @@
 
 </div>
 <!--// wrap -->
+
+<div class="popup pop-basic" id="layerCoupon">
+	<div class="pop-wrap">
+		<div class="popup-header">
+			<div class="pop-tit">Coupon code input</div>
+			<a href="javascript:void(0);" class="pop-close"></a>
+		</div>
+		<div class="popup-body">
+			<div class="popup-cont">
+				<p>Please input the coupon code of the Morning Print.</p>
+				<div class="insert input-text">
+					<input type="text" placeholder="coupon code" id="" value="">
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap type02 sm">
+			<button type="button" class="btn sm type01">CANCEL</button>
+			<button type="button" class="btn sm type02">CONTINUE</button>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

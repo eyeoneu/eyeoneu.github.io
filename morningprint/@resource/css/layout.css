@@ -122,6 +122,7 @@ header .gnb-cont img {}
 .side-lt-open header .btn-all:hover .menu-icon span:last-child {transform: rotate(315deg);}
 
 footer {position: relative; width: 100%; background-color: #eee; margin-top: auto;}
+footer.active {padding-bottom: 258px;}
 footer .footer-wrap {display: flex; flex-direction: column;}
 footer .my-page {display: none;}
 footer .gnb {width: 1200px; padding: 80px 0 75px; margin: 0 auto; display: flex; box-sizing: border-box;}
@@ -289,7 +290,6 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 .sign .cont-area .cont-box h3 {font-size: 4rem; color: #000; font-weight: 900; margin-bottom: 50px; text-transform: uppercase;}
 .sign .cont-form {margin-bottom: 40px; border: none;}
 .sign .cont-form .input-text {padding: 15px 0;}
-.sign .cont-form .chk-wrap {padding: 15px 0;}
 .sign .cont-form table .input-text {padding: 0;}
 .sign .cont-form table .chk-wrap {padding: 0;}
 .sign .btn-wrap {margin-top: auto;}
@@ -673,11 +673,10 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.sign .cont-area {position: relative; display: block; min-height: 500px;}
 	.sign .cont-area .cont-box {position: absolute; width: 100%; display: none; background-color: #ffffff;}
 	.sign .cont-area .cont-box h3 {display: none;}
-	.sign .cont-form {margin-bottom: 10px;}
+	.sign .cont-form {margin-bottom: 30px;}
 	.sign .cont-form .input-text {padding: 10px 0;}
 	.sign .cont-form .input-wrap {flex-direction: column;}
 	.sign .cont-form .input-wrap .input-text {width: 100%;}
-	.sign .cont-form .chk-wrap {padding: 10px 0 20px;}
 	.sign .tbl-find-mail td:first-child {width: 75%;}
 	.sign .tbl-find-mail .min {display: none;}
 
