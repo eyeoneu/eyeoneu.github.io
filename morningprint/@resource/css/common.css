@@ -117,7 +117,7 @@
 .field-inner {padding: 5px 0; border-bottom: 1px solid #ccc;}
 .field-inner .field {padding: 5px 0; border: none; min-height: 0;}
 .field {position: relative; display: flex; min-height: 70px; box-sizing: border-box; padding: 15px 0; border-bottom: 1px solid #ccc; font-family: 'Noto Sans KR', sans-serif;}
-.field .input-wrap {width: 100%; display: flex;}
+.field .input-wrap {width: 100%; display: flex; flex-direction: row;}
 .field .insert.disabled {height: 36px; line-height: 36px;}
 .field label,
 .field .label {position: relative; width: 18%; font-weight: 500; margin: 10px 10px; box-sizing: border-box;}
@@ -149,12 +149,24 @@
 .input-text.insert input:focus {border: 1px solid #111;}
 
 /* textarea */
+textarea {font-family: 'Noto Sans KR', sans-serif; color: #111; font-size: 1rem; width: 100%; min-height: 150px; line-height: 28px; padding: 10px; border: 1px solid #ccc;}
+textarea:focus {border: 1px solid #111;}
 .input-textarea {width: 100%;}
-.input-textarea textarea {width: 100%; min-height: 150px; line-height: 28px; padding: 10px; border: 1px solid #ccc; color: #111; font-size: 1rem;}
-.input-textarea input:focus {border: 1px solid #111;}
+.input-textarea.insert {line-height: 40px; padding-right: 50px; box-sizing: border-box;}
+.input-textarea.insert textarea {}
+
+/* file */
+.file-box {}
+.file-box.insert {padding-right: 50px; width: 84%; box-sizing: border-box;}
+.file-box .input-file {width: 100%; display: flex;}
+.file-box .upload-name { display: inline-block; width: 100%; font-family: 'Noto Sans KR', sans-serif; padding: 0 10px; font-size: 1rem; color: #111; border: 1px solid #ccc; background-color: #fff; }
+.file-box .upload-name:focus {border: 1px solid #111;}
+.file-box label { display: inline-block; vertical-align: middle; margin: 0; margin-left: 10px; min-width: 180px; cursor: pointer;}
+.file-box input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0; }
+
 
 /* select */
-select {position: relative; width: 100%; padding: 0 10px; height: 36px; line-height: 34px; font-family: 'Noto Sans KR', sans-serif; font-size: 0.88rem; color: #333; font-weight: 300; border: 1px solid #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; box-sizing: border-box;}
+select {position: relative; width: 100%; padding: 0 10px; height: 36px; line-height: 34px; font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; color: #111; font-weight: 400; border: 1px solid #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; box-sizing: border-box;}
 select:focus {border: 1px solid #111;}
 .select-box {position: relative;}
 .select-box .ico-arrow {position: absolute; right: 0; top: 50%; width: 36px; height: 36px; background: url(../images/common/sp-icon.png) -198px -454px no-repeat; background-size: 500px 800px; transform: translateY(-50%); cursor: pointer;}
@@ -301,6 +313,9 @@ select:focus {border: 1px solid #111;}
 .cont-form .chk-wrap {padding: 15px 0;}
 .cont-form .chk-wrap.chk-txt {padding: 15px 0 15px 35px;}
 .cont-form .chk-wrap + .chk-wrap {padding-top: 0;}
+.cont-form .alert-notice {position: relative; padding-left: 25px; color: #333; font-size: 1rem; line-height: 1.5; font-weight: 300; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -0.02em; margin-top: 20px;}
+.cont-form .alert-notice b {font-weight: 500;}
+.cont-form .alert-notice:before {content: '!'; display: block; position: absolute; left: 0; top: 5px; width: 15px; height: 15px; line-height: 15px; text-align: center; font-size: 0.88rem; font-weight: 500; border-radius: 100%; border: 1px solid #555;}
 
 .my-product {}
 .my-product .thumb-wrap {text-align: left !important; padding: 20px 0;}
@@ -318,9 +333,12 @@ select:focus {border: 1px solid #111;}
 .my-product .item-info .sub-txt {margin-top: 15px;}
 .my-product .item-info .sub-txt .sub {display: block; font-size: 0.88rem; font-weight: 300; color: #888; line-height: 1.5;}
 .my-product .item-info .sub-txt .sub > span {}
+.my-product .txt-paid,
+.my-product .txt-status,
 .my-product .txt-date,
 .my-product .txt-qty {font-weight: 400;}
 .my-product .txt-coupon,
+.my-product .txt-order,
 .my-product .txt-price {font-weight: 700;}
 .my-product .txt-subtotal {font-weight: 700; color: #f67d00;}
 .my-product .btn-wrap .btn + .btn {margin-top: 7px;}
@@ -505,7 +523,6 @@ select:focus {border: 1px solid #111;}
 .product-info .item-option dd > ul > li {margin-bottom: 10px;}
 .product-info .item-option dd li:last-child {margin: 0;}
 
-
 /* template */
 .down-list {display: flex; justify-content: center;}
 .down-list li {padding: 0 100px;}
@@ -517,6 +534,19 @@ select:focus {border: 1px solid #111;}
 .down-list li .ico-corel {background-position: -250px -530px;}
 .down-list li .name {font-size: 0.88rem; font-weight: 500; color: #111; text-transform: uppercase;}
 .down-list li .btn-wrap {margin-top: 10px;}
+
+/* select your type */
+.select-type.type01 {display: flex; justify-content: space-between; border: 1px solid #888;}
+.select-type.type01 li {position: relative; width: 50%; padding: 60px; background-color: #fff; box-sizing: border-box; cursor: pointer;}
+.select-type.type01 li + li {border-left: 1px solid #888;}
+.select-type.type01 li.active,
+.select-type.type01 li:hover {background-color: none;}
+.select-type.type01 li .img {position: absolute; right: 15%; top: 50%; width: 130px; transform: translateY(-50%);}
+.select-type.type01 li .img img {width: 100%;}
+.select-type.type01 li .tit {font-weight: 300; font-size: 1.25rem; color: #000;}
+.select-type.type01 li .ico-go-link {font-weight: 500; font-size: 1.5rem; color: #000; }
+.select-type.type01 li .ico-go-link .ico-go {border: none;}
+.select-type.type01 li .ico-go-link .ico-go:after {width: 40px; background-position: -103px -327px;}
 
 /* popup */
 .dim-layer {position: fixed !important; top: 0 !important; left: 0 !important; width: 100%; min-width: 1200px; height: 100%; background-color: rgba(0,0,0, 0.7); z-index: 199;}
@@ -536,7 +566,7 @@ select:focus {border: 1px solid #111;}
 .popup.pop-basic .popup-header .pop-close {display: block;}
 .popup.pop-basic .popup-body {position: relative; display: flex; align-items: center; min-width: 420px; min-height: 250px; border-top: 2px solid #111; border-bottom: 1px solid #111; }
 .popup.pop-basic .popup-body .popup-cont {margin: 0 auto; font-family: 'Noto Sans KR', sans-serif; overflow-y: scroll;}
-.popup.pop-basic .popup-body .popup-cont p {color: #333; text-align: center; letter-spacing: -0.03rem;}
+.popup.pop-basic .popup-body .popup-cont p {color: #333; text-align: center; letter-spacing: -0.03em;}
 .popup.pop-basic .popup-body .popup-cont .input-text.insert {padding: 0; margin-top: 20px;}
 .popup.pop-basic .btn-wrap {width: 250px; margin: 30px auto 0; flex-direction: row;}
 .popup.pop-basic .btn-wrap .btn {width: 49%;}
@@ -621,6 +651,9 @@ select:focus {border: 1px solid #111;}
     .view-m.cont-tit {display: flex !important;}
     .br {display: block;}
 
+    select {font-size: 0.88rem; font-weight: 300; padding-left: 0;}
+    textarea {font-size: 0.88rem; font-weight: 300; line-height: 1.5;}
+
     .chk-wrap.type03 label .chk-mark {width: 16px; height: 16px;}
     .chk-wrap.type03 label .chk-mark:after {top: 5px; left: 6px; width: 9px; height: 5px;}
     
@@ -689,6 +722,16 @@ select:focus {border: 1px solid #111;}
 	.my-product .item-product .item-info .sub-txt {font-weight: 300; font-size: 0.75rem; color: #aaa; margin: 5px 0 0;}
 	.my-product .item-product .item-info .sub-txt .sub {line-height: 1.3; color: #aaa; font-size: 0.75rem;}
     .my-product .item-product .item-info .sub-txt .sub:last-child {display: block;}
+    .my-product.type03  {border-top: 2px solid #111;}
+    .my-product.type03 .item-product {padding: 20px 0; background-color: #fff; border: none;}
+    .my-product.type03 .item-product:last-child {border-bottom: 1px solid #111;}
+    .my-product.type03 .item-product + .item-product {margin: 0; border-top: 1px solid #eee;}
+    .my-product.type03 .item-product .item-info {display: flex; justify-content: space-between;}
+    .my-product.type03 .item-product .item-info span {font-size: 0.75rem;}
+    .my-product.type03 .item-product .item-info .txt-order {font-size: 0.88rem;}
+    .my-product.type03 .item-product .item-info .txt-date {color: #888;}
+    .my-product.type03 .item-product .item-info .txt-paid,
+    .my-product.type03 .item-product .item-info .txt-status {}
 
     .my-product .item-product .item-text {color: #333;}
 	.my-product .item-product .item-text > div > .tit {display: block; font-weight: 300; font-size: 0.75rem; color: #aaa;}
@@ -793,9 +836,13 @@ select:focus {border: 1px solid #111;}
     .cont-form .field-wrap {border: none;}
     .cont-form .chk-wrap.chk-txt {padding: 10px 0 0 25px;}
     .cont-form .chk-wrap label .chk-mark {left: -25px;}
-
+    .cont-form .alert-notice {font-size: 0.75rem; padding-left: 20px; margin-top: 35px;}
+    .cont-form .alert-notice:before {top: 3px; width: 10px; height: 10px; line-height: 10px; font-size: 0.55rem;}
+    
     .field {border: none; padding: 0; padding-top: 30px; display: block;}
-    .field label {display: block; margin: 0; padding: 0; width: 100%; font-size: 0.88rem; font-weight: 300;}
+    .field label,
+    .field .label {display: block; margin: 0; padding: 0; width: 100%; font-size: 0.88rem; font-weight: 300;}
+    .field .input-wrap {flex-direction: column;}
     .field .insert {width: 100%; padding: 0; margin: 15px 0 0; font-size: 0.88rem; font-weight: 300;}
     .field .insert.disabled {border-bottom: 1px solid #ccc;}
     .field .insert input {border: none; border-bottom: 1px solid #ccc; padding: 0; font-size: 0.88rem; font-weight: 300;}
@@ -828,6 +875,16 @@ select:focus {border: 1px solid #111;}
     .field-inner {border-bottom: none;}
     .input-text input {font-size: 0.88rem !important; font-weight: 300;}
     .input-text .alert-desc {font-size: 0.75rem;}
+
+    .file-box {}
+    .file-box.insert {}
+    .file-box .file-top {display: flex; justify-content: space-between; align-items: center;}
+    .file-box .file-top label {width: auto; min-width: 100px; font-weight: 400; font-size: 0.75rem; margin: 0;}
+    .file-box .file-top .alert-desc {font-size: 0.75rem; margin: 0;}
+    .file-box .input-file {}
+    .file-box .input-file:after {content:''; display: block; position: absolute; right: 0; bottom: 10px; width: 16px; height: 16px; background: url(../images/common/sp-icon.png) -5px -184px no-repeat; background-size: 250px 400px; opacity: 0.2; cursor: pointer;} 
+    .file-box .input-file .upload-name {line-height: 36px;}
+
 
     .my-page {display: block; padding: 0; border: none;}
     .my-page .my-info {margin-bottom: 10px;}

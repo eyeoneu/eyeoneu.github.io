@@ -7,14 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="../@resource/css/reset.css">
-	<!-- <link rel="stylesheet" href="../@resource/css/selectric.css"> -->
-	<link rel="stylesheet" href="../@resource/css/slick.css">
-	<link rel="stylesheet" href="../@resource/css/slick-theme.css">
 	<link rel="stylesheet" href="../@resource/css/common.css">
 	<link rel="stylesheet" href="../@resource/css/layout.css">
 	<script src="../@resource/js/jquery-1.12.4.min.js"></script>
-	<!-- <script src="../@resource/js/jquery.selectric.js"></script> -->
-	<script src="../@resource/js/slick.js"></script>
 	<script src="../@resource/js/common.js"></script>
 </head>
 <body>
@@ -176,110 +171,184 @@
 	<!-- // header -->
 
 	<!-- content -->
-	<div id="content" class="item">
-		<div class="cont-top">
-			<ul class="select-type type01">
-				<li>
-					<span class="img"><img src="../@resource/images/common/select-custom.png" alt=""></span>
-					<p class="tit">Customize Your Designs</p>
-					<a href="#" class="ico-go-link">
-                        <span>Go to Editort</span>
-                        <i class="ico-go"></i>
-                    </a>
-				</li>
-				<li>
-					<span class="img"><img src="../@resource/images/common/select-upload.png" alt=""></span>
-					<p class="tit">Upload a Complete Design</p>
-					<a href="#" class="ico-go-link">
-                        <span>File Upload</span>
-                        <i class="ico-go"></i>
-                    </a>
-				</li>
-			</ul>
-		</div>
+	<div id="content" class="cs">
+		<div class="cont-head">
+            <h2>Contact Us</h2>
+            <div class="cont-desc">
+                <p>Customer Center inquiries and messages may be submitted at any time, customer service will do its best to get </p>
+				<p>to your inquiries answered as quickly as possible, you can expect an response no later than the end of the next business day </p>
+				<p>(not including weekends or holidays).</p>
+            </div>
+        </div>
 		<div class="cont-body">
-			<div class="item-product type02">
-				<div class="item-top">
-					<h3>Choose from our Designs</h3>
+            <p class="body-tit column">
+				<span>Customer Center</span>
+				<span class="req"><span>*</span> Required Fields</span>
+			</p>
+			<div class="cont-form">
+				<div class="field-wrap">
+					<div class="field type02">
+						<div class="input-wrap">
+							<label for="fname" class="req">First Name</label>
+							<div class="insert input-text">
+								<input type="text" placeholder="First Name" id="fname" value="morning">
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label for="lname" class="req">Last Name</label>
+							<div class="insert input-text">
+								<input type="text" placeholder="Last Name" id="lname" value="last name">
+							</div>
+						</div>
+					</div>
+					<div class="field type02">
+						<div class="input-wrap">
+							<label for="email" class="req">Email Address</label>
+							<div class="insert input-text">
+								<input type="text" placeholder="" id="email" value="www@hanbom.com">
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label for="tel">Telephone</label>
+							<div class="insert input-text">
+								<input type="text" placeholder="" id="tel" value="1234">
+							</div>
+						</div>
+					</div>
+					<div class="field type02">
+						<div class="input-wrap">
+							<label for="select1" class="req">Question Type</label>
+							<div class="insert input-text">
+								<div class="select-box">
+									<select name="" id="select1">
+										<option value="">Technical Issue</option>
+										<option value="">2</option>
+										<option value="">3</option>
+										<option value="">4</option>
+										<option value="">5</option>
+										<option value="">6</option>
+									</select>
+									<span class="ico-arrow"></span>
+								</div>
+							</div>
+						</div>
+						<div class="input-wrap">
+							<label for="order">Order Number</label>
+							<div class="insert input-text">
+								<input type="text" placeholder="" id="order" value="">
+								<p class="alert-desc">(If available)</p>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="input-wrap">
+							<label for="mass" class="req">Message</label>
+							<div class="insert input-textarea">
+								<textarea name="" id="mass" cols="30" rows="6"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<div class="input-wrap">
+							<p class="label">File Upload</p>
+							<div class="insert file-box view-pc">
+								<div class="insert input-file">
+									<input type="text" class="upload-name" name="" id="file" placeholder="" disabled="disabled">
+									<label for="ex_filename" class="btn sm type02">FILE SELECTION</label>
+									<input type="file" id="ex_filename" class="upload-hidden"> 
+								</div>
+								<p class="alert-desc">Maximum upload file size is 5MB</p>
+							</div>
+							<div class="insert file-box view-m">
+								<div class="file-top">
+									<label for="ex_filename" class="btn sm type02">FILE SELECTION</label>
+									<p class="alert-desc">Maximum upload file size is 5MB</p>
+								</div>
+								<div class="insert input-file">
+									<input type="text" class="upload-name" name="" id="file" value="102304982093.jpg" disabled="disabled">
+									<input type="file" id="ex_filename" class="upload-hidden"> 
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="product-list">
-					<a href="#" class="product">
-						<div class="thumb">
-							<div class="thumb-img1">
-								<img src="../@resource/images/@temp/product1.png" alt="제품이미지">
-							</div>
-							<div class="thumb-img2">
-								<img src="../@resource/images/@temp/product2.png" alt="제품이미지">
-							</div>
-						</div>
-						<span class="tit">Primium</span>
-					</a>
-					<a href="#" class="product">
-						<div class="thumb">
-							<div class="thumb-img1">
-								<img src="../@resource/images/@temp/product1.png" alt="제품이미지">
-							</div>
-							<div class="thumb-img2">
-								<img src="../@resource/images/@temp/product2.png" alt="제품이미지">
-							</div>
-						</div>
-						<span class="tit">Primium</span>
-					</a>
-					<a href="#" class="product">
-						<div class="thumb">
-							<div class="thumb-img1">
-								<img src="../@resource/images/@temp/product1.png" alt="제품이미지">
-							</div>
-							<div class="thumb-img2">
-								<img src="../@resource/images/@temp/product2.png" alt="제품이미지">
-							</div>
-						</div>
-						<span class="tit">Primium</span>
-					</a>
-					<a href="#" class="product">
-						<div class="thumb">
-							<div class="thumb-img1">
-								<img src="../@resource/images/@temp/product1.png" alt="제품이미지">
-							</div>
-							<div class="thumb-img2">
-								<img src="../@resource/images/@temp/product2.png" alt="제품이미지">
-							</div>
-						</div>
-						<span class="tit">Primium</span>
-					</a>
-					<a href="#" class="product">
-						<div class="thumb">
-							<div class="thumb-img1">
-								<img src="../@resource/images/@temp/product1.png" alt="제품이미지">
-							</div>
-							<div class="thumb-img2">
-								<img src="../@resource/images/@temp/product2.png" alt="제품이미지">
-							</div>
-						</div>
-						<span class="tit">Primium</span>
-					</a>
-					<a href="#" class="product">
-						<div class="thumb">
-							<div class="thumb-img1">
-								<img src="../@resource/images/@temp/product1.png" alt="제품이미지">
-							</div>
-							<div class="thumb-img2">
-								<img src="../@resource/images/@temp/product2.png" alt="제품이미지">
-							</div>
-						</div>
-						<span class="tit">Primium</span>
-					</a>
-				</div>
-				<div class="pagenation">
-					<button class="first"></button>
-					<button class="prev"></button>
-					<button class="current">1</button>
-					<button>2</button>
-					<button class="next"></button>
-					<button class="last"></button>
-				</div>
+				<p class="alert-notice">NOTE : Please put <b>cs@themorningprint.com</b> on your safe-senders list and check your spam folders if you are not answered within  1-2 day(s).</p>
+            </div>
+            <div class="btn-wrap type02 sm reverse">
+                <button type="button" class="btn md type01">CANCEL</button>
+                <button type="button" class="btn md type03">SUBMIT</button>
 			</div>
 		</div>
+		<div class="cont-body">
+			<p class="body-tit">Order Summary (<b>3</b>)</p>
+            <div class="tbl-wrap lg type02 my-product view-pc">
+                <table class="tbl-row">
+                    <colgroup>
+                        <col style="width: 25%;"><col><col style="width: 18%;"><col style="width: 18%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Order Number</th>
+                            <th scope="col">Paid</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="item-product">
+                            <td class="txt-date">2020. 05. 12 &nbsp; 17 : 51</td>
+                            <td class="txt-order">mo934804280938402909</td>
+                            <td class="txt-paid">$24.98</td>
+                            <td class="txt-status">Printing</td>
+						</tr>
+						<tr class="item-product">
+                            <td class="txt-date">2020. 05. 12 &nbsp; 17 : 51</td>
+                            <td class="txt-order">mo934804280938402909</td>
+                            <td class="txt-paid">$24.98</td>
+                            <td class="txt-status">Printing</td>
+						</tr>
+						<tr class="item-product">
+                            <td class="txt-date">2020. 05. 12 &nbsp; 17 : 51</td>
+                            <td class="txt-order">mo934804280938402909</td>
+                            <td class="txt-paid">$24.98</td>
+                            <td class="txt-status">Printing</td>
+						</tr>
+                    </tbody>
+                </table>
+			</div>
+			<div class="my-product type03 view-m">
+				<div class="item-product">
+					<div class="item-info">
+						<span class="txt-order">mo934804280938402909</span>
+						<span class="txt-paid">$24.98</span>
+					</div>
+					<div class="item-info">
+						<span class="txt-date">2020. 05. 12 &nbsp; 17 : 51</span>
+						<span class="txt-status">Status : Printing</span>
+					</div>
+				</div>
+				<div class="item-product">
+					<div class="item-info">
+						<span class="txt-order">mo934804280938402909</span>
+						<span class="txt-paid">$24.98</span>
+					</div>
+					<div class="item-info">
+						<span class="txt-date">2020. 05. 12 &nbsp; 17 : 51</span>
+						<span class="txt-status">Status : Printing</span>
+					</div>
+				</div>
+				<div class="item-product">
+					<div class="item-info">
+						<span class="txt-order">mo934804280938402909</span>
+						<span class="txt-paid">$24.98</span>
+					</div>
+					<div class="item-info">
+						<span class="txt-date">2020. 05. 12 &nbsp; 17 : 51</span>
+						<span class="txt-status">Status : Printing</span>
+					</div>
+				</div>
+			</div>
+        </div>
 	</div>
 	<!-- // content -->
 
@@ -350,11 +419,9 @@
 
 	<div class="side-lt-bg"></div>
 	<div class="side-rt-bg"></div>
-	  
+
 </div>
 <!--// wrap -->
-
-
 
 </body>
 </html>

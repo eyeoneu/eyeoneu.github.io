@@ -59,11 +59,11 @@ $(function(){
 		if(nowScrollTop > headerHeight){
 			$('.btn-top-wrap').addClass('visible');
 			$('.checkout-wrap').addClass('fix');
-			$('footer').addClass('active');
+			$('.item.detail footer').addClass('active');
 		}else{
 			$('.btn-top-wrap').removeClass('visible');
 			$('.checkout-wrap').removeClass('fix');
-			$('footer').removeClass('active');
+			$('.item.detail footer').removeClass('active');
 		}
 
 		if(nowScrollTop > btnCartHeight){
@@ -130,6 +130,17 @@ $(function(){
 	// toggle
 	$('.ico-ques').on('click', function () {
 		$(this).siblings('.ques-txt').toggleClass('active');
+	});
+
+	// input file
+	var fileTarget = $('.file-box .upload-hidden');
+	fileTarget.on('change', function(){
+		if(window.FileReader){
+			var filename = $(this)[0].files[0].name;
+		} else { 
+			var filename = $(this).val().split('/').pop().split('\\').pop(); 
+		} 
+		$(this).siblings('.upload-name').val(filename);
 	});
 
 
