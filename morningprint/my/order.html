@@ -201,38 +201,32 @@
 			<div class="tbl-wrap lg type02 my-product view-pc">
 				<table class="tbl-row">
 					<colgroup>
-						<col style="width: 39%;"><col style="width: 12%;"><col style="width: 12%;"><col style="width: 12%;"><col style="width: 12%;"><col>
+						<col style="width: 5%;"><col style="width: 39%;"><col style="width: 12%;"><col style="width: 12%;"><col style="width: 12%;"><col style="width: 12%;"><col>
 					</colgroup>
 					<thead>
 						<tr>
-							<th scope="col">Product Image</th>
+							<th scope="col">No</th>
+							<th scope="col">Product</th>
 							<th scope="col">Date</th>
-							<th scope="col">Price</th>
 							<th scope="col">Qty</th>
-							<th scope="col">Sub Total</th>
-							<th scope="col">ReOrder</th>
+							<th scope="col">Total Price</th>
+							<th scope="col">Order Status</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr class="item-product">
+							<td class="list-num">2</td>
 							<td class="thumb-wrap">
 								<div class="thumb">
 									<img src="../@resource/images/@temp/product1.png" alt="">
 								</div>
 								<div class="item-info">
-									<span class="name">Business Card</span>
+									<span class="sort">Economy Paper</span>
+									<span class="name">Standard Uncoated</span>
 									<div class="sub-txt">
 										<span class="sub">
-											<span>Paper : </span>
-											Nouveau
-										</span>
-										<span class="sub">
-											<span>Corner : </span>
-											Square
-										</span>
-										<span class="sub">
-											<span>Finishing : </span>
-											Gold text
+											<span>Specisl features</span>
+											: Gold Foil (Glossy), Gold Foil (Glossy)
 										</span>
 									</div>
 								</div>
@@ -240,40 +234,34 @@
 							<td class="txt-date">
 								<span>2020.05.12</span>
 							</td>
-							<td class="txt-price">
-								<span>$24.98</span>
-							</td>
 							<td class="txt-qty">
-								<span>200QTY</span>
+								<span>100</span><span>(1set)</span>
 							</td>
 							<td class="txt-subtotal">
 								<span>$24.98</span>
+								<button type="button" class="btn sm2 type01" onclick="openLayer('layerPrice');">more</button>
 							</td>
 							<td>
-								<div class="btn-wrap type01">
-									<button type="button" class="btn sm type02">Reorder</button>
+								<p class="order-num">mo202008060925228506</p>
+								<div class="btn-wrap type05 col2">
+									<button type="button" class="btn sm2 type08" onclick="openLayer('layerConfirm');">Confirmed</button>
+									<button type="button" class="btn sm2 type02">Reorder</button>
 								</div>
 							</td>
 						</tr>
 						<tr class="item-product">
+							<td class="list-num">1</td>
 							<td class="thumb-wrap">
 								<div class="thumb">
 									<img src="../@resource/images/@temp/product1.png" alt="">
 								</div>
 								<div class="item-info">
-									<span class="name">Business Card</span>
+									<span class="sort">Economy Paper</span>
+									<span class="name">Standard Uncoated</span>
 									<div class="sub-txt">
 										<span class="sub">
-											<span>Paper : </span>
-											Nouveau
-										</span>
-										<span class="sub">
-											<span>Corner : </span>
-											Square
-										</span>
-										<span class="sub">
-											<span>Finishing : </span>
-											Gold text
+											<span>Specisl features</span>
+											: Gold Foil (Glossy), Gold Foil (Glossy)
 										</span>
 									</div>
 								</div>
@@ -281,26 +269,25 @@
 							<td class="txt-date">
 								<span>2020.05.12</span>
 							</td>
-							<td class="txt-price">
-								<span>$24.98</span>
-							</td>
 							<td class="txt-qty">
-								<span>200QTY</span>
+								<span>100</span><span>(1set)</span>
 							</td>
 							<td class="txt-subtotal">
 								<span>$24.98</span>
+								<button type="button" class="btn sm2 type01">more</button>
 							</td>
 							<td>
-								<div class="btn-wrap type01">
-									<button type="button" class="btn sm type02">Reorder</button>
+								<p class="order-num">mo202008060925228506</p>
+								<div class="btn-wrap type05 col2">
+									<button type="button" class="btn sm2 type08">Confirmed</button>
+									<button type="button" class="btn sm2 type02">Reorder</button>
 								</div>
 							</td>
 						</tr>
 					</tbody>
 				</table>
-
 			</div>
-			<div class="my-product view-m">
+			<div class="my-product type02 view-m">
 				<div class="item-product">
 					<div class="thumb-wrap">
 						<div class="thumb">
@@ -313,24 +300,23 @@
 								<span class="sub">Gold text, Nouveau</span>
 							</div>
 							<span class="txt-date">2020.05.12</span>
+							<p class="order-num">mo202008060925228506</p>
 						</div>
 					</div>
-					<div class="item-text">
-						<div class="txt-price">
-							<span class="tit">price</span>
+					<div class="item-text type02">
+						<div class="txt-subtotal">
 							<span>$24.98</span>
 						</div>
 						<div class="txt-qty">
-							<span class="tit">qty</span>
 							<span>200 QTY</span>
 						</div>
-						<div class="txt-subtotal">
-							<span class="tit">sub total</span>
-							<span>$24.98</span>
+						<div class="btn-wrap">
+							<button type="button" class="btn more03" onclick="openLayer('layerPrice');">more</button>
 						</div>
 					</div>
-					<div class="btn-wrap type01">
-						<button type="button" class="btn md type06">Reorder</button>
+					<div class="btn-wrap type02 col2">
+						<button type="button" class="btn sm type01">Reorder</button>
+						<button type="button" class="btn sm type02" onclick="openLayer('layerConfirm');">Confirmed</button>
 					</div>
 				</div>
 				<div class="item-product">
@@ -345,56 +331,23 @@
 								<span class="sub">Gold text, Nouveau</span>
 							</div>
 							<span class="txt-date">2020.05.12</span>
+							<p class="order-num">mo202008060925228506</p>
 						</div>
 					</div>
-					<div class="item-text">
-						<div class="txt-price">
-							<span class="tit">price</span>
+					<div class="item-text type02">
+						<div class="txt-subtotal">
 							<span>$24.98</span>
 						</div>
 						<div class="txt-qty">
-							<span class="tit">qty</span>
 							<span>200 QTY</span>
 						</div>
-						<div class="txt-subtotal">
-							<span class="tit">sub total</span>
-							<span>$24.98</span>
+						<div class="btn-wrap">
+							<button type="button" class="btn more03" onclick="openLayer('layerPrice');">more</button>
 						</div>
 					</div>
-					<div class="btn-wrap type01">
-						<button type="button" class="btn md type06">Reorder</button>
-					</div>
-				</div>
-				<div class="item-product">
-					<div class="thumb-wrap">
-						<div class="thumb">
-							<img src="../@resource/images/@temp/product1.png" alt="">
-						</div>
-						<div class="item-info">
-							<span class="name">Business Card</span>
-							<div class="sub-txt">
-								<span class="sub">Nouveau/Square</span>
-								<span class="sub">Gold text, Nouveau</span>
-							</div>
-							<span class="txt-date">2020.05.12</span>
-						</div>
-					</div>
-					<div class="item-text">
-						<div class="txt-price">
-							<span class="tit">price</span>
-							<span>$24.98</span>
-						</div>
-						<div class="txt-qty">
-							<span class="tit">qty</span>
-							<span>200 QTY</span>
-						</div>
-						<div class="txt-subtotal">
-							<span class="tit">sub total</span>
-							<span>$24.98</span>
-						</div>
-					</div>
-					<div class="btn-wrap type01">
-						<button type="button" class="btn md type06">Reorder</button>
+					<div class="btn-wrap type02 col2">
+						<button type="button" class="btn sm type01">Reorder</button>
+						<button type="button" class="btn sm type02" onclick="openLayer('layerConfirm');">Confirmed</button>
 					</div>
 				</div>
 			</div>
@@ -480,6 +433,76 @@
 
 </div>
 <!--// wrap -->
+
+<div class="popup pop-basic" id="layerConfirm">
+	<div class="pop-wrap">
+		<div class="popup-header">
+			<div class="pop-tit">ORDER STATUS</div>
+			<a href="javascript:void(0);" class="pop-close"></a>
+		</div>
+		<div class="popup-body">
+			<div class="tbl-wrap md type03">
+				<table class="tbl-col sm">
+					<colgroup>
+						<col style="width: 30%;"><col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>Order Code</th>
+							<td>mo202008060925228506</td>
+						</tr>
+						<tr>
+							<th>TEL</th>
+							<td>3235239186</td>
+						</tr>
+						<tr>
+							<th>ADD</th>
+							<td>15 Montelena, 92602 Irvine CA, United States</td>
+						</tr>
+						<tr>
+							<th>STATUS</th>
+							<td>Confirmed</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="btn-wrap full sm">
+			<button type="button" class="btn sm type02">INVOICE DOWNLOAD</button>
+		</div>
+	</div>
+</div>
+
+<div class="popup pop-basic" id="layerPrice">
+	<div class="pop-wrap">
+		<div class="popup-header">
+			<div class="pop-tit">PRICE DETAIL</div>
+			<a href="javascript:void(0);" class="pop-close"></a>
+		</div>
+		<div class="popup-body">
+			<div class="tbl-view-total type03">
+				<div class="wrapper">
+					<ul class="total-tit">
+						<li>Product Price</li>
+						<li>Special Features</li>
+						<li>Coupon</li>
+						<li>Shipping</li>
+					</ul>
+					<ul class="total-num">
+						<li>$24.98</li>
+						<li>+ $0.00</li>
+						<li>- $24.98</li>
+						<li>+ $0.00</li>
+					</ul>
+				</div>
+				<ul class="total-bottom">
+					<li>Total Payment Price</li>
+					<li>$33.93</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

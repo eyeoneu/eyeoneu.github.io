@@ -819,9 +819,12 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.my .pf-wrap .pf-item .pf-link .link-wrap span {display: block;}
 	.my .pf-wrap .pf-item .pf-link .btn {background-color: #888; color: #fff; border: none; font-size: 0.88rem; height: 40px; line-height: 38px;}
 	.my .my-product .item-product .item-text {display: flex; padding: 15px; font-size: 0.88rem; border-top: 1px solid #ddd; }
+	.my .my-product .item-product .item-text.type02 {font-size: 0.75rem; padding: 15px 0;}
 	.my .my-product .item-product .item-text > div:last-child {margin-left: auto;}
 	.my .my-product .item-product .item-text > div:last-child span {text-align: right;}
 	.my .my-product .item-product .item-text > div + div {margin-left: 20px;}
+	.my .my-product .item-product .item-text > div + .txt-qty {position: relative; padding-left: 10px; margin-left: 10px;}
+	.my .my-product .item-product .item-text > div + .txt-qty:before {content: ''; display: block; position: absolute; width: 1px; height: 10px; left: 0; top: 2px; background-color: #ccc;}
 	.my .my-product .item-product .item-text > div > .tit {margin-bottom: 10px;}
 	.my .my-product .item-product .btn-wrap.col3 {padding: 0 0 15px;}
 	.my .my-product .item-product .btn-wrap + .item-text {padding: 15px 0 22px;}
