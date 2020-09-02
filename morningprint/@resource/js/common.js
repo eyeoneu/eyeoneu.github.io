@@ -80,10 +80,10 @@ $(function(){
 
 	// 탭
 	$('ul.tab-menu li').click(function () {
-		$('ul.tab-menu li').removeClass('active');
+		$(this).parent().children('li').removeClass('active');
 		$(this).addClass('active');
-		$('.tab-cont > div').removeClass('active')
-			var activeTab = $(this).attr('rel');
+		$(this).parent().siblings('.tab-cont').children('div').removeClass('active')
+		var activeTab = $(this).attr('rel');
 		$('#' + activeTab).addClass('active')
 	})
 
