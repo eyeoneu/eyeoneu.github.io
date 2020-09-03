@@ -368,6 +368,7 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 .item.detail .item-product .product-list .product .tit {font-size: 1.13rem; font-family: 'Noto Sans KR', sans-serif; font-weight: 700; color: #000; padding: 40px 0 20px; text-transform: none; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
 .item.detail .item-product .product-list .product .tit > span {font-weight: 300; color: #888; display: inline-block;}
 
+
 /* order */
 .order .cont-head {}
 .order .cont-body > div {margin-bottom: 80px;}
@@ -378,7 +379,71 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 
 
 /* cs */
-.cs .cont-head {}
+.cs .select-wrap {}
+.cs .search-wrap {margin: 20px 0; }
+.cs .search-wrap .search-form {margin-left: auto; width: 300px;}
+
+.cs .board-detail {font-family: 'Noto Sans KR', sans-serif; margin-bottom: 100px !important;}
+.cs .board-detail .post-tit {display: flex; align-items: center; padding: 23px 30px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+.cs .board-detail .post-tit .ico-status {padding: 5px; font-size: 0.88rem;}
+.cs .board-detail .post-tit .tit {font-size: 1.13rem; color: #111; padding: 0 10px;}
+.cs .board-detail .post-tit .date {font-weight: 300; font-size: 1rem; margin-left: auto;}
+.cs .board-detail .post-cont {margin: 40px 30px;}
+.cs .board-detail .post-cont .post-txt {}
+.cs .board-detail .post-cont .post-txt p {font-weight: 300; font-size: 1rem; color: #555; line-height: 1.7;}
+.cs .board-detail .post-cont .post-img {margin-top: 40px;}
+.cs .board-detail .post-cont .post-img img {}
+.cs .board-detail .post-link {display: flex; padding: 30px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+.cs .board-detail .post-link li {display: flex; width: 50%;}
+.cs .board-detail .post-link li a {width: 22%; position: relative; color: #888; font-size: 0.88rem;}
+.cs .board-detail .post-link li .prev {margin-right: 25px; border-right: 1px solid #eee;}
+.cs .board-detail .post-link li .prev:after {content: ''; display: block; position: absolute; right: 15px; top: 0; width: 20px; height: 20px; background: url('../images/common/sp-icon.png') -205px -497px no-repeat; background-size: 500px 800px;}
+.cs .board-detail .post-link li .next {margin-right: 25px; border-right: 1px solid #eee;}
+.cs .board-detail .post-link li .next:after {content: ''; display: block; position: absolute; right: 15px; top: 0; width: 20px; height: 20px; background: url('../images/common/sp-icon.png') -245px -497px no-repeat; background-size: 500px 800px;}
+.cs .board-detail .post-link li .link-txt {width: auto; color: #555; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.cs .board-detail > .btn-wrap {display: flex; margin-top: 30px;}
+.cs .board-detail > .btn-wrap .btn {margin-left: auto; min-width: 100px;}
+
+.cs .board-list {font-family: 'Noto Sans KR', sans-serif; margin-bottom: 100px !important;}
+.cs .board-list .list-wrap {border-bottom: 1px solid #ccc;}
+.cs .board-list .list-wrap span {text-align: center; font-size: 1rem; color: #111; padding: 25px 0;}
+.cs .board-list .list-wrap .num {width: 12%;}
+.cs .board-list .list-wrap .tit {flex-grow: 1;}
+.cs .board-list .list-wrap .date {width: 15%;}
+.cs .board-list .list-wrap .list-head {display: flex; justify-content: space-between; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+.cs .board-list .list-wrap .list-head span {}
+.cs .board-list .list-wrap .list-body {}
+.cs .board-list .list-wrap .list-body .list-item {display: flex; justify-content: space-between; border-bottom: 1px solid #eee;}
+.cs .board-list .list-wrap .list-body .list-item.last {border: none;}
+.cs .board-list .list-wrap .list-body .list-item span {font-weight: 300;}
+.cs .board-list .list-wrap .list-body .list-item .tit {text-align: left;}
+
+.cs .item-product {margin-top: 70px; margin-bottom: 50px; font-family: 'Noto Sans KR', sans-serif;}
+.cs .item-product .product-list {display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-around;}
+.cs .item-product .product-list.view-pc {display: flex !important;}
+.cs .item-product .product-list .product {width: 31%;}
+.cs .item-product .product-list .more-area {display: none;}
+.cs .item-product .product-list .product {margin-bottom: 30px; width: 31%;}
+.cs .item-product .product-list .product .thumb {padding-bottom: 100%;}
+.cs .item-product .product-list .product .thumb:before {display: none;}
+.cs .item-product .product-list .product .thumb:hover .thumb-img1 {opacity: 1;}
+.cs .item-product .product-list .product .tit {font-size: 1.4rem; font-weight: 700; color: #000; padding: 0 0 15px; text-transform: none; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.cs .item-product .product-list .product .tit > span {font-weight: 300; color: #888; display: inline-block;}
+.cs .item-product .post-tit {display: flex; flex-direction: column; align-items: flex-start; padding: 23px 0;}
+.cs .item-product .post-tit .ico-status {padding: 5px; font-size: 0.88rem; margin-bottom: 10px;}
+.cs .item-product .post-tit .date {margin-left: unset; font-size: 0.88rem; color: #888;}
+
+.cs .faq-list {margin-bottom: 100px !important;}
+.cs .faq-wrap {}
+.cs .faq-wrap.type01 {font-family: 'Noto Sans KR', sans-serif; font-weight: 300; font-size: 1rem; }
+.cs .faq-wrap.type01 dt {display: flex; justify-content: space-between; align-items: center; color: #111; padding: 25px 30px; line-height: 1.5; border-bottom: 1px solid #eee;}
+.cs .faq-wrap.type01 dt span {width: 90%;}
+.cs .faq-wrap.type01 dt.last {border-bottom: 1px solid #ccc;}
+.cs .faq-wrap.type01 dt.on {border: none;}
+.cs .faq-wrap.type01 dt.last + dd {border-bottom: 1px solid #ccc;}
+.cs .faq-wrap.type01 dd {padding: 40px 70px; color: #555; background-color: #f8f8f8; }
+.cs .faq-wrap.type01 dd > div {}
+.cs .faq-wrap.type01 dd > div p {line-height: 1.5;}
 
 
 /* guide */
@@ -513,7 +578,12 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.guide .guide-line,
 	.guide .caution-wrap,
 	.guide .product-desc,
-	.guide .item-product .product-list {width: 1200px; margin: 0 auto;}
+	.guide .item-product .product-list,
+	.cs .item-product .product-list,
+	.cs .tab-wrap,
+	.cs .board-list,
+	.cs .faq-list,
+	.cs .board-detail {width: 1200px; margin: 0 auto;}
 	.item .item-product .item-top {width: 1200px; margin: 140px auto 60px;}
 	.item .product-desc {width: 1200px; margin: 140px auto 140px;}
 	.item.detail .item-wrap {width: 1200px; margin: 70px auto 150px;}
@@ -538,10 +608,18 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	footer .footer-bottom .footer-bottom-wrap {width: 100%; padding: 80px 5%;}
 	footer .footer-bottom .logo {margin-right: 0;}
 
-	#content {padding: 0 20px;}
+	#content {padding: 0 20px; box-sizing: border-box;}
 	#content.item,
-	#content.guide {width: 100%; padding: 0;}
+	#content.cs,
+	#content.guide,
 	#content.main-cont {width: 100%; padding: 0;}
+	.cs .item-product .product-list,
+	#content.cs .cont-head,
+	#content.cs .tab-wrap,
+	#content.cs .board-list,
+	#content.cs .faq-list,
+	#content.cs .board-detail {width: 100%; padding: 0 20px; box-sizing: border-box;}
+	#content.cs .cont-body {width: 100%; padding: 0;}
 	.main-cont h3 {font-size: 4.1rem; margin-bottom: 50px;}
 
 
@@ -568,6 +646,7 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.main-official dd {min-width: auto; padding-right: 10px; box-sizing: border-box;}
 	.main-official dd .number {font-size: 2rem;}
 
+	.cont-top,
 	.sign .cont-wrap,
 	.item .sub-top h2,
 	.item .item-product h3,
@@ -589,7 +668,12 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.guide .product-desc,
 	.guide .guide-line .line-info,
 	.guide .caution-wrap,
-	.guide .item-product .product-list {width: 100%; padding: 0 20px; box-sizing: border-box;}
+	.guide .item-product .product-list,
+	.cs .cont-head,
+	.cs .tab-wrap,
+	.cs .board-list,
+	.cs .faq-list,
+	.cs .board-detail {width: 100%; padding: 0 20px; box-sizing: border-box;}
 	.guide .video-desc {width: 100%; padding: 60px 20px;}
 	.guide .sample-wrap .sample-info {padding: 0 30px;}
 	
@@ -767,6 +851,7 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.item .item-product .product-list.type02 .product:nth-child(4) {display: block;}
 	.item .item-product .product-list.type02 .product:after {content: ''; display: block; position: absolute; bottom: 60px; left: 20px; width: 80px; height: 15px; transition: 1s all ease; z-index: 1; background-position: -133px -92px; background-image: url(../images/common/sp-icon.png); background-size: 250px 400px;}
 	.item .item-product .product-list.type02 + .more-area {background-color: #eee;}
+	.item .item-product .product-list .product {width: 100%;}
 
 	.item.list h3 {padding: 70px 20px 20px;}
 	.item.list .item-wrap {flex-direction: column; padding: 0;}
@@ -840,8 +925,6 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.order .tbl-view-total .total-num li {font-size: 1.13rem;}
 	.order .my-product .item-product .item-text {font-size: 0.75rem; }
 
-	.cs .cont-head {margin: 45px 0 0;}
-
 	.guide h3 {font-size: 2.12rem; text-transform: capitalize;}
 	.guide .sub-top {min-height: 415px; padding: 20px; background: url('../images/common/sub-top-m.png') 0 0 no-repeat; background-size: cover; }
 	.guide .sub-top h2 {font-size: 2.25rem;}
@@ -860,6 +943,7 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.guide .item-product {margin: 50px 0;}
 	.guide .product-info .item-info .name {font-size: 1.25rem;}
 	.guide .product-info .item-info .sub-txt {font-size: 0.88rem; margin: 5px 0 20px;}
+	.guide .item-product .product-list .product {width: 100%;}
 
 	.guide .video-wrap video {padding: 0 20px; box-sizing: border-box;}
 	.guide .video-desc {flex-direction: column; padding: 30px 20px;}
@@ -906,8 +990,48 @@ footer .footer-bottom .contact .time {font-weight: 500; color: #333; letter-spac
 	.guide .caution-wrap .caution-list .img-info .img-wrap.color {margin: 0; width: 43%; padding-bottom: 47%;}
 	.guide .caution-wrap .caution-list .img-info .img-wrap.black {width: 100%; padding-bottom: 43%;}
 	
-	
-	
+	.cs .view-m .search-wrap {width: 100%; margin-top: 50px; padding: 0 20px; box-sizing: border-box;}
+	.cs .view-m .search-wrap .search-form {margin-left: unset; width: 100%;}
+	.cs .cont-head {margin: 45px 0 0;}
+	.cs .board-detail {padding: 0 !important; margin-top: 20px;}
+	.cs .board-detail .post-tit {flex-direction: column; align-items: flex-start; padding: 23px 20px;}
+	.cs .board-detail .post-tit span {margin-bottom: 10px;}
+	.cs .board-detail .post-tit span:last-child {margin: 0;}
+	.cs .board-detail .post-tit .ico-status {font-size: 0.75rem; padding: 6px;}
+	.cs .board-detail .post-tit .tit {padding: 0; font-size: 0.88rem; }
+	.cs .board-detail .post-tit .date {margin-left: unset; font-size: 0.75rem; color: #888;}
+	.cs .board-detail .post-cont {margin: 20px;}
+	.cs .board-detail .post-cont .post-txt p {font-size: 0.8rem; color: #555;}
+	.cs .board-detail .post-cont .post-img img {width: 100%;}
+	.cs .board-detail .post-link {flex-direction: column; padding: 0;}
+	.cs .board-detail .post-link li {width: 100%; padding: 20px; box-sizing: border-box;}
+	.cs .board-detail .post-link li + li {border-top: 1px solid #ccc;}
+	.cs .board-detail .post-link li a {width: 26%; font-size: 0.8rem; border: none !important;}
+	.cs .board-detail > .btn-wrap .btn {margin: 0 auto;}
+
+	.cs .board-list {padding: 0 !important; margin-top: 20px;}
+	.cs .board-list .list-wrap {border-top: 1px solid #ccc;}
+	.cs .board-list .list-wrap .num {display: none;}
+	.cs .board-list .list-wrap .list-head {display: none;}
+	.cs .board-list .list-wrap .list-body .list-item {flex-direction: column; padding: 20px;}
+	.cs .board-list .list-wrap .list-body .list-item span {padding: 5px 0;}
+	.cs .board-list .list-wrap .list-body .list-item .tit {font-size: 0.88rem;}
+	.cs .board-list .list-wrap .list-body .list-item .date {color: #888; font-size: 0.75rem; text-align: left;}
+	.cs .board-list .pagenation {display: none;}
+
+	.cs .item-product {margin-top: 30px;}
+	.cs .item-product .product-list {padding: 0;}
+	.cs .item-product .product-list .product {width: 100%; margin-bottom: 10px; }
+	.cs .item-product .product-list .product .tit {padding: 0 0 10px; font-size: 1.13rem;}
+	.cs .item-product .post-tit {padding: 20px;}
+	.cs .item-product .post-tit .ico-status { font-size: 0.75rem; padding: 6px; margin-bottom: 5px;}
+	.cs .item-product .pagenation {display: none;}
+
+	.cs .faq-list {padding: 0 !important}
+	.cs .faq-wrap.type01 {font-size: 0.88rem;}
+	.cs .faq-wrap.type01 dt {padding: 20px 25px; line-height: 1.4;}
+	.cs .faq-wrap.type01 dd {padding: 25px; line-height: 1.3;}
+
 }
 
 
