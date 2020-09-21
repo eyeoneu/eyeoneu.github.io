@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project view (Project list)</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    <script>
+        var projectList = [{
+            "ID": 1,
+            "No": 1,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 2,
+            "No": 2,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 3,
+            "No": 3,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+        }, {
+            "ID": 4,
+            "No": 4,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }, {
+            "ID": 5,
+            "No": 5,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+        }, {
+            "ID": 6,
+            "No": 6,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 7,
+            "No": 7,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 8,
+            "No": 8,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }, {
+            "ID": 9,
+            "No": 9,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 10,
+            "No": 10,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 11,
+            "No": 11,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 12,
+            "No": 12,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }];
+    </script>
+
+</head>
+<body>
+    <div class="proepm-wrap">
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>project list search</caption>
+                    <colgroup>
+                        <col width="10%"><col width="40%"><col width="10%"><col width="40%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Segment</th>
+                            <td scope="col">
+                                <div class="proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a1"><label for="a1">All</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a2"><label for="a2">Mobile</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a3"><label for="a3">OLED</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a4"><label for="a4">LCD</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a5"><label for="a5">Audio</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="col">Project definition</th>
+                            <td scope="col">
+                                <div class="proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b1"><label for="b1">All</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b2"><label for="b2">Product</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b3"><label for="b3">IP</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b4"><label for="b4">Automotive</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b5"><label for="b5">Others</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Project type</th>
+                            <td>
+                                <div class="proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b1"><label for="b1">All</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b2"><label for="b2">Platform</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b3"><label for="b3">Derivative</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b4"><label for="b4">Option</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="b5"><label for="b5">IP</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>Design team</th>
+                            <td>
+                                <div class="proepm-item proepm-item-full">
+                                    <select name="" id="">
+                                        <option value="">Select design team</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Phase</th>
+                            <td>
+                                <div class="proepm-item proepm-item-full">
+                                    <select name="" id="">
+                                        <option value="">Select Phase</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>Status</th>
+                            <td>
+                                <div class="proepm-item proepm-item-full">
+                                    <select name="" id="">
+                                        <option value="">Select Status</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Text search</th>
+                            <td colspan="3">
+                                <div class="proepm-search-wrap proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <select name="" id="">
+                                            <option value="">Select Status</option>
+                                        </select>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="text" placeholder="search">
+                                    </div>
+                                    <div id="searchBtn" class="proepm-btn"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="proepm-tit-wrap proepm-section-tit">
+            <h2>Project list</h2>
+            <div class="proepm-btn-wrap proepm-btn-rt">
+                <div id="projectBtn1" class="proepm-btn proepm-btn-md"></div>
+                <div id="projectBtn2" class="proepm-btn proepm-btn-md"></div>
+            </div>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div id="gridCont1" class="proepm-tbl-row proepm-tbl-ct"></div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    // table2
+    $("#gridCont1").dxDataGrid({
+        dataSource: projectList,
+        showBorders: true,
+        paging: {
+            pageSize: 10
+        },
+        pager: {
+            showPageSizeSelector: true,
+            allowedPageSizes: [5, 10, 20],
+            showInfo: true
+        },
+        columns: [{dataField: "No", width: 45}, "Product code", "Segment", "Design team", "PM/PL", "Application", "Project definition", "Project type", "Phase(Plan date)", "Status", {
+            dataField: "Signal",
+            width: 60,
+            allowFiltering: false,
+            allowSorting: false,
+            cellTemplate: function (container, options) {
+                $("<div class='proepm-icon-signal'>")
+                    .append($("<i>", { "class": options.value }))
+                    .appendTo(container);
+            }
+        }]
+    });
+
+    $("#searchBtn").dxButton({
+        stylingMode: "contained",
+        text: "Search",
+        type: "default"
+    });
+    $("#projectBtn1").dxButton({
+        stylingMode: "contained",
+        text: "Project registration",
+        type: "normal"
+    });
+    $("#projectBtn2").dxButton({
+        stylingMode: "contained",
+        text: "Project registration",
+        type: "default"
+    });
+</script>

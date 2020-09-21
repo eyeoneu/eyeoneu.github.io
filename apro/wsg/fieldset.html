@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no"/>
+	<title>Silicon mitus Makeup</title>
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+	<script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+
+	<!-- Reference either Knockout or AngularJS, if you do -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	
+	<!-- DevExtreme themes -->
+	<link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+	<link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+	<link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+	<link rel="stylesheet" type="text/css" href="../css/PROEPMStylesV2.css">
+	<link rel="stylesheet" type="text/css" href="wsg.css">
+
+	<!-- DevExtreme library -->
+	<script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+	<!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+	<!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+	<script type="text/javascript" src="wsg.js"></script>
+</head>
+<body>
+
+<!-- WRAP -->
+<div id="wrap" class="wsg">
+	<!-- HEADER -->
+	<div id="header">
+		<div class="header-wrap">
+			<h1></h1>
+	
+			<div id="allMenu" class="gnb-menu">
+				<a href="#" class="open-menu">
+					<span class="line-01"></span>
+					<span class="line-02"></span>
+					<span class="line-03"></span>
+				</a>
+			</div>
+			<div class="gnb">
+				<div class="gnb-wrap">
+					<h3>PROGRESS</h3>
+					<ul>
+						<li><a href="markup.html">markup</a></li>
+					</ul>
+					<h3>UI LIBRARY</h3>
+					<ul>
+						 <li><a href="button.html">button (ing)</a></li>
+						<li><a href="table.html">table (ing)</a></li>
+						<li><a href="etc.html">etc (ing)</a></li>
+						<li><a href="">form</a></li>
+						<li><a href="">fieldset</a></li>
+						<li><a href="">tab</a></li>
+						<li><a href="">popup</a></li>
+					</ul>
+					<a href="javascript:void(0);" class="btn-close"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // HEADER -->
+<!-- CONTENT -->
+<div id="container">
+	<h2>FIELDSET</h2>
+	<!-- section -->
+	<div class="section">
+		<strong class="preview">PREVIEW</strong>
+		<fieldset class="fieldset medium">
+			<legend></legend>
+			<div class="field">
+				<div class="insert">
+					<label class="label" for="input01">COUNTRY</label>
+					<select name="" id="" style="width: 250px;">
+						<option value="">KOREA</option>
+						<option value="">GERMANY</option>
+						<option value="">MEXICO</option>
+					</select>
+				</div>
+				<div class="insert">
+					<label class="label" for="input01">CITY</label>
+					<select name="" id="" style="width: 250px;">
+						<option value="">SEOUL</option>
+						<option value="">BERLIN</option>
+						<option value="">NEWYORK</option>
+					</select>
+				</div>
+				<div class="insert">
+					<label class="label" for="input01">AGENCY</label>
+					<select name="" id="" style="width: 250px;">
+						<option value="">삼성의료원</option>
+						<option value="">MICOBIOMED</option>
+						<option value="">차병원</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset class="fieldset large">
+			<legend></legend>
+			<div class="field">
+				<div class="insert">
+					<label class="label" for="input01">instrument</label>
+					<select name="" id="" style="width: 260px;">
+						<option value="">A01001  /  5호기</option>
+						<option value="">A01001  /  5호기</option>
+						<option value="">A01001  /  5호기</option>
+					</select>
+				</div>
+				<div class="insert">
+					<label class="label" for="input02">Date</label>
+					<div class="input-date">
+						<input type="text" name="">
+						<a class="btn" href="javascript:void(0);"><img alt="달력" src="../images/common/calendar.png"></a>
+					</div>
+					<span class="hypen"></span>
+					<div class="input-date">
+						<input type="text" name="">
+						<a class="btn" href="javascript:void(0);"><img alt="달력" src="../images/common/calendar.png"></a>
+					</div>
+				</div>
+				<button type="button" class="btn type01 medium">INQUIRE<span class="ico-search"></span></button>
+			</div>
+		</fieldset>
+	<!-- markup -->
+	<div class="markup">
+		<strong>markup 예시</strong>
+		<pre>
+		&lt;fieldset class="fieldset medium"&gt;
+			&lt;legend&gt;&lt;/legend&gt;
+			&lt;div class="field"&gt;
+				&lt;div class="insert"&gt;
+					&lt;label class="label" for="input01"&gt;COUNTRY&lt;/label&gt;
+					&lt;select name="" id=""&gt;
+						&lt;option value=""&gt;KOREA&lt;/option&gt;
+						&lt;option value=""&gt;GERMANY&lt;/option&gt;
+						&lt;option value=""&gt;MEXICO&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+				&lt;div class="insert"&gt;
+					&lt;label class="label" for="input01"&gt;CITY&lt;/label&gt;
+					&lt;select name="" id=""&gt;
+						&lt;option value=""&gt;SEOUL&lt;/option&gt;
+						&lt;option value=""&gt;BERLIN&lt;/option&gt;
+						&lt;option value=""&gt;NEWYORK&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+				&lt;div class="insert"&gt;
+					&lt;label class="label" for="input01"&gt;AGENCY&lt;/label&gt;
+					&lt;select name="" id=""&gt;
+						&lt;option value=""&gt;삼성의료원&lt;/option&gt;
+						&lt;option value=""&gt;MICOBIOMED&lt;/option&gt;
+						&lt;option value=""&gt;차병원&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/fieldset&gt;
+
+		&lt;fieldset class="fieldset large"&gt;
+			&lt;legend&gt;&lt;/legend&gt;
+			&lt;div class="field"&gt;
+				&lt;div class="insert"&gt;
+					&lt;label class="label" for="input01"&gt;instrument&lt;/label&gt;
+					&lt;select name="" id=""&gt;
+						&lt;option value=""&gt;A01001  /  5호기&lt;/option&gt;
+						&lt;option value=""&gt;A01001  /  5호기&lt;/option&gt;
+						&lt;option value=""&gt;A01001  /  5호기&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+				&lt;div class="insert"&gt;
+					&lt;label class="label" for="input02"&gt;Date&lt;/label&gt;
+					&lt;div class="input-date"&gt;
+						&lt;input type="text" name=""&gt;
+						&lt;a class="btn" href="javascript:void(0);"&gt;&lt;img alt="달력" src="../images/common/calendar.png"&gt;&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;span class="hypen"&gt;&lt;/span&gt;
+					&lt;div class="input-date"&gt;
+						&lt;input type="text" name=""&gt;
+						&lt;a class="btn" href="javascript:void(0);"&gt;&lt;img alt="달력" src="../images/common/calendar.png"&gt;&lt;/a&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;button type="button" class="btn type01 medium"&gt;INQUIRE&lt;span class="ico-search"&gt;&lt;/span&gt;&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/fieldset&gt;
+		</pre>
+	</div>
+	<!-- // markup -->
+	</div>
+	<!-- //section -->
+
+</div>
+<!-- // CONTENT -->
+ 
+</div>
+<!-- // WRAP -->
+</body>
+</html>

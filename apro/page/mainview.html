@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My dashboard</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <script>
+        var projectList = [{
+            "ID": 1,
+            "No": 1,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 2,
+            "No": 2,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 3,
+            "No": 3,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+        }, {
+            "ID": 4,
+            "No": 4,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }];
+    </script>
+
+</head>
+<body>
+
+    <div class="proepm-wrap proepm-page-wrap">
+        <div class="proepm-section-wrap section-grid-4 proepm-dashboard-total">
+            <ul>
+                <li>
+                    <div class="total-tit">Delayed Timesheet</div>
+                    <div class="total-cont">
+                        <span>2</span>
+                        <i class="fa fa-tasks"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="total-tit">Timesheet Approvals</div>
+                    <div class="total-cont">
+                        <span>10</span>
+                        <i class="fa fa-pencil-square-o"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="total-tit">My Project</div>
+                    <div class="total-cont">
+                        <span>2</span>
+                        <i class="fa fa-share-alt"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="total-tit">Project Approvals</div>
+                    <div class="total-cont">
+                        <span>8</span>
+                        <i class="fa fa-pencil-square-o"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="proepm-date-tit">
+            <div class="proepm-tit-wrap">
+                <i class="fa fa-calendar"></i>
+                <h2>
+                    <span>Timesheet title example 2</span>
+                </h2>
+                <div class="proepm-search-wrap">
+                    <div class="proepm-item-wrap">
+                        <div class="proepm-item">
+                            <select name="" id="">
+                                <option value="">2020</option>
+                            </select>
+                        </div>
+                        <div class="proepm-item">
+                            <select name="" id="">
+                                <option value="">W22</option>
+                            </select>
+                        </div>
+                        <span class="date-period">(2020-05-24 ~ 2020-05-30)</span>
+                    </div>
+                </div>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status12" class="proepm-btn"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="proepm-timesheet-wrap">
+            <div class="proepm-tbl-wrap ">
+                <div class="proepm-tbl-row">
+                    <table>
+                        <caption>time sheet title</caption>
+                        <colgroup>
+                            <col><col><col>
+                        </colgroup>
+                        <thead>
+                            <th>User name</th>
+                            <th>Project code</th>
+                            <th>Project status</th>
+                            <th>BU</th>
+                            <th>W21</th>
+                            <th>W22</th>
+                            <th>W23</th>
+                            <th>W24</th>
+                            <th>W25</th>
+                            <th class="last-week">W26</th>
+                            <th class="current-week">W27</th>
+                        </thead>
+                        <tbody>
+                            <tr class="tr-total">
+                                <th rowspan="11">정창화</th>
+                                <th colspan="3">Total</th>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>100%</td>
+                                <td>50%</td>
+                                <td>40%</td>
+                                <td class="under-num">40%</td>
+                                <td class="under-num">40%</td>
+                            </tr>
+                            <tr class="tr-tit">
+                                <th colspan="3">Project</th>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td class="td-input">50%</td>
+                                <td class="td-input">50%</td>
+                            </tr>
+                            <tr>
+                                <th>SM4175</th>
+                                <th>DEV</th>
+                                <th>LCD</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">5%</td>
+                                <td class="td-input">5%</td>
+                            </tr>
+                            <tr>
+                                <th>SM4176</th>
+                                <th>DEV</th>
+                                <th>OLED</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">5%</td>
+                                <td class="td-input">5%</td>
+                            </tr>
+                            <tr>
+                                <th>SM4177</th>
+                                <th>MP</th>
+                                <th>LCD</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">5%</td>
+                                <td class="td-input">5%</td>
+                            </tr>
+                            <tr class="tr-tit">
+                                <th colspan="3">Common</th>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td>50%</td>
+                                <td class="td-input">50%</td>
+                                <td class="td-input">50%</td>
+                            </tr>
+                            <tr>
+                                <th>LCD</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">5%</td>
+                                <td class="td-input">5%</td>
+                            </tr>
+                            <tr>
+                                <th>OLED</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-alert">5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">5%</td>
+                                <td class="td-input">5%</td>
+                            </tr>
+                            <tr class="tr-empty">
+                                <th>Mobile</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">(미입력된</td>
+                                <td class="td-input">라인배경)</td>
+                            </tr>
+                            <tr>
+                                <th>Audio</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td>5%</td>
+                                <td class="td-input">5%</td>
+                                <td class="td-input">5%</td>
+                            </tr>
+                            <tr class="tr-status">
+                                <th colspan="3">Approval Status</th>
+                                <td>
+                                    <div id="status4" class="proepm-btn proepm-status-approved"></div>
+                                </td>
+                                <td>
+                                    <div id="status5" class="proepm-btn proepm-status-approved"></div>
+                                </td>
+                                <td>
+                                    <div id="status6" class="proepm-btn proepm-status-approved"></div>
+                                </td>
+                                <td>
+                                    <div id="status7" class="proepm-btn proepm-status-approved"></div>
+                                </td>
+                                <td>
+                                    <div id="status8" class="proepm-btn"></div>
+                                </td>
+                                <td>
+                                    <div id="status9" class="proepm-btn"></div>
+                                </td>
+                                <td>
+                                    <div id="status10" class="proepm-btn"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+    $("#status4").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status5").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status6").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status7").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status8").dxButton({
+        stylingMode: "contained",
+        text: "Drafted",
+        type: "success"
+    });
+    $("#status9").dxButton({
+        stylingMode: "contained",
+        text: "Delayed",
+        type: "danger"
+    });
+    $("#status10").dxButton({
+        stylingMode: "contained",
+        text: "Saved",
+        type: "normal"
+    });
+    $("#status11").dxButton({
+        stylingMode: "contained",
+        text: "Excel import",
+        type: "normal"
+    });
+    $("#status12").dxButton({
+        stylingMode: "contained",
+        text: "example",
+        type: "normal"
+    });
+
+</script>
