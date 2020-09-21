@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My dashboard</title>
+    <title>NPDP Main View</title>
 
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
     <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
     <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
     <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    <link rel="stylesheet" href="../css/npdp.css">
     
     <!-- DevExtreme library -->
     <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
@@ -60,230 +61,414 @@
 <body>
 
     <div class="proepm-wrap proepm-page-wrap">
-        <div class="proepm-section-wrap section-grid-4 proepm-dashboard-total">
-            <ul>
-                <li>
-                    <div class="total-tit">Delayed Timesheet</div>
-                    <div class="total-cont">
-                        <span>2</span>
-                        <i class="fa fa-tasks"></i>
-                    </div>
-                </li>
-                <li>
-                    <div class="total-tit">Timesheet Approvals</div>
-                    <div class="total-cont">
-                        <span>10</span>
-                        <i class="fa fa-pencil-square-o"></i>
-                    </div>
-                </li>
-                <li>
-                    <div class="total-tit">My Project</div>
-                    <div class="total-cont">
-                        <span>2</span>
-                        <i class="fa fa-share-alt"></i>
-                    </div>
-                </li>
-                <li>
-                    <div class="total-tit">Project Approvals</div>
-                    <div class="total-cont">
-                        <span>8</span>
-                        <i class="fa fa-pencil-square-o"></i>
-                    </div>
-                </li>
-            </ul>
+       
+        <div class="proepm-tit-wrap proepm-section-tit">
+            <h2>Project list</h2>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>project list search</caption>
+                    <colgroup>
+                        <col width="10%"><col width="40%"><col width="10%"><col width="40%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Status</th>
+                            <td scope="col">
+                                <div class="proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a1"><label for="a1">All</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a2" checked><label for="a2">Running</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a3"><label for="a3">Hold</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a4"><label for="a4">Completion</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a5"><label for="a5">Drop</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="col">Text Search</th>
+                            <td scope="col">
+                                <div class="proepm-search-wrap proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="text" placeholder="search">
+                                    </div>
+                                    <div id="searchBtn" class="proepm-btn"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="proepm-date-tit">
-            <div class="proepm-tit-wrap">
-                <i class="fa fa-calendar"></i>
+            <div class="proepm-tit-wrap proepm-delay-a">
+                <span class="status-txt">Completion</span>
                 <h2>
-                    <span>Timesheet title example 2</span>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
                 </h2>
-                <div class="proepm-search-wrap">
-                    <div class="proepm-item-wrap">
-                        <div class="proepm-item">
-                            <select name="" id="">
-                                <option value="">2020</option>
-                            </select>
-                        </div>
-                        <div class="proepm-item">
-                            <select name="" id="">
-                                <option value="">W22</option>
-                            </select>
-                        </div>
-                        <span class="date-period">(2020-05-24 ~ 2020-05-30)</span>
-                    </div>
-                </div>
                 <div class="proepm-btn-wrap proepm-btn-rt">
-                    <div id="status12" class="proepm-btn"></div>
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
                 </div>
             </div>
-            
+            <div class="proepm-tit-wrap proepm-delay-b">
+                <span class="status-txt">Completion</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-c">
+                <span class="status-txt">Completion</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-d">
+                <span class="status-txt">Completion</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
         </div>
 
-        <div class="proepm-timesheet-wrap">
-            <div class="proepm-tbl-wrap ">
-                <div class="proepm-tbl-row">
-                    <table>
-                        <caption>time sheet title</caption>
-                        <colgroup>
-                            <col><col><col>
-                        </colgroup>
-                        <thead>
-                            <th>User name</th>
-                            <th>Project code</th>
-                            <th>Project status</th>
-                            <th>BU</th>
-                            <th>W21</th>
-                            <th>W22</th>
-                            <th>W23</th>
-                            <th>W24</th>
-                            <th>W25</th>
-                            <th class="last-week">W26</th>
-                            <th class="current-week">W27</th>
-                        </thead>
-                        <tbody>
-                            <tr class="tr-total">
-                                <th rowspan="11">정창화</th>
-                                <th colspan="3">Total</th>
-                                <td>100%</td>
-                                <td>100%</td>
-                                <td>100%</td>
-                                <td>50%</td>
-                                <td>40%</td>
-                                <td class="under-num">40%</td>
-                                <td class="under-num">40%</td>
-                            </tr>
-                            <tr class="tr-tit">
-                                <th colspan="3">Project</th>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td class="td-input">50%</td>
-                                <td class="td-input">50%</td>
-                            </tr>
-                            <tr>
-                                <th>SM4175</th>
-                                <th>DEV</th>
-                                <th>LCD</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">5%</td>
-                                <td class="td-input">5%</td>
-                            </tr>
-                            <tr>
-                                <th>SM4176</th>
-                                <th>DEV</th>
-                                <th>OLED</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">5%</td>
-                                <td class="td-input">5%</td>
-                            </tr>
-                            <tr>
-                                <th>SM4177</th>
-                                <th>MP</th>
-                                <th>LCD</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">5%</td>
-                                <td class="td-input">5%</td>
-                            </tr>
-                            <tr class="tr-tit">
-                                <th colspan="3">Common</th>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                                <td class="td-input">50%</td>
-                                <td class="td-input">50%</td>
-                            </tr>
-                            <tr>
-                                <th>LCD</th>
-                                <th>-</th>
-                                <th>-</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">5%</td>
-                                <td class="td-input">5%</td>
-                            </tr>
-                            <tr>
-                                <th>OLED</th>
-                                <th>-</th>
-                                <th>-</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-alert">5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">5%</td>
-                                <td class="td-input">5%</td>
-                            </tr>
-                            <tr class="tr-empty">
-                                <th>Mobile</th>
-                                <th>-</th>
-                                <th>-</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">(미입력된</td>
-                                <td class="td-input">라인배경)</td>
-                            </tr>
-                            <tr>
-                                <th>Audio</th>
-                                <th>-</th>
-                                <th>-</th>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td>5%</td>
-                                <td class="td-input">5%</td>
-                                <td class="td-input">5%</td>
-                            </tr>
-                            <tr class="tr-status">
-                                <th colspan="3">Approval Status</th>
-                                <td>
-                                    <div id="status4" class="proepm-btn proepm-status-approved"></div>
-                                </td>
-                                <td>
-                                    <div id="status5" class="proepm-btn proepm-status-approved"></div>
-                                </td>
-                                <td>
-                                    <div id="status6" class="proepm-btn proepm-status-approved"></div>
-                                </td>
-                                <td>
-                                    <div id="status7" class="proepm-btn proepm-status-approved"></div>
-                                </td>
-                                <td>
-                                    <div id="status8" class="proepm-btn"></div>
-                                </td>
-                                <td>
-                                    <div id="status9" class="proepm-btn"></div>
-                                </td>
-                                <td>
-                                    <div id="status10" class="proepm-btn"></div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>project list search</caption>
+                    <colgroup>
+                        <col width="5%"><col width="10%"><col width="5%"><col width="10%"><col width="5%"><col width="10%"><col width="5%"><col width="10%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Product Code</th>
+                            <td scope="col">SM4175</td>
+                            <th scope="col">Customer</th>
+                            <td scope="col">LCD</td>
+                            <th scope="col">Tech name</th>
+                            <td scope="col">HM13EU</td>
+                            <th scope="col">Description</th>
+                            <td scope="col">UHD TV</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">PL</th>
+                            <td scope="col">Jeongyong Lee</td>
+                            <th scope="col">PM</th>
+                            <td scope="col"></td>
+                            <th scope="col">MKT</th>
+                            <td scope="col">chulyong mo</td>
+                            <th scope="col">Sales</th>
+                            <td scope="col"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dx-popup-content" style="height: 699px; min-height: auto;">
+            <div id="scrollView" class="dx-scrollable dx-scrollview dx-visibility-change-handler dx-scrollable-both dx-scrollable-simulated dx-scrollable-scrollbars-alwaysvisible dx-scrollable-customizable-scrollbars">
+                <div class="dx-scrollable-wrapper">
+                    <div class="dx-scrollable-container" tabindex="0">
+                        <div class="dx-scrollable-content" style="left: 0px; top: 0px; transform: none;">
+                            <div class="dx-scrollview-top-pocket">
+                                <div class="dx-scrollview-pull-down" style="display: none;">
+                                    <div class="dx-scrollview-pull-down-image"></div>
+                                    <div class="dx-scrollview-pull-down-indicator">
+                                        <div class="dx-loadindicator dx-widget">
+                                            <div class="dx-loadindicator-wrapper">
+                                                <div class="dx-loadindicator-content">
+                                                    <div class="dx-loadindicator-icon">
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dx-scrollview-pull-down-text">
+                                        <div class="dx-scrollview-pull-down-text-visible">Pull down to refresh...</div>
+                                        <div>Release to refresh...</div>
+                                        <div>Refreshing...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-scrollview-content">
+                                <div class="proepm-pop-treeview">
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Plan (Org)<br>(Rev1)</div>
+                                        <div class="proepm-pop-stage-container">
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P1. Project Planning</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P2. Product Planning</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P3. Design</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P4. Engineering sample</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P5. Customer sample</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P6. Ready to production</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Stage</div>
+                                        <div class="proepm-pop-stage-container">
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P1. Project Planning</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P2. Product Planning</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P3. Design</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P4. Engineering sample</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P5. Customer sample</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage2 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">P6. Ready to production</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container box-transform">
+                                        <div class="proepm-pop-title">Milestone</div>
+                                        <div class="proepm-pop-stage-container">
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage3 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">M1</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage3 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">M2</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage3 dx-button-content proepm-stage-complete">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">M3</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage3 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">M4</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-pop-stage" style="width: 100%; height: 100%;">
+                                                <div class="proepm-stage3 dx-button-content">
+                                                    <div class="proepm-stage-title"><span class="dx-button-text">M5</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Deliverable</div>
+                                        <div class="proepm-pop-activity-container">
+                                            <div class="proepm-activity-box" style="border: 0;">
+                                                <div class="proepm-activity" style="width: 180px; padding: 5px 7px;">
+                                                    <ul>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="d0be81fe-b0c0-4df8-a943-b8c6eaf214c5" mapping_key="1.0" title="Project registration">Project registration</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="9e654f48-87a4-4267-bebb-70ce0b4fe3e0" r_task_uid="d57dfea5-ce82-ea11-856a-00155d99e819" mapping_key="1.1" title="Project proposal">Project proposal</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="881a3636-1680-47f2-bf4b-59b114fd3a80" r_task_uid="d67dfea5-ce82-ea11-856a-00155d99e819" mapping_key="1.2" title="Engineering review">Engineering review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="6e9de19e-1b06-4cfd-b1cc-f901cfeb39c3" r_task_uid="d77dfea5-ce82-ea11-856a-00155d99e819" mapping_key="1.3" title="OPS review">OPS review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="49d551f3-e008-476c-ba28-3cfb9bdf2a5e" r_task_uid="d87dfea5-ce82-ea11-856a-00155d99e819" mapping_key="1.4" title="Profitability assessment">Profitability assessment</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="e4be9893-ae5b-40d8-8b50-a4eeaafef257" r_task_uid="d97dfea5-ce82-ea11-856a-00155d99e819" mapping_key="1.5" title="Project feasibility review">Project feasibility review</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-activity-box" style="border: 0;">
+                                                <div class="proepm-activity" style="width: 180px; padding: 5px 7px;">
+                                                    <ul>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="2b3bcbde-d272-404d-ad69-b1a7800d46c0" r_task_uid="db7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.1" title="Development definitions(RFQ)">Development definitions(RFQ)</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="a4c2e560-d99b-4acb-b240-753ae093e54a" r_task_uid="dc7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.2" title="Target datasheet">Target datasheet</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="a204d7fd-819d-4891-affe-8b801a6bc9d4" r_task_uid="dd7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.3" title="Kick off report">Kick off report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="f8547e45-6443-41a3-98c3-08f3ea83ee48" r_task_uid="de7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.4" title="Kick off meeting">Kick off meeting</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="d3844654-3a46-4261-b0d6-5d863773e89c" r_task_uid="df7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.5" title="IP&amp; Device information">IP&amp; Device information</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="719ba2f4-7d69-4448-b278-bef7f855298b" r_task_uid="e07dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.6" title="DFX">DFX</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="12f040aa-de81-4b64-adad-693222fe15c8" r_task_uid="e17dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.7" title="Application risk report">Application risk report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="4baab13e-0e79-4c2e-9719-3793597d2f3c" r_task_uid="e27dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.8" title="Process risk report">Process risk report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="cf8c2f7b-01e3-4ce0-b0ae-e7e0d853ae91" r_task_uid="e37dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.9" title="Reliability risk report">Reliability risk report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="d85ee61d-8007-420a-a638-2524d065ce31" r_task_uid="e47dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.10" title="Test risk report">Test risk report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="1756464f-787f-40ad-bf26-aca4ac98fe22" r_task_uid="e57dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.11" title="Risk review report">Risk review report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="19a4d31f-e025-49a8-8d15-62dfbf9cfe65" r_task_uid="e97dfea5-ce82-ea11-856a-00155d99e819" mapping_key="2.12" title="Risk Review">Risk Review</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-activity-box" style="border: 0;">
+                                                <div class="proepm-activity" style="width: 180px; padding: 5px 7px;">
+                                                    <ul>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable revision proepm-pop-rej" data-popup-type="new" data-event-target="flow-task-click" task_uid="9861d92c-94cd-4600-a100-cce06217af4d" r_task_uid="eb7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.1" title="Internal design check list">Internal design check list</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable revision proepm-pop-rej" data-popup-type="new" data-event-target="flow-task-click" task_uid="01662819-cc9d-4e4e-9055-e20e847235ca" r_task_uid="ec7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.2" title="Internal design review report">Internal design review report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable revision proepm-pop-rej" data-popup-type="new" data-event-target="flow-task-click" task_uid="d4c4b467-1178-43eb-8e84-c01dbda5d870" r_task_uid="ed7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.3" title="IP&amp;Device information">IP&amp;Device information</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable revision proepm-pop-rej" data-popup-type="new" data-event-target="flow-task-click" task_uid="5d9ea8b8-2f42-4733-abe5-3f53da37a579" r_task_uid="ee7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.4" title="Internal design review">Internal design review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="f117e446-377b-4bb7-b04d-d002ff486f93" r_task_uid="ef7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.5" title="Testability check">Testability check</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="ab44f5b7-bcc6-41f8-97ac-51846a0b8fd6" r_task_uid="f07dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.6" title="Test Plan (FT/PT)">Test Plan (FT/PT)</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="34490ec9-3c00-4ced-8cac-80ecf236fab1" r_task_uid="f17dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.7" title="ESD network info">ESD network info</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="cd091781-de7a-4c7b-84a2-90346b65dfb2" r_task_uid="f27dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.8" title="ESD network check">ESD network check</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="10034521-5456-42ac-99c6-fa01249fe75a" r_task_uid="f37dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.9" title="Advanced datasheet">Advanced datasheet</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="c8287ea9-e4f1-42bf-a799-a6436098d4aa" r_task_uid="f47dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.10" title="Design review report">Design review report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="0a6ff359-ccee-451e-98ef-196bf319efe2" r_task_uid="f57dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.11" title="Risk review report2">Risk review report2</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="e273e60e-57fd-416d-9125-3eab657a3d0e" r_task_uid="f67dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.12" title="Project interim review1">Project interim review1</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="33e62f51-f8c6-453f-87b7-9442afc61dfa" r_task_uid="f77dfea5-ce82-ea11-856a-00155d99e819" mapping_key="3.13" title="Design review">Design review</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-activity-box" style="border: 0;">
+                                                <div class="proepm-activity" style="width: 180px; padding: 5px 7px;">
+                                                    <ul>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="bffbcab4-921e-4ec2-86d0-fe122858e296" r_task_uid="f97dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.1" title="Application report">Application report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="0c1f42f6-150f-4626-836a-42ec4e518b15" r_task_uid="fa7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.2" title="Key test item set up report">Key test item set up report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="0c6af2ba-2bc2-4837-8ed7-60171743d528" r_task_uid="fb7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.3" title="Pin characteristic report">Pin characteristic report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="ce126d14-81ba-4ebd-a9ca-96148523e850" r_task_uid="fc7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.4" title="Pre Qual. report">Pre Qual. report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="57908c98-ddbf-40d6-ac07-fd647a8b55dc" r_task_uid="fd7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.5" title="Revision Request">Revision Request</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable skipped" data-popup-type="new" data-event-target="flow-task-click" task_uid="ffd61d4f-251f-432e-bd88-f5aff563f720" r_task_uid="fe7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.6" title="Revision request review">Revision request review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="c96f65ce-51cd-40d2-ac9a-fb76197a05e3" r_task_uid="ff7dfea5-ce82-ea11-856a-00155d99e819" mapping_key="4.7" title="Preliminary Datasheet">Preliminary Datasheet</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="0f9653a8-7b95-419b-b8d5-de57bffdbf88" r_task_uid="007efea5-ce82-ea11-856a-00155d99e819" mapping_key="4.8" title="Risk Review report3">Risk Review report3</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="855bccc0-a1df-4f9c-9d61-2c7c58087812" r_task_uid="017efea5-ce82-ea11-856a-00155d99e819" mapping_key="4.9" title="Project Interim review2">Project Interim review2</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="d567a074-ac68-4b22-b54d-50aa48ca7f48" r_task_uid="077efea5-ce82-ea11-856a-00155d99e819" mapping_key="4.10" title="ES review">ES review</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-activity-box" style="border: 0;">
+                                                <div class="proepm-activity" style="width: 180px; padding: 5px 7px;">
+                                                    <ul>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="df7a894f-935d-4f18-b944-5f141b581550" r_task_uid="097efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.1" title="Application report">Application report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="70a4dbdb-2877-442f-8a89-54d7f85726f0" r_task_uid="0a7efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.2" title="Test set up report">Test set up report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="a0bcfde2-d161-40a0-b390-cd8fcd58be8d" r_task_uid="0b7efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.3" title="Pin characteristic report">Pin characteristic report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="6011053b-6eb9-4dc2-9e5e-dd5380ca62c9" r_task_uid="0c7efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.4" title="Pre qual. report">Pre qual. report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="078dedc0-0df5-4a9b-ae68-ea191cd0fa58" r_task_uid="0d7efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.5" title="Revision request">Revision request</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="b7d0f4f4-388a-4871-98c7-cfe221d75862" r_task_uid="0e7efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.6" title="Revision review">Revision review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="a5c3b89d-e8e4-49cc-8d47-4d5576b46c29" r_task_uid="0f7efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.7" title="Spec. meeting ">Spec. meeting </li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="c45e1071-59f3-4412-a037-3cbf709f1405" r_task_uid="107efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.8" title="Final datasheet">Final datasheet</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="3ac2dcea-a110-4868-a7d5-be431c59293f" r_task_uid="117efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.9" title="Qual. report">Qual. report</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="937cb6e8-c9af-4b93-a0e3-b9ddae975e9b" r_task_uid="127efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.10" title="Risk Review report4">Risk Review report4</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="e5c7fc0a-45c8-4327-91f8-3e31e3f4f71e" r_task_uid="137efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.11" title="Project Interim Review 3">Project Interim Review 3</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="35d5c084-d9b1-44bb-b5cc-b2094008e096" r_task_uid="177efea5-ce82-ea11-856a-00155d99e819" mapping_key="5.12" title="CS review">CS review</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="proepm-activity-box" style="border: 0;">
+                                                <div class="proepm-activity" style="width: 180px; padding: 5px 7px;">
+                                                    <ul>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="9f0b77ba-00bf-4e6c-b70f-f61221d5a4dc" r_task_uid="197efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.1" title="RTP Design review">RTP Design review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="e8f1a5f8-a698-454a-9809-758d374c3288" r_task_uid="1a7efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.2" title="RTP SE review">RTP SE review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="7858e269-7b63-4730-8e7d-9301b6dce0de" r_task_uid="1b7efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.3" title="RTP PE review">RTP PE review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="0534d944-79ee-4efe-97f3-a654f8ac9b8d" r_task_uid="1c7efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.4" title="RTP SCM review">RTP SCM review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="a1b62e49-5af2-42ce-9682-f586ceee78de" r_task_uid="1d7efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.5" title="RTP QE review">RTP QE review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="50d6cd3b-970b-411c-a020-35865b1f2ab9" r_task_uid="1e7efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.6" title="RTP TE review">RTP TE review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="43893702-9096-47bd-a1ec-52c6df612078" r_task_uid="1f7efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.7" title="RTP FE review">RTP FE review</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable approved" data-popup-type="new" data-event-target="flow-task-click" task_uid="59d4a2f7-fa09-4abe-b235-010d05fcd811" r_task_uid="207efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.8" title="Final DB upload check">Final DB upload check</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable drafted" data-popup-type="new" data-event-target="flow-task-click" task_uid="3de56e5d-275c-4d5c-90f3-cc930f979bb9" r_task_uid="217efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.9" title="Project interim review 4">Project interim review 4</li>
+                                                        <li style="position: relative; padding: 0; text-align: center; display: flex; justify-content: center; margin-bottom: 5px; overflow: unset; text-overflow: unset; white-space: unset; height: 42px; line-height: unset;" class="proepm-clickable none" data-popup-type="new" data-event-target="flow-task-click" task_uid="ab135df4-7011-4a2d-88be-382e4870f966" r_task_uid="227efea5-ce82-ea11-856a-00155d99e819" mapping_key="6.10" title="RTP review">RTP review</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-scrollview-bottom-pocket">
+                                <div class="dx-scrollview-scrollbottom" style="display: none;">
+                                    <div class="dx-scrollview-scrollbottom-indicator">
+                                        <div class="dx-loadindicator dx-widget">
+                                            <div class="dx-loadindicator-wrapper">
+                                                <div class="dx-loadindicator-content">
+                                                    <div class="dx-loadindicator-icon">
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dx-scrollview-scrollbottom-text">Loading...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-horizontal dx-scrollbar-hoverable" style="display: none;">
+                            <div class="dx-scrollable-scroll dx-state-invisible" style="width: 1178px; transform: translate(0px, 0px);">
+                                <div class="dx-scrollable-scroll-content"></div>
+                            </div>
+                        </div>
+                        <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical dx-scrollbar-hoverable" style="display: none;">
+                            <div class="dx-scrollable-scroll dx-state-invisible" style="height: 699px; transform: translate(0px, 0px);">
+                                <div class="dx-scrollable-scroll-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-scrollview-loadpanel dx-overlay dx-widget dx-state-invisible dx-visibility-change-handler dx-loadpanel">
+                    <div class="dx-overlay-content" aria-hidden="true" style="width: 222px; height: 90px;"></div>
                 </div>
             </div>
         </div>
@@ -338,6 +523,12 @@
         stylingMode: "contained",
         text: "example",
         type: "normal"
+    });
+
+    $("#searchBtn").dxButton({
+        stylingMode: "contained",
+        text: "Search",
+        type: "default"
     });
 
 </script>

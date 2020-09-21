@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project view (Project list)</title>
+    <title>Project list</title>
 
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
     <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
@@ -27,165 +27,85 @@
         var projectList = [{
             "ID": 1,
             "No": 1,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+            "Project code": "A31G226",
+            "Tech name": "LF6",
+            "Customer": "삼성",
+            "Type": "Platform",
+            "Description": "전자담배향 GP MCU",
+            "Delay day": "608",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "PCS설계팀"
         }, {
             "ID": 2,
             "No": 2,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "Ready",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
         }, {
             "ID": 3,
             "No": 3,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "Ready",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
         }, {
             "ID": 4,
             "No": 4,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+            "Project code": "A31G226",
+            "Tech name": "LF6",
+            "Customer": "삼성",
+            "Type": "Platform",
+            "Description": "전자담배향 GP MCU",
+            "Delay day": "608",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "PCS설계팀"
         }, {
             "ID": 5,
             "No": 5,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "664",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
         }, {
             "ID": 6,
             "No": 6,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
-        }, {
-            "ID": 7,
-            "No": 7,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
-        }, {
-            "ID": 8,
-            "No": 8,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
-        }, {
-            "ID": 9,
-            "No": 9,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
-        }, {
-            "ID": 10,
-            "No": 10,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
-        }, {
-            "ID": 11,
-            "No": 11,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
-        }, {
-            "ID": 12,
-            "No": 12,
-            "Product code": "SM4175",
-            "Segment": "Mobile",
-            "Design team": "LCD Design Group1",
-            "PM/PL": "이용현",
-            "Application": "Charger",
-            "Project definition": "Product",
-            "Project type": "Platform",
-            "Phase(Plan date)": "P1 (2020-03-02)",
-            "Status": "Running",
-            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "468",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
         }];
     </script>
 
 </head>
 <body>
     <div class="proepm-wrap">
+
+        <div class="proepm-tit-wrap proepm-section-tit">
+            <h2>Project list</h2>
+        </div>
 
         <div class="proepm-tbl-wrap">
             <div class="proepm-tbl-col">
@@ -196,104 +116,29 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="col">Segment</th>
+                            <th scope="col">Status</th>
                             <td scope="col">
                                 <div class="proepm-item-wrap">
                                     <div class="proepm-item">
                                         <input type="checkbox" id="a1"><label for="a1">All</label>
                                     </div>
                                     <div class="proepm-item">
-                                        <input type="checkbox" id="a2"><label for="a2">Mobile</label>
+                                        <input type="checkbox" id="a2" checked><label for="a2">Running</label>
                                     </div>
                                     <div class="proepm-item">
-                                        <input type="checkbox" id="a3"><label for="a3">OLED</label>
+                                        <input type="checkbox" id="a3"><label for="a3">Hold</label>
                                     </div>
                                     <div class="proepm-item">
-                                        <input type="checkbox" id="a4"><label for="a4">LCD</label>
+                                        <input type="checkbox" id="a4"><label for="a4">Completion</label>
                                     </div>
                                     <div class="proepm-item">
-                                        <input type="checkbox" id="a5"><label for="a5">Audio</label>
+                                        <input type="checkbox" id="a5"><label for="a5">Drop</label>
                                     </div>
                                 </div>
                             </td>
-                            <th scope="col">Project definition</th>
+                            <th scope="col">Text Search</th>
                             <td scope="col">
-                                <div class="proepm-item-wrap">
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b1"><label for="b1">All</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b2"><label for="b2">Product</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b3"><label for="b3">IP</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b4"><label for="b4">Automotive</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b5"><label for="b5">Others</label>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Project type</th>
-                            <td>
-                                <div class="proepm-item-wrap">
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b1"><label for="b1">All</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b2"><label for="b2">Platform</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b3"><label for="b3">Derivative</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b4"><label for="b4">Option</label>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <input type="checkbox" id="b5"><label for="b5">IP</label>
-                                    </div>
-                                </div>
-                            </td>
-                            <th>Design team</th>
-                            <td>
-                                <div class="proepm-item proepm-item-full">
-                                    <select name="" id="">
-                                        <option value="">Select design team</option>
-                                    </select>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Phase</th>
-                            <td>
-                                <div class="proepm-item proepm-item-full">
-                                    <select name="" id="">
-                                        <option value="">Select Phase</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <th>Status</th>
-                            <td>
-                                <div class="proepm-item proepm-item-full">
-                                    <select name="" id="">
-                                        <option value="">Select Status</option>
-                                    </select>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Text search</th>
-                            <td colspan="3">
                                 <div class="proepm-search-wrap proepm-item-wrap">
-                                    <div class="proepm-item">
-                                        <select name="" id="">
-                                            <option value="">Select Status</option>
-                                        </select>
-                                    </div>
                                     <div class="proepm-item">
                                         <input type="text" placeholder="search">
                                     </div>
@@ -306,16 +151,8 @@
             </div>
         </div>
 
-        <div class="proepm-tit-wrap proepm-section-tit">
-            <h2>Project list</h2>
-            <div class="proepm-btn-wrap proepm-btn-rt">
-                <div id="projectBtn1" class="proepm-btn proepm-btn-md"></div>
-                <div id="projectBtn2" class="proepm-btn proepm-btn-md"></div>
-            </div>
-        </div>
-
         <div class="proepm-tbl-wrap">
-            <div id="gridCont1" class="proepm-tbl-row proepm-tbl-ct"></div>
+            <div id="gridCont1" class="proepm-tbl-row proepm-tbl-ct fix-tbl"></div>
         </div>
 
     </div>
@@ -323,7 +160,6 @@
 </html>
 
 <script>
-    // table2
     $("#gridCont1").dxDataGrid({
         dataSource: projectList,
         showBorders: true,
@@ -335,17 +171,23 @@
             allowedPageSizes: [5, 10, 20],
             showInfo: true
         },
-        columns: [{dataField: "No", width: 45}, "Product code", "Segment", "Design team", "PM/PL", "Application", "Project definition", "Project type", "Phase(Plan date)", "Status", {
-            dataField: "Signal",
-            width: 60,
-            allowFiltering: false,
-            allowSorting: false,
+        columns: [{dataField: "No", width: 45}, {
+            dataField: "Project code",
             cellTemplate: function (container, options) {
-                $("<div class='proepm-icon-signal'>")
-                    .append($("<i>", { "class": options.value }))
-                    .appendTo(container);
+                $("<a href='' class='code-link'>")
+                .append(options.value)
+                .appendTo(container);
             }
-        }]
+        }, "Tech name", "Customer", {
+            dataField: "Type",
+            width: 80
+        }, "Description", {
+            dataField: "Delay day",
+            width: 80
+        }, "Stage(due dat)", {
+            dataField: "PL",
+            width: 80
+        }, "Owner team"]
     });
 
     $("#searchBtn").dxButton({
@@ -353,14 +195,5 @@
         text: "Search",
         type: "default"
     });
-    $("#projectBtn1").dxButton({
-        stylingMode: "contained",
-        text: "Project registration",
-        type: "normal"
-    });
-    $("#projectBtn2").dxButton({
-        stylingMode: "contained",
-        text: "Project registration",
-        type: "default"
-    });
+
 </script>

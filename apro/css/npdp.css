@@ -1252,13 +1252,13 @@ div.project-summary {
 
 /* 스테이지 완료 */
 .proepm-stage-complete {
-    background-color: #2b3b4d !important;
+    background-color: #084897 !important;
 }
 
 /* 스테이지 선택 */
 .selected-stage {
     background-color: #ffffff !important;
-    color: #2b3b4d !important;
+    color: #084897 !important;
     border-right: 1px solid #f9f9f9 !important;
 }
 
@@ -2359,7 +2359,11 @@ th {
     padding: 12px 5px;
 }
 
-
+.box-transform .proepm-stage-complete {background-color: transparent !important;}
+.box-transform .proepm-pop-stage .proepm-stage-title {display: flex; align-items: center; justify-content: center; width: 0; height: 0; border: 90px solid transparent; border-bottom: 30px solid #a7fbff; position: relative; top: -50px;}
+.box-transform .proepm-pop-stage .proepm-stage-title:after {content: ''; position: absolute; left: -90px; top: 30px; width: 0; height: 0; border: 90px solid transparent; border-top: 30px solid #a7fbff;}
+.box-transform .proepm-pop-stage .proepm-stage-title .dx-button-text {position: absolute; display: block; left: 50%; top: 20px; transform: translateX(-50%); z-index: 1; white-space: nowrap; text-align: center;}
+.box-transform .proepm-pop-stage-container {flex: 0; margin: 0 auto;}
 .proepm-project-info-container {
     display: flex;
     justify-content: flex-start;
@@ -2470,3 +2474,6 @@ th {
     font-size: 14px;
     margin-left:10px;
 }
+
+
+.dx-popup-content {padding: 0;}
