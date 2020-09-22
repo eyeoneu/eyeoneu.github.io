@@ -28,23 +28,24 @@ caption {visibility:hidden; overflow:hidden; width:1px; height:1px; font-size:0;
 .proepm-status-stop {color: #f9a449;}
 .proepm-status-danger {color: #f26067;}
 
-/* 
 .proepm-delay-a {background-color: #34add0; color: #fff;}
 .proepm-delay-b {background-color: #90af59; color: #fff;}
 .proepm-delay-c {background-color: #f9a449; color: #fff;}
 .proepm-delay-d {background-color: #f26067; color: #fff;} 
+.proepm-delay-e {background-color: #084897; color: #fff;} 
+.proepm-delay-f {background-color: #696a6c; color: #fff;} 
 
+/* 
 .proepm-delay-a {background-color: #65f8ff; color: #222;}
 .proepm-delay-b {background-color: #4dff37; color: #222;}
 .proepm-delay-c {background-color: #fcff23; color: #222;}
 .proepm-delay-d {background-color: #ff0000; color: #fff;}
-*/
 
 .proepm-delay-a {background-color: #a7fbff; color: #222;}
 .proepm-delay-b {background-color: #dbffba; color: #222;}
 .proepm-delay-c {background-color: #ffe682; color: #222;}
 .proepm-delay-d {background-color: #ff1a1a; color: #fff;}
-
+ */
 
 .proepm-btn.proepm-status-approved {background-color: #6679c7; border: none; color: #ffffff;}
 .proepm-btn.proepm-status-approved:hover {background-color: #5666ad; }
@@ -205,7 +206,7 @@ div[class*="wrap"] {position: relative;}
 .proepm-section-tit button + button {margin-left: 10px;}
 
 .proepm-date-tit {margin-bottom: 10px;}
-.proepm-date-tit .proepm-tit-wrap {display: flex; border: 1px solid #ddd; margin: 25px 0 10px; padding-right: 20px;}
+.proepm-date-tit .proepm-tit-wrap {display: flex; margin: 25px 0 10px; padding-right: 20px;}
 .proepm-date-tit .proepm-tit-wrap i.fa {color: #ffffff; font-size: 20px; background-color: #084897; padding: 14px;}
 .proepm-date-tit .proepm-tit-wrap i.dx-icon {color: #ffffff;}
 .proepm-date-tit .proepm-tit-wrap h2 {position: relative; line-height: 47px; padding-left: 20px; margin: 0; font-size: 22px; font-weight: 500; cursor: pointer;}

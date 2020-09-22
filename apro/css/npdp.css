@@ -2269,22 +2269,30 @@ th {
     display: flex;
     justify-content: space-between;
     flex: 1;
+    margin: 0 0 10px !important;
 }
 
     .proepm-pop-container:first-of-type {
-        margin-bottom: 5px;
+        /* margin-bottom: 5px; */
     }
+.proepm-pop-container .proepm-pop-title {margin-right: 10px;}
+.proepm-pop-container .proepm-pop-stage {}
+.proepm-pop-container .proepm-pop-stage .proepm-stage2 { padding: 12px; box-sizing: border-box;}
 
 .proepm-pop-stage-container {
     display: flex;
     flex: 1;
     justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important
 }
 
 
     .proepm-pop-stage-container > .proepm-pop-stage {
         flex: 1;
-        padding: 5px;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        margin: 0 3px;
     }
 
     .proepm-pop-stage > .proepm-stage2 {
@@ -2313,6 +2321,8 @@ th {
     display: flex;
     flex: 1;
     justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 
@@ -2322,10 +2332,11 @@ th {
     }
 
 .proepm-pop-title {
+    font-size: 12px !important;
     width: 80px;
     border: 1px solid #cac8c2;
-    border-radius: 5px;
-    text-align: center;
+    padding: 10px 0;
+    text-align: right;
 }
 
 .proepm-pop-activities > .proepm-pop-activity {
@@ -2359,11 +2370,7 @@ th {
     padding: 12px 5px;
 }
 
-.box-transform .proepm-stage-complete {background-color: transparent !important;}
-.box-transform .proepm-pop-stage .proepm-stage-title {display: flex; align-items: center; justify-content: center; width: 0; height: 0; border: 90px solid transparent; border-bottom: 30px solid #a7fbff; position: relative; top: -50px;}
-.box-transform .proepm-pop-stage .proepm-stage-title:after {content: ''; position: absolute; left: -90px; top: 30px; width: 0; height: 0; border: 90px solid transparent; border-top: 30px solid #a7fbff;}
-.box-transform .proepm-pop-stage .proepm-stage-title .dx-button-text {position: absolute; display: block; left: 50%; top: 20px; transform: translateX(-50%); z-index: 1; white-space: nowrap; text-align: center;}
-.box-transform .proepm-pop-stage-container {flex: 0; margin: 0 auto;}
+
 .proepm-project-info-container {
     display: flex;
     justify-content: flex-start;
@@ -2477,3 +2484,35 @@ th {
 
 
 .dx-popup-content {padding: 0;}
+
+.plan-wrap {width: 100%; display: flex; }
+.plan-wrap li {position: relative; flex: 1; padding: 10px 15px;}
+.plan-wrap li:before {content: ''; display: block; position: absolute; left: 0; top: 50%; width: 1px; height: 30px; background-color: #ddd; transform: translateY(-50%);}
+.plan-wrap li:first-child:before {display: none;}
+.plan-wrap li > div {display: flex; justify-content: space-between;}
+.plan-wrap li > div span {font-size: 12px; line-height: 1.5;}
+.plan-wrap li > div span.tit {color: #767676;}
+.plan-wrap li > div span.date {color: #222; font-weight: 500;}
+
+.appr-wrap {width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
+.appr-wrap li {width: 100px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.appr-wrap li span {}
+.appr-wrap li .tit {font-weight: 700; font-size: 13px;}
+.appr-wrap li .pass {margin-top: 5px; font-size: 12px; border-radius: 20px; padding: 3px; border: 4px solid #767676;}
+.appr-wrap li .pass.appr {padding: 3px 10px; border: 4px solid #084897;}
+
+.box-wrap {width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
+.box-wrap li {width: 100px; height: 80px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.box-wrap li > div {display: flex; align-items: center; justify-content: center; width: 0; height: 0; border: 90px solid transparent; border-bottom: 30px solid #eee; position: relative; top: -80px;}
+.box-wrap li > div:after {content: ''; position: absolute; left: -90px; top: 30px; width: 0; height: 0; border: 90px solid transparent; border-top: 30px solid #eee;}
+.box-wrap li > div span {position: absolute; display: block; left: 50%; top: 20px; font-size: 15px; font-weight: 700; transform: translateX(-50%); z-index: 1; white-space: nowrap; text-align: center;}
+.box-wrap li.appr > div {display: flex; align-items: center; justify-content: center; width: 0; height: 0; border: 90px solid transparent; border-bottom: 30px solid #084897; color: #fff; position: relative; top: -80px;}
+.box-wrap li.appr > div:after {content: ''; position: absolute; left: -90px; top: 30px; width: 0; height: 0; border: 90px solid transparent; border-top: 30px solid #084897;}
+
+.proepm-pop-treeview .proepm-activity .proepm-pop-rej:before {content: 'U'; display: block; position: absolute; top: 0; left: 0; width: 15px; height: 15px; line-height: 14px; font-size: 10px; font-weight: 500; text-align: center; color: #ffffff; background-color: #222; border: none; border-radius: 0;}
+
+
+
+
+
+
