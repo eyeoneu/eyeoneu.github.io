@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project list</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    <script>
+        var projectList = [{
+            "ID": 1,
+            "No": 1,
+            "Project code": "A31G226",
+            "Tech name": "LF6",
+            "Customer": "삼성",
+            "Type": "Platform",
+            "Description": "전자담배향 GP MCU",
+            "Delay day": "608",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "PCS설계팀"
+        }, {
+            "ID": 2,
+            "No": 2,
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "Ready",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
+        }, {
+            "ID": 3,
+            "No": 3,
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "Ready",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
+        }, {
+            "ID": 4,
+            "No": 4,
+            "Project code": "A31G226",
+            "Tech name": "LF6",
+            "Customer": "삼성",
+            "Type": "Platform",
+            "Description": "전자담배향 GP MCU",
+            "Delay day": "608",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "PCS설계팀"
+        }, {
+            "ID": 5,
+            "No": 5,
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "664",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
+        }, {
+            "ID": 6,
+            "No": 6,
+            "Project code": "A31G324",
+            "Tech name": "HM13EUP153",
+            "Customer": "현대오트론",
+            "Type": "Derivative",
+            "Description": "전동공구용 SoC개발",
+            "Delay day": "468",
+            "Stage(due dat)": "M4(2020-09-09)",
+            "PL": "곽승호",
+            "Owner team": "APS설계팀"
+        }];
+    </script>
+
+</head>
+<body>
+    <div class="proepm-wrap">
+
+        <div class="proepm-tit-wrap proepm-section-tit">
+            <h2>My Project</h2>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>project list search</caption>
+                    <colgroup>
+                        <col width="10%"><col width="40%"><col width="10%"><col width="40%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Status</th>
+                            <td scope="col">
+                                <div class="proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a1"><label for="a1">All</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a2" checked><label for="a2">Running</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a3"><label for="a3">Hold</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a4"><label for="a4">Completion</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a5"><label for="a5">Drop</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="col">Text Search</th>
+                            <td scope="col">
+                                <div class="proepm-search-wrap proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="text" placeholder="search">
+                                    </div>
+                                    <div id="searchBtn" class="proepm-btn"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div id="gridCont1" class="proepm-tbl-row proepm-tbl-ct fix-tbl"></div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    $("#gridCont1").dxDataGrid({
+        dataSource: projectList,
+        showBorders: true,
+        paging: {
+            pageSize: 10
+        },
+        pager: {
+            showPageSizeSelector: true,
+            allowedPageSizes: [5, 10, 20],
+            showInfo: true
+        },
+        columns: [{dataField: "No", width: 45}, {
+            dataField: "Project code",
+            cellTemplate: function (container, options) {
+                $("<a href='' class='code-link'>")
+                .append(options.value)
+                .appendTo(container);
+            }
+        }, "Tech name", "Customer", {
+            dataField: "Type",
+            width: 80
+        }, "Description", {
+            dataField: "Delay day",
+            width: 80
+        }, "Stage(due dat)", {
+            dataField: "PL",
+            width: 80
+        }, "Owner team"]
+    });
+
+    $("#searchBtn").dxButton({
+        stylingMode: "contained",
+        text: "Search",
+        type: "default"
+    });
+
+</script>

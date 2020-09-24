@@ -24,157 +24,99 @@
     <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
 
-    <script>
-        var approval = [{
-            "ID": 1,
-            "Role": "Drafter",
-            "Name": "정창화",
-            "Status": "Draft",
-            "Date": "2020-02-27 12:53",
-            "Comment": "코멘트영역1"
-        }, {
-            "ID": 2,
-            "Role": "Approver",
-            "Name": "홍지훈",
-            "Status": "Approved",
-            "Date": "2020-02-27 13:07",
-            "Comment": "코멘트영역2"
-        }];
-    
-    </script>
 </head>
 <body>
     <div class="proepm-wrap proepm-pop-wrap">
 
         <div class="proepm-tit-wrap proepm-pop-tit">
-            <h1>Timesheet Excel import</h1>
+            <h1>Project Members</h1>
             <div class="proepm-btn-wrap proepm-btn-rt">
                 <div id="default" class="proepm-btn proepm-btn-md"></div>
             </div>
         </div>
 
-        <div class="proepm-tbl-wrap">
-            <div class="proepm-tbl-col proepm-tbl-grid proepm-tbl-ct">
-                <!-- tr-wrap -->
-                <div class="tr-wrap">
-                    <div class="th-view"><span>Excel import</span></div>
-                    <div class="td-view row-wrap">
-                        <div class="td-row col-wrap col-2">
-                            <div class="th-dep2">Work week</div>
-                            <div class="td-dep2">
-                                <div class="proepm-search-wrap proepm-item-wrap">
-                                    <div class="proepm-item">
-                                        <select name="" id="">
-                                            <option value="">2020</option>
-                                        </select>
-                                    </div>
-                                    <div class="proepm-item">
-                                        <select name="" id="">
-                                            <option value="">W22</option>
-                                        </select>
-                                    </div>
-                                    <span class="date-period">(2020-05-24 ~ 2020-05-30)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="td-row col-wrap col-2">
-                            <div class="th-dep2">File upload</div>
-                            <div class="td-dep2"></div>
-                        </div>
-                    </div>
-                </div> <!-- //tr-wrap -->
-            </div>
-        </div>
-
         <div class="proepm-timesheet-wrap">
-            <div class="proepm-tbl-wrap ">
+            <div class="proepm-tbl-wrap proepm-tbl-ct">
                 <div class="proepm-tbl-row">
                     <table>
                         <caption>time sheet title</caption>
                         <colgroup>
-                            <col><col><col>
+                            <col style="width: 5%;"><col style="width: 10%;"><col><col><col>
                         </colgroup>
                         <thead>
-                            <th>User name</th>
-                            <th>Project code</th>
-                            <th>Project status</th>
-                            <th>BU</th>
-                            <th>W25</th>
+                            <th>No</th>
+                            <th>Function</th>
+                            <th>Team</th>
+                            <th>Name</th>
+                            <th>E-mail</th>
                         </thead>
                         <tbody>
-                            <tr class="tr-total">
-                                <th rowspan="4">정창화</th>
-                                <th colspan="3">Total</th>
-                                <td>40%</td>
+                            <tr>
+                                <td>1</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                             <tr>
-                                <th class="td-alert">SM4175</th>
-                                <th>DEV</th>
-                                <th>LCD</th>
-                                <td>5%</td>
+                                <td>2</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                             <tr>
-                                <th>SM4176</th>
-                                <th>DEV</th>
-                                <th>OLED</th>
-                                <td>5%</td>
+                                <td>3</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                             <tr>
-                                <th>SM4177</th>
-                                <th>MP</th>
-                                <th>LCD</th>
-                                <td>5%</td>
-                            </tr>
-                            <tr class="tr-total tr-alert">
-                                <th rowspan="3">정창화</th>
-                                <th colspan="3">Total</th>
-                                <td>40%</td>
+                                <td>4</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                             <tr>
-                                <th>SM4176</th>
-                                <th>DEV</th>
-                                <th>OLED</th>
-                                <td>5%</td>
+                                <td>5</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                             <tr>
-                                <th>OLED</th>
-                                <th>-</th>
-                                <th>-</th>
-                                <td>5%</td>
-                            </tr>
-                            <tr class="tr-total">
-                                <th rowspan="4">정창화</th>
-                                <th colspan="3">Total</th>
-                                <td>40%</td>
+                                <td>6</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                             <tr>
-                                <th>SM4175</th>
-                                <th>DEV</th>
-                                <th>LCD</th>
-                                <td>5%</td>
-                            </tr>
-                            <tr>
-                                <th>SM4176</th>
-                                <th>DEV</th>
-                                <th>OLED</th>
-                                <td>5%</td>
-                            </tr>
-                            <tr>
-                                <th>SM4177</th>
-                                <th>MP</th>
-                                <th>LCD</th>
-                                <td>5%</td>
+                                <td>7</td>
+                                <td>PL</td>
+                                <td>PCS Cev Team</td>
+                                <td>jeongyong lee</td>
+                                <td>
+                                    <a href="mailto:jeongyong lee@abov.co.kr">jeongyong lee@abov.co.kr</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-
-        <div class="proepm-btn-wrap">
-            <div class="proepm-btn-wrap proepm-btn-rt">
-                <div id="default17" class="proepm-btn proepm-btn-md"></div>
-                <div id="normal17" class="proepm-btn proepm-btn-md"></div>
             </div>
         </div>
     </div>
@@ -182,37 +124,9 @@
 </html>
 
 <script>
-    $("#approvalInner").dxDataGrid({
-        dataSource: approval,
-        showBorders: true,
-        columns: ["Role", "Name", "Status", "Date", "Comment"]
-    });
-
-    $("#approvalBtn").dxButton({
-        stylingMode: "contained",
-        text: "Set approval Line",
-        type: "normal"
-    });
-
-    $("#uploadBtn").dxButton({
-        stylingMode: "contained",
-        text: "Select File",
-        type: "normal"
-    });
-
-    $("#normal17").dxButton({
-		stylingMode: "contained",
-		text: "Cancel",
-		type: "normal"
-	});
-	$("#default17").dxButton({
-		stylingMode: "contained",
-		text: "Submit",
-		type: "default"
-	});
     $("#default").dxButton({
 		stylingMode: "contained",
-		text: "Excel template download",
+		text: "Membership Approval Request",
 		type: "default"
 	});
 
