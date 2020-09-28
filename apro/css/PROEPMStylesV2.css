@@ -34,7 +34,8 @@ caption {visibility:hidden; overflow:hidden; width:1px; height:1px; font-size:0;
 .proepm-delay-d {background-color: #f26067; color: #fff;} 
 .proepm-delay-e {background-color: #084897; color: #fff;} 
 .proepm-delay-f {background-color: #696a6c; color: #fff;} 
-
+.proepm-delay-g {background-color: #000; color: #fff;} 
+.proepm-delay-g .status-txt {background-color: rgba(255, 255, 255, 0.2) !important;}
 /* 
 .proepm-delay-a {background-color: #65f8ff; color: #222;}
 .proepm-delay-b {background-color: #4dff37; color: #222;}
@@ -197,7 +198,7 @@ div[class*="wrap"] {position: relative;}
 .proepm-section-wrap.section-grid-3 > ul > li {width: 32.5%; min-width: 320px;}
 .proepm-section-wrap.section-grid-4 > ul > li {width: 24%; min-width: 238px;}
 .proepm-tit-wrap {display: flex; align-items: center;}
-.proepm-tit-wrap .status-txt {padding: 5px 15px; font-size: 13px; background-color: #222; color: #fff; border-radius: 0 5px 5px 0;}
+.proepm-tit-wrap .status-txt {padding: 5px 15px; font-size: 13px; background-color: rgba(0,0,0,0.6); color: #fff; border-radius: 0 5px 5px 0;}
 .proepm-tit-wrap .proepm-btn-rt {align-items: center;}
 
 .proepm-section-tit {display: flex; justify-content: flex-end; padding: 0 0 10px;}
