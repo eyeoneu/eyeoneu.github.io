@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project view (Project list)</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    <script>
+        var projectList = [{
+            "ID": 1,
+            "No": 1,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 2,
+            "No": 2,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 3,
+            "No": 3,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+        }, {
+            "ID": 4,
+            "No": 4,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }, {
+            "ID": 5,
+            "No": 5,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+        }, {
+            "ID": 6,
+            "No": 6,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 7,
+            "No": 7,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 8,
+            "No": 8,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }, {
+            "ID": 9,
+            "No": 9,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 10,
+            "No": 10,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 11,
+            "No": 11,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 12,
+            "No": 12,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }];
+    </script>
+
+</head>
+<body>
+    <div class="proepm-wrap">
+        
+        <div class="proepm-project-status-content">
+            <div class="proepm-project-status proepm-status-delay">
+                <div class="icon-signal">
+                    <i class="fa fa-clock-o fa-2x"></i>
+                </div>
+                <div class="proepm-status-tit">
+                    <span id="lblProjCode">delay</span>
+                    <span>MTV0</span>
+                </div>
+                <div class="proepm-btn-wrap proepm-btn-full">
+                    <div class="proepm-btn-wrap proepm-btn-lt">
+                        <div id="btnProjectStatus2" class="proepm-btn proepm-status-now"></div>
+                        <div id="btnProjectProposal2" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnProjectMember2" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnIssues2" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                    <div class="proepm-btn-wrap proepm-btn-rt">
+                        <div id="btnTreeView2" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proepm-project-status-content">
+            <div class="proepm-project-status proepm-status-normal">
+                <div class="icon-signal">
+                    <i class="fa fa-check-circle fa-2x"></i>
+                </div>
+                <div class="proepm-status-tit">
+                    <span id="lblProjCode">normal</span>
+                    <span>MTV0</span>
+                </div>
+                <div class="proepm-btn-wrap proepm-btn-full">
+                    <div class="proepm-btn-wrap proepm-btn-lt">
+                        <div id="btnProjectStatus1" class="proepm-btn proepm-status-now"></div>
+                        <div id="btnProjectProposal1" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnProjectMember1" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnIssues1" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                    <div class="proepm-btn-wrap proepm-btn-rt">
+                        <div id="btnTreeView1" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proepm-project-status-content">
+            <div class="proepm-project-status proepm-status-risk">
+                <div class="icon-signal">
+                    <i class="fa fa-exclamation-triangle fa-2x"></i>
+                </div>
+                <div class="proepm-status-tit">
+                    <span id="lblProjCode">risk</span>
+                    <span>MTV0</span>
+                </div>
+                <div class="proepm-btn-wrap proepm-btn-full">
+                    <div class="proepm-btn-wrap proepm-btn-lt">
+                        <div id="btnProjectStatus3" class="proepm-btn proepm-status-now"></div>
+                        <div id="btnProjectProposal3" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnProjectMember3" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnIssues3" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                    <div class="proepm-btn-wrap proepm-btn-rt">
+                        <div id="btnTreeView3" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proepm-project-status-content">
+            <div class="proepm-project-status proepm-status-normal">
+                <div class="icon-signal">
+                    <i class="fa fa-check-circle fa-2x"></i>
+                </div>
+                <div class="proepm-status-tit">
+                    <span id="lblProjCode">normal</span>
+                    <span>MTV0</span>
+                </div>
+                <div class="proepm-btn-wrap proepm-btn-full">
+                    <div class="proepm-btn-wrap proepm-btn-lt">
+                        <div id="btnProjectStatus4" class="proepm-btn proepm-status-now"></div>
+                        <div id="btnProjectProposal4" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnProjectMember4" class="proepm-btn proepm-btn-md"></div>
+                        <div id="btnIssues4" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                    <div class="proepm-btn-wrap proepm-btn-rt">
+                        <div id="btnTreeView4" class="proepm-btn proepm-btn-md"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proepm-project-view">
+            <div class="proepm-tbl-wrap">
+                <div class="proepm-tbl-col proepm-tbl-basic">
+                    <table>
+                        <caption>project list search</caption>
+                        <colgroup>
+                            <col width="10%"><col width="40%"><col width="10%"><col width="40%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">Segment</th>
+                                <td scope="col">
+                                    <div class="proepm-item-wrap">
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="a1"><label for="a1">All</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="a2"><label for="a2">Mobile</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="a3"><label for="a3">OLED</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="a4"><label for="a4">LCD</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="a5"><label for="a5">Audio</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="col">Project definition</th>
+                                <td scope="col">
+                                    <div class="proepm-item-wrap">
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b1"><label for="b1">All</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b2"><label for="b2">Product</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b3"><label for="b3">IP</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b4"><label for="b4">Automotive</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b5"><label for="b5">Others</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Project type</th>
+                                <td>
+                                    <div class="proepm-item-wrap">
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b1"><label for="b1">All</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b2"><label for="b2">Platform</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b3"><label for="b3">Derivative</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b4"><label for="b4">Option</label>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="checkbox" id="b5"><label for="b5">IP</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>Design team</th>
+                                <td>
+                                    <div class="proepm-item proepm-item-full">
+                                        <select name="" id="">
+                                            <option value="">Select design team</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Phase</th>
+                                <td>
+                                    <div class="proepm-item proepm-item-full">
+                                        <select name="" id="">
+                                            <option value="">Select Phase</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>Status</th>
+                                <td>
+                                    <div class="proepm-item proepm-item-full">
+                                        <select name="" id="">
+                                            <option value="">Select Status</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Text search</th>
+                                <td colspan="3">
+                                    <div class="proepm-search-wrap proepm-item-wrap">
+                                        <div class="proepm-item">
+                                            <select name="" id="">
+                                                <option value="">Select Status</option>
+                                            </select>
+                                        </div>
+                                        <div class="proepm-item">
+                                            <input type="text" placeholder="search">
+                                        </div>
+                                        <div id="searchBtn" class="proepm-btn"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="proepm-kpi-wrap">
+                <div class="proepm-kpi-item">
+                    <div class="proepm-kpi-tit">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        <div>Profitability(3years)</div>
+                    </div>
+                    <div class="proepm-kpi-cont">
+                        <dl>
+                            <dt>Revenue:</dt>
+                            <dd>$25.9M</dd>
+                        </dl>
+                        <dl>
+                            <dt>GrossMargin:</dt>
+                            <dd>20.3%</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="proepm-kpi-item">
+                    <div class="proepm-kpi-tit">
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        <div>Quality target</div>
+                    </div>
+                    <div class="proepm-kpi-cont">
+                        <dl>
+                            <dt>Defective rate:</dt>
+                            <dd>10ppm</dd>
+                        </dl>
+                        <dl>
+                            <dt>Yield:</dt>
+                            <dd>98%</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proepm-work-flow">
+            <div class="proepm-stage-vertical"></div>
+            <div class="proepm-svg-flow-container"></div>
+            <div class="proepm-activity-wrap">
+                <div class="proepm-activity-info">
+                    <div class="proepm-activity-container">
+                        <div class="proepm-activity-deliverables">
+                            <span>Deliverables</span>
+                        </div>
+                        <div class="proepm-activity-box">
+                            <ul>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="proepm-activity-info">
+                    <div class="proepm-activity-container">
+                        <div class="proepm-activity-deliverables">
+                            <span>Additional</span>
+                        </div>
+                        <div class="proepm-activity-box">
+                            <ul>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="proepm-activity-container">
+                        <div class="proepm-activity-deliverables">
+                            <span>Others</span>
+                            <i class="fa fa-plus-square"></i>
+                        </div>
+                        <div class="proepm-activity-box">
+                            <ul>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                                <li>Development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $("#btnProjectStatus1").dxButton({
+        stylingMode: "Outlined",
+        text: "Running",
+        type: "normal"
+    });
+    $("#btnProjectProposal1").dxButton({
+        icon: 'fa fa-wpforms',
+        stylingMode: "contained",
+        text: "Project proposal",
+        type: "default"
+    });
+    $("#btnProjectMember1").dxButton({
+        icon: 'fa fa-users',
+        stylingMode: "contained",
+        text: "Project member",
+        type: "default"
+    });
+    $("#btnIssues1").dxButton({
+        icon: 'fa fa-exclamation-circle',
+        stylingMode: "contained",
+        text: "Issues",
+        type: "default"
+    });
+    $("#btnTreeView1").dxButton({
+        icon: 'fa fa-list-ul',
+        stylingMode: "contained",
+        text: "Tree view",
+        type: "default"
+    });
+
+    $("#btnProjectStatus2").dxButton({
+        stylingMode: "Outlined",
+        text: "Hold",
+        type: "normal"
+    });
+    $("#btnProjectProposal2").dxButton({
+        icon: 'fa fa-wpforms',
+        stylingMode: "contained",
+        text: "Project proposal",
+        type: "default"
+    });
+    $("#btnProjectMember2").dxButton({
+        icon: 'fa fa-users',
+        stylingMode: "contained",
+        text: "Project member",
+        type: "default"
+    });
+    $("#btnIssues2").dxButton({
+        icon: 'fa fa-exclamation-circle',
+        stylingMode: "contained",
+        text: "Issues",
+        type: "default"
+    });
+    $("#btnTreeView2").dxButton({
+        icon: 'fa fa-list-ul',
+        stylingMode: "contained",
+        text: "Tree view",
+        type: "default"
+    });
+
+    $("#btnProjectStatus3").dxButton({
+        stylingMode: "Outlined",
+        text: "Drop",
+        type: "normal"
+    });
+    $("#btnProjectProposal3").dxButton({
+        icon: 'fa fa-wpforms',
+        stylingMode: "contained",
+        text: "Project proposal",
+        type: "default"
+    });
+    $("#btnProjectMember3").dxButton({
+        icon: 'fa fa-users',
+        stylingMode: "contained",
+        text: "Project member",
+        type: "default"
+    });
+    $("#btnIssues3").dxButton({
+        icon: 'fa fa-exclamation-circle',
+        stylingMode: "contained",
+        text: "Issues",
+        type: "default"
+    });
+    $("#btnTreeView3").dxButton({
+        icon: 'fa fa-list-ul',
+        stylingMode: "contained",
+        text: "Tree view",
+        type: "default"
+    });
+
+    $("#btnProjectStatus4").dxButton({
+        stylingMode: "Outlined",
+        text: "Completion",
+        type: "normal"
+    });
+    $("#btnProjectProposal4").dxButton({
+        icon: 'fa fa-wpforms',
+        stylingMode: "contained",
+        text: "Project proposal",
+        type: "default"
+    });
+    $("#btnProjectMember4").dxButton({
+        icon: 'fa fa-users',
+        stylingMode: "contained",
+        text: "Project member",
+        type: "default"
+    });
+    $("#btnIssues4").dxButton({
+        icon: 'fa fa-exclamation-circle',
+        stylingMode: "contained",
+        text: "Issues",
+        type: "default"
+    });
+    $("#btnTreeView4").dxButton({
+        icon: 'fa fa-list-ul',
+        stylingMode: "contained",
+        text: "Tree view",
+        type: "default"
+    });
+
+    $("#searchBtn").dxButton({
+        stylingMode: "contained",
+        text: "Search",
+        type: "default"
+    });
+   
+</script>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Silicon mitus Makeup</title>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" type="text/css" href="../css/PROEPMStylesV2.css">
+    <link rel="stylesheet" type="text/css" href="wsg.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    <script type="text/javascript" src="wsg.js"></script>
+</head>
+<body>
+
+<!-- WRAP -->
+<div id="wrap" class="wsg">
+    <!-- HEADER -->
+    <div id="header">
+        <div class="header-wrap">
+            <h1></h1>
+    
+            <div id="allMenu" class="gnb-menu">
+                <a href="#" class="open-menu">
+                    <span class="line-01"></span>
+                    <span class="line-02"></span>
+                    <span class="line-03"></span>
+                </a>
+            </div>
+            <div class="gnb">
+                <div class="gnb-wrap">
+                    <h3>PROGRESS</h3>
+                    <ul>
+                        <li><a href="markup.html">markup</a></li>
+                    </ul>
+                    <h3>UI LIBRARY</h3>
+                    <ul>
+                         <li><a href="button.html">button (ing)</a></li>
+                        <li><a href="table.html">table (ing)</a></li>
+                        <li><a href="etc.html">etc (ing)</a></li>
+                        <li><a href="">form</a></li>
+                        <li><a href="">fieldset</a></li>
+                        <li><a href="">tab</a></li>
+                        <li><a href="">popup</a></li>
+                    </ul>
+                    <a href="javascript:void(0);" class="btn-close"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HEADER -->
+<!-- CONTENT -->
+<section id="container">
+    <h2>MARKUP LIST</h2>
+    <!-- section -->
+    <section class="section">
+        <h2>진행상황</h2>
+        <p class="summary"><strong>진행상황 표현 : </strong>미정, 진행, 완료, 검수, 삭제</p>
+        <div class="table-wrap">
+            <table id="progressList" class="data-table wsg">
+                <caption>진행상황</caption>
+                <colgroup>
+                    <col style="width: 80px">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width: 110px;">
+                    <col style="width: 110px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">1 Depth</th>
+                        <th scope="col">2 Depth</th>
+                        <th scope="col">3 Depth</th>
+                        <th scope="col">FOLDER</th>
+                        <th scope="col">PAGE ID</th>
+                        <th scope="col">완료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>dashboard</td>
+                        <td></td>
+                        <td></td>
+                        <td>page</td>
+                        <td class="state">dashboard</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project view (Project list)</td>
+                        <td></td>
+                        <td></td>
+                        <td>page</td>
+                        <td class="state">page06</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project Registration</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup07</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project Registration (Set approval Line)</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup08</td>
+                        <td class="state">미정</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project view (Project detail)</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup09</td>
+                        <td class="state">진행</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project proposal</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup10</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Engineering review</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup11</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>OPS review</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup13</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Profitability assessment</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup14</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project feasibility review (Phase pass mailing)</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup16</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project feasibility review (Phase pass request)</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup17</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Project membership change</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup19</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Issue registration</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup20</td>
+                        <td class="state">완료</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Document registration</td>
+                        <td></td>
+                        <td></td>
+                        <td>popup</td>
+                        <td class="state">popup21</td>
+                        <td class="state">완료</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- //section -->
+</section>
+<!-- // CONTENT -->
+</div>
+<!-- // WRAP -->
+</body>
+</html>

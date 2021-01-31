@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPS review</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+
+    <script>
+        var approval = [{
+            "ID": 1,
+            "Role": "Drafter",
+            "Name": "정창화",
+            "Status": "Draft",
+            "Date": "2020-02-27 12:53",
+            "Comment": "코멘트영역1"
+        }, {
+            "ID": 2,
+            "Role": "Approver",
+            "Name": "홍지훈",
+            "Status": "Approved",
+            "Date": "2020-02-27 13:07",
+            "Comment": "코멘트영역2"
+        }];
+    
+    </script>
+</head>
+<body>
+    <div class="proepm-wrap proepm-pop-wrap">
+
+        <div class="proepm-tit-wrap proepm-pop-tit">
+            <h1>OPS review</h1>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col proepm-tbl-grid">
+                <!-- tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view">
+                        <div class="th-wrap">
+                            <div class="th-txt"><span>Approval</span></div>
+                            <div class="th-btn proepm-btn" id="approvalBtn"></div>
+                        </div>
+                    </div>
+                    <div class="td-view">
+                        <div id="approvalInner" class="proepm-tbl-row proepm-tbl-ct proepm-tbl-inner"></div>
+                    </div>
+                </div> <!-- //tr-wrap -->
+            </div>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col proepm-tbl-grid proepm-tbl-ct">
+                <!-- tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view">
+                        <div class="th-wrap">
+                            <span>COM Estimation</span>
+                        </div>
+                    </div>
+                    <div class="td-view">
+                        <div class="proepm-tbl-wrap">
+                            <div class="proepm-tbl-col proepm-tbl-inner proepm-tbl-input proepm-tbl-ct">
+                                <table>
+                                    <colgroup>
+                                        <col><col><col><col><col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="tr-tit">
+                                            <th>title</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                        </tr>
+                                        <tr>
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr>
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr>
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                        <tr class="tr-total">
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                        <tr class="tr-total">
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr class="tr-total">
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- //tr-wrap -->
+                <!-- tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view">
+                        <div class="th-wrap">
+                            <span>GM% Estimation</span>
+                        </div>
+                    </div>
+                    <div class="td-view">
+                        <div class="proepm-tbl-wrap">
+                            <div class="proepm-tbl-col proepm-tbl-inner proepm-tbl-input proepm-tbl-ct">
+                                <table>
+                                    <colgroup>
+                                        <col><col><col><col><col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="tr-tit">
+                                            <th>title</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                        </tr>
+                                        <tr>
+                                            <th>title</th>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                        <tr>
+                                            <th>title</th>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                        <tr>
+                                            <th>title</th>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                        <tr class="tr-total">
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- //tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view">
+                        <div class="th-wrap">
+                            <span>NRE Estimation</span>
+                        </div>
+                    </div>
+                    <div class="td-view">
+                        <div class="proepm-tbl-wrap">
+                            <div class="proepm-tbl-col proepm-tbl-inner proepm-tbl-input proepm-tbl-ct">
+                                <table>
+                                    <colgroup>
+                                        <col><col><col><col><col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="tr-tit">
+                                            <th>title</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                            <th>abc</th>
+                                        </tr>
+                                        <tr class="tr-total">
+                                            <th>title</th>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr>
+                                            <th>title</th>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr>
+                                            <th>title</th>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr>
+                                            <th>title</th>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                            <td class="td-input">abc</td>
+                                        </tr>
+                                        <tr class="tr-total">
+                                            <td>title</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                            <td>abc</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- //tr-wrap -->
+                <!-- tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view"><span>Key Note</span></div>
+                    <div class="td-view">
+                        <div class="proepm-item proepm-item-full">
+                            <textarea name="" id="" cols="30" rows="5">SCM, COM 상 Challnege, COM 개선 방안 등</textarea>
+                        </div>
+                    </div>
+                </div> <!-- //tr-wrap -->
+            </div>
+        </div>
+
+        <div class="proepm-btn-wrap">
+            <div class="proepm-btn-wrap proepm-btn-rt">
+                <div id="default17" class="proepm-btn proepm-btn-md"></div>
+                <div id="normal17" class="proepm-btn proepm-btn-md"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $("#approvalInner").dxDataGrid({
+        dataSource: approval,
+        showBorders: true,
+        columns: ["Role", "Name", "Status", "Date", "Comment"]
+    });
+
+    $("#approvalBtn").dxButton({
+        stylingMode: "contained",
+        text: "Set approval Line",
+        type: "normal"
+    });
+
+    $("#uploadBtn").dxButton({
+        stylingMode: "contained",
+        text: "Select File",
+        type: "normal"
+    });
+
+    $("#normal17").dxButton({
+		stylingMode: "contained",
+		text: "Cancel",
+		type: "normal"
+	});
+	$("#default17").dxButton({
+		stylingMode: "contained",
+		text: "Submit",
+		type: "default"
+	});
+
+</script>
