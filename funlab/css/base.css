@@ -1,0 +1,83 @@
+@charset "utf-8";
+@font-face {
+    font-family: "NanumSquareRound";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/NanumSquareRoundL.eot"), /* IE9 Compat Modes */
+      url("../font/NanumSquareRoundL.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../font/NanumSquareRoundL.woff2") format("woff2"), /* Modern Browsers */
+      url("../font/NanumSquareRoundL.woff") format("woff"), /* Modern Browsers */
+      url("../font/NanumSquareRoundL.ttf") format("truetype"); /* Safari, Android, iOS */
+  }
+  @font-face {
+    font-family: "NanumSquareRound";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/NanumSquareRoundR.eot"), /* IE9 Compat Modes */
+      url("../font/NanumSquareRoundR.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../font/NanumSquareRoundR.woff2") format("woff2"), /* Modern Browsers */    
+      url("../font/NanumSquareRoundR.woff") format("woff"), /* Modern Browsers */
+      url("../font/NanumSquareRoundR.ttf") format("truetype"); /* Safari, Android, iOS */
+  }
+  @font-face {
+    font-family: "NanumSquareRound";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/NanumSquareRoundB.eot"), /* IE9 Compat Modes */
+      url("../font/NanumSquareRoundB.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../font/NanumSquareRoundB.woff2") format("woff2"), /* Modern Browsers */
+      url("../font/NanumSquareRoundB.woff") format("woff"), /* Modern Browsers */
+      url("../font/NanumSquareRoundB.ttf") format("truetype"); /* Safari, Android, iOS */
+  }
+  @font-face {
+    font-family: "NanumSquareRound";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../font/NanumSquareRoundEB.eot"), /* IE9 Compat Modes */
+      url("../font/NanumSquareRoundEB.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../font/NanumSquareRoundEB.woff2") format("woff2"), /* Modern Browsers */
+      url("../font/NanumSquareRoundEB.woff") format("woff"), /* Modern Browsers */
+      url("../font/NanumSquareRoundEB.ttf") format("truetype"); /* Safari, Android, iOS */
+  }
+
+/* Base Style */
+/* 모든 요소 공간 0, 서체 크기 100%, 세로정렬 baseline, 배경색 투명 */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; /* outline:0; */ border:0; font-size:100%; vertical-align:baseline;}
+input, select, textarea, button {margin:0; padding:0; font-size:100%;}
+em, address {font-style:normal;}
+
+/* HTML5 새 요소 초기화 */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {display:block;}
+
+/* 본문 기본 설정 */
+html { font-size:100%; }
+body { font:100%/1.2 'NanumSquareRound', AppleGothic, '돋움', 'Dotum', sans-serif; }
+input, button, select, textarea { font-family:'NanumSquareRound'; }
+
+ol, ul { list-style: none; }
+legend { position:absolute; left:0; top:0; width:1px; height:1px; text-indent:-10000px; overflow:hidden; }
+button, input, select {border-radius:0;-webkit-appearance:none;  -moz-appearance:none;}
+input, select, textarea {vertical-align:middle;}
+h1, h2, h3, h4, h5, h6 {font-size:1rem;}
+h1 img, h2 img, h3 img,	h4 img, h5 img, h6 img {margin: 0;}
+img, fieldset {border:0 none;}
+img {vertical-align:top; max-width:100%;}
+hr { display: none; }
+button {text-transform: none; vertical-align: middle; border: 0 none; background-color: transparent; cursor: pointer; }
+
+a:link, a:visited {text-decoration:none;}
+a:focus { text-decoration:underline; }
+a:hover, a:active { text-decoration:none;}
+a img {border:0;padding:0;}
+:focus { outline:1px dotted #777; }
+
+.skip-navi {}
+.skip-navi a {}

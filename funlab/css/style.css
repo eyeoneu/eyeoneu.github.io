@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+#wrap {}
+#wrap.main {}
+
+header {}
+.header-wrap {}
+.header-wrap h1.logo {}
+.header-wrap .util {}
+.header-wrap .util a {}
+.header-wrap .util a[class*="menu"] {}
+.header-wrap .util a.icon {}
+.header-wrap .ico-gnb {}
+.header-wrap .ico-gnb span {}
+.header-wrap nav {}
+.header-wrap nav .gnb {}
+.header-wrap nav .gnb li {}
+.header-wrap nav .gnb li a {}
+.header-wrap nav .gnb li a span {}
+
+main {}
+main section {}
+
+main .slide {}
+main .slide article {}
+main .slide article .txt-wrap {}
+main .slide article .txt-wrap p {}
+main .slide article .txt-wrap p.txt {}
+main .slide article .txt-wrap p.desc {}
+main .slide article .txt-wrap p.btn {}
+main .slide article .img-wrap {}
+main .slide article .img-wrap img {}
+
+main .program {}
+main .program article {}
+main .program article .txt-wrap {}
+main .program article .txt-wrap p {}
+main .program article .txt-wrap p.txt {}
+main .program article .txt-wrap p.desc {}
+main .program article .txt-wrap p.btn {}
+main .program article .img-wrap {}
+main .program article .img-wrap img {}
+
+footer {}
+.footer-wrap {}
+.footer-wrap h2.logo{}
+.footer-wrap .footer-info {}
+.footer-wrap .footer-info span {}
+.footer-wrap p.copy {}
+
+
+
+
+
+@media only screen and (max-width: 1040){
+
+
+}
+
+
+@media only screen and (max-width: 768){
+
+
+}
