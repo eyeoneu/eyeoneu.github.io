@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Silicon mitus Makeup</title>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" type="text/css" href="../css/PROEPMStylesV2.css">
+    <link rel="stylesheet" type="text/css" href="wsg.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    <script type="text/javascript" src="wsg.js"></script>
+    <script>
+        var approval = [{
+            "ID": 1,
+            "Role": "Drafter",
+            "Name": "정창화",
+            "Status": "Draft",
+            "Date": "2020-02-27 12:53",
+            "Comment": "코멘트영역1"
+        }, {
+            "ID": 2,
+            "Role": "Approver",
+            "Name": "홍지훈",
+            "Status": "Approved",
+            "Date": "2020-02-27 13:07",
+            "Comment": "코멘트영역2"
+        }];
+        
+        var projectList = [{
+            "ID": 1,
+            "No": 1,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 2,
+            "No": 2,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 3,
+            "No": 3,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 4,
+            "No": 4,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 5,
+            "No": 5,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 6,
+            "No": 6,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 7,
+            "No": 7,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 8,
+            "No": 8,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 9,
+            "No": 9,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 10,
+            "No": 10,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 11,
+            "No": 11,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }, {
+            "ID": 12,
+            "No": 12,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Design team": "LCD Design Group1",
+            "PM/PL": "이용현",
+            "Application": "Charger",
+            "Project definition": "Product",
+            "Project type": "Platform",
+            "Phase(Plan date)": "P1 (2020-03-02)",
+            "Status": "Running"
+        }];
+        var resources = [{
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    },{
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }, {
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }, {
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }, {
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }, {
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }, {
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }, {
+        "Function": "PL",
+        "Group": "LCD Design 1 Group",
+        "Name": "박기태",
+        "Title": "이사",
+        "Est Man Month": "4.0"
+    }];
+    </script>
+</head>
+<body>
+
+<!-- WRAP -->
+<div id="wrap" class="wsg">
+<!-- HEADER -->
+<div id="header">
+    <div class="header-wrap">
+        <h1></h1>
+
+        <div id="allMenu" class="gnb-menu">
+            <a href="#" class="open-menu">
+                <span class="line-01"></span>
+                <span class="line-02"></span>
+                <span class="line-03"></span>
+            </a>
+        </div>
+        <div class="gnb">
+            <div class="gnb-wrap">
+                <h3>PROGRESS</h3>
+                <ul>
+                    <li><a href="markup.html">markup</a></li>
+                </ul>
+                <h3>UI LIBRARY</h3>
+                <ul>
+                     <li><a href="button.html">button (ing)</a></li>
+                    <li><a href="table.html">table (ing)</a></li>
+                    <li><a href="etc.html">etc (ing)</a></li>
+                    <li><a href="">form</a></li>
+                    <li><a href="">fieldset</a></li>
+                    <li><a href="">tab</a></li>
+                    <li><a href="">popup</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="btn-close"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // HEADER -->
+<!-- CONTENT -->
+<div id="container">
+    <h2>TABLE</h2>
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-row<span>본문 세로형</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-row">
+                <table>
+                    <caption>본문 세로형 & 가운데 정렬</caption>
+                    <colgroup>
+                        <col><col><col>
+                    </colgroup>
+                    <thead>
+                        <th>Segment</th>
+                        <th>Project definition</th>
+                        <th>Project type</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div class="proepm-tbl-row"&gt;
+        &lt;table&gt;
+            &lt;caption&gt;본문 세로형&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col&gt;&lt;col&gt;&lt;col&gt;
+            &lt;/colgroup&gt;
+            &lt;thead&gt;
+                &lt;th&gt;Segment&lt;/th&gt;
+                &lt;th&gt;Project definition&lt;/th&gt;
+                &lt;th&gt;Project type&lt;/th&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-row.proepm-tbl-ct<span>본문 세로형 & 가운데 정렬 / DevExtreme사용</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div id="gridCont1" class="proepm-tbl-row proepm-tbl-ct"></div>
+        </div>
+
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div id="gridCont1" class="proepm-tbl-row proepm-tbl-ct"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-col<span>본문 가로형</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>본문 가로형</caption>
+                    <colgroup>
+                        <col width="10%"><col width="40%"><col width="10%"><col width="40%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Segment</th>
+                            <td scope="col">abc</td>
+                            <th scope="col">Project definition</th>
+                            <td scope="col">abc</td>
+                        </tr>
+                        <tr>
+                            <th>Project type</th>
+                            <td>abc</td>
+                            <th>Design team</th>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <th>Text search</th>
+                            <td colspan="3">abc</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div class="proepm-tbl-col"&gt;
+        &lt;table&gt;
+            &lt;caption&gt;project list search&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col width="10%"&gt;&lt;col width="40%"&gt;&lt;col width="10%"&gt;&lt;col width="40%"&gt;
+            &lt;/colgroup&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th scope="col"&gt;Segment&lt;/th&gt;
+                    &lt;td scope="col"&gt;abc&lt;/td&gt;
+                    &lt;th scope="col"&gt;Project definition&lt;/th&gt;
+                    &lt;td scope="col"&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Project type&lt;/th&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;th&gt;Design team&lt;/th&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Text search&lt;/th&gt;
+                    &lt;td colspan="3"&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-col.proepm-tbl-grid<span>본문 Grid 가로형</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col proepm-tbl-grid proepm-tbl-ct">
+                <!-- tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view"><span>Tentative production spec</span></div>
+                    <div class="td-view row-wrap">
+                        <div class="td-row col-wrap col-4">
+                            <div class="th-dep2">Tech name</div>
+                            <div class="td-dep2">
+                                <span>abc</span>
+                            </div>
+                            <div class="th-dep2">Package</div>
+                            <div class="td-dep2">
+                                <span>abc</span>
+                            </div>
+                        </div>
+                        <div class="td-row col-wrap col-2">
+                            <div class="th-dep2">Reusable IP</div>
+                            <div class="td-dep2">
+                                <span>abc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- //tr-wrap -->
+                <!-- tr-wrap -->
+                <div class="tr-wrap">
+                    <div class="th-view">
+                        <div class="th-wrap">
+                            <div class="th-txt"><span>Engineering resources<br> allocation</span></div>
+                            <div class="th-btn proepm-btn" id="resources"></div>
+                        </div>
+                    </div>
+                    <div class="td-view">
+                        <span>abc</span>
+                    </div>
+                </div> <!-- tr-wrap -->
+            </div>
+        </div>
+        
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div class="proepm-tbl-col proepm-tbl-grid proepm-tbl-ct"&gt;
+        &lt;!-- tr-wrap --&gt;
+        &lt;div class="tr-wrap"&gt;
+            &lt;div class="th-view"&gt;&lt;span&gt;Tentative production spec&lt;/span&gt;&lt;/div&gt;
+            &lt;div class="td-view row-wrap"&gt;
+                &lt;div class="td-row col-wrap col-4"&gt;
+                    &lt;div class="th-dep2"&gt;Tech name&lt;/div&gt;
+                    &lt;div class="td-dep2"&gt;
+                        &lt;span&gt;abc&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="th-dep2"&gt;Package&lt;/div&gt;
+                    &lt;div class="td-dep2"&gt;
+                        &lt;span&gt;abc&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="td-row col-wrap col-2"&gt;
+                    &lt;div class="th-dep2"&gt;Reusable IP&lt;/div&gt;
+                    &lt;div class="td-dep2"&gt;
+                        &lt;span&gt;abc&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt; &lt;!-- //tr-wrap --&gt;
+        &lt;!-- tr-wrap --&gt;
+        &lt;div class="tr-wrap"&gt;
+            &lt;div class="th-view"&gt;
+                &lt;div class="th-wrap"&gt;
+                    &lt;div class="th-txt"&gt;&lt;span&gt;Engineering resources&lt;br&gt; allocation&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class="th-btn proepm-btn" id="resources"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="td-view"&gt;
+                &lt;span&gt;abc&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt; &lt;!-- tr-wrap --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+        <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-row.proepm-tbl-inner<span>본문 Grid 내부 세로형</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-row proepm-tbl-inner">
+                <table>
+                    <caption>본문 Grid 내부 세로형</caption>
+                    <colgroup>
+                        <col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Kick-off</th>
+                            <th>Circuit (DR1)</th>
+                            <th>Layout (DR2)</th>
+                            <th>Fab out</th>
+                            <th>1st sample out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div class="proepm-tbl-row proepm-tbl-inner"&gt;
+        &lt;table&gt;
+            &lt;caption&gt;본문 내부 세로형&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col&gt;&lt;col&gt;&lt;col&gt;&lt;col&gt;&lt;col&gt;
+            &lt;/colgroup&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Kick-off&lt;/th&gt;
+                    &lt;th&gt;Circuit (DR1)&lt;/th&gt;
+                    &lt;th&gt;Layout (DR2)&lt;/th&gt;
+                    &lt;th&gt;Fab out&lt;/th&gt;
+                    &lt;th&gt;1st sample out&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Kick-off&lt;/th&gt;
+                    &lt;th&gt;Circuit (DR1)&lt;/th&gt;
+                    &lt;th&gt;Layout (DR2)&lt;/th&gt;
+                    &lt;th&gt;Fab out&lt;/th&gt;
+                    &lt;th&gt;1st sample out&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-row.proepm-tbl-inner.proepm-tbl-data.proepm-tbl-ct<span>본문 Grid 내부 세로형 & total & 가운데 정렬</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-row proepm-tbl-inner proepm-tbl-data proepm-tbl-ct">
+                <table>
+                    <caption>본문 Grid 내부 세로형 & total & 가운데 정렬</caption>
+                    <colgroup>
+                        <col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Kick-off</th>
+                            <th>Circuit (DR1)</th>
+                            <th>Layout (DR2)</th>
+                            <th>Fab out</th>
+                            <th>1st sample out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">total</td>
+                            <td>99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div class="proepm-tbl-row proepm-tbl-inner proepm-tbl-data proepm-tbl-ct"&gt;
+        &lt;table&gt;
+            &lt;caption&gt;본문 Grid 내부 세로형 & total & 가운데 정렬&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col&gt;&lt;col&gt;&lt;col&gt;&lt;col&gt;&lt;col&gt;
+            &lt;/colgroup&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Kick-off&lt;/th&gt;
+                    &lt;th&gt;Circuit (DR1)&lt;/th&gt;
+                    &lt;th&gt;Layout (DR2)&lt;/th&gt;
+                    &lt;th&gt;Fab out&lt;/th&gt;
+                    &lt;th&gt;1st sample out&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="4"&gt;total&lt;/td&gt;
+                    &lt;td&gt;99&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-col.proepm-tbl-inner.proepm-tbl-input.proepm-tbl-ct<span>본문 Grid 내부 입력 가로형 & total & 가운데 정렬</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col proepm-tbl-inner proepm-tbl-input proepm-tbl-ct">
+                <table>
+                    <caption>본문 Grid 내부 입력 가로형 & total & 가운데 정렬</caption>
+                    <colgroup>
+                        <col><col><col><col><col>
+                    </colgroup>
+                    <tbody>
+                        <tr class="tr-tit">
+                            <th>title</th>
+                            <th>abc</th>
+                            <th>abc</th>
+                            <th>abc</th>
+                            <th>abc</th>
+                        </tr>
+                        <tr>
+                            <th>title</th>
+                            <td class="td-input">abc</td>
+                            <td class="td-input">abc</td>
+                            <td class="td-input">abc</td>
+                            <td class="td-input">abc</td>
+                        </tr>
+                        <tr>
+                            <th>title</th>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td class="td-input">abc</td>
+                            <td class="td-input">abc</td>
+                        </tr>
+                        <tr>
+                            <th>title</th>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr class="tr-total">
+                            <td>title</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <th>title</th>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                        <tr>
+                            <th>title</th>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                            <td>abc</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div class="proepm-tbl-col proepm-tbl-inner proepm-tbl-input proepm-tbl-ct"&gt;
+        &lt;table&gt;
+            &lt;caption&gt;본문 Grid 내부 가로형 & total & 가운데 정렬&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col&gt;&lt;col&gt;&lt;col&gt;&lt;col&gt;&lt;col&gt;
+            &lt;/colgroup&gt;
+            &lt;tbody&gt;
+                &lt;tr class="tr-tit"&gt;
+                    &lt;th&gt;title&lt;/th&gt;
+                    &lt;th&gt;abc&lt;/th&gt;
+                    &lt;th&gt;abc&lt;/th&gt;
+                    &lt;th&gt;abc&lt;/th&gt;
+                    &lt;th&gt;abc&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;title&lt;/th&gt;
+                    &lt;td class="td-input"&gt;abc&lt;/td&gt;
+                    &lt;td class="td-input"&gt;abc&lt;/td&gt;
+                    &lt;td class="td-input"&gt;abc&lt;/td&gt;
+                    &lt;td class="td-input"&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;title&lt;/th&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td class="td-input"&gt;abc&lt;/td&gt;
+                    &lt;td class="td-input"&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;title&lt;/th&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="tr-total"&gt;
+                    &lt;td&gt;title&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;title&lt;/th&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;title&lt;/th&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                    &lt;td&gt;abc&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+    <!-- section -->
+    <div class="section">
+        <h3>.proepm-tbl-wrap > .proepm-tbl-row.proepm-tbl-inner.proepm-tbl-ct<span>본문 Grid 내부 세로형 & 가운데 정렬 / DevExtreme사용</span></h3>
+        <div class="proepm-tbl-wrap">
+            <div id="approvalInner" class="proepm-tbl-row proepm-tbl-ct proepm-tbl-inner"></div>
+        </div>
+        <!-- markup -->
+        <div class="section markup">
+            <strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-tbl-wrap"&gt;
+    &lt;div id="approvalInner" class="proepm-tbl-row proepm-tbl-ct proepm-tbl-inner"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <!-- //markup -->
+    </div>
+    <!-- //section -->
+
+
+</div>
+<!-- // CONTENT -->
+ 
+</div>
+<!-- // WRAP -->
+</body>
+</html>
+
+<script>
+    $("#gridCont1").dxDataGrid({
+        dataSource: projectList,
+        showBorders: true,
+        paging: {
+            pageSize: 10
+        },
+        pager: {
+            showPageSizeSelector: true,
+            allowedPageSizes: [5, 10, 20],
+            showInfo: true
+        },
+        columns: [{dataField: "No", width: 45}, "Product code", "Segment", "Design team", "PM/PL", "Application", "Project definition", "Project type", "Phase(Plan date)"]
+    });
+
+    $("#approvalInner").dxDataGrid({
+        dataSource: approval,
+        showBorders: true,
+        columns: ["Role", "Name", "Status", "Date", "Comment"]
+    });
+
+    $("#resources").dxButton({
+        stylingMode: "contained",
+        text: "Set resources",
+        type: "normal"
+    });
+
+</script>

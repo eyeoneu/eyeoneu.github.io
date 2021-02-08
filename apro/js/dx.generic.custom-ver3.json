@@ -1,0 +1,73 @@
+{
+    "items": [
+        {
+            "key": "@base-accent",
+            "value": "rgba(43, 59, 77, 1)"
+        },
+        {
+            "key": "@base-text-color",
+            "value": "rgba(41, 41, 41, 1)"
+        },
+        {
+            "key": "@base-success",
+            "value": "rgba(52, 173, 208, 1)"
+        },
+        {
+            "key": "@base-warning",
+            "value": "rgba(249, 164, 73, 1)"
+        },
+        {
+            "key": "@base-danger",
+            "value": "rgba(242, 96, 103, 1)"
+        },
+        {
+            "key": "@base-hover-bg",
+            "value": "rgba(247, 247, 247, 1)"
+        },
+        {
+            "key": "@badge-bg",
+            "value": "rgba(242, 96, 103, 1)"
+        },
+        {
+            "key": "@pager-page-selected-color",
+            "value": "rgba(255, 255, 255, 1)"
+        },
+        {
+            "key": "@pager-page-selected-bg",
+            "value": "rgba(43, 59, 77, 1)"
+        },
+        {
+            "key": "@datagrid-selection-bg",
+            "value": "rgba(238, 241, 246, 1)"
+        },
+        {
+            "key": "@datagrid-row-alternation-bg",
+            "value": "rgba(249, 249, 249, 1)"
+        },
+        {
+            "key": "@datagrid-cell-modified-border-color",
+            "value": "rgba(52, 173, 208, 0.5)"
+        },
+        {
+            "key": "@PIVOTGRID_GRANDTOTALCOLOR",
+            "value": "rgba(238, 241, 246, 1)"
+        },
+        {
+            "key": "@button-normal-border-color",
+            "value": "rgba(221, 221, 221, 1)"
+        },
+        {
+            "key": "@button-group-normal-selected-color",
+            "value": "rgba(41, 41, 41, 1)"
+        },
+        {
+            "key": "@button-group-normal-selected-bg",
+            "value": "rgba(0, 0, 0, 0.17)"
+        }
+    ],
+    "baseTheme": "generic.light.compact",
+    "outputColorScheme": "custom-ver3",
+    "makeSwatch": false,
+    "version": "19.2.6",
+    "widgets": []
+}

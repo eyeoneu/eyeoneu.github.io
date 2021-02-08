@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    
+
+</head>
+<body>
+    <div class="proepm-content-box">
+        <div class="lnb-wrap">
+            <div class="lnb-top">
+                <div class="proepm-btn-wrap proepm-btn-full proepm-btn-1">
+                    <div id="projectBtn1" class="proepm-btn proepm-btn-lg"></div>
+                </div>
+            </div>
+            <ul class="lnb">
+                <li class="depth01">
+                    <a href="#">자주 쓰는 양식</a>
+                    <i class="dx-icon fa fa-pencil-square-o"></i>
+                </li>
+                <li class="depth01"><a href="#">결재하기</a>
+                    <ul>
+                        <li class="depth02"><a href="#">결재 대기 문서</a></li>
+                        <li class="depth02"><a href="#">결재 예정 문서</a></li>
+                        <li class="depth02"><a href="#">결재 완료 문서</a></li>
+                    </ul>
+                </li>
+                <li class="depth01">
+                    <a href="#">개인 문서함</a>
+                    <i class="dx-icon fa fa-cog"></i>
+                    <ul>
+                        <li class="depth02"><a href="#">기안 문서</a></li>
+                        <li class="depth02"><a href="#">완료 문서</a></li>
+                        <li class="depth02"><a href="#">임시 저장함</a></li>
+                    </ul>
+                </li>
+                <li class="depth01">
+                    <a href="#">관리</a>
+                    <i class="dx-icon fa fa-cog"></i>
+                    <ul>
+                        <li class="depth02"><a href="#">코드 관리</a></li>
+                        <li class="depth02"><a href="#">사용자 관리</a></li>
+                        <li class="depth02"><a href="#">결재문서 설정</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="home-wrap">
+            <div class="home-top">
+                <h2>전자결재 홈</h2>
+            </div>
+            <div class="home-card">
+                <div class="card-item">
+                    <div class="card-item-wrap">
+                        <div class="card-tag">
+                            <ul>
+                                <li class="status emergency">
+                                    <span>긴급</span>
+                                </li>
+                                <li class="status ongoing">
+                                    <span>진행중</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-subject">
+                            <span>(신규)연장근무신청-근태관리연동</span>
+                            <i class="dx-icon fa fa-window-restore"></i>
+                        </div>
+                        <div class="card-cont">
+                            <dl>
+                                <dt>기안자 : </dt>
+                                <dd>한성준 과장</dd>
+                            </dl>
+                            <dl>
+                                <dt>기안일 : </dt>
+                                <dd>2021-01-27</dd>
+                            </dl>
+                            <dl>
+                                <dt>결재양식 : </dt>
+                                <dd>(신규)연장근무신청-근태관리연동</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="card-btn">결재하기</div>
+                </div>
+                <div class="card-item">
+                    <div class="card-item-wrap">
+                        <div class="card-tag">
+                            <ul>
+                                <li class="status emergency">
+                                    <span>긴급</span>
+                                </li>
+                                <li class="status ongoing">
+                                    <span>진행중</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-subject">
+                            <span>(신규)연장근무신청-근태관리연동</span>
+                            <i class="dx-icon fa fa-window-restore"></i>
+                        </div>
+                        <div class="card-cont">
+                            <dl>
+                                <dt>기안자 : </dt>
+                                <dd>한성준 과장</dd>
+                            </dl>
+                            <dl>
+                                <dt>기안일 : </dt>
+                                <dd>2021-01-27</dd>
+                            </dl>
+                            <dl>
+                                <dt>결재양식 : </dt>
+                                <dd>(신규)연장근무신청-근태관리연동</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="card-btn">결재하기</div>
+                </div>
+            </div>
+            <div class="home-board">
+                <h3>
+                    <span>기안 진행 문서</span>
+                    <i class="dx-icon fa fa-exclamation-circle"></i>
+                </h3>
+                <div class="approval-list">
+                    <table>
+                        <caption>기안 진행 문서</caption>
+                        <colgroup>
+                            <col width="120"><col width="120"><col width="120"><col width="*"><col width="120"><col width="120">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>기안일</th>
+                                <th>결재양식</th>
+                                <th>긴급</th>
+                                <th>제목</th>
+                                <th>첨부</th>
+                                <th>결재상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2021-01-29</td>
+                                <td>테스트</td>
+                                <td></td>
+                                <td>
+                                    <span>테스트</span>
+                                    <i class="dx-icon fa fa-window-restore"></i>
+                                    <i class="dx-icon fa fa-commenting-o"></i>
+                                    <span class="num">1</span>
+                                    <i class="dx-icon fa fa-sticky-note-o"></i>
+                                    <span class="num">2</span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="status ongoing">진행중</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021-01-29</td>
+                                <td>테스트</td>
+                                <td></td>
+                                <td>
+                                    <span>테스트</span>
+                                    <i class="dx-icon fa fa-window-restore"></i>
+                                    <i class="dx-icon fa fa-commenting-o"></i>
+                                    <span class="num">1</span>
+                                    <i class="dx-icon fa fa-sticky-note-o"></i>
+                                    <span class="num">2</span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="status ongoing">진행중</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021-01-29</td>
+                                <td>테스트</td>
+                                <td></td>
+                                <td>
+                                    <span>테스트</span>
+                                    <i class="dx-icon fa fa-window-restore"></i>
+                                    <i class="dx-icon fa fa-commenting-o"></i>
+                                    <span class="num">1</span>
+                                    <i class="dx-icon fa fa-sticky-note-o"></i>
+                                    <span class="num">2</span>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <span class="status complete">완료</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="home-board">
+                <h3>
+                    <span>완료 문서</span>
+                    <i class="dx-icon fa fa-exclamation-circle"></i>
+                </h3>
+                <div class="approval-list">
+                    <table>
+                        <caption>완료 문서</caption>
+                        <colgroup>
+                            <col width="120"><col width="120"><col width="120"><col width="*"><col width="120"><col width="120"><col width="120">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>기안일</th>
+                                <th>결재양식</th>
+                                <th>긴급</th>
+                                <th>제목</th>
+                                <th>첨부</th>
+                                <th>문서번호</th>
+                                <th>결재상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2021-01-29</td>
+                                <td>테스트</td>
+                                <td></td>
+                                <td>
+                                    <span class="status receive">수신</span>
+                                    <span>테스트</span>
+                                    <i class="dx-icon fa fa-window-restore"></i>
+                                    <i class="dx-icon fa fa-commenting-o"></i>
+                                    <span class="num">1</span>
+                                    <i class="dx-icon fa fa-sticky-note-o"></i>
+                                    <span class="num">2</span>
+                                </td>
+                                <td></td>
+                                <td>다우그룹-2020-00016</td>
+                                <td>
+                                    <span class="status ongoing">진행중</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021-01-29</td>
+                                <td>테스트</td>
+                                <td></td>
+                                <td>
+                                    <span>테스트</span>
+                                    <i class="dx-icon fa fa-window-restore"></i>
+                                    <i class="dx-icon fa fa-commenting-o"></i>
+                                    <span class="num">1</span>
+                                    <i class="dx-icon fa fa-sticky-note-o"></i>
+                                    <span class="num">2</span>
+                                </td>
+                                <td></td>
+                                <td>다우그룹-2020-00016</td>
+                                <td>
+                                    <span class="status ongoing">진행중</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2021-01-29</td>
+                                <td>테스트</td>
+                                <td></td>
+                                <td>
+                                    <span>테스트</span>
+                                    <i class="dx-icon fa fa-window-restore"></i>
+                                    <i class="dx-icon fa fa-commenting-o"></i>
+                                    <span class="num">1</span>
+                                    <i class="dx-icon fa fa-sticky-note-o"></i>
+                                    <span class="num">2</span>
+                                </td>
+                                <td></td>
+                                <td>다우그룹-2020-00016</td>
+                                <td>
+                                    <span class="status complete">완료</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    $("#projectBtn1").dxButton({
+        stylingMode: "contdeained",
+        text: "신규결제",
+        type: "default"
+    });
+</script>
