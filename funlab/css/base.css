@@ -87,3 +87,4 @@ a img {border:0;padding:0;}
 .skip-navi a {display: block; position: absolute; left: 0; top: 0; width: 1px; height: 1px; text-align: center; color: #fff; text-decoration: none; overflow: hidden; z-index: 100;}
 .skip-navi a:focus,
 .skip-navi a:active {padding: 10px 0; width: 100%; height: auto; background: #111; outline: none;}
+.dimmed {position: fixed !important; top: 0 !important; left: 0 !important; width: 100%; min-width: 1200px; height: 100%; background-color: rgba(0,0,0, 0.7); z-index: 9;}
