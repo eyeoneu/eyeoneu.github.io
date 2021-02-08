@@ -1,4 +1,6 @@
 @charset "utf-8";
+  /* 13px=0.82rem / 14px=0.88rem / 15px=0.94rem / 16px=1rem / 17px=1.06rem / 18px=1.12rem / 19px=1.18rem / 20px=1.26rem / 24px=1.5rem  */
+
 @font-face {
     font-family: "NanumSquareRound";
     font-style: normal;
@@ -40,6 +42,7 @@
       url("../font/NanumSquareRoundEB.ttf") format("truetype"); /* Safari, Android, iOS */
   }
 
+
 /* Base Style */
 /* 모든 요소 공간 0, 서체 크기 100%, 세로정렬 baseline, 배경색 투명 */
 html, body, div, span, object, iframe,
@@ -58,8 +61,8 @@ em, address {font-style:normal;}
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {display:block;}
 
 /* 본문 기본 설정 */
-html { font-size:100%; }
-body { font:100%/1.2 'NanumSquareRound', AppleGothic, '돋움', 'Dotum', sans-serif; }
+html {height: 100%; font-size:100%; }
+body {height: 100%; font:100%/1.2 'NanumSquareRound', AppleGothic, '돋움', 'Dotum', sans-serif; letter-spacing: -0.08em;}
 input, button, select, textarea { font-family:'NanumSquareRound'; }
 
 ol, ul { list-style: none; }
@@ -73,11 +76,14 @@ img {vertical-align:top; max-width:100%;}
 hr { display: none; }
 button {text-transform: none; vertical-align: middle; border: 0 none; background-color: transparent; cursor: pointer; }
 
-a:link, a:visited {text-decoration:none;}
-a:focus { text-decoration:underline; }
+a {color: #222;}
+a:link, a:visited, a:focus { text-decoration:none; }
 a:hover, a:active { text-decoration:none;}
 a img {border:0;padding:0;}
-:focus { outline:1px dotted #777; }
+:focus { outline: none;}
 
-.skip-navi {}
-.skip-navi a {}
+.blind {text-indent: 100%; white-space: nowrap; overflow: hidden; color: transparent; font-size: 0;}
+
+.skip-navi a {display: block; position: absolute; left: 0; top: 0; width: 1px; height: 1px; text-align: center; color: #fff; text-decoration: none; overflow: hidden; z-index: 100;}
+.skip-navi a:focus,
+.skip-navi a:active {padding: 10px 0; width: 100%; height: auto; background: #111; outline: none;}
