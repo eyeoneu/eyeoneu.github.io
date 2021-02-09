@@ -15,7 +15,7 @@
     <meta property="og:image" content="">
     <meta property="og:url" content="">
     <meta name="author" content="">
-    <title>Digital 스마트FUN랩</title>
+    <title>Digital 스마트FUN랩 - 로그인</title>
     <!-- <link rel="shortcut icon" type="image/x-icon" href="../images/thumb-favicon.ico" />  -->
 
 	<link rel="stylesheet" href="../css/base.css">
@@ -34,7 +34,7 @@
 </div>
 
 <!-- wrap -->
-<div id="wrap" class="main">
+<div id="wrap" class="sub">
 	
 	<!-- header -->
 	<header>
@@ -65,73 +65,38 @@
 
     <!-- main -->
     <main>
-        <section class="slide-wrap">
-            <div class="slide type01">
-                <article>
-                    <div class="txt-wrap">
-                        <p class="tit">Seniors Go Digital</p>
-                        <p class="desc">최신형 스마트폰을 20대처럼 활용하기 어렵지 않아요!</p>
-                        <a href="#" class="btn lg arrow-lg green">수강신청하기</a>
-                    </div>
-                    <div class="img-wrap">
-                        <img src="../images/thumb-visual.png" alt="슬라이드이미지1">
-                    </div>
-                </article>
-                <article>
-                    <div class="txt-wrap">
-                        <p class="tit">2 Seniors Go Digital</p>
-                        <p class="desc">최신형 스마트폰을 20대처럼 활용하기 어렵지 않아요!</p>
-                        <a href="#" class="btn lg arrow-lg green">수강신청하기</a>
-                    </div>
-                    <div class="img-wrap">
-                        <img src="../images/thumb-visual.png" alt="슬라이드이미지2">
-                    </div>
-                </article>
-                <article>
-                    <div class="txt-wrap">
-                        <p class="tit">3 Seniors Go Digital</p>
-                        <p class="desc">최신형 스마트폰을 20대처럼 활용하기 어렵지 않아요!</p>
-                        <a href="#" class="btn lg arrow-lg green">수강신청하기</a>
-                    </div>
-                    <div class="img-wrap">
-                        <img src="../images/thumb-visual.png" alt="슬라이드이미지3">
-                    </div>
-                </article>
+        <section>
+            <div class="tit type02">
+                <h2>로그인</h2>
             </div>
-        </section>
-        <section class="program-wrap">
-            <h2>펀랩프로그램</h2>
-            <div class="block type02">
-                <article>
-                    <div class="txt-wrap">
-                        <p class="tit">시니어들의 컴퓨터 수업</p>
-                        <p class="desc">컴퓨터 기본 및 응용교육 실시</p>
-                        <a href="#" class="btn md transparent">자세히 보기</a>
-                    </div>
-                    <div class="img-wrap">
-                        <img src="../images/thumb-article.png" alt="프로그램이미지1">
-                    </div>
-                </article>
-                <article>
-                    <div class="txt-wrap">
-                        <p class="tit">시니어들의 컴퓨터 수업</p>
-                        <p class="desc">컴퓨터 기본 및 응용교육 실시</p>
-                        <a href="#" class="btn md transparent">자세히 보기</a>
-                    </div>
-                    <div class="img-wrap">
-                        <img src="../images/thumb-article.png" alt="프로그램이미지2">
-                    </div>
-                </article>
-                <article>
-                    <div class="txt-wrap">
-                        <p class="tit">시니어들의 컴퓨터 수업</p>
-                        <p class="desc">컴퓨터 기본 및 응용교육 실시</p>
-                        <a href="#" class="btn md transparent">자세히 보기</a>
-                    </div>
-                    <div class="img-wrap">
-                        <img src="../images/thumb-article.png" alt="프로그램이미지3">
-                    </div>
-                </article>
+            <div class="page type02">
+                <form action="">
+                    <fieldset>
+                        <legend class="blind">login</legend>
+                        <div class="login">
+                            <div class="input-text type01">
+                                <label for="id" class="blind">아이디</label>
+                                <input type="text" id="id" name="id" placeholder="아이디">
+                            </div>
+                            <div class="input-text type01">
+                                <label for="pw" class="blind">비밀번호</label>
+                                <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                            </div>
+                        </div>
+                        <div class="chk-box type01">
+                            <input type="checkbox" name="saveId" id="saveId">
+                            <label for="saveId">자동로그인</label>
+                        </div>
+                        <div class="btn-wrap type01">
+                            <button type="button" class="btn xlg blue">로그인</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="find-info">
+                    <span><a href="#">아이디 찾기</a></span>
+                    <span><a href="#">비밀번호 찾기</a></span>
+                    <span><a href="#">회원가입</a></span>
+                </div>
             </div>
         </section>
     </main>
@@ -165,11 +130,3 @@
 
 </body>
 </html>
-
-<script>
-$('.slide.type01').slick({
-    dots: true,
-    infinite: true,
-    arrows: false
-});
-</script>
