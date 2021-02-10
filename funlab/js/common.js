@@ -1,17 +1,10 @@
-$(function(){
-	
-});
 
-
-
-// 브라우저 사이즈에 따라 class 부여
 $(document).ready(function () {
 	var winWidth = 0;
 
    function setWidthSize(){
 		winWidth = window.innerWidth;
 		if(winWidth <= 1040){
-			// $('html').addClass('m-ver');
             $('.ico-gnb').on('click', function () {
 				$(this).toggleClass('close');
 				$('nav').toggleClass('active');
@@ -27,7 +20,6 @@ $(document).ready(function () {
 				}
 			});
 		} else {
-			// $('html').removeClass('m-ver');
 
 		}
 	}
