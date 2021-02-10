@@ -72,7 +72,7 @@ input, select, textarea {vertical-align:middle;}
 h1, h2, h3, h4, h5, h6 {font-size:1rem;}
 h1 img, h2 img, h3 img,	h4 img, h5 img, h6 img {margin: 0;}
 img, fieldset {border:0 none;}
-img {vertical-align:top; max-width:100%;}
+img {vertical-align:top;}
 hr { display: none; }
 button {text-transform: none; vertical-align: middle; border: 0 none; background-color: transparent; cursor: pointer; }
 
