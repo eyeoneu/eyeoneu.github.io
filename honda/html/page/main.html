@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+
+
+</head>
+
+<body>
+
+    <div class="proepm-home-container">
+        <div class="proepm-home-body">
+            <div class="proepm-home-events">
+                <div></div>
+                <div>
+                    <div class="notice-container">
+                        <div class="notice-header-container proepm-header">
+                            <div class="notice-header">공지사항</div>
+                            <div class="notice-bottons">
+                                <a target="_blank" href="/sites/Public/Lists/List"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_09e6c711e566bd76c708ec54955724fa.png" data-themekey="#">More</a>
+                            </div>
+                        </div>
+                        <div class="notice-body-container">
+                            <div class="notice-body">
+                                <div class="notice-date">[2019-10-21]</div>
+                                <div class="notice-title"><a href="/sites/Public/Lists/List/DispForm.aspx?ID=1" target="_blank">[공지] 2019년 7월 온라인 교육 신청안내</a></div>
+                            </div>
+                            <div class="notice-body">
+                                <div class="notice-date">[2019-10-21]</div>
+                                <div class="notice-title"><a href="/sites/Public/Lists/List/DispForm.aspx?ID=2" target="_blank">[공지] HKO 내선번호 및 좌석배치도 안내의 건</a></div>
+                            </div>
+                            <div class="notice-body">
+                                <div class="notice-date">[2019-10-21]</div>
+                                <div class="notice-title"><a href="/sites/Public/Lists/List/DispForm.aspx?ID=3" target="_blank">[공지](일정변경) 사내택배(롯데택배) 프로그램 변경 안내 및 메뉴얼</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="news-container">
+                        <div class="news-header-container proepm-header">
+                            <div class="news-header">홍보자료 뉴스&amp;보도</div>
+                            <div class="news-bottons"><a target="_blank" href="/sites/ProFlow/Lists/List1"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_09e6c711e566bd76c708ec54955724fa.png" data-themekey="#">More</a></div>
+                        </div>
+                        <div class="news-body-container">
+                            <div class="news-body">
+                                <div class="news-date">[2021-02-04]</div>
+                                <div class="news-title"><a href="/sites/ProFlow/Lists/List1/DispForm.aspx?ID=2" target="_blank">테스트2</a></div>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-date">[2021-02-04]</div>
+                                <div class="news-title"><a href="/sites/ProFlow/Lists/List1/DispForm.aspx?ID=1" target="_blank">테스트1</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proepm-home-events">
+                <div>
+                    <div class="notice-container">
+                        <div class="notice-header-container proepm-header">
+                            <div class="notice-header">공지사항</div>
+                            <div class="notice-bottons">
+                                <a target="_blank" href="/sites/Public/Lists/List"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_09e6c711e566bd76c708ec54955724fa.png" data-themekey="#">More</a>
+                            </div>
+                        </div>
+                        <div class="notice-body-container">
+                            <div class="notice-body">
+                                <div class="notice-date">[2019-10-21]</div>
+                                <div class="notice-title"><a href="/sites/Public/Lists/List/DispForm.aspx?ID=1" target="_blank">[공지] 2019년 7월 온라인 교육 신청안내</a></div>
+                            </div>
+                            <div class="notice-body">
+                                <div class="notice-date">[2019-10-21]</div>
+                                <div class="notice-title"><a href="/sites/Public/Lists/List/DispForm.aspx?ID=2" target="_blank">[공지] HKO 내선번호 및 좌석배치도 안내의 건</a></div>
+                            </div>
+                            <div class="notice-body">
+                                <div class="notice-date">[2019-10-21]</div>
+                                <div class="notice-title"><a href="/sites/Public/Lists/List/DispForm.aspx?ID=3" target="_blank">[공지](일정변경) 사내택배(롯데택배) 프로그램 변경 안내 및 메뉴얼</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="news-container">
+                        <div class="news-header-container proepm-header">
+                            <div class="news-header">홍보자료 뉴스&amp;보도</div>
+                            <div class="news-bottons"><a target="_blank" href="/sites/ProFlow/Lists/List1"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_09e6c711e566bd76c708ec54955724fa.png" data-themekey="#">More</a></div>
+                        </div>
+                        <div class="news-body-container">
+                            <div class="news-body">
+                                <div class="news-date">[2021-02-04]</div>
+                                <div class="news-title"><a href="/sites/ProFlow/Lists/List1/DispForm.aspx?ID=2" target="_blank">테스트2</a></div>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-date">[2021-02-04]</div>
+                                <div class="news-title"><a href="/sites/ProFlow/Lists/List1/DispForm.aspx?ID=1" target="_blank">테스트1</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="upcoming-events">
+                            <div class="upcoming-events-header-container proepm-header">
+                                <div class="upcoming-events-header">일정표</div>
+                                <div class="upcoming-events-buttons"><a target="_blank"
+                                        href="/sites/Public/Lists/List2"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_09e6c711e566bd76c708ec54955724fa.png"
+                                            style="margin-right: 3px;" data-themekey="#">More</a></div>
+                            </div>
+                            <div style="padding-top: 3px; height: 206px;">
+                                <div class="react-calendar">
+                                    <div class="react-calendar__navigation" style="display: flex;"><button
+                                            class="react-calendar__navigation__arrow react-calendar__navigation__prev2-button"
+                                            type="button">«</button><button
+                                            class="react-calendar__navigation__arrow react-calendar__navigation__prev-button"
+                                            type="button">‹</button><button class="react-calendar__navigation__label"
+                                            type="button" style="flex-grow: 1;">2021년 2월</button><button
+                                            class="react-calendar__navigation__arrow react-calendar__navigation__next-button"
+                                            type="button">›</button><button
+                                            class="react-calendar__navigation__arrow react-calendar__navigation__next2-button"
+                                            type="button">»</button></div>
+                                    <div class="react-calendar__month-view ">
+                                        <div style="display: flex; align-items: flex-end;">
+                                            <div style="flex-grow: 1; width: 100%;">
+                                                <div class="react-calendar__month-view__weekdays"
+                                                    style="display: flex;">
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="일요일" aria-label="일요일">일</abbr></div>
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="월요일" aria-label="월요일">월</abbr></div>
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="화요일" aria-label="화요일">화</abbr></div>
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="수요일" aria-label="수요일">수</abbr></div>
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="목요일" aria-label="목요일">목</abbr></div>
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="금요일" aria-label="금요일">금</abbr></div>
+                                                    <div class="react-calendar__month-view__weekdays__weekday"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;">
+                                                        <abbr title="토요일" aria-label="토요일">토</abbr></div>
+                                                </div>
+                                                <div class="react-calendar__month-view__days"
+                                                    style="display: flex; flex-wrap: wrap;"><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 1월 31일">31</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 1일">1</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 2일">2</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 3일">3</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 4일">4</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 5일">5</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 6일">6</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 7일">7</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 8일">8</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 9일">9</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 10일">10</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 11일">11</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 12일">12</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 13일">13</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 14일">14</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 15일">15</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 16일">16</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 17일">17</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 18일">18</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 19일">19</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 20일">20</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 21일">21</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 22일">22</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 23일">23</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 24일">24</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 25일">25</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 26일">26</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 27일">27</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 2월 28일">28</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 1일">1</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 2일">2</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 3일">3</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 4일">4</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 5일">5</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 6일">6</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 7일">7</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 8일">8</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 9일">9</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 10일">10</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 11일">11</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 12일">12</abbr></button><button
+                                                        class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+                                                        type="button"
+                                                        style="flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;"><abbr
+                                                            aria-label="2021년 3월 13일">13</abbr></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upcoming-events-container">
+                            <div style="font-weight: bold; height: 28px;">다음달 이벤트</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proepm-home-work">
+                <div class="proepm-work-container">
+                    <div class="proepm-work-title">회의실 예약</div>
+                    <div class="proepm-work-desc">대기시간 최소를 위한 회의실 예약 시스템</div><img class="proepm-work-img"
+                        src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/link_icon04_e630ec65bd24ee52db2c51df3d02d7b0.png"
+                        data-themekey="#">
+                </div>
+                <div class="proepm-work-container">
+                    <div class="proepm-work-title">차량예약</div>
+                    <div class="proepm-work-desc">업무시 필요한 공용 차량 예약 시스팀</div><img class="proepm-work-img"
+                        src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/link_icon03_1dea1af151315f2e359c82f8447369d2.png"
+                        data-themekey="#">
+                </div>
+                <div class="proepm-work-container">
+                    <div class="proepm-work-title">전자결재</div>
+                    <div class="proepm-work-desc">효율적인 업무를 위한 전자 결재 시스템</div><img class="proepm-work-img"
+                        src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/link_icon02_2d655984e0121d1a7a45e2dd31fe953b.png"
+                        data-themekey="#">
+                </div>
+                <div class="proepm-work-container">
+                    <div class="proepm-work-title">자료실</div>
+                    <div class="proepm-work-desc">원할한 협업을 위한 자료 공유 공간</div><img class="proepm-work-img"
+                        src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/link_icon01_f4a19174c0560707908112f886194b69.png"
+                        data-themekey="#">
+                </div>
+            </div>
+            <div class="proepm-home-site">
+                <div class="proepm-site-contianer">
+                    <div class="proepm-site-body">
+                        <div class="proepm-site-title"><a href="https://pnjco.sharepoint.com/sites/Public/MB"
+                                target="_blank">모터사이클사업</a></div>
+                        <div class="proepm-sub-sites">
+                            <div class="proepm-sub-site-title"><a>기획팀</a></div>
+                            <div class="proepm-sub-site-title"><a>필드팀</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proepm-site-contianer">
+                    <div class="proepm-site-body">
+                        <div class="proepm-site-title"><a href="https://pnjco.sharepoint.com/Team/4RSALES"
+                                target="_blank">자동차사업</a></div>
+                        <div class="proepm-sub-sites">
+                            <div class="proepm-sub-site-title"><a>기획팀</a></div>
+                            <div class="proepm-sub-site-title"><a>필드1팀</a></div>
+                            <div class="proepm-sub-site-title"><a>필드2팀</a></div>
+                            <div class="proepm-sub-site-title"><a>필드3팀</a></div>
+                            <div class="proepm-sub-site-title"><a>필드4팀</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proepm-site-contianer">
+                    <div class="proepm-site-body">
+                        <div class="proepm-site-title"><a href="https://pnjco.sharepoint.com/sites/ProFlow/"
+                                target="_blank">소셜커뮤니케이션팀</a></div>
+                        <div class="proepm-sub-sites"></div>
+                    </div>
+                </div>
+                <div class="proepm-site-contianer">
+                    <div class="proepm-site-body">
+                        <div class="proepm-site-title"><a target="_blank">부품팀</a></div>
+                        <div class="proepm-sub-sites"></div>
+                    </div>
+                </div>
+                <div class="proepm-site-contianer">
+                    <div class="proepm-site-body">
+                        <div class="proepm-site-title"><a target="_blank">사업관리팀</a></div>
+                        <div class="proepm-sub-sites"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="proepm-home-business">
+                <div class="result-container">
+                    <div class="result-header-container proepm-header">
+                        <div class="result-header">영업실적</div>
+                        <div class="result-buttons"><a target="_blank" href="/sites/Public/Lists/List1"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_09e6c711e566bd76c708ec54955724fa.png"
+                                    style="margin-right: 3px;" data-themekey="#">More</a></div>
+                    </div>
+                    <div class="result-body-container">
+                        <div class="result-table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>2R</th>
+                                        <th>목표</th>
+                                        <th>실적</th>
+                                        <th>달성율</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>W/S</th>
+                                        <td>3000</td>
+                                        <td>2900</td>
+                                        <td>97%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>R/S<img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/bell_0c0b8fd5b6d9da0e344be934b94398eb.gif"
+                                                data-themekey="#"
+                                                style="height: 30px; width: 30px; margin-top: -3px; position: absolute; margin-left: 5px;">
+                                        </th>
+                                        <td>1093</td>
+                                        <td>1965</td>
+                                        <td>180%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="result-table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>4R</th>
+                                        <th>목표</th>
+                                        <th>실적</th>
+                                        <th>달성율</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Booking<img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/bell_0c0b8fd5b6d9da0e344be934b94398eb.gif"
+                                                data-themekey="#"
+                                                style="height: 30px; width: 30px; margin-top: -3px; position: absolute; margin-left: 5px;">
+                                        </th>
+                                        <td>600</td>
+                                        <td>678</td>
+                                        <td>113%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>R/S</th>
+                                        <td>574</td>
+                                        <td>339</td>
+                                        <td>59%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proepm-home-etc">
+                <div class="proepm-etc-widget">
+                    <div class="proepm-widget-tabs proepm-header">
+                        <div data-isactive="true">날씨</div>
+                        <div data-isactive="false">환율</div>
+                        <div data-isactive="false">유가</div>
+                    </div>
+                    <div class="proepm-widget-body">
+                        <div class="proepm-weather">
+                            <div class="proepm-weather-title">대한민국 / 서울</div>
+                            <div class="proepm-weather-container">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="proepm-weather-today">
+                                                <div class="totday-title">오늘</div>
+                                                <div><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/13d_7457d729f77e34dcefdff3bb18a2769e.png"
+                                                        data-themekey="#"></div>
+                                                <div class="today-status">가벼운 눈</div>
+                                                <div class="today-temp">-4.01°C</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="proepm-weather-week"><span
+                                                    style="color: rgb(136, 136, 136);">수요일</span><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/02d_ed6562c1e2410d410a08b2a028c7e211.png"
+                                                    data-themekey="#"><span class="today-temp">-10.46°C</span></div>
+                                            <div class="proepm-weather-week"><span
+                                                    style="color: rgb(136, 136, 136);">목요일</span><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/01d_504c34f0354fd4833de2dcdf255ca23d.png"
+                                                    data-themekey="#"><span class="today-temp">-8.88°C</span></div>
+                                            <div class="proepm-weather-week"><span
+                                                    style="color: rgb(136, 136, 136);">금요일</span><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/01d_504c34f0354fd4833de2dcdf255ca23d.png"
+                                                    data-themekey="#"><span class="today-temp">-2.21°C</span></div>
+                                            <div class="proepm-weather-week"><span
+                                                    style="color: rgb(0, 186, 255);">토요일</span><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/04d_38b11e50fbef1b0397de0a383c4f1468.png"
+                                                    data-themekey="#"><span class="today-temp">3.74°C</span></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proepm-etc-commercial">
+                    <div class="commercial-container">
+                        <div class="commercial-header">
+                            <div class="commercial-title proepm-header">광고</div>
+                        </div>
+                        <div class="commercial-body"><iframe src="https://www.youtube.com/embed/Z57kGB-mI54"
+                                frameborder="0" style="width: 100%; height: 100%;"></iframe></div>
+                        <div class="commercial-description">
+                            <div class="commercial-desc-title">Honda Suisse</div>
+                            <div class="commercial-desc-desc">Honda Accord, 2003</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proepm-etc-links">
+                    <div class="proepm-link-container">
+                        <div class="proepm-links">
+                            <div class="proepm-links-header"><span
+                                    class="proepm-links-header-title">딜러<span>Dealer</span></span></div>
+                            <div class="proepm-links-body">
+                                <div class="proepm-links-box">
+                                    <div class="proepm-links-box-title">2륜</div>
+                                    <div class="proepm-links-box-icon"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon-2_8dc5ea0aa9c8b44b1d5a0e8a18925ef8.png"
+                                            data-themekey="#"></div>
+                                </div>
+                                <div class="proepm-links-box">
+                                    <div class="proepm-links-box-title">4륜</div>
+                                    <div class="proepm-links-box-icon"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon-4_20a71bd45e32dcd3065a00ec97e5e141.png"
+                                            data-themekey="#"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proepm-links">
+                            <div class="proepm-links-header proepm-header"><span
+                                    class="proepm-links-header-title ">제품<span>Product</span></span></div>
+                            <div class="proepm-links-body">
+                                <div class="proepm-links-box">
+                                    <div class="proepm-links-box-title">2륜</div>
+                                    <div class="proepm-links-box-icon"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon-2_8dc5ea0aa9c8b44b1d5a0e8a18925ef8.png"
+                                            data-themekey="#"></div>
+                                </div>
+                                <div class="proepm-links-box">
+                                    <div class="proepm-links-box-title">4륜</div>
+                                    <div class="proepm-links-box-icon"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon-4_20a71bd45e32dcd3065a00ec97e5e141.png"
+                                            data-themekey="#"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proepm-links-other">
+                        <div class="proepm-links-other-box">
+                            <div class="proepm-other-title">FAQ</div>
+                            <div class="proepm-other-img"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/arrow_a12ec0c4a4f09a40e8d015e70c529026.png"
+                                    data-themekey="#"></div>
+                        </div>
+                        <div class="proepm-links-other-box">
+                            <div class="proepm-other-title">해외법인 시간</div>
+                            <div class="proepm-other-img"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/arrow_a12ec0c4a4f09a40e8d015e70c529026.png"
+                                    data-themekey="#"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proepm-home-sitemap">
+            <div class="proepm-sitemap">
+                <div class="proepm-sitemap-container">
+                    <div class="proepm-sitemap-box">
+                        <div class="proepm-sitemap-home"><a
+                                href="https://pnjco.sharepoint.com/Team/SitePages/%EB%A9%94%EC%9D%B8.aspx"
+                                target="_blank"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon-home_3d62e753e4a45afb9a4a4518f14c0a33.png"
+                                    height="21" width="24" data-themekey="#"></a></div>
+                    </div>
+                    <div class="proepm-sitemap-box">
+                        <div class="proepm-sitemap-content" style="width: 200px;"><span
+                                class="proepm-sitemap-title">업무지원</span>
+                            <div class="proepm-sitemap-box-flex">
+                                <div class="proepm-sitemap-list">
+                                    <ul>
+                                        <li><a>공지사항</a> </li>
+                                        <li><a href="/sites/Public/SitePages/회의실%20예약.aspx">회의실 예약</a> </li>
+                                        <li><a href="/sites/Public/SitePages/차량%20예약.aspx">차량예약</a> </li>
+                                        <li><a href="https://pnjco.sharepoint.com/sites/ProFlow/">전자결재</a>
+                                            <ul class="proepm-second-list"></ul>
+                                        </li>
+                                        <li><a>설문조사</a> </li>
+                                        <li><a>IT물품대여</a> </li>
+                                        <li><a href="https://outlook.office.com">아웃룩 웹</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proepm-sitemap-box">
+                        <div class="proepm-sitemap-content" style="width: 200px;"><span
+                                class="proepm-sitemap-title">정보공유</span>
+                            <div class="proepm-sitemap-box-flex">
+                                <div class="proepm-sitemap-list">
+                                    <ul>
+                                        <li><a>사내규정</a> </li>
+                                        <li><a>영업실적</a> </li>
+                                        <li><a href="/Team/SitePages/Activity.aspx">뻔뻔한위크</a> </li>
+                                        <li><a>딜러정보</a>
+                                            <ul class="proepm-second-list">
+                                                <li><a href="/sites/Public/SitePages/Map.aspx" target="_blank">2R</a>
+                                                </li>
+                                                <li><a href="/sites/Public/SitePages/Map.aspx">4R</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proepm-sitemap-box">
+                        <div class="proepm-sitemap-content" style="width: 200px;"><span
+                                class="proepm-sitemap-title">자료실</span>
+                            <div class="proepm-sitemap-box-flex">
+                                <div class="proepm-sitemap-list">
+                                    <ul>
+                                        <li><a>제품 정보 자료</a>
+                                            <ul class="proepm-second-list">
+                                                <li><a>2R</a></li>
+                                                <li><a>4R</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a
+                                                href="https://pnjco.sharepoint.com/sites/ProFlow/Lists/List/AllItems.aspx">홍보자료</a>
+                                        </li>
+                                        <li><a>서식자료</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proepm-sitemap-box">
+                        <div class="proepm-sitemap-content" style="width: 340px;"><span
+                                class="proepm-sitemap-title">팀사이트</span>
+                            <div class="proepm-sitemap-box-flex">
+                                <div class="proepm-sitemap-list">
+                                    <ul>
+                                        <li><a href="https://pnjco.sharepoint.com/sites/Public/MB">모터사이클사업</a>
+                                            <ul class="proepm-second-list">
+                                                <li><a>기획팀</a></li>
+                                                <li><a>필드팀</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="https://pnjco.sharepoint.com/Team/4RSALES">자동차사업</a>
+                                            <ul class="proepm-second-list">
+                                                <li><a>기획팀</a></li>
+                                                <li><a>필드1팀</a></li>
+                                                <li><a>필드2팀</a></li>
+                                                <li><a>필드3팀</a></li>
+                                                <li><a>필드4팀</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="https://pnjco.sharepoint.com/sites/ProFlow/">소셜커뮤니케이션팀</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="proepm-sitemap-list">
+                                    <ul>
+                                        <li><a>부품팀</a> </li>
+                                        <li><a>사업관리팀</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proepm-sitemap-box">
+                        <div class="proepm-sitemap-content" style="width: 210px;">
+                            <ul>
+                                <li><a>동호회</a></li>
+                                <li><a target="_blank">e-Learning</a></li>
+                                <li><a target="_blank">HID</a></li>
+                                <li><a target="_blank">EMIS</a></li>
+                                <li><a href="Team/SitePages/WorldTime.aspx">세계시간</a></li>
+                                <li style="display: flex; align-items: flex-start; justify-content: space-between;">
+                                    <span>홈페이지</span><span><label class="proepm-home-page-nav"
+                                            for="opener">+</label><input class="proepm-home-page-opener" type="checkbox"
+                                            id="opener"></span></li>
+                            </ul>
+                            <div id="subHomes" style="display: none;">
+                                <ul class="proepm-second-list">
+                                    <li><a href="http://www.hondakorea.co.kr" target="_blank">혼다코리아</a></li>
+                                    <li><a href="https://global.honda/" target="_blank">글로벌혼다</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proepm-copyright-contianer">
+                <div class="proepm-copyright">
+                    <div class="proepm-copyright-title"><span style="font-size: 12px;">COPYRIGHT(C) 2019 <span
+                                style="color: rgb(255, 255, 255);">Honda Korea.</span> ALL RIGHT RESERVED.</span></div>
+                    <div class="proepm-copyright-links"><a href="https://www.naver.com" target="_blank"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_footer_naver_977168ed70dc66cec3b54f9ed1abd621.png"
+                                data-themekey="#"></a><a href="https://www.google.com" target="_blank"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_footer_google_a8ce40ad9a6e73045c6b871cff0f4bcd.png"
+                                data-themekey="#"></a><a href="https://www.facebook.com" target="_blank"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_footer_facebook_d5cf7664b29873fe8273eb6f4569efc9.png"
+                                data-themekey="#"></a><a href="https://www.youtube.com" target="_blank"><img src="https://publiccdn.sharepointonline.com/pnjco.sharepoint.com/sites/AppCatalog/ClientSideAssets/abc083ea-66b2-4781-8e83-87a794fb6ab2/icon_footer_youtube_57353f127fe07146fcfbfba9a5fc9e06.png"
+                                data-themekey="#"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
