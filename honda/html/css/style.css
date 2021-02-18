@@ -445,7 +445,6 @@
   
   /* main 화면 수정 (0203) */
   
-  
   .proepm-user-profile-container {
     height : 50%;
     display : flex;
@@ -493,6 +492,27 @@
     cursor : pointer;
     margin : 0 5px;
   }
+
+.profile-container {background-color: #f7f7f7; height: 100%; padding: 50px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; box-sizing: border-box;}
+.profile-container .profile-user {display: flex; align-items: center;}
+.profile-container .profile-user .user-img {width: 130px; height: 130px; border-radius: 100%; margin-right: 20px; background: url('../img/profile-user.png') 50% 40% no-repeat #8a8a8a; background-size: 75px 75px;}
+.profile-container .profile-user .user-name {display: flex; flex-direction: column; font-weight: 600;}
+.profile-container .profile-user .user-name span {line-height: 1;}
+.profile-container .profile-user .user-name .kor {font-size: 20px;}
+.profile-container .profile-user .user-name .eng {color: #767676;}
+.profile-container .profile-btn {}
+.profile-container .profile-btn ul {display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: -10px;}
+.profile-container .profile-btn ul li {position: relative; width: 48%; margin-bottom: 10px; }
+.profile-container .profile-btn ul li a {display: block; padding-left: 70px; height: 45px; line-height: 43px; background-color: #fff; border: 1px solid #afafaf; box-sizing: border-box; font-weight: 600; color: #222; text-decoration: none;}
+.profile-container .profile-btn ul li a span {}
+.profile-container .profile-btn ul li[class*="icon-"] a:before {content: ''; display: block; position: absolute; right: 115px; top: 8px; height: 25px; background-image: url('../img/sp-icon.png'); background-size: 250px 250px;}
+.profile-container .profile-btn ul li.icon-appr a:before {width: 21px; background-position: 0 0;}
+.profile-container .profile-btn ul li.icon-out a:before {width: 25px; background-position: -30px 0;}
+.profile-container .profile-btn ul li.icon-reser a:before {width: 26px; background-position: -63px 0;}
+.profile-container .profile-btn ul li.icon-drive a:before {width: 32px; background-position: -97px 0;}
+.profile-container .profile-btn ul li.icon-car a:before {width: 30px; background-position: -138px 0;}
+.profile-container .profile-btn ul li.icon-teams a:before {width: 28px; background-position: -175px 0;}
+
 
 
 .notice-container .notice-header-container {
