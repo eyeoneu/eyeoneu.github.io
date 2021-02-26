@@ -117,18 +117,19 @@ caption {visibility:hidden; overflow:hidden; width:1px; height:1px; font-size:0;
 .proepm-tbl-grid .tr-wrap .th-view:before {content: ''; display: block; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background-color: #00a1b9;}
 .proepm-tbl-grid .tr-wrap .td-view {width: 85%; border-left: 1px solid #dddddd;}
 .proepm-tbl-grid .tr-wrap .td-view.row-wrap,
-.proepm-tbl-grid .tr-wrap .td-view.col-wrap {padding: 0; border-left: none; border-bottom: 1px solid #dddddd;}
+.proepm-tbl-grid .tr-wrap .td-view.col-wrap {border-right: 1px solid #dddddd;}
 .proepm-tbl-grid .tr-wrap .row-wrap {display: flex; flex-direction: column; height: 100%;}
 .proepm-tbl-grid .tr-wrap .col-wrap {display: flex; flex-direction: row; height: 100%;}
 .proepm-tbl-grid .tr-wrap .col-wrap + .col-wrap {border-top: 1px solid #dddddd;}
-
 .proepm-tbl-grid .tr-wrap .col-wrap > div {display: flex; flex: none; align-items: center; width: 16%; padding: 10px 5px; box-sizing: border-box;}
-.proepm-tbl-grid .tr-wrap .col-wrap.col-4 > div.td-dep2 {width: 35%; padding: 5px;}
-.proepm-tbl-grid .tr-wrap .col-wrap.col-2 > div.td-dep2 {width: 85%; padding: 5px;}
+.proepm-tbl-grid .tr-wrap .col-wrap.col-4 > div.td-dep2 {width: 34%; padding: 5px;}
+.proepm-tbl-grid .tr-wrap .col-wrap.col-2 > div.td-dep2 {width: 84%; padding: 5px;}
 
 .proepm-tbl-grid .tr-wrap .th-dep1 {background-color: #eef1f6;}
 .proepm-tbl-grid .tr-wrap .th-dep2 {border-left: 1px solid #dddddd; border-right: 1px solid #dddddd; background-color: #f1f1f1; justify-content: center;}
 .proepm-tbl-grid .th-txt + .th-btn {margin-top: 5px;}
+
+.proepm-tbl-grid .dx-texteditor.dx-editor-outlined + .dx-htmleditor {margin-top: 5px;}
 
 /* innder table */
 .proepm-tbl-inner table {border-top: transparent;}
@@ -291,7 +292,11 @@ div[class*="wrap"]:after {content: ''; display: block; clear: both;}
 .proepm-pop-tit {margin-bottom: 10px;}
 .proepm-pop-tit h1 {position: relative; display: inline-block; margin: 0; font-size: 25px; color: #232326; padding: 0;}
 .proepm-pop-tit h1:before {display: none;}
+.proepm-pop-wrap .proepm-tbl-wrap {margin-bottom: 10px; padding: 0; border-radius: 0; background-color: #ffffff; box-shadow: none;}
 .proepm-pop-wrap .proepm-tbl-grid {min-width: auto;}
+.proepm-pop-wrap .proepm-tbl-grid .tr-wrap .th-view {background-color: #f7f7f7; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #222;}
+.proepm-pop-wrap .proepm-tbl-grid .tr-wrap .th-view:before {display: none;}
+.proepm-pop-wrap .proepm-tbl-grid .tr-wrap .td-view {flex: 1;}
 
 .proepm-project-view {display: flex; padding: 10px 10px 0;}
 .proepm-project-view .proepm-tbl-wrap {flex: 1; margin: 0;}
@@ -419,6 +424,7 @@ div[class*="wrap"]:after {content: ''; display: block; clear: both;}
 .proepm-content-box .sub-wrap {width: 100%; min-width: 1135px;}
 .proepm-content-box .sub-wrap .sub-top {padding: 0; border-bottom: 1px solid #ddd;}
 .proepm-content-box .sub-wrap .sub-top h2 {margin: 0; padding: 20px 20px 10px; font-weight: 600; font-size: 24px;}
+.proepm-content-box .sub-wrap .sub-top h2 + .dx-button {margin: 0 0 10px 20px;}
 .proepm-content-box .sub-wrap .sub-top .tab-wrap {padding: 0 10px;}
 .proepm-content-box .sub-wrap .sub-cont {display: flex; border-bottom: 1px solid #ddd;}
 .proepm-content-box .sub-wrap .sub-cont .sub-page {flex: 1; margin: 10px; border: 6px solid #ddd;}
@@ -501,6 +507,9 @@ div[class*="wrap"]:after {content: ''; display: block; clear: both;}
 .approval-import .doc-top tbody td .sign-wrap .sign-box .sign-date {font-size: 12px; height: 25px;}
 .approval-import .doc-area {padding: 5px;}
 .approval-import .doc-area > table {margin-bottom: 5px;}
+.approval-import .doc-area > table.type01 {border-collapse: collapse; border-top: 1px solid #ddd;}
+.approval-import .doc-area > table.type01 th {background-color: #f7f7f7; border: 1px solid #ddd;}
+.approval-import .doc-area > table.type01 td {border: 1px solid #ddd;}
 
 
 
@@ -780,6 +789,9 @@ div[class*="wrap"]:after {content: ''; display: block; clear: both;}
 .proepm-approval-form .td-inner table tr + tr > th,
 .proepm-approval-form .td-inner table tr + tr > td {border-top: 1px solid black;}
 
+.form_type {border-collapse: collapse; border: 1px solid #ddd;}
+.form_type th {padding: 5px; border: 1px solid #ddd; background-color: #f5f5f5;}
+.form_type td {padding: 5px; border: 1px solid #ddd;}
 
 .user-photo > img {border-radius: 50%;}
 
