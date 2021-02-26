@@ -131,7 +131,7 @@ caption {visibility:hidden; overflow:hidden; width:1px; height:1px; font-size:0;
 
 .proepm-tbl-grid .dx-texteditor.dx-editor-outlined + .dx-htmleditor {margin-top: 5px;}
 
-/* innder table */
+/* inner table */
 .proepm-tbl-inner table {border-top: transparent;}
 .proepm-tbl-inner th {padding: 3px 7px; background-color: #f1f1f1;}
 .proepm-tbl-inner td {padding: 3px 7px; border-bottom: 1px solid #dddddd;}
@@ -411,7 +411,7 @@ div[class*="wrap"]:after {content: ''; display: block; clear: both;}
 /* 전자결재 */
 .proepm-content-box {display: flex; height: 100%;}
 
-.proepm-content-box .lnb-wrap {width: 250px; min-width: 250px; padding: 0; box-sizing: border-box; border-right: 1px solid #ddd;overflow: hidden;}
+.proepm-content-box .lnb-wrap {width: 250px; min-width: 250px; height: 100%; padding: 0; box-sizing: border-box; overflow: hidden; border-right: none;}
 .proepm-content-box .lnb-wrap .lnb-top {display: flex; margin-bottom: 30px; padding: 0 10px;}
 .proepm-content-box .lnb-wrap .lnb-top a.btn-home {position: relative; display: block; width: 30%; margin-right: 10px; background: url(../img/icon-home.png) 50% 50% no-repeat #00a1b9; background-size: 50%; border-radius: 6px;}
 .proepm-content-box .lnb-wrap .lnb-top .proepm-btn-wrap {}
@@ -544,6 +544,10 @@ div[class*="wrap"]:after {content: ''; display: block; clear: both;}
 .proepm-tbl-grid .dx-datagrid-total-footer > .dx-datagrid-content {padding: 0;}
 .proepm-tbl-grid .dx-datagrid-rowsview {overflow: visible;}
 .dx-datagrid-borders .dx-datagrid-rowsview, .dx-datagrid-headers + .dx-datagrid-rowsview {border-top: 1px solid #ddd;}
+.dx-empty th,
+.dx-empty td {border: none !important;}
+.dx-drawer-shrink .dx-drawer-content {border-left: 1px solid #ddd;}
+.dx-drawer-shrink .dx-drawer-panel-content {height: auto;}
 
 .dx-filemanager {border-color: transparent;}
 .dx-filemanager .dx-header-row td {background-color: #ffffff; color: #292929;}
