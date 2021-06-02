@@ -1,0 +1,73 @@
+@import  "_reset.less"; // 초기화 로드
+
+// 기본 zIndex
+@z: 1;
+
+// 이미지 경로
+@img: '../images';
+
+
+// --------------------------------------
+// # 색상
+// --------------------------------------
+@black: #000000;
+@white: #ffffff;
+@light-grey: #dddddd;
+@sky-blue: #33b1d0;
+
+
+// --------------------------------------
+// # 폰트
+// --------------------------------------
+@main-font: 'GmarketSans', sans-serif;
+@bold-font: 'Jalnan', sans-serif;
+
+
+// --------------------------------------
+// # 버튼
+// --------------------------------------
+.btn {
+    background-color: transparent;
+
+    > span {
+        color: @white;
+    }
+
+    &.sm {
+        @height: 30px;
+        height: @height;
+        border-radius: @height;
+
+    }
+    &.md {
+        @height: 40px;
+        height: @height;
+        border-radius: @height;
+    }
+    &.lg {
+        @height: 50px;
+        height: @height;
+        border-radius: @height;
+    }
+
+    &.line-type {
+        border: 1px solid @white;
+        
+    }
+    &.bg-type {
+        background-color: @white;
+    }
+
+    > i {
+        &.icon-arrow {
+
+        }
+        &.icon-link {
+
+        }
+        &.icon-retry {
+
+        }
+    }
+
+}

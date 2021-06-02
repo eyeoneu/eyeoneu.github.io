@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+@import  "_common.less";
+@import  "_utils.less";
+@import  "_fonts.less";
+@import  "_reset.less";
+
+
+// --------------------------------------
+// # layout
+// --------------------------------------
+@default: 1280px;
+@responsive: 100%;
+
+.wrap {
+    width: @responsive;
+
+    > section.visual-wrapper {
+        font-family: @main-font;
+        width: @default;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 1280px){
+    .wrap {
+        padding: 0 2rem;
+        box-sizing: border-box;
+        
+        > section.visual-wrapper {
+            width: @responsive;
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    
+}
+
+@media all and (max-width: 768px){
+    
+}
+
+
+
+// --------------------------------------
+// # landing
+// --------------------------------------
+#landing-visual {
+    background-color: @sky-blue;
+
+    > section.visual-wrapper {
+
+        > header {
+            color: @white;
+
+            h1 {
+                span {
+                    display: block;
+                }
+            }
+            p {
+                span {
+                    display: block;
+
+                    strong {
+                        border-bottom: 1px solid @white;
+                    }
+                }
+            }
+            button {
+
+            }
+        }
+
+        .container {
+            article {
+                &.people1 {
+
+                }
+                &.people2 {
+                    
+                }
+                &.desk {
+                    
+                }
+
+                img {
+
+                }
+            }
+        }
+
+        > footer {
+            h2 {
+                text-align: center;
+                font-weight: normal;
+
+                span {
+
+                }
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.icon-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+        margin: 0 10px;
+        text-indent: -9999px;
+        color: transparent;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid @white;
+
+        &.kakao {
+            
+        }
+        &.instagram {
+
+        }
+        &.facebook {
+
+        }
+        &.twitter {
+
+        }
+        &.link {
+
+        }
+    }
+}
+
+@media all and (max-width: 1280px){
+    
+}
+
+// --------------------------------------
+// # stage
+// --------------------------------------
+#stage-visual {
+    > section.visual-wrapper {
+        
+    }
+}
+
+@media all and (max-width: 1280px){
+    
+}
+
+// --------------------------------------
+// # result
+// --------------------------------------
+#result-visual {
+    > section.visual-wrapper {
+        
+    }
+}
+
+@media all and (max-width: 1280px){
+    
+}
+
+

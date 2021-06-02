@@ -1,0 +1,162 @@
+// --------------------------------------
+// # 초기화
+// --------------------------------------
+// ## 폼 요소 초기화
+button,
+input,
+optgroup,
+select,
+textarea {
+    display: inline-block;
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    //line-height: 1.15; /* 1 */
+    line-height: 1;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+// ## 입력창 초기화
+input[type=tel],
+input[type=text],
+input[type=button],
+input[type=reset],
+button[type=reset],
+button[type=button],
+button[type=submit],
+select,
+textarea {
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    appearance: none;
+}
+
+input[type=tel],
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=submit],
+input[type=button],
+input[type=reset] {
+    &[readonly] {
+        background: @white;
+        border: 1px solid @light-grey;
+    }
+    &::placeholder {
+        color: @light-grey;
+    }
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+select {
+    vertical-align: top;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+fieldset,
+a,
+img {
+    border: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    .reset();
+    border: 0;
+    background: transparent;
+    -webkit-appearance: button;
+    outline: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li {
+    .reset();
+}
+
+a,
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+ul,
+ol {
+    li {
+        list-style: none;
+    }
+}
+
+figure {
+    .reset();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-stretch: normal;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    font-family: inherit, sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
