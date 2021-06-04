@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>approval</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+    
+
+</head>
+<body>
+    <div class="proepm-content-box">
+        <div class="lnb-wrap">
+            <div class="lnb-top">
+                <div class="proepm-btn-wrap proepm-btn-full proepm-btn-1">
+                    <div id="projectBtn1" class="proepm-btn proepm-btn-lg"></div>
+                </div>
+            </div>
+            <ul class="lnb">
+                <li class="depth01">
+                    <a href="#">자주 쓰는 양식</a>
+                    <i class="dx-icon fa fa-pencil-square-o"></i>
+                </li>
+                <li class="depth01"><a href="#">결재하기</a>
+                    <ul>
+                        <li class="depth02"><a href="#">결재 대기 문서</a></li>
+                        <li class="depth02"><a href="#">결재 예정 문서</a></li>
+                        <li class="depth02"><a href="#">결재 완료 문서</a></li>
+                    </ul>
+                </li>
+                <li class="depth01">
+                    <a href="#">개인 문서함</a>
+                    <i class="dx-icon fa fa-cog"></i>
+                    <ul>
+                        <li class="depth02"><a href="#">기안 문서</a></li>
+                        <li class="depth02"><a href="#">완료 문서</a></li>
+                        <li class="depth02"><a href="#">임시 저장함</a></li>
+                    </ul>
+                </li>
+                <li class="depth01">
+                    <a href="#">관리</a>
+                    <i class="dx-icon fa fa-cog"></i>
+                    <ul>
+                        <li class="depth02"><a href="#">코드 관리</a></li>
+                        <li class="depth02"><a href="#">사용자 관리</a></li>
+                        <li class="depth02"><a href="#">결재문서 설정</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sub-wrap">
+            <div class="sub-top">
+                <h2>경조사비 신청서 (거래처용)</h2>
+                <div class="tab-wrap type02">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-pencil-square-o"></i>
+                                <span>결재요청</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-floppy-o"></i>
+                                <span>임시저장</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-eye"></i>
+                                <span>미리보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-times"></i>
+                                <span>취소</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-info"></i>
+                                <span>결재설정</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-cont">
+                <div class="sub-page">
+                    <div class="approval-import">
+                        <div class="doc-top">
+                            <table>
+                                <caption>document top</caption>
+                                <thead>
+                                    <tr>
+                                        <th>경조사비 신청서 (거래처용)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="sign-wrap sign-lt">
+                                                <div class="sign-tit">
+                                                    <span>신청</span>
+                                                </div>
+                                                <div class="sign-box">
+                                                    <span class="sign-rank">대리</span>
+                                                    <span class="sign-view">
+                                                        <span class="sign-stamp"><img src="../img/stamp_approved.png" alt=""></span>
+                                                        <span class="sign-kor">김경희</span>
+                                                        <span class="sign-eng">Kim Kyunghee</span>
+                                                    </span>
+                                                    <span class="sign-date">2021/11/11</span>
+                                                </div>
+                                            </div>
+                                            <div class="sign-wrap sign-rt">
+                                                <div class="sign-tit">
+                                                    <span>신청</span>
+                                                </div>
+                                                <div class="sign-box">
+                                                    <span class="sign-rank">대리</span>
+                                                    <span class="sign-view">
+                                                        <span class="sign-kor">김경희</span>
+                                                        <span class="sign-eng">Kim Kyunghee</span>
+                                                    </span>
+                                                    <span class="sign-date">2021/11/11</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="sign-wrap sign-rt">
+                                                <div class="sign-tit">
+                                                    <span>신청</span>
+                                                </div>
+                                                <div class="sign-box">
+                                                    <span class="sign-rank">대리</span>
+                                                    <span class="sign-view">
+                                                        <span class="sign-stamp"><img src="../img/stamp_approved.png" alt=""></span>
+                                                        <span class="sign-kor">김경희</span>
+                                                        <span class="sign-eng">Kim Kyunghee</span>
+                                                    </span>
+                                                    <span class="sign-date">2021/11/11</span>
+                                                </div>
+                                                <div class="sign-box">
+                                                    <span class="sign-rank">대리</span>
+                                                    <span class="sign-view">
+                                                        <span class="sign-stamp"><img src="../img/stamp_approved.png" alt=""></span>
+                                                        <span class="sign-kor">김경희</span>
+                                                        <span class="sign-eng">Kim Kyunghee</span>
+                                                    </span>
+                                                    <span class="sign-date">2021/11/11</span>
+                                                </div>
+                                                <div class="sign-box">
+                                                    <span class="sign-rank">대리</span>
+                                                    <span class="sign-view">
+                                                        <span class="sign-kor">김경희</span>
+                                                        <span class="sign-eng">Kim Kyunghee</span>
+                                                    </span>
+                                                    <span class="sign-date">2021/11/11</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="doc-area">
+                            <table class="proepm-approval-form">
+                                <caption>document area</caption>
+                                <colgroup>
+                                    <col width="14%"><col width="38%"><col width="14%"><col width="38%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td colspan="3">
+                                            <div class="dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-texteditor-empty dx-widget" style="width: 100%;">
+                                                <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" tabindex="0" role="textbox">
+                                                        <div data-dx_placeholder="" class="dx-placeholder"> </div>
+                                                        </div>
+                                                            <div class="dx-texteditor-buttons-container"> <div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>경조종류</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-selectbox dx-textbox dx-texteditor dx-editor-outlined dx-state-readonly dx-widget dx-dropdowneditor dx-dropdowneditor-field-clickable">
+                                                <div class="dx-dropdowneditor-input-wrapper dx-selectbox-container">
+                                                    <input type="hidden" value="99c547c4-73da-d13a-c04c-54063c46d68b">
+                                                    <div class="dx-texteditor-container">
+                                                        <div class="dx-texteditor-input-container">
+                                                        <input autocomplete="off" class="dx-texteditor-input" aria-haspopup="listbox" aria-autocomplete="list" type="text" readonly="" aria-readonly="true" spellcheck="false" tabindex="0" role="combobox" aria-expanded="false">
+                                                            <div data-dx_placeholder="Select..." class="dx-placeholder dx-state-invisible"> </div>
+                                                            </div>
+                                                                <div class="dx-texteditor-buttons-container"> <div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th>경조구분</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-selectbox dx-textbox dx-texteditor dx-dropdowneditor-button-visible dx-editor-outlined dx-texteditor-empty dx-widget dx-dropdowneditor dx-dropdowneditor-field-clickable">
+                                                <div class="dx-dropdowneditor-input-wrapper dx-selectbox-container">
+                                                    <input type="hidden" value="">
+                                                    <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" aria-haspopup="listbox" aria-autocomplete="list" type="text" readonly="" spellcheck="false" tabindex="0" role="combobox" aria-expanded="false">
+                                                    <div data-dx_placeholder="Select..." class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                    <div class="dx-button-normal dx-button-mode-contained dx-widget dx-dropdowneditor-button" role="button" aria-label="Select">
+                                                    <div class="dx-button-content">
+                                                    <div class="dx-dropdowneditor-icon">
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                    <div class="dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-texteditor-empty dx-widget dx-state-invisible" style="width: 100%;">
+                                                    <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" aria-hidden="true" tabindex="0" role="textbox">
+                                                    <div data-dx_placeholder="" class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>경조대상자</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-texteditor-empty dx-widget">
+                                                <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" tabindex="0" role="textbox">
+                                                    <div data-dx_placeholder="" class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th>대상자 소속</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-texteditor-empty dx-widget">
+                                                <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" tabindex="0" role="textbox">
+                                                    <div data-dx_placeholder="" class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>경조일자</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-datebox dx-textbox dx-texteditor dx-dropdowneditor-button-visible dx-editor-outlined dx-texteditor-empty dx-widget dx-visibility-change-handler dx-auto-width dx-dropdowneditor dx-datebox-datetime dx-datebox-calendar">
+                                                <div class="dx-dropdowneditor-input-wrapper">
+                                                    <input type="hidden" value="">
+                                                    <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" aria-haspopup="true" aria-autocomplete="list" type="text" spellcheck="false" tabindex="0" role="combobox" aria-expanded="false">
+                                                    <div data-dx_placeholder="" class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                    <div class="dx-button-normal dx-button-mode-contained dx-widget dx-dropdowneditor-button" role="button" aria-label="Select">
+                                                    <div class="dx-button-content">
+                                                    <div class="dx-dropdowneditor-icon">
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th>경조 수령일</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-datebox dx-textbox dx-texteditor dx-dropdowneditor-button-visible dx-editor-outlined dx-texteditor-empty dx-widget dx-visibility-change-handler dx-auto-width dx-dropdowneditor dx-datebox-date dx-datebox-calendar">
+                                                <div class="dx-dropdowneditor-input-wrapper">
+                                                    <input type="hidden" value="">
+                                                    <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" aria-haspopup="true" aria-autocomplete="list" type="text" spellcheck="false" tabindex="0" role="combobox" aria-expanded="false">
+                                                    <div data-dx_placeholder="" class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                    <div class="dx-button-normal dx-button-mode-contained dx-widget dx-dropdowneditor-button" role="button" aria-label="Select">
+                                                    <div class="dx-button-content">
+                                                    <div class="dx-dropdowneditor-icon">
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>경조금</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-selectbox dx-textbox dx-texteditor dx-dropdowneditor-button-visible dx-editor-outlined dx-texteditor-empty dx-widget dx-dropdowneditor dx-dropdowneditor-field-clickable" style="width: 100%;">
+                                                <div class="dx-dropdowneditor-input-wrapper dx-selectbox-container">
+                                                    <input type="hidden" value="">
+                                                    <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" aria-haspopup="listbox" aria-autocomplete="list" type="text" readonly="" spellcheck="false" tabindex="0" role="combobox" aria-expanded="false">
+                                                    <div data-dx_placeholder="Select..." class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                                    <div class="dx-button-normal dx-button-mode-contained dx-widget dx-dropdowneditor-button" role="button" aria-label="Select">
+                                                    <div class="dx-button-content">
+                                                    <div class="dx-dropdowneditor-icon">
+                                                    
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                    <div class="dx-show-invalid-badge dx-textbox dx-texteditor dx-editor-outlined dx-texteditor-empty dx-widget dx-state-invisible" style="width: 100%;">
+                                                    <div class="dx-texteditor-container">
+                                                    <div class="dx-texteditor-input-container">
+                                                    <input autocomplete="off" class="dx-texteditor-input" type="text" spellcheck="false" aria-hidden="true" tabindex="0" role="textbox">
+                                                    <div data-dx_placeholder="" class="dx-placeholder">
+                                                    
+                                                </div>
+                                                </div>
+                                                    <div class="dx-texteditor-buttons-container">
+                                                    <div>
+                                                    
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <th>경조화 신청</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-switch dx-swipeable dx-widget dx-visibility-change-handler" role="button" tabindex="0" aria-pressed="false" aria-label="Not Apply" style="width: 80px;">
+                                                <div class="dx-switch-wrapper">
+                                                    <div class="dx-switch-container">
+                                                    <div class="dx-switch-inner" style="transform: translateX(-50%);">
+                                                    <div class="dx-switch-on">Apply</div>
+                                                    <div class="dx-switch-handle" style="transform: translateX(0%);">
+                                                </div>
+                                                    <div class="dx-switch-off">Not Apply</div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                <input type="hidden" value="false">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="proepm-approval-form">
+                                <caption>document area</caption>
+                                <colgroup>
+                                    <col width="14%"><col width="38%"><col width="14%"><col width="38%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>첨부</th>
+                                        <td colspan="3">
+                                            <div>
+                                                <div style="margin-top: 10px;">
+                                                    <div class="dx-show-invalid-badge dx-widget dx-fileuploader dx-fileuploader-show-file-list dx-fileuploader-empty">
+                                                    <div class="dx-fileuploader-wrapper">
+                                                    <div class="dx-fileuploader-container">
+                                                    <div class="dx-fileuploader-content">
+                                                    <div class="dx-fileuploader-input-wrapper">
+                                                    <div class="dx-fileuploader-button dx-button dx-button-normal dx-button-mode-contained dx-widget dx-button-has-text" aria-label="Select files.." role="button" tabindex="0">
+                                                    <div class="dx-button-content">
+                                                    <span class="dx-button-text">Select files..</span>
+                                                </div>
+                                                </div>
+                                                    <div class="dx-fileuploader-input-container">
+                                                    <input type="file" multiple="" accept="*" tabindex="-1" name="files[]" class="dx-fileuploader-input" aria-labelledby="dx-fileuploader-input-label-c0be9dd3-ba57-0268-3cf6-127eccd95755">
+                                                    <div id="dx-fileuploader-input-label-c0be9dd3-ba57-0268-3cf6-127eccd95755" class="dx-fileuploader-input-label">or Drop file here</div>
+                                                </div>
+                                                </div>
+                                                    <div class="dx-fileuploader-button dx-fileuploader-upload-button dx-button dx-button-normal dx-button-mode-contained dx-widget dx-button-has-text" aria-label="Upload" tabindex="0" role="button">
+                                                    <div class="dx-button-content">
+                                                    <span class="dx-button-text">Upload</span>
+                                                </div>
+                                                </div>
+                                                    <div class="dx-fileuploader-files-container">
+                        
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="proepm-approval-form">
+                                <caption>document area</caption>
+                                <colgroup>
+                                    <col width="14%"><col width="38%"><col width="14%"><col width="38%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4">텍스트영역</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-wrap">
+                    <ul class="tab-menu">
+                        <li class="selected"><a href="#">문서정보</a></li>
+                        <li><a href="#">결제정보</a></li>
+                    </ul>
+                    <div class="tab-cont-wrap">
+                        <div class="tab-cont doc-info">
+                            <table>
+                                <caption>문서정보</caption>
+                                <colgroup>
+                                    <col width="30%"><col width="70%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>문서번호</th>
+                                        <td>aa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>소속</th>
+                                        <td>aa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>기안자</th>
+                                        <td>aa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>기안일</th>
+                                        <td>aa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>보존연한</th>
+                                        <td>
+                                            <div class="dx-show-invalid-badge dx-selectbox dx-textbox dx-texteditor dx-editor-outlined dx-state-readonly dx-widget dx-dropdowneditor dx-dropdowneditor-field-clickable">
+                                                <div class="dx-dropdowneditor-input-wrapper dx-selectbox-container">
+                                                    <input type="hidden" value="86711807-aeb8-4a7d-9daf-348244f88841">
+                                                    <div class="dx-texteditor-container">
+                                                        <div class="dx-texteditor-input-container">
+                                                            <input autocomplete="off" class="dx-texteditor-input" aria-haspopup="listbox" aria-autocomplete="list" type="text" readonly="" aria-readonly="true" spellcheck="false" tabindex="0" role="combobox" aria-expanded="false">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-cont appr-info">
+                            <ul>
+                                <li class="selected">
+                                    <div class="user-photo">
+                                        <img src="../img/test-thumb.jpeg" alt="">
+                                    </div>
+                                    <div class="msg-wrap">
+                                        <a href="#" class="name">
+                                            <span class="name-kor">김경희</span>
+                                            <span class="name-eng">Kim Kyunghee</span>
+                                        </a>
+                                        <span class="department">사업관리팀</span>
+                                        <span class="status">기안</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="user-photo">
+                                        <img src="../img/test-thumb.jpeg" alt="">
+                                    </div>
+                                    <div class="msg-wrap">
+                                        <a href="#" class="name">
+                                            <span class="name-kor">김경희</span>
+                                            <span class="name-eng">Kim Kyunghee</span>
+                                        </a>
+                                        <span class="department">사업관리팀</span>
+                                        <span class="status">기안</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-bottom">
+                <div class="tab-wrap type02">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-pencil-square-o"></i>
+                                <span>결재요청</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-floppy-o"></i>
+                                <span>임시저장</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-eye"></i>
+                                <span>미리보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-times"></i>
+                                <span>취소</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="dx-icon fa fa-info"></i>
+                                <span>결재설정</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    $("#projectBtn1").dxButton({
+        stylingMode: "contdeained",
+        text: "신규결제",
+        type: "default"
+    });
+</script>

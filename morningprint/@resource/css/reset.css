@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* light300, regular400(basic), medium500, bold700, black900 */
+/* 0.75rem=12, 0.88rem=14, 1rem=16, 1.25rem=20, 1.5rem=24, 1.75rem=28, 2rem=32, 2.25rem=36 */
+
+html {height: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-weight: 400; font-size: 12px; overflow-y: scroll;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video button {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1; height: 100%; width: 100%; font-family: 'Roboto', 'Noto Sans KR', sans-serif;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+video,img {vertical-align: top;}
+a {margin: 0; padding: 0; color: #111; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none;}
+a:hover, a:active {color: #f67d00;}
+table {border-collapse: collapse; border-spacing: 0; width: 100%;}
+caption,legend {width: 0; height: 0; opacity: 0; text-indent: -9999px; line-height: 0; overflow: hidden;}
+
+fieldset {border: 0;}
+ins {background-color:#ff9; color:#111; text-decoration:none;}
+mark {background-color:#ff9; color:#111; font-style:italic; font-weight:bold;}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #d6d6d6; margin: 50px; padding: 0;}
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select::-ms-expand { display: none; }
+input, select {color: #111; vertical-align: middle; line-height: normal; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0;}
+input, textarea, button, select .btn {box-sizing: border-box; -webkit-box-sizing: border-box;}
+textarea {resize: none; border: 1px solid #999;}
+input:focus,
+textarea:focus,
+select:focus {outline: none;}
+button {cursor: pointer; border: 0; background: none; outline: none; padding: 0;}
+
+::placeholder {color:#888;}
+::-webkit-input-placeholder {color:#888;}
+::-moz-placeholder {color:#888;}
+:-ms-input-placeholder {color: #888;}
+:-moz-placeholder {color:#888;}
+
+.skip-navi a {display: block; position: absolute; left: 0; top: 0; width: 1px; height: 1px; text-align: center; color: #fff; text-decoration: none; overflow: hidden; z-index: 100;}
+.skip-navi a:focus,
+.skip-navi a:active {padding: 10px 0; width: 100%; height: auto; background: #111; outline: none;}
+
+.hide {text-indent: 100%; white-space: nowrap; overflow: hidden; color: transparent; font-size: 0;}
+em {color: #f67d00;}

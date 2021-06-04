@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap');
+@import url(_normalize.css);
+@import url(_reset.css);
+
+/* base font */
+html, body 						{font-family:'Noto Sans KR', 'Sans-serif';line-height:1.4;font-weight:300}
+body 							{color:#000;margin:0 auto;}
+
+/* markup guide layout */
+#header .header-wrap,
+#container,
+#footer .footer-wrap 			{padding:0 1.4rem;}
+#header							{position:relative;height:4rem;background-color:#000;}
+#header h1 						{padding:1rem 0;color:#fff;font-size:1.4rem;line-height:2rem;font-weight:400;}
+#header h1 span 				{font-size:1rem;font-weight:300;margin-left:.1rem;}
+#header h1 a,
+#header h1 span 				{color:inherit;}
+#footer{padding:1.2rem 0;border-top:1px solid rgba(208,208,208,1);font-size:.8rem;}
+#footer .footer-wrap{position:relative;}
+#footer p{text-align:center}
+#footer a{color:#ffcd31;}
+#container{max-width:1200px;margin:2rem auto 2.8rem;}
+#container > .section > .section-title {font-size:2.2rem;color:#000;text-align:center;font-weight:700;letter-spacing:-.1rem}
+#container h3{font-size:1.35rem;color:#292929;font-weight:400;}
+#container .section +.section {margin-top:4rem}
+#container .section-title + .table-wrap,
+#container .section-title + .text-wrap,
+#container .text-wrap + h3,
+#container .table-wrap + h3,
+#container .code-wrap + h3 {margin-top:2rem;}
+#container h3 + .text-wrap,
+#container h3 + .table-wrap,
+#container .code-wrap {margin-top:.5rem;}
+
+
+/* table */
+.table-wrap{border-top:2px solid #292929;overflow-x:auto;}
+.data-table{width: 100%; border-bottom:1px solid #292929;/*font-size:14px;*/}
+.data-table thead th{background:#f9f9f9;}
+.data-table th + th,
+.data-table td + td,
+.data-table th + td{border-left:1px solid #e2e2e2;}
+.data-table td.complete{background-image: linear-gradient(106deg, #14bed2 1%, #0ddf6a 99%);color:#fff;}
+.data-table td.undecided{background:#ddd;color:#000;}
+.data-table td.apply{background:#f57f00;color:#fff;}
+.data-table td.validation{background:#f5f5f5;color:#292929;}
+.data-table td.working{background-image: linear-gradient(106deg, #ffa000 1%, #ffcc00 99%); color: #fff;}
+.data-table td.del{background-color:#999;text-decoration:line-through;}
+.data-table td a{color:inherit;text-decoration:underline;}
+.data-table th,
+.data-table td{padding:.8rem;text-align:center;border-top:1px solid #e2e2e2;}
+

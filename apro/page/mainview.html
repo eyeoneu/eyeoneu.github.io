@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPDP Main View</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+ 
+    <!-- Reference either Knockout or AngularJS, if you do -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    
+    <!-- DevExtreme themes -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+    <link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+    <link rel="stylesheet" href="../css/PROEPMStylesV2.css">
+    <link rel="stylesheet" href="../css/npdp.css">
+    
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <script>
+        var projectList = [{
+            "ID": 1,
+            "No": 1,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-exclamation-triangle fa-lg proepm-status-danger"
+        }, {
+            "ID": 2,
+            "No": 2,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-stop-circle-o fa-lg proepm-status-stop"
+        }, {
+            "ID": 3,
+            "No": 3,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-refresh fa-lg proepm-status-run"
+        }, {
+            "ID": 4,
+            "No": 4,
+            "Product code": "SM4175",
+            "Segment": "Mobile",
+            "Project type": "Platform",
+            "Status": "Running",
+            "Signal": "fa fa-check-circle fa-lg proepm-status-success"
+        }];
+    </script>
+
+</head>
+<body>
+
+    <div class="proepm-wrap proepm-page-wrap">
+       
+        <div class="proepm-tit-wrap proepm-section-tit">
+            <h2>Project list</h2>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>project list search</caption>
+                    <colgroup>
+                        <col width="10%"><col width="40%"><col width="10%"><col width="40%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Status</th>
+                            <td scope="col">
+                                <div class="proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a1"><label for="a1">All</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a2" checked><label for="a2">Running</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a3"><label for="a3">Hold</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a4"><label for="a4">Completion</label>
+                                    </div>
+                                    <div class="proepm-item">
+                                        <input type="checkbox" id="a5"><label for="a5">Drop</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th scope="col">Text Search</th>
+                            <td scope="col">
+                                <div class="proepm-search-wrap proepm-item-wrap">
+                                    <div class="proepm-item">
+                                        <input type="text" placeholder="search">
+                                    </div>
+                                    <div id="searchBtn" class="proepm-btn"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="proepm-date-tit">
+            <div class="proepm-tit-wrap proepm-delay-a">
+                <span class="status-txt">Running</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-b">
+                <span class="status-txt">Running</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-c">
+                <span class="status-txt">Running</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-d">
+                <span class="status-txt">Running</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-e">
+                <span class="status-txt">Completion</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-f">
+                <span class="status-txt">Hold</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+            <div class="proepm-tit-wrap proepm-delay-g">
+                <span class="status-txt">Drop</span>
+                <h2>
+                    <span>A31G226 256KB CMO+ GP MCU</span>
+                </h2>
+                <div class="proepm-btn-wrap proepm-btn-rt">
+                    <div id="status10" class="proepm-btn"></div>
+                    <div id="status8" class="proepm-btn"></div>
+                    <div id="status7" class="proepm-btn"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proepm-tbl-wrap">
+            <div class="proepm-tbl-col">
+                <table>
+                    <caption>project list search</caption>
+                    <colgroup>
+                        <col width="5%"><col width="10%"><col width="5%"><col width="10%"><col width="5%"><col width="10%"><col width="5%"><col width="10%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">Product Code</th>
+                            <td scope="col">SM4175</td>
+                            <th scope="col">Customer</th>
+                            <td scope="col">LCD</td>
+                            <th scope="col">Tech name</th>
+                            <td scope="col">HM13EU</td>
+                            <th scope="col">Description</th>
+                            <td scope="col">UHD TV</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">PL</th>
+                            <td scope="col">Jeongyong Lee</td>
+                            <th scope="col">PM</th>
+                            <td scope="col"></td>
+                            <th scope="col">MKT</th>
+                            <td scope="col">chulyong mo</td>
+                            <th scope="col">Sales</th>
+                            <td scope="col"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dx-popup-content" style="height: 699px; min-height: auto;">
+            <div id="scrollView" class="dx-scrollable dx-scrollview dx-visibility-change-handler dx-scrollable-both dx-scrollable-simulated dx-scrollable-scrollbars-alwaysvisible dx-scrollable-customizable-scrollbars">
+                <div class="dx-scrollable-wrapper">
+                    <div class="dx-scrollable-container" tabindex="0">
+                        <div class="dx-scrollable-content" style="left: 0px; top: 0px; transform: none;">
+                            <div class="dx-scrollview-top-pocket">
+                                <div class="dx-scrollview-pull-down" style="display: none;">
+                                    <div class="dx-scrollview-pull-down-image"></div>
+                                    <div class="dx-scrollview-pull-down-indicator">
+                                        <div class="dx-loadindicator dx-widget">
+                                            <div class="dx-loadindicator-wrapper">
+                                                <div class="dx-loadindicator-content">
+                                                    <div class="dx-loadindicator-icon">
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dx-scrollview-pull-down-text">
+                                        <div class="dx-scrollview-pull-down-text-visible">Pull down to refresh...</div>
+                                        <div>Release to refresh...</div>
+                                        <div>Refreshing...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-scrollview-content">
+                                <div class="proepm-pop-treeview">
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Plan</div>
+                                        <div class="proepm-pop-stage-container">
+                                            <div class="plan-tit">
+                                                <span class="tit">Org date</span>
+                                                <span class="tit">Rev date</span>
+                                            </div>
+                                            <ul class="plan-wrap">
+                                                <li>
+                                                    <div>
+                                                        <span class="date">2015-11-13</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="date">2020-10-31</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="date">2015-11-13</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="date">2020-10-31</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="date">2015-11-13</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="date">2020-10-31</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="date">2015-11-13</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="date">2020-10-31</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="date">2015-11-13</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="date">2020-10-31</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Stage</div>
+                                        <ul class="stage-container">
+                                            <li class="complete"><span>S1. Development Plan</span></li>
+                                            <li class="progress"><span>S2. Design</span></li>
+                                            <li><span>S3. menu</span></li>
+                                            <li><span>S4. E/S</span></li>
+                                            <li><span>S5. Qualifiation</span></li>
+                                            <li><span>MP. Revision</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Approver</div>
+                                        <div class="proepm-pop-stage-container">
+                                           <ul class="appr-wrap box5">
+                                               <li class="complete">
+                                                   <span class="pass">Approved</span>
+                                                   <span class="tit">CEO</span>
+                                               </li>
+                                               <li>
+                                                   <span class="pass"></span>
+                                                   <span class="tit">DDL</span>
+                                               </li>
+                                               <li class="complete">
+                                                    <span class="pass">Approved</span>
+                                                    <span class="tit">QTL</span>
+                                                </li>
+                                                <li>
+                                                    <span class="pass"></span>
+                                                    <span class="tit">QTL</span>
+                                                </li>
+                                                <li>
+                                                    <span class="pass"></span>
+                                                    <span class="tit">CEEO</span>
+                                                </li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Milestone</div>
+                                        <div class="proepm-pop-stage-container">
+                                            <ul class="box-wrap box5">
+                                                <li class="complete">
+                                                    <div><span>M1</span></div>
+                                                </li>
+                                                <li class="complete">
+                                                    <div><span>M2</span></div>
+                                                </li>
+                                                <li class="complete">
+                                                    <div><span>M3</span></div>
+                                                </li>
+                                                <li>
+                                                    <div><span>M4</span></div>
+                                                </li>
+                                                <li>
+                                                    <div><span>M5</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Approver</div>
+                                        <div class="proepm-pop-stage-container">
+                                           <ul class="appr-wrap box6">
+                                               <li>
+                                                   <span class="pass"></span>
+                                                   <span class="tit">CEO</span>
+                                               </li>
+                                               <li>
+                                                   <span class="pass"></span>
+                                                   <span class="tit">CEO</span>
+                                               </li>
+                                               <li>
+                                                   <span class="pass"></span>
+                                                   <span class="tit">CEO</span>
+                                               </li>
+                                               <li>
+                                                   <span class="pass"></span>
+                                                   <span class="tit">CEOCEO</span>
+                                               </li>
+                                               <li>
+                                                   <span class="pass"></span>
+                                                   <span class="tit">DDL</span>
+                                               </li>
+                                               <li>
+                                                    <span class="pass"></span>
+                                                    <span class="tit">??</span>
+                                                </li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Milestone</div>
+                                        <div class="proepm-pop-stage-container">
+                                            <ul class="box-wrap box6">
+                                                <li class="complete">
+                                                    <div><span>M1</span></div>
+                                                </li>
+                                                <li class="complete">
+                                                    <div><span>M2</span></div>
+                                                </li>
+                                                <li class="complete">
+                                                    <div><span>M3</span></div>
+                                                </li>
+                                                <li>
+                                                    <div><span>M4</span></div>
+                                                </li>
+                                                <li>
+                                                    <div><span>M5</span></div>
+                                                </li>
+                                                <li>
+                                                    <div><span>M6</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="proepm-pop-container">
+                                        <div class="proepm-pop-title">Deliverable</div>
+                                        <div class="proepm-pop-activity-container">
+                                            <ul class="proepm-activity-box">
+                                                <li class="complete">Project registration</li>
+                                                <li class="complete">Project proposal</li>
+                                                <li class="complete">Engineering review</li>
+                                                <li class="complete">OPS review</li>
+                                                <li class="complete">Profitability assessment</li>
+                                                <li class="complete add-box">Project feasibility review</li>
+                                                <li class="add">
+                                                    <span>ADD</span>
+                                                    <i class="fa fa-plus fa-lg"></i>
+                                                </li>
+                                            </ul>
+                                            <ul class="proepm-activity-box">
+                                                <li class="complete">Development definitions(RFQ)</li>
+                                                <li class="">Target datasheet</li>
+                                                <li class="complete upload">Kick off report</li>
+                                                <li class="complete">Kick off meeting</li>
+                                                <li class="complete">IP&amp; Device information</li>
+                                                <li class="complete">DFX</li>
+                                                <li class="complete">Application risk report</li>
+                                                <li class="complete approved">Process risk report</li>
+                                                <li class="complete approved">Reliability risk report</li>
+                                                <li class="complete">Test risk report</li>
+                                                <li class="complete">Risk review report</li>
+                                                <li class="complete">Risk Review</li>
+                                                <li class="add">
+                                                    <span>ADD</span>
+                                                    <i class="fa fa-plus fa-lg"></i>
+                                                </li>
+                                            </ul>
+                                            <ul class="proepm-activity-box">
+                                                <li class="complete">Internal design check list</li>
+                                                <li class="complete">Internal design review report</li>
+                                                <li>IP&amp;Device information</li>
+                                                <li>Internal design review</li>
+                                                <li>Testability check</li>
+                                                <li>Test Plan (FT/PT)</li>
+                                                <li>ESD network info</li>
+                                                <li>ESD network check</li>
+                                                <li>Advanced datasheet</li>
+                                                <li>Design review report</li>
+                                                <li>Risk review report2</li>
+                                                <li>Project interim review1</li>
+                                                <li>Design review</li>
+                                                <li class="add">
+                                                    <span>ADD</span>
+                                                    <i class="fa fa-plus fa-lg"></i>
+                                                </li>
+                                            </ul>
+                                            <ul class="proepm-activity-box">
+                                                <li class="progress">Application report</li>
+                                                <li class="progress add-box">Application report</li>
+                                                <li class="progress">Key test item set up report</li>
+                                                <li>Pin characteristic report</li>
+                                                <li>Pre Qual. report</li>
+                                                <li>Revision Request</li>
+                                                <li>Revision request review</li>
+                                                <li>Preliminary Datasheet</li>
+                                                <li>Risk Review report3</li>
+                                                <li>Project Interim review2</li>
+                                                <li>ES review</li>
+                                                <li class="add">
+                                                    <span>ADD</span>
+                                                    <i class="fa fa-plus fa-lg"></i>
+                                                </li>
+                                            </ul>
+                                            <ul class="proepm-activity-box">
+                                                <li>Application report</li>
+                                                <li>Test set up report</li>
+                                                <li>Pin characteristic report</li>
+                                                <li>Pre qual. report</li>
+                                                <li>Revision request</li>
+                                                <li>Revision review</li>
+                                                <li>Spec. meeting </li>
+                                                <li>Final datasheet</li>
+                                                <li>Qual. report</li>
+                                                <li>Risk Review report4</li>
+                                                <li>Project Interim Review 3</li>
+                                                <li>CS review</li>
+                                                <li class="add">
+                                                    <span>ADD</span>
+                                                    <i class="fa fa-plus fa-lg"></i>
+                                                </li>
+                                            </ul>
+                                            <ul class="proepm-activity-box">
+                                                <li>RTP Design review</li>
+                                                <li>RTP SE review</li>
+                                                <li>RTP PE review</li>
+                                                <li>RTP SCM review</li>
+                                                <li>RTP QE review</li>
+                                                <li>RTP TE review</li>
+                                                <li>RTP FE review</li>
+                                                <li>Final DB upload check</li>
+                                                <li>Project interim review 4</li>
+                                                <li>RTP review</li>
+                                                <li class="add">
+                                                    <span>ADD</span>
+                                                    <i class="fa fa-plus fa-lg"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-scrollview-bottom-pocket">
+                                <div class="dx-scrollview-scrollbottom" style="display: none;">
+                                    <div class="dx-scrollview-scrollbottom-indicator">
+                                        <div class="dx-loadindicator dx-widget">
+                                            <div class="dx-loadindicator-wrapper">
+                                                <div class="dx-loadindicator-content">
+                                                    <div class="dx-loadindicator-icon">
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                        <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dx-scrollview-scrollbottom-text">Loading...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-horizontal dx-scrollbar-hoverable" style="display: none;">
+                            <div class="dx-scrollable-scroll dx-state-invisible" style="width: 1178px; transform: translate(0px, 0px);">
+                                <div class="dx-scrollable-scroll-content"></div>
+                            </div>
+                        </div>
+                        <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical dx-scrollbar-hoverable" style="display: none;">
+                            <div class="dx-scrollable-scroll dx-state-invisible" style="height: 699px; transform: translate(0px, 0px);">
+                                <div class="dx-scrollable-scroll-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-scrollview-loadpanel dx-overlay dx-widget dx-state-invisible dx-visibility-change-handler dx-loadpanel">
+                    <div class="dx-overlay-content" aria-hidden="true" style="width: 222px; height: 90px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+    $("#status4").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status5").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status6").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status7").dxButton({
+        stylingMode: "contained",
+        text: "Approved",
+        type: "default"
+    });
+    $("#status8").dxButton({
+        stylingMode: "contained",
+        text: "Drafted",
+        type: "success"
+    });
+    $("#status9").dxButton({
+        stylingMode: "contained",
+        text: "Delayed",
+        type: "danger"
+    });
+    $("#status10").dxButton({
+        stylingMode: "contained",
+        text: "Summary sheet",
+        type: "normal"
+    });
+    $("#status11").dxButton({
+        stylingMode: "contained",
+        text: "Project members",
+        type: "normal"
+    });
+    $("#status12").dxButton({
+        stylingMode: "e-approval",
+        text: "example",
+        type: "normal"
+    });
+
+    $("#searchBtn").dxButton({
+        stylingMode: "contained",
+        text: "Search",
+        type: "default"
+    });
+
+</script>

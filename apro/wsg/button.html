@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no"/>
+	<title>Silicon mitus Makeup</title>
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+	<script src="https://use.fontawesome.com/e6f5e6e77f.js"></script>
+
+	<!-- Reference either Knockout or AngularJS, if you do -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	
+	<!-- DevExtreme themes -->
+	<link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+	<link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+	<link rel="stylesheet" href="../css/dx.generic.custom-ver3.css">
+	<link rel="stylesheet" type="text/css" href="../css/PROEPMStylesV2.css">
+	<link rel="stylesheet" type="text/css" href="wsg.css">
+	
+	<!-- DevExtreme library -->
+	<script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.web.js"></script> -->
+	<!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz.js"></script> -->
+	<!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.viz-web.js"></script> -->
+	<script type="text/javascript" src="wsg.js"></script>
+</head>
+<body>
+
+<!-- WRAP -->
+<div id="wrap" class="wsg">
+	<!-- HEADER -->
+	<div id="header">
+		<div class="header-wrap">
+			<h1></h1>
+	
+			<div id="allMenu" class="gnb-menu">
+				<a href="#" class="open-menu">
+					<span class="line-01"></span>
+					<span class="line-02"></span>
+					<span class="line-03"></span>
+				</a>
+			</div>
+			<div class="gnb">
+				<div class="gnb-wrap">
+					<h3>PROGRESS</h3>
+					<ul>
+						<li><a href="markup.html">markup</a></li>
+					</ul>
+					<h3>UI LIBRARY</h3>
+					<ul>
+						 <li><a href="button.html">button (ing)</a></li>
+						<li><a href="table.html">table (ing)</a></li>
+						<li><a href="etc.html">etc (ing)</a></li>
+						<li><a href="">form</a></li>
+						<li><a href="">fieldset</a></li>
+						<li><a href="">tab</a></li>
+						<li><a href="">popup</a></li>
+					</ul>
+					<a href="javascript:void(0);" class="btn-close"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // HEADER -->
+<!-- CONTENT -->
+<div id="container">
+	<h2>BUTTON</h2>
+	<!-- section -->
+	<div class="section">
+		<div class="table-wrap">
+			<table class="data-table">
+				<caption></caption>
+				<colgroup>
+					<col style="width: 16%" />
+					<col style="width: 21%" />
+					<col style="width: 21%" />
+					<col style="width: 21%" />
+					<col style="width: 21%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>.proepm-btn</th>
+						<th>.proepm-btn<br>.proepm-btn-md</th>
+						<th>.proepm-btn<br>.proepm-btn-lg</th>
+						<th>.proepm-btn<br>.btn-disabled</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Normal<br>(contained)</th>
+						<td><div id="normal11" class="proepm-btn"></div></td>
+						<td><div id="normal21" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="normal31" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="normal41" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Success<br>(contained)</th>
+						<td><div id="success11" class="proepm-btn"></div></td>
+						<td><div id="success21" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="success31" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="success41" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Default<br>(contained)</th>
+						<td><div id="default11" class="proepm-btn"></div></td>
+						<td><div id="default21" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="default31" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="default41" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Danger<br>(contained)</th>
+						<td><div id="danger11" class="proepm-btn"></div></td>
+						<td><div id="danger21" class="proepm-btn proepm-btn-md"></div></td>
+						<td class="selected"><div id="danger31" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="danger41" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+
+					<tr>
+						<th>Normal<br>(Outlined)</th>
+						<td><div id="normal12" class="proepm-btn"></div></td>
+						<td><div id="normal22" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="normal32" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="normal42" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Success<br>(Outlined)</th>
+						<td><div id="success12" class="proepm-btn"></div></td>
+						<td><div id="success22" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="success32" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="success42" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Default<br>(Outlined)</th>
+						<td><div id="default12" class="proepm-btn"></div></td>
+						<td><div id="default22" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="default32" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="default42" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Danger<br>(Outlined)</th>
+						<td><div id="danger12" class="proepm-btn"></div></td>
+						<td><div id="danger22" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="danger32" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="danger42" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+
+					<tr>
+						<th>Normal<br>(text)</th>
+						<td><div id="normal13" class="proepm-btn"></div></td>
+						<td><div id="normal23" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="normal33" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="normal43" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Success<br>(text)</th>
+						<td><div id="success13" class="proepm-btn"></div></td>
+						<td><div id="success23" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="success33" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="success43" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Default<br>(text)</th>
+						<td><div id="default13" class="proepm-btn"></div></td>
+						<td><div id="default23" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="default33" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="default43" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+					<tr>
+						<th>Danger<br>(text)</th>
+						<td><div id="danger13" class="proepm-btn"></div></td>
+						<td><div id="danger23" class="proepm-btn proepm-btn-md"></div></td>
+						<td><div id="danger33" class="proepm-btn proepm-btn-lg"></div></td>
+						<td><div id="danger43" class="proepm-btn proepm-btn-lg btn-disabled"></div></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<!-- markup -->
+		<div class="markup">
+		<strong>markup 예시</strong>
+<pre>
+&lt;div id="danger31" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+
+$("#danger31").dxButton({
+	stylingMode: "contained",
+	text: "버튼",
+	type: "danger"
+});
+<pre>
+		</div>
+		<!-- // markup -->
+	</div>
+	<!-- //section -->
+
+	<!-- section -->
+	<div class="section">
+		<h3>Layout Preview</h3>
+		<div class="proepm-btn-wrap">
+			<div class="proepm-btn-wrap proepm-btn-ct">
+				<div id="normal15" class="proepm-btn proepm-btn-lg"></div>
+				<div id="danger15" class="proepm-btn proepm-btn-lg"></div>
+			</div>
+		</div>
+		<div class="proepm-btn-wrap">
+			<div class="proepm-btn-wrap proepm-btn-lt">
+				<div id="normal16" class="proepm-btn proepm-btn-md"></div>
+				<div id="success16" class="proepm-btn proepm-btn-md"></div>
+			</div>
+			<div class="proepm-btn-wrap proepm-btn-rt">
+				<div id="normal17" class="proepm-btn"></div>
+				<div id="default17" class="proepm-btn"></div>
+			</div>
+		</div>
+		<hr>
+		<div class="proepm-btn-wrap proepm-btn-full proepm-btn-2">
+			<div id="normal18" class="proepm-btn proepm-btn-lg"></div>
+			<div id="default18" class="proepm-btn proepm-btn-lg"></div>
+		</div>
+		<hr>
+		<div class="proepm-btn-wrap proepm-btn-full proepm-btn-3">
+			<div id="normal19" class="proepm-btn proepm-btn-lg"></div>
+			<div id="default19" class="proepm-btn proepm-btn-lg"></div>
+			<div id="success19" class="proepm-btn proepm-btn-lg"></div>
+		</div>
+		<hr>
+		<div class="proepm-btn-wrap proepm-btn-full proepm-btn-4">
+			<div id="normal20" class="proepm-btn proepm-btn-lg"></div>
+			<div id="default20" class="proepm-btn proepm-btn-lg"></div>
+			<div id="success20" class="proepm-btn proepm-btn-lg"></div>
+			<div id="danger20" class="proepm-btn proepm-btn-lg"></div>
+		</div>
+		<!-- markup -->
+		<div class="markup">
+		<strong>markup 예시</strong>
+<pre>
+&lt;div class="proepm-btn-wrap"&gt;
+	&lt;div class="proepm-btn-wrap proepm-btn-ct"&gt;
+		&lt;div id="normal15" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+		&lt;div id="danger15" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="proepm-btn-wrap"&gt;
+	&lt;div class="proepm-btn-wrap proepm-btn-lt"&gt;
+		&lt;div id="normal16" class="proepm-btn proepm-btn-md"&gt;&lt;/div&gt;
+		&lt;div id="success16" class="proepm-btn proepm-btn-md"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="proepm-btn-wrap proepm-btn-rt"&gt;
+		&lt;div id="normal17" class="proepm-btn"&gt;&lt;/div&gt;
+		&lt;div id="default17" class="proepm-btn"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="proepm-btn-wrap proepm-btn-full proepm-btn-2"&gt;
+	&lt;div id="normal18" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;div id="default18" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="proepm-btn-wrap proepm-btn-full proepm-btn-3"&gt;
+	&lt;div id="normal19" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;div id="default19" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;div id="success19" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="proepm-btn-wrap proepm-btn-full proepm-btn-4"&gt;
+	&lt;div id="normal20" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;div id="default20" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;div id="success20" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+	&lt;div id="danger20" class="proepm-btn proepm-btn-lg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+<pre>
+		</div>
+		<!-- // markup -->
+
+	</div>
+	<!-- //section -->
+
+</div>
+<!-- // CONTENT -->
+ 
+</div>
+<!-- // WRAP -->
+</body>
+</html>
+
+<script>
+	$("#normal11").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal21").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal31").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal41").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+
+	$("#success11").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success21").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success31").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success41").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+
+	$("#default11").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default21").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default31").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default41").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+
+	$("#danger11").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger21").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger31").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger41").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "danger"
+	});
+
+	// ------------------------
+
+	$("#normal12").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal22").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal32").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal42").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "normal"
+	});
+
+	$("#success12").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success22").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success32").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success42").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "success"
+	});
+
+	$("#default12").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default22").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default32").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default42").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "default"
+	});
+
+	$("#danger12").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger22").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger32").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger42").dxButton({
+		stylingMode: "outlined",
+		text: "버튼",
+		type: "danger"
+	});
+
+	// ------------------------
+
+	$("#normal13").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal23").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal33").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#normal43").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "normal"
+	});
+
+	$("#success13").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success23").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success33").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "success"
+	});
+	$("#success43").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "success"
+	});
+
+	$("#default13").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default23").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default33").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "default"
+	});
+	$("#default43").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "default"
+	});
+
+	$("#danger13").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger23").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger33").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#danger43").dxButton({
+		stylingMode: "text",
+		text: "버튼",
+		type: "danger"
+	});
+
+	// ------------------------
+
+	$("#normal15").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#danger15").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#normal16").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#success16").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+	$("#normal17").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#default17").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#normal18").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#default18").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#normal19").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#default19").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#success19").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+	$("#normal20").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "normal"
+	});
+	$("#default20").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "default"
+	});
+	$("#danger20").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "danger"
+	});
+	$("#success20").dxButton({
+		stylingMode: "contained",
+		text: "버튼",
+		type: "success"
+	});
+
+</script>

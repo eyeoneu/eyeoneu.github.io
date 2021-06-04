@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>모닝프린트 &copy; HANBOM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<script src="http://211.253.28.191/@pub/@resource/js/jquery-1.12.4.min.js"></script>
+	<script src="http://211.253.28.191/@pub/@resource/js/progress.js"></script>
+	<link rel="stylesheet" href="http://211.253.28.191/@pub/@resource/css/pub.css">
+</head>
+<body>
+
+<div class="skip-navi">
+	<a href="#content">본문 바로가기</a>
+</div>
+
+<!-- WRAP -->
+<div id="wrap">
+<!-- HEADER -->
+<header id="header">
+	<div class="header-wrap">
+		<h1>모닝프린트 <span>Albert Communication</span></h1>
+	</div>
+</header>
+<!-- // HEADER -->
+<!-- CONTENT -->
+<div id="container">
+	<!-- section -->
+	<section class="section">
+		<h2 class="section-title">MARKUP LIST</h2>
+
+		<p style="text-align:right;padding:1rem 0"><strong>진행상황 표현 :</strong> 예정일(mm/dd), 미정, 진행, 미정, 검수, 삭제</p>
+
+		<div class="table-wrap">
+			<table class="data-table markup-list">
+				<caption>진행상황</caption>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col" class="path">PATH</th>
+						<th scope="col" class="pageid">PAGE ID</th>
+						<th scope="col" class="plan">PLAN</th>
+						<th scope="col" class="state">STATE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>layout</td>
+						<td></td>
+						<td class="path">home</td>
+						<td class="pageid">layout</td>
+						<td class="plan">8/2</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/home/layout.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Home</td>
+						<td></td>
+						<td class="path">home</td>
+						<td class="pageid">index</td>
+						<td class="plan">8/2</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/home/index.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td rowspan="2">Login</td>
+						<td>Login</td>
+						<td class="path">sign</td>
+						<td class="pageid">login</td>
+						<td class="plan">8/2</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/sign/login.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>find Id/pw</td>
+						<!--
+							login2
+							두개 폼 합해진 구조.
+							결과도 같은 페이지
+
+							로그인은 결과 보이고,
+							비밀번호 리셋은 이메일 전송 메세지만
+						 -->
+						<td class="path">sign</td>
+						<td class="pageid">forgot</td>
+						<td class="plan">8/2</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/sign/forgot.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td rowspan="4">My</td>
+						<td>Order history</td>
+						<td class="path">my</td>
+						<td class="pageid">order</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/my/order.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Change my Account</td>
+						<td class="path">my</td>
+						<td class="pageid">info</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/my/info.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>My Portfolio</td>
+						<td class="path">my</td>
+						<td class="pageid">pf</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/my/pf.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>Cart</td>
+						<td class="path">my</td>
+						<td class="pageid">cart</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/my/cart.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td rowspan="3">Order</td>
+						<td>Order</td>
+						<td class="path">order</td>
+						<td class="pageid">order</td>
+						<td class="plan">8/23</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/order/order.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>payment</td>
+						<td class="path">order</td>
+						<td class="pageid">payment</td>
+						<td class="plan">8/23</td>
+						<td class="state del"><a target="_blank" href="/morningprint/order/payment.html">삭제</a></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>complete</td>
+						<td class="path">order</td>
+						<td class="pageid">complete</td>
+						<td class="plan">8/23</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/order/complete.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td rowspan="3">Product</td>
+						<td>list</td>
+						<td class="path">item</td>
+						<td class="pageid">group-list</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/item/group-list.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td>list</td>
+						<td class="path">item</td>
+						<td class="pageid">list</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/item/list.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td></td>
+						<td class="path">item</td>
+						<td class="pageid">detail</td>
+						<td class="plan">8/9</td>
+						<td class="state complete"><a target="_blank" href="/morningprint/item/detail.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td rowspan="8">SUPPORT</td>
+						<td>Notice</td>
+						<td class="path">cs</td>
+						<td class="pageid">notice</td>
+						<td class="plan">8/30</td>
+						<td class="state working"><a target="_blank" href="/morningprint/cs/notice.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>16</td>
+						<td>Event</td>
+						<td class="path">cs</td>
+						<td class="pageid">event</td>
+						<td class="plan">8/30</td>
+						<td class="state working"><a target="_blank" href="/morningprint/cs/event.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>17</td>
+						<td>FAQ</td>
+						<td class="path">cs</td>
+						<td class="pageid">faq</td>
+						<td class="plan">8/30</td>
+						<td class="state working"><a target="_blank" href="/morningprint/cs/faq.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td>Print Tip</td>
+						<td class="path">cs</td>
+						<td class="pageid">tip</td>
+						<td class="plan">8/30</td>
+						<td class="state working"><a target="_blank" href="/morningprint/cs/tip.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>19</td>
+						<td>Design of the Month</td>
+						<td class="path">cs</td>
+						<td class="pageid">dom</td>
+						<td class="plan">9/6</td>
+						<td class="state undecided"><a target="_blank" href="/morningprint/cs/dom.html">미정</a></td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td>Design of the Month Detail</td>
+						<td class="path">cs</td>
+						<td class="pageid">dom_detail</td>
+						<td class="plan">9/6</td>
+						<td class="state undecided"><a target="_blank" href="/morningprint/cs/dom_detail.html">미정</a></td>
+					</tr>
+					<tr>
+						<td>21</td>
+						<td>QR CODE generator</td>
+						<td class="path">cs</td>
+						<td class="pageid">qr</td>
+						<td class="plan">삭제</td>
+						<td class="state del"><a target="_blank" href="/morningprint/cs/qr.html">삭제</a></td>
+					</tr>
+					<tr>
+						<td>22</td>
+						<td>Contact Us</td>
+						<td class="path">cs</td>
+						<td class="pageid">inquiry</td>
+						<td class="plan">8/30</td>
+						<td class="state modify"><a target="_blank" href="/morningprint/cs/inquiry.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>23</td>
+						<td rowspan="6">Guide</td>
+						<td>Upload Guide</td>
+						<td class="path">guide</td>
+						<td class="pageid">upload</td>
+						<td class="plan">8/30</td>
+						<td class="state modify"><a target="_blank" href="/morningprint/guide/upload.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>24</td>
+						<td>Editor Guide</td>
+						<td class="path">guide</td>
+						<td class="pageid">editor</td>
+						<td class="plan">9/6</td>
+						<td class="state undecided"><a target="_blank" href="/morningprint/guide/editor.html">미정</a></td>
+					</tr>
+					<tr>
+						<td>25</td>
+						<td>Quote</td>
+						<td class="path">guide</td>
+						<td class="pageid">quote</td>
+						<td class="plan">9/6</td>
+						<td class="state undecided"><a target="_blank" href="/morningprint/guide/quote.html">미정</a></td>
+					</tr>
+					<tr>
+						<td>26</td>
+						<td>Finishing</td>
+						<td class="path">guide</td>
+						<td class="pageid">finishing_list</td>
+						<td class="plan">8/30</td>
+						<td class="state modify"><a target="_blank" href="/morningprint/guide/finishing_list.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>27</td>
+						<td>Finishing</td>
+						<td class="path">guide</td>
+						<td class="pageid">finishing_detail</td>
+						<td class="plan">8/30</td>
+						<td class="state modify"><a target="_blank" href="/morningprint/guide/finishing_detail.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>28</td>
+						<td>Lowest Price Guarantee</td>
+						<td class="path">guide</td>
+						<td class="pageid">guarantee</td>
+						<td class="plan">9/6</td>
+						<td class="state undecided"><a target="_blank" href="/morningprint/guide/guarantee.html">미정</a></td>
+					</tr>
+					<tr>
+						<td>29</td>
+						<td rowspan="3">Footer</td>
+						<td>Terms of use</td>
+						<td class="path">other</td>
+						<td class="pageid">terms</td>
+						<td class="plan">삭제</td>
+						<td class="state del"><a target="_blank" href="/morningprint/other/terms.html">삭제</a></td>
+					</tr>
+					<tr>
+						<td>30</td>
+						<td>copyright</td>
+						<td class="path">other</td>
+						<td class="pageid">copyright</td>
+						<td class="plan">삭제</td>
+						<td class="state del"><a target="_blank" href="/morningprint/other/copyright.html">삭제</a></td>
+					</tr>
+					<tr>
+						<td>31</td>
+						<td>policy</td>
+						<td class="path">other</td>
+						<td class="pageid">policy</td>
+						<td class="plan">삭제</td>
+						<td class="state del"><a target="_blank" href="/morningprint/other/policy.html">삭제</a></td>
+					</tr>
+					<tr>
+						<td>32</td>
+						<td>Product 추가</td>
+						<td>list</td>
+						<td class="path">item</td>
+						<td class="pageid">detail-option-list</td>
+						<td class="plan">8/30</td>
+						<td class="state working"><a target="_blank" href="/morningprint/item/detail-option-list.html">완료</a></td>
+					</tr>
+					<tr>
+						<td>33</td>
+						<td>Support 추가</td>
+						<td>board detail(notice,event,printtip 공통)</td>
+						<td class="path">cs</td>
+						<td class="pageid">board-detail</td>
+						<td class="plan">8/30</td>
+						<td class="state working"><a target="_blank" href="/morningprint/item/board-detail.html">완료</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- //section -->
+</div>
+<!-- // CONTENT -->
+<!-- FOOTER -->
+<footer id="footer">
+	<div class="footer-wrap">
+		<p class="copyright">&copy;<a href="http://www.hanbom.com/" title="한봄스튜디오" target="_blank">HANBOM</a></p>
+	</div>
+</footer>
+<!-- // FOOTER -->
+</div>
+<!-- // WRAP -->
+
+</body>
+</html>
