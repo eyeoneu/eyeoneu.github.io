@@ -488,10 +488,20 @@ html {
     margin-bottom: 0;
   }
   #landing-visual .banner-section .container .row {
-    margin-left: -35px;
-    margin-left: -2.1875rem;
-    margin-right: -35px;
-    margin-right: -2.1875rem;
+    margin-left: -25px;
+    margin-left: -1.5625rem;
+    margin-right: -25px;
+    margin-right: -1.5625rem;
+  }
+  #landing-visual .banner-section .container .row [class*="col-"] {
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 0px;
+    padding-left: 0rem;
   }
   #landing-visual .banner-section .container .banner-content {
     align-items: center;
@@ -547,5 +557,37 @@ html {
   #landing-visual .banner-section .container .banner-content p.sizeup strong {
     font-size: 27px;
     font-size: 1.6875rem;
+  }
+  #landing-visual .banner-section .mobile-app-banner-1 {
+    padding-top: 120px;
+    padding-top: 7.5rem;
+  }
+  #landing-visual .banner-section footer p.tit {
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  #landing-visual .banner-section footer p.copy {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+  #landing-visual .banner-section footer .icon-share {
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+  }
+  #landing-visual .banner-section footer .icon-share .btn {
+    width: 55px;
+    width: 3.4375rem;
+    height: 55px;
+    height: 3.4375rem;
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 12px;
+    margin-right: 0.75rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 12px;
+    margin-left: 0.75rem;
   }
 }

@@ -199,8 +199,12 @@ html {
                 margin-bottom: 0;
 
                 .row {
-                    .margin-left(-35);
-                    .margin-right(-35);
+                    .margin-left(-25);
+                    .margin-right(-25);
+
+                    [class*="col-"] {
+                        .padding-all(0);
+                    }
                 }
 
                 .banner-content {
@@ -231,6 +235,7 @@ html {
                     margin-bottom: 0;
                 }
             }
+
             .mobile-app-banner-1 {
                 padding-bottom: 0;
             }
@@ -277,6 +282,32 @@ html {
                     }
                 }
             }
+
+            .mobile-app-banner-1 {
+                .padding-top(120);
+            }
+
+            footer {
+                p {
+                    &.tit {
+                        .margin-bottom(20);
+                        .font-size(20);
+                    }
+                    &.copy {
+                        .font-size(14);
+                    }
+                }
+
+                .icon-share {
+                    .margin-bottom(20);
+
+                    .btn {
+                        .width(55);
+                        .height(55);
+                        .margin(0,12,0,12);
+                    }
+                }
+            }
         }
     }
 }
@@ -285,9 +316,7 @@ html {
 // # stage
 // --------------------------------------
 #stage-visual {
-    > section.visual-wrapper {
-        
-    }
+    
 }
 
 @media all and (max-width: 1280px){
@@ -298,9 +327,7 @@ html {
 // # result
 // --------------------------------------
 #result-visual {
-    > section.visual-wrapper {
-        
-    }
+    
 }
 
 @media all and (max-width: 1280px){
