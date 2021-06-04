@@ -1,6 +1,73 @@
 // --------------------------------------
 // # 초기화
 // --------------------------------------
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+strong,
+span,
+small,
+label,
+i {
+    .reset();
+    font-family: inherit;
+}
+
+a,
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none !important;
+    font-family: inherit;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+ul,
+ol {
+    li {
+        list-style: none;
+    }
+}
+
+figure {
+    .reset();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-stretch: normal;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 // ## 폼 요소 초기화
 button,
 input,
@@ -33,27 +100,6 @@ textarea {
     border: none;
     background: transparent;
     appearance: none;
-}
-
-input[type=tel],
-input[type=text],
-input[type=email],
-input[type=date],
-input[type=number],
-input[type=password],
-input[type=submit],
-input[type=button],
-input[type=reset] {
-    &[readonly] {
-        background: @white;
-        border: 1px solid @light-grey;
-    }
-    &::placeholder {
-        color: @light-grey;
-    }
-    &::-ms-clear {
-        display: none;
-    }
 }
 
 button,
@@ -95,68 +141,8 @@ button,
     line-height: 1;
 }
 
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-form,
-fieldset,
-p,
-dl,
-dt,
-dd,
-ul,
-ol,
-li {
-    .reset();
-}
 
-a,
-img {
-    border: 0;
-}
-
-a {
-    text-decoration: none !important;
-}
-
-i,
-em {
-    font-style: normal;
-}
-
-ul,
-ol {
-    li {
-        list-style: none;
-    }
-}
-
-figure {
-    .reset();
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    font-stretch: normal;
-}
-
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-html {
+html, body {
     font-family: inherit, sans-serif;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
+    height: 100%;
+}   

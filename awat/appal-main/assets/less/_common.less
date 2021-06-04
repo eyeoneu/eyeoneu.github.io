@@ -6,52 +6,119 @@
 // 이미지 경로
 @img: '../images';
 
-
 // --------------------------------------
 // # 색상
 // --------------------------------------
 @black: #000000;
 @white: #ffffff;
-@light-grey: #dddddd;
+@light-grey: #f5f5f5;
+@normal-grey: #dddddd;
 @sky-blue: #33b1d0;
+
+.bg-default-white {background-color: @white;}
+.bg-default-blank {background-color: transparent;}
 
 
 // --------------------------------------
 // # 폰트
 // --------------------------------------
-@main-font: 'GmarketSans', sans-serif;
+@default-font: 'Roboto', sans-serif;
+@basic-font: 'GmarketSans', sans-serif;
+@sub-font: 'ProximaNova', sans-serif;
 @bold-font: 'Jalnan', sans-serif;
 
 
 // --------------------------------------
+// # 여백
+// --------------------------------------
+
+
+
+
+// --------------------------------------
+// # 입력창 초기화
+// --------------------------------------
+input[type=tel],
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=submit],
+input[type=button],
+input[type=reset] {
+    &[readonly] {
+        background: @white;
+        border: 1px solid @normal-grey;
+    }
+    &::placeholder {
+        color: @normal-grey;
+    }
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+// --------------------------------------
 // # 버튼
 // --------------------------------------
-.btn {
-    background-color: transparent;
+.store-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #fff;
 
-    > span {
-        color: @white;
+    > strong {
+        font-family: 'Jalnan', sans-serif;
+        font-weight: normal;
     }
 
     &.sm {
-        @height: 30px;
-        height: @height;
-        border-radius: @height;
+        @height: 30;
+        .height(@height);
+        .border-radius(@height);
+        strong {
+
+        }
 
     }
     &.md {
-        @height: 40px;
-        height: @height;
-        border-radius: @height;
+        @height: 40;
+        .height(@height);
+        .border-radius(@height);
+        strong {
+
+        }
     }
     &.lg {
-        @height: 50px;
-        height: @height;
-        border-radius: @height;
+        .width(320);
+        @height: 80;
+        .height(@height);
+        .border-radius(@height);
+        .line-height(@height - 2);
+        strong {
+            .font-size(30);
+        }
+    }
+
+    &.icon-rt {
+        .padding(0,25,0,55);
     }
 
     &.line-type {
         border: 1px solid @white;
+
+        &:before {
+            background-color: @white;
+        }
+
+        &:hover {
+            color: @sky-blue;
+            .title-text {
+                color: @sky-blue;
+            }
+        }
         
     }
     &.bg-type {
@@ -59,15 +126,46 @@
     }
 
     > i {
-        &.icon-arrow {
-
-        }
-        &.icon-link {
-
-        }
-        &.icon-retry {
-
+        &:before {
+            .font-size(50);
+            margin: 0;
         }
     }
 
+}
+
+@media all and (max-width: 991px){
+    .store-btn {
+        
+        &.lg {
+            width: 100%;
+            .min-width(420);
+            justify-content: center;
+        }
+
+        &.icon-rt {
+            .padding(0,0,0,50);
+        }
+
+        > i {
+            .margin-left(30);
+        }
+    }
+}
+
+@media all and (max-width: 720px){
+    .store-btn {
+        
+        &.lg {
+            .min-width(340);
+            @height: 66;
+            .height(@height);
+            .border-radius(@height);
+            .line-height(@height - 2);
+
+            strong {
+                .font-size(24);
+            }
+        }
+    }
 }
