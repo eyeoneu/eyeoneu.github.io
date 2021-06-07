@@ -65,7 +65,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
 
-    <div id="landing-visual" class="wrap">
+    <div id="stage-visual" class="wrap">
 
 
         <!-- header-section - start
@@ -306,66 +306,57 @@
         ================================================== -->
 
 
-        <!-- banner-section - start
+        <!-- visual-wrapper - start
         ================================================== -->
-        <section id="banner-section" class="banner-section clearfix">
-            <div class="mobile-app-banner-1">
+        <section class="visual-wrapper">
+            
+            <header>
+                <strong>Stage 1</strong>
+                <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+            </header>
 
-                <div class="container">
-                    <div class="row justify-content-lg-between justify-content-md-center">
+            <div class="cont">
+                
+                <div class="cont__head">
+                    <p>Network WAN 영역</p>
+                </div>
 
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="banner-content">
-                                <h2><img src="assets/images/img-title.svg" alt="AWS용어 능력고사 - AWAT:AWS Word Ability Test"></h2>
-                                <p>
-                                    <span>레거시에서 생존해온 나에게</span>
-                                    <span>Cloud라는 용어가 어렵게 느껴진다면!?</span>
-                                </p>
-                                <p class="sizeup">
-                                    <span><strong>100레벨</strong>도 어려운 당신을 위한</span>
-                                    <span><strong>50레벨</strong>테스트!</span>
-                                </p>
-                                <button class="store-btn bg-default-blank md line-type icon-rt">
-                                    <strong>테스트 시작</strong>
-                                    <i class="uil uil-angle-right"></i>
-                                </button>
-                            </div>
-
-                            <div class="mobile-banner-image d-none">
-                                <img src="assets/images/bg-mobile-main@2x.png" alt="image_not_found">
-                            </div>
-                        </div>
-
-                        <div class="banner-image-wrap">
-                            <div class="banner-image scene">
-                                <span class="bg-main" data-depth="0.1">
-                                    <small data-aos="" data-aos-duration="450" data-aos-delay="100">
-                                        <img src="assets/images/bg-main@2x.png" alt="image_not_found">
-                                    </small>
-                                </span>
-                            </div>
-                        </div>
-
+                <div class="cont__body">
+                    <div class="form-item">
+                        <input type="radio" name="question" id="ques1">
+                        <label for="ques1">
+                            <span>MAN</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <input type="radio" name="question" id="ques2">
+                        <label for="ques2">
+                            <span>Managed Service</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <input type="radio" name="question" id="ques3">
+                        <label for="ques3">
+                            <span>Region</span>
+                        </label>
                     </div>
                 </div>
-                
             </div>
 
             <footer>
-                <p class="tit">
-                    <span>테스트 공유하기</span>
-                </p>
-                <article class="icon-share">
-                    <button type="button" class="btn"><img src="assets/images/icon-kakako@2x.png" alt="kakao"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-instagram@2x.png" alt="instagram"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-facebook@2x.png" alt="facebook"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-twitter@2x.png" alt="twitter"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-link@2x.png" alt="링크"></button>
-                </article>
-                <p class="copy">Copyright @ 2021 Saltware all right reserved. Privacy Policy</p>
+                <p class="info">9개의 문제가 남았습니다.</p>
+
+                <!-- 문항선택을 했을경우 disabled 클래스 제거 -->
+                <button class="store-btn bg-default-black lg bg-type disabled">
+                    <strong>다음 문제 풀기</strong>
+                    <!-- 마지막 문항일 경우 -->
+                    <!-- <strong>결과보기</strong> -->
+                </button>
+
             </footer>
+
         </section>
-        <!-- banner-section - end
+        <!-- visual-wrapper - end
         ================================================== -->
 
 
