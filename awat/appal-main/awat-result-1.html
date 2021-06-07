@@ -65,7 +65,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
 
-    <div id="stage-visual" class="wrap">
+    <div id="result-visual" class="wrap">
 
 
         <!-- header-section - start
@@ -310,50 +310,34 @@
         ================================================== -->
         <section class="visual-wrapper">
             
-            <header>
-                <strong>Stage 1</strong>
-                <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
-            </header>
-
-            <div class="cont">
-                
-                <div class="cont__head">
-                    <p>VDI</p>
-                    <p><span>(Virtual Desktop infrastructure)</span></p>
-                </div>
-
-                <div class="cont__body">
-                    <div class="form-item">
-                        <input type="radio" name="question" id="ques1">
-                        <label for="ques1">
-                            <span>MAN</span>
-                        </label>
+            <div class="cont cont--level01">
+                <div class="cont__wrap">
+                    <div class="cont__head">
+                        <strong class="tit">당신의 AWAT 점수는?</strong>
+                        <strong class="num">30<span>점</span></strong>
                     </div>
-                    <div class="form-item">
-                        <input type="radio" name="question" id="ques2">
-                        <label for="ques2">
-                            <span>Managed Service</span>
-                        </label>
-                    </div>
-                    <div class="form-item">
-                        <input type="radio" name="question" id="ques3">
-                        <label for="ques3">
-                            <span>Region</span>
-                        </label>
+                    
+                    <div class="cont__body">
+                        <p class="pc-view"><span class="line-br">아직 AWS를 ‘<strong>본격적으로 알아가기엔 부족한 점수</strong>’인 것 같아요.</span> <span class="line-br">이미 마음은 AWS 앰배서더 급이지만</span> <span class="line-br">레거시 환경과 AWS 환경의 서비스 맵핑부터 공부해보시는 건 어떨까요?</span></p>
+                        <p class="m-view"><span class="line-br">아직 AWS를 ‘<strong>본격적으로 알아가기엔</strong></span> <span class="line-br"><strong>부족한 점수</strong>’인 것 같아요.</span> <span class="line-br">이미 마음은 AWS 앰배서더 급이지만 레거시 환경과</span> <span class="line-br">AWS 환경의 서비스 맵핑부터 공부해보시는 건 어떨까요?</span></p>
+                        <button class="store-btn bg-default-black lg bg-type">
+                            <strong>용어집 다운받기</strong>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <footer>
-                <p class="info">9개의 문제가 남았습니다.</p>
-
-                <!-- 문항선택을 했을경우 disabled 클래스 제거 -->
-                <button class="store-btn bg-default-black lg bg-type disabled">
-                    <strong>다음 문제 풀기</strong>
-                    <!-- 마지막 문항일 경우 -->
-                    <!-- <strong>결과보기</strong> -->
-                </button>
-
+                <div class="btn-wrap">
+                    <button class="store-btn bg-default-blank lg line-type">
+                        <i class="ico ico__share"></i>
+                        <strong>친구에게 공유하기</strong>
+                    </button>
+                    <button class="store-btn bg-default-blank lg line-type">
+                        <i class="ico ico__reload"></i>
+                        <strong>다시 도전하기</strong>
+                    </button>
+                </div>
             </footer>
 
         </section>
