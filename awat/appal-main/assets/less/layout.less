@@ -17,7 +17,6 @@ html {
     width: 100%;
     min-height: 100%;
     font-family: @basic-font;
-    background-color: @sky-blue;
 }
 
 @media all and (max-width: 720px){
@@ -44,8 +43,10 @@ html {
 // # landing
 // --------------------------------------
 #landing-visual {
+    background-color: @white;
 
     .banner-section {
+        background-color: @sky-blue;
         overflow: hidden;
 
         .container {
@@ -62,10 +63,12 @@ html {
 
                 h2 {
                     .margin-bottom(20);
+
                     span {
                         display: block;
                     }
                 }
+
                 p {
                     .font-size(24);
                     text-shadow: 0.125rem 0.125rem 0.0625rem rgba(0,0,0,0.15);
@@ -108,14 +111,12 @@ html {
                     }
                 }
             }
-
         }
         
-
         > footer {
             position: relative;
             z-index: @z + 1;
-            .padding-bottom(40);
+            .padding(0,20,40,20);
 
             p {
                 text-align: center;
@@ -125,20 +126,16 @@ html {
                     .font-size(30);
                     .margin-bottom(30);
                     color: @light-black;
-                    
-                    span {
-
-                    }
                 }
 
                 &.copy {
                     font-family: @sub-font;
                     font-weight: 300; 
                     .font-size(15);
+                    .line-height(22);
                     color: @black;
                     text-transform: uppercase;
                 }
-                
             }
 
             .icon-share {
@@ -164,7 +161,6 @@ html {
         .banner-section {
             .mobile-app-banner-1 {
                 overflow: visible;
-
             }
         }
     }
@@ -187,7 +183,6 @@ html {
 
             footer {
                 background-color: @light-grey;
-
             }
         }
     }
@@ -262,7 +257,6 @@ html {
 
                 .icon-share {
                     .margin-bottom(30);
-                
                 }
             }
         }
@@ -270,6 +264,7 @@ html {
 }
 
 @media all and (max-width: 720px){
+    
     #landing-visual {
         .banner-section {
             .container {
@@ -324,6 +319,7 @@ html {
 // # stage
 // --------------------------------------
 #stage-visual {
+    background-color: @sky-blue;
 
     .visual-wrapper {
         position: relative;
@@ -497,8 +493,6 @@ html {
                 .margin-right(25);
                 .margin-bottom(35);
 
-                
-
                 &__head {
                     .min-height(120);
                     .padding-all(20);
@@ -517,8 +511,6 @@ html {
                             .font-size(24);
                         }
                     }
-
-                    
                 }
 
                 &__body {
@@ -534,7 +526,6 @@ html {
             }
 
             > footer {
-
                 p.info {
                     .font-size(23);
                     .margin-bottom(50); 
@@ -548,6 +539,7 @@ html {
 // # result
 // --------------------------------------
 #result-visual {
+    background-color: @sky-blue;
 
     .visual-wrapper {
         position: relative;
@@ -754,10 +746,6 @@ html {
                         }
                     }
                 }
-            }
-
-            > footer {
-
             }
         }
     }
