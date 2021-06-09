@@ -327,6 +327,7 @@ input[type="radio"]:checked + span > span:after {
 }
 .store-btn.disabled {
   cursor: default;
+  pointer-events: none;
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 .store-btn.disabled:hover:before {
@@ -600,10 +601,13 @@ html {
     font-size: 2.77777778vw;
   }
 }
-@media all and (max-width: 360px) {
+@media all and (max-width: 320px) {
   html {
     font-size: 10px;
     font-size: 0.625rem;
+    min-width: 510px;
+    min-width: 31.875rem;
+    overflow-x: hidden;
   }
 }
 .header-section,
@@ -629,10 +633,18 @@ html {
   flex-direction: column;
   padding-top: 50px;
   padding-top: 3.125rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
   color: #ffffff;
   z-index: 1;
 }
 #landing-visual .banner-section .container .banner-content h2 {
+  width: 440px;
+  width: 27.5rem;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
@@ -790,6 +802,8 @@ html {
     align-items: center;
   }
   #landing-visual .banner-section .container .banner-content h2 {
+    width: 440px;
+    width: 27.5rem;
     margin-bottom: 15px;
     margin-bottom: 0.9375rem;
   }
@@ -829,7 +843,8 @@ html {
 }
 @media all and (max-width: 720px) {
   #landing-visual .banner-section .container .banner-content h2 {
-    width: 60%;
+    width: 350px;
+    width: 21.875rem;
   }
   #landing-visual .banner-section .container .banner-content p {
     font-size: 20px;
@@ -1075,6 +1090,8 @@ html {
   #stage-visual .visual-wrapper .ques-list header p {
     font-size: 19px;
     font-size: 1.1875rem;
+    letter-spacing: 0px;
+    letter-spacing: -0.05625rem;
   }
   #stage-visual .visual-wrapper .ques-list .cont {
     width: 100%;
@@ -1347,5 +1364,20 @@ html {
     font-size: 1.1875rem;
     line-height: 30px;
     line-height: 1.875rem;
+  }
+}
+@media all and (max-width: 320px) {
+  #result-visual .visual-wrapper .cont__wrap {
+    padding-left: 15px;
+    padding-left: 0.9375rem;
+    padding-right: 15px;
+    padding-right: 0.9375rem;
+  }
+  #result-visual .visual-wrapper .cont__body > p > span {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+    word-break: keep-all;
   }
 }
