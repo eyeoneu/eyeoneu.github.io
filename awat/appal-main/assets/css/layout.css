@@ -892,6 +892,9 @@ html {
   }
 }
 #stage-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #33b1d0;
 }
 #stage-visual .visual-wrapper {
@@ -1158,6 +1161,9 @@ html {
   }
 }
 #result-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #33b1d0;
 }
 #result-visual .visual-wrapper {
