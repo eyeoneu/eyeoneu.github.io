@@ -53,13 +53,13 @@
   font-weight: 900;
 }
 .bg-default-blank {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .bg-default-blank:before {
   background-color: #ffffff !important;
 }
 .bg-default-black {
-  background-color: #333333;
+  background-color: #333333 !important;
 }
 .bg-default-black:before {
   background-color: #333333 !important;
@@ -98,6 +98,9 @@ input[type=button]::-ms-clear,
 input[type=reset]::-ms-clear {
   display: none;
 }
+.form-item {
+  display: block;
+}
 input[type="radio"] {
   position: absolute;
   width: 1px;
@@ -124,7 +127,7 @@ input[type="radio"] {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-input[type="radio"] + label {
+input[type="radio"] + span {
   position: relative;
   display: flex;
   align-items: center;
@@ -151,7 +154,7 @@ input[type="radio"] + label {
   word-break: break-word;
   transition: all 0.15s ease-in-out;
 }
-input[type="radio"] + label span {
+input[type="radio"] + span > span {
   position: relative;
   color: #ffffff;
   padding-left: 70px;
@@ -161,43 +164,41 @@ input[type="radio"] + label span {
   letter-spacing: 0px;
   letter-spacing: -0.046875rem;
 }
-input[type="radio"] + label span:before {
+input[type="radio"] + span > span:before {
   content: '';
   position: absolute;
-  top: -10px;
-  top: -0.625rem;
+  top: 50%;
   left: 0px;
   left: 0rem;
   width: 54px;
   width: 3.375rem;
   height: 54px;
   height: 3.375rem;
+  transform: translateY(-50%);
   background-color: #ffffff;
   border-radius: 100%;
   transition: all 0.15s ease-in-out;
 }
-input[type="radio"] + label span:after {
+input[type="radio"] + span > span:after {
   content: '';
   position: absolute;
-  top: 5px;
-  top: 0.3125rem;
-  left: 15px;
-  left: 0.9375rem;
+  top: 50%;
+  left: 25px;
+  left: 1.5625rem;
   width: 23px;
   width: 1.4375rem;
   height: 18px;
   height: 1.125rem;
   border-left: 0.4375rem solid #cfced3;
   border-bottom: 0.4375rem solid #cfced3;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(-85%);
   transition: all 0.15s ease-in-out;
 }
-input[type="radio"]:checked + label {
+input[type="radio"]:checked + span {
   background-color: #1d89fc;
 }
-input[type="radio"]:checked + label span:after {
+input[type="radio"]:checked + span > span:after {
   border-color: #1d89fc;
-  transform: rotate(-45deg);
 }
 .btn-wrap {
   display: flex;
@@ -326,7 +327,7 @@ input[type="radio"]:checked + label span:after {
 }
 .store-btn.disabled {
   cursor: default;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 .store-btn.disabled:hover:before {
   display: none;
@@ -370,31 +371,29 @@ input[type="radio"]:checked + label span:after {
   }
 }
 @media all and (max-width: 720px) {
-  input[type="radio"] + label {
-    width: 440px;
-    width: 27.5rem;
+  .form-item {
+    width: 100%;
+  }
+  input[type="radio"] + span {
+    width: 100%;
     height: 72px;
     height: 4.5rem;
   }
-  input[type="radio"] + label span {
+  input[type="radio"] + span > span {
     font-size: 23px;
     font-size: 1.4375rem;
     padding-left: 55px;
     padding-left: 3.4375rem;
   }
-  input[type="radio"] + label span:before {
+  input[type="radio"] + span > span:before {
     width: 42px;
     width: 2.625rem;
     height: 42px;
     height: 2.625rem;
-    top: -8px;
-    top: -0.5rem;
   }
-  input[type="radio"] + label span:after {
-    left: 12px;
-    left: 0.75rem;
-    top: 3px;
-    top: 0.1875rem;
+  input[type="radio"] + span > span:after {
+    left: 22px;
+    left: 1.375rem;
     width: 18px;
     width: 1.125rem;
     height: 15px;
@@ -599,6 +598,12 @@ html {
   html {
     font-size: 10px;
     font-size: 2.77777778vw;
+  }
+}
+@media all and (max-width: 360px) {
+  html {
+    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 .header-section,
@@ -876,6 +881,8 @@ html {
 }
 #stage-visual .visual-wrapper {
   position: relative;
+}
+#stage-visual .visual-wrapper .ques-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -889,7 +896,7 @@ html {
   max-width: 80rem;
   overflow: hidden;
 }
-#stage-visual .visual-wrapper > header {
+#stage-visual .visual-wrapper .ques-list header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -907,7 +914,7 @@ html {
   padding-left: 1.875rem;
   text-align: center;
 }
-#stage-visual .visual-wrapper > header strong {
+#stage-visual .visual-wrapper .ques-list header strong {
   font-family: 'Jalnan', sans-serif;
   font-size: 64px;
   font-size: 4rem;
@@ -916,7 +923,7 @@ html {
   font-weight: normal;
   text-transform: uppercase;
 }
-#stage-visual .visual-wrapper > header p {
+#stage-visual .visual-wrapper .ques-list header p {
   font-size: 24px;
   font-size: 1.5rem;
   letter-spacing: 0px;
@@ -924,7 +931,7 @@ html {
   line-height: 32px;
   line-height: 2rem;
 }
-#stage-visual .visual-wrapper .cont {
+#stage-visual .visual-wrapper .ques-list .cont {
   position: relative;
   display: block;
   width: 100%;
@@ -933,7 +940,7 @@ html {
   margin-bottom: 50px;
   margin-bottom: 3.125rem;
 }
-#stage-visual .visual-wrapper .cont__head {
+#stage-visual .visual-wrapper .ques-list .cont__head {
   position: relative;
   min-height: 147px;
   min-height: 9.1875rem;
@@ -956,7 +963,7 @@ html {
   border-top-right-radius: 30px;
   border-top-right-radius: 1.875rem;
 }
-#stage-visual .visual-wrapper .cont__head:before {
+#stage-visual .visual-wrapper .ques-list .cont__head:before {
   content: '';
   display: block;
   position: absolute;
@@ -972,7 +979,7 @@ html {
   background-size: contain;
   z-index: 2;
 }
-#stage-visual .visual-wrapper .cont__head > p {
+#stage-visual .visual-wrapper .ques-list .cont__head > p {
   position: relative;
   font-size: 38px;
   font-size: 2.375rem;
@@ -983,19 +990,27 @@ html {
   color: #333333;
   z-index: 3;
 }
-#stage-visual .visual-wrapper .cont__head > p > span {
+#stage-visual .visual-wrapper .ques-list .cont__head > p > span {
   display: block;
   font-size: 28px;
   font-size: 1.75rem;
 }
-#stage-visual .visual-wrapper .cont__body {
+#stage-visual .visual-wrapper .ques-list .cont__head > p + p {
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+#stage-visual .visual-wrapper .ques-list .cont__body {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 55px;
   padding-top: 3.4375rem;
+  padding-right: 30px;
+  padding-right: 1.875rem;
   padding-bottom: 55px;
   padding-bottom: 3.4375rem;
+  padding-left: 30px;
+  padding-left: 1.875rem;
   border-bottom-right-radius: 30px;
   border-bottom-right-radius: 1.875rem;
   border-bottom-left-radius: 30px;
@@ -1003,16 +1018,16 @@ html {
   background-color: #ffffff;
   overflow: hidden;
 }
-#stage-visual .visual-wrapper .cont__body .form-item {
+#stage-visual .visual-wrapper .ques-list .cont__body .form-item {
   position: relative;
   margin-bottom: 0px;
   margin-bottom: 0rem;
 }
-#stage-visual .visual-wrapper .cont__body .form-item + .form-item {
+#stage-visual .visual-wrapper .ques-list .cont__body .form-item + .form-item {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
-#stage-visual .visual-wrapper > footer {
+#stage-visual .visual-wrapper .ques-list footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1020,7 +1035,7 @@ html {
   padding-bottom: 80px;
   padding-bottom: 5rem;
 }
-#stage-visual .visual-wrapper > footer p.info {
+#stage-visual .visual-wrapper .ques-list footer p.info {
   margin-bottom: 70px;
   margin-bottom: 4.375rem;
   font-size: 30px;
@@ -1031,13 +1046,11 @@ html {
   text-align: center;
 }
 @media all and (max-width: 991px) {
-  #stage-visual .visual-wrapper {
+  #stage-visual .visual-wrapper .ques-list {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
   }
-  #stage-visual .visual-wrapper .cont {
+  #stage-visual .visual-wrapper .ques-list .cont {
     padding-left: 30px;
     padding-left: 1.875rem;
     padding-right: 30px;
@@ -1045,12 +1058,7 @@ html {
   }
 }
 @media all and (max-width: 720px) {
-  #stage-visual .visual-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  #stage-visual .visual-wrapper > header {
+  #stage-visual .visual-wrapper .ques-list header {
     margin-left: 25px;
     margin-left: 1.5625rem;
     margin-right: 25px;
@@ -1058,17 +1066,17 @@ html {
     margin-bottom: 40px;
     margin-bottom: 2.5rem;
   }
-  #stage-visual .visual-wrapper > header strong {
+  #stage-visual .visual-wrapper .ques-list header strong {
     font-size: 50px;
     font-size: 3.125rem;
     margin-bottom: 20px;
     margin-bottom: 1.25rem;
   }
-  #stage-visual .visual-wrapper > header p {
+  #stage-visual .visual-wrapper .ques-list header p {
     font-size: 19px;
     font-size: 1.1875rem;
   }
-  #stage-visual .visual-wrapper .cont {
+  #stage-visual .visual-wrapper .ques-list .cont {
     width: 100%;
     margin-left: 25px;
     margin-left: 1.5625rem;
@@ -1077,7 +1085,7 @@ html {
     margin-bottom: 35px;
     margin-bottom: 2.1875rem;
   }
-  #stage-visual .visual-wrapper .cont__head {
+  #stage-visual .visual-wrapper .ques-list .cont__head {
     min-height: 120px;
     min-height: 7.5rem;
     padding-top: 20px;
@@ -1089,25 +1097,29 @@ html {
     padding-left: 20px;
     padding-left: 1.25rem;
   }
-  #stage-visual .visual-wrapper .cont__head:before {
+  #stage-visual .visual-wrapper .ques-list .cont__head:before {
     width: 161px;
     width: 10.0625rem;
-    top: -70px;
-    top: -4.375rem;
+    top: -65px;
+    top: -4.0625rem;
     right: 0px;
     right: 0rem;
   }
-  #stage-visual .visual-wrapper .cont__head > p {
+  #stage-visual .visual-wrapper .ques-list .cont__head > p {
     font-size: 30px;
     font-size: 1.875rem;
     line-height: 40px;
     line-height: 2.5rem;
   }
-  #stage-visual .visual-wrapper .cont__head > p > span {
+  #stage-visual .visual-wrapper .ques-list .cont__head > p > span {
     font-size: 24px;
     font-size: 1.5rem;
   }
-  #stage-visual .visual-wrapper .cont__body {
+  #stage-visual .visual-wrapper .ques-list .cont__head > p + p {
+    margin-top: 0px;
+    margin-top: 0rem;
+  }
+  #stage-visual .visual-wrapper .ques-list .cont__body {
     padding-top: 40px;
     padding-top: 2.5rem;
     padding-right: 45px;
@@ -1117,11 +1129,11 @@ html {
     padding-left: 45px;
     padding-left: 2.8125rem;
   }
-  #stage-visual .visual-wrapper .cont__body .form-item + .form-item {
+  #stage-visual .visual-wrapper .ques-list .cont__body .form-item + .form-item {
     margin-top: 15px;
     margin-top: 0.9375rem;
   }
-  #stage-visual .visual-wrapper > footer p.info {
+  #stage-visual .visual-wrapper .ques-list footer p.info {
     font-size: 23px;
     font-size: 1.4375rem;
     margin-bottom: 50px;

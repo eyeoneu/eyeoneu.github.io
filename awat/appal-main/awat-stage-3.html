@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>AWS용어 능력고사</title>
+    <link rel="shortcut icon" href="assets/images/logo/saltLogo.ico">
+
+    <!-- fraimwork - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <!-- icon - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/unicons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.css">
+
+    <!-- carousel - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
+
+    <!-- magnific popup - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+
+    <!-- scroll animation - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css">
+
+    <!-- custom - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- awat -->
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <script defer src="assets/js/awat.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https: //www.googletagmanager.com/gtag/js?id=UA-98721978-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-98721978-5');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NKGD8XZ');
+    </script>
+
+
+
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https: //www.googletagmanager.com/ns.html?id=GTM-NKGD8XZ" height="0"  width="0"
+             style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div id="stage-visual" class="wrap">
+        
+        <form action="">
+
+            <!-- header-section - start
+            ================================================== -->
+            <header id="header-section" class="header-section white-content sticky-header clearfix">
+                <div class="container-fluid">
+                    <div class="row">
+            
+                        <!-- brand-logo - satrt -->
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="brand-logo float-left">
+                                <a href="awat-landing.html" class="brand-link">
+                                    <img src="assets/images/logo/logo.png" alt="AWS 공식 파트너 - 솔트웨어 | FitCloud">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- brand-logo - end -->
+            
+                        <!-- main-menubar - satrt -->
+                        <div class="col-lg-7">
+                            <div class="main-menubar ul-li-right clearfix">
+                                <ul class="clearfix">
+                                
+                                    <li class="menu-item-has-child">
+                                        <a href="#!">Program</a>
+                                        <ul class="sub-menu" style="width:270px">
+                                            <li>
+                                                <a href="/management">Management</a>
+                                            </li>
+                                
+                                            <li>
+                                                <a href="/mediabridge">Media Bridge</a>
+                                            </li>
+                                
+                                            <li>
+                                                <a href="/cost-optimization">Cost Optimization</a>
+                                            </li>
+                                            <li>
+                                                <a href="/webPerformanceBooster">Web Performance Booster</a>
+                                            </li>
+                                            <li>
+                                                <a href="/fastTrack">FastTrack</a>
+                                            </li>
+                                            <li>
+                                                <a href="/securityArchitecture">Security Architecture</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="menu-item-has-child">
+                                        <a href="#!">Expertise</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/finance">Financial Services</a></li>
+                                            <li><a href="/devops">DevOps</a></li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="menu-item-has-child">
+                                        <a href="#!">Service</a>
+                                        <ul class="sub-menu" style="width: 270px;">
+                                            <li><a href="/RDS">RDS</a></li>
+                                            <li><a href="/microsoftworkloads">Microsoft Worklodads</a></li>
+                                            <li><a href="/edge">Edge Service</a></li>
+                                            <li><a href="/cdn">Contents Delivery</a></li>
+                                            <li><a href="/war">Well Architected Review</a></li>
+                                            <li><a href="/devops_cicd">CI/CD</a></li>
+                                            <li><a href="/devops_mnl">Monitoring and Logging</a></li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="menu-item-has-child">
+                                        <a href="#!">Solutions</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="//aws.fitcloud.co.kr" target="_blank">FitCloud Billing</a>
+                                            </li>
+                                            <li>
+                                                <a href="//support.fitcloud.co.kr" target="_blank">Support Desk</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                
+                                    <li class="menu-item-has-child">
+                                        <a href="/resource">Resource</a>
+                                    </li>
+                                
+                                    <li class="menu-item-has-child">
+                                        <a href="#!">About</a>
+                                        <ul class="sub-menu">
+                                            <!-- <li><a href="/saltware">Saltware FitCloud</a></li> -->
+                                            <li><a href="whySaltware">Why Saltware</a></li>
+                                            <li><a href="/history">History</a></li>
+                                            <li><a href="/jobs">Jobs</a></li>
+                                            <li><a href="/event">Event</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- main-menubar - end -->
+            
+                        <!-- btns-group - start -->
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="btns-group ul-li-right clearfix">
+                                <ul class="clearfix">
+                                    <li><a href="#!" class="custom-btn">Contact Us</a></li>
+                                    <li>
+                                        <button type="button" id="sidebar-collapse" class="mobile-menu-btn">
+                                            <i class="flaticon-right-alignment"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- btns-group - end -->
+            
+                    </div>
+                </div>
+            </header>
+            
+            <div class="sidebar-menu-wrapper">
+                <div id="sidebar-menu" class="sidebar-menu">
+            
+                    <div class="dismiss text-right mb-60 clearfix">
+                        <span class="close-btn"><i class="flaticon-cancel-music"></i></span>
+                    </div>
+            
+                    <div class="btns-group ul-li mb-60 clearfix">
+                        <h2 class="sidebar-title mb-30">FITCLOUD
+                            <span>Your Cloud Concierge</span>
+                        </h2>
+                        <a href="/contact" class="store-btn bg-default-blue">Contact Us</a>
+                    </div>
+            
+                    <ul class="menu-list mb-60 list-unstyled components clearfix">
+                    
+                        <li class="menu-item-has-child">
+                            <a href="#mobileapp-submenu" data-toggle="collapse" aria-expanded="false" class="">Program</a>
+                            <ul class="sub-menu list-unstyled collapse" id="mobileapp-submenu" style="">
+                                <li>
+                                    <a href="/management">Management</a>
+                                </li>
+                    
+                                <li>
+                                    <a href="/mediabridge">Media Bridge</a>
+                                </li>
+                    
+                                <li>
+                                    <a href="/cost-optimization">Cost Optimization</a>
+                                </li>
+                                <li>
+                                    <a href="/webPerformanceBooster">Web Performance Booster</a>
+                                </li>
+                                <li>
+                                    <a href="/fastTrack">FastTrack</a>
+                                </li>
+                                <li>
+                                    <a href="/securityArchitecture">Security Architecture</a>
+                                </li>
+                            </ul>
+                        </li>
+                    
+                        <li class="menu-item-has-child">
+                            <a href="#sasslanding-submenu" data-toggle="collapse" aria-expanded="false">Expertise</a>
+                            <ul class="sub-menu collapse list-unstyled" id="sasslanding-submenu">
+                                <li><a href="/finance">Financial Services</a></li>
+                                <li><a href="/devops">DevOps</a></li>
+                            </ul>
+                        </li>
+                    
+                        <li class="menu-item-has-child">
+                            <a href="#appstore-submenu" data-toggle="collapse" aria-expanded="false">Services</a>
+                            <ul class="sub-menu collapse list-unstyled" id="appstore-submenu">
+                                <li><a href="/RDS">RDS</a></li>
+                                <li><a href="/microsoftworkloads">Microsoft Worklodads</a></li>
+                                <li><a href="/edge">Edge Service</a></li>
+                                <li><a href="/cdn">Contents Delivery</a></li>
+                                <li><a href="/war">Well Architected Review</a></li>
+                                <li><a href="/devops_cicd">CI/CD</a></li>
+                                <li><a href="/devops_mnl">Monitoring and Logging</a></li>
+                            </ul>
+                        </li>
+                    
+                        <li class="menu-item-has-child">
+                            <a href="#features-submenu" data-toggle="collapse" aria-expanded="false">Solutions</a>
+                            <ul class="sub-menu collapse list-unstyled" id="features-submenu">
+                                <li>
+                                    <a href="//aws.fitcloud.co.kr" target="_blank">FitCloud Billing</a>
+                                </li>
+                                <li>
+                                    <a href="//support.fitcloud.co.kr" target="_blank">Support Desk</a>
+                                </li>
+                            </ul>
+                        </li>
+                    
+                        <li class="menu-list">
+                            <a href="/resource">Resource</a>
+                        </li>
+                    
+                        <li class="menu-item-has-child">
+                            <a href="#blog-submenu" data-toggle="collapse" aria-expanded="false">About</a>
+                            <ul class="sub-menu collapse list-unstyled" id="blog-submenu">
+                                <li><a href="/whySaltware">Why Saltware</a></li>
+                                <li><a href="/history">History</a></li>
+                                <li><a href="/jobs">Jobs</a></li>
+                                <li><a href="/event">Event</a></li>
+                            </ul>
+                        </li>
+                    
+                    </ul>
+            
+                    <div class="contact-info ul-li-block mb-60 clearfix">
+                        <h2 class="sidebar-title mb-30">contact info</h2>
+                        <ul class="clearfix">
+                            <li>
+                                <span class="icon"><i class="uil uil-map-marker"></i></span>
+                                서울특별시 구로구 디지털로 34길
+                            </li>
+                            <li>
+                                <span class="icon"><i class="uil uil-map-pin"></i></span>
+                                코오롱싸이언스밸리 2차 901호
+                            </li>
+                            <li>
+                                <span class="icon"><i class="uil uil-envelope-alt"></i></span>
+                                FAX : 02-2025-4935
+                            </li>
+                            <li>
+                                <span class="icon"><i class="uil uil-phone"></i></span>
+                                +02-2025-0066
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <!-- header-section - end
+            ================================================== -->
+
+            <!-- visual-wrapper - start
+            ================================================== -->
+            <section class="visual-wrapper">
+                
+                <!-- Q1 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 1</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+
+                    <div class="cont">
+                        
+                        <div class="cont__head">
+                            <p>On Premise</p>
+                        </div>
+
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q1" value="10">
+                                <span>
+                                    <span>Cloud</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q1" value="0">
+                                <span>
+                                    <span>IDC</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q1" value="0">
+                                <span>
+                                    <span>Legacy</span>
+                                </span>
+                            </label>
+                        </div>
+                        
+                    </div>
+
+                    <footer>
+                        <p class="info">9개의 문제가 남았습니다.</p>
+
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+
+                    </footer>
+                </div>
+
+                <!-- Q2 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 2</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>L4, L7 스위치</p>
+                            <p><span>(로드밸런서)</span></p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q2" value="0">
+                                <span>
+                                    <span>S3</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q2" value="10">
+                                <span>
+                                    <span>ELB</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q2" value="0">
+                                <span>
+                                    <span>EC2</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">8개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q3 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 3</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>Relation DataBase</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q3" value="0">
+                                <span>
+                                    <span>NoSQL</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q3" value="10">
+                                <span>
+                                    <span>RDS</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q3" value="0">
+                                <span>
+                                    <span>Aurora</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">7개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q4 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 4</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>블록스토리지</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q4" value="0">
+                                <span>
+                                    <span>Origin</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q4" value="0">
+                                <span>
+                                    <span>Glacier</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q4" value="10">
+                                <span>
+                                    <span>EBS</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">6개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q5 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 5</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>DNS</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q5" value="10">
+                                <span>
+                                    <span>Route 53</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q5" value="0">
+                                <span>
+                                    <span>NLB</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q5" value="0">
+                                <span>
+                                    <span>CloudFront</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">5개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q6 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 6</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>Network Attached Storage</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q6" value="10">
+                                <span>
+                                    <span>FSx</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q6" value="0">
+                                <span>
+                                    <span>AD</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q6" value="0">
+                                <span>
+                                    <span>S3</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">4개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q7 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 7</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>Firewall</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q7" value="0">
+                                <span>
+                                    <span>GuardDuty</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q7" value="10">
+                                <span>
+                                    <span>NACL</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q7" value="0">
+                                <span>
+                                    <span>Shield</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">3개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q8 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 8</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>VPN</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q8" value="10">
+                                <span>
+                                    <span>VPC VPN</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q8" value="0">
+                                <span>
+                                    <span>Direct Connect</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q8" value="0">
+                                <span>
+                                    <span>Gateway</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">2개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q9 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 9</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>VDI</p>
+                            <p><span>(Virtual Desktop infrastructure)</span></p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q9" value="0">
+                                <span>
+                                    <span>VMware</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q9" value="0">
+                                <span>
+                                    <span>Chime</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q9" value="10">
+                                <span>
+                                    <span>WorkSpace</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                        <p class="info">1개의 문제가 남았습니다.</p>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled" id="btnSubmit" disabled>
+                            <strong>다음 문제 풀기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+                <!-- Q10 -->
+                <div class="ques-list">
+                    <header>
+                        <strong>Stage 10</strong>
+                        <p>다음 중 레거시 서비스와 알맞은 AWS 서비스를 고르시오.</p>
+                    </header>
+                
+                    <div class="cont">
+                
+                        <div class="cont__head">
+                            <p>전용선</p>
+                        </div>
+                
+                        <div class="cont__body">
+                            <label class="form-item">
+                                <input type="radio" name="Q10" value="10">
+                                <span>
+                                    <span>Direct Connect</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q10" value="0">
+                                <span>
+                                    <span>Subnet</span>
+                                </span>
+                            </label>
+                            <label class="form-item">
+                                <input type="radio" name="Q10" value="0">
+                                <span>
+                                    <span>VPC</span>
+                                </span>
+                            </label>
+                        </div>
+                
+                    </div>
+                
+                    <footer>
+                
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                            <strong>결과보기</strong>
+                        </button>
+                
+                    </footer>
+                </div>
+
+            </section>
+            <!-- visual-wrapper - end
+            ================================================== -->
+
+        </form>
+
+    </div>
+        
+
+    <!-- fraimwork - jquery include -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- carousel - jquery include -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- magnific popup - jquery include -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- scroll animation - jquery include -->
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+
+    <!-- multy countdown - jquery include -->
+    <script src="assets/js/jquery.countdown.js"></script>
+
+    <!-- counter - jquery include -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+
+    <!-- google - jquery include -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhrdEzlfpnsnfq4MgU1e1CCsrvVx2d59s"></script>
+    <script src="assets/js/gmaps.js"></script>
+
+    <!-- mCustomScrollbar for sidebar menu - jquery include -->
+    <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+
+    <!-- custom - jquery include -->
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+</html>
