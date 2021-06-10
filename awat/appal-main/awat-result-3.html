@@ -314,7 +314,7 @@
                 <div class="cont__wrap">
                     <div class="cont__head">
                         <strong class="tit">당신의 AWAT 점수는?</strong>
-                        <strong class="num">100<span>점</span></strong>
+                        <strong class="num"><span name="scoreSpan"></span><span>점</span></strong>
                     </div>
                     
                     <div class="cont__body">
@@ -406,6 +406,15 @@
 
     <!-- custom - jquery include -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- custom - actionScript include -->
+    <script src="assets/js/customAction.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            viewResult();
+        });
+    </script>
 
 
 </body>

@@ -719,7 +719,7 @@
                     <footer>
                         <p class="info">1개의 문제가 남았습니다.</p>
                 
-                        <button type="button" class="store-btn bg-default-black lg bg-type disabled" id="btnSubmit" disabled>
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
                             <strong>다음 문제 풀기</strong>
                         </button>
                 
@@ -764,7 +764,7 @@
                 
                     <footer>
                 
-                        <button type="button" class="store-btn bg-default-black lg bg-type disabled btnNext" disabled>
+                        <button type="button" class="store-btn bg-default-black lg bg-type disabled" id="btnSubmit" disabled onclick="score()">
                             <strong>결과보기</strong>
                         </button>
                 
@@ -811,6 +811,9 @@
 
     <!-- custom - jquery include -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- custom - actionScript include -->
+    <script src="assets/js/customAction.js"></script>
 
 
 </body>
