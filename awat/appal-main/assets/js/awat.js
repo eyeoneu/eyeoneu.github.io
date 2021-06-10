@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // 체크문항
     $(".ques-list").hide();
     $(".ques-list").eq(0).show();
 
@@ -18,3 +19,25 @@ $(document).ready(function () {
     });
 
 });
+
+// layer
+function openLayer(el) {
+    var temp = $('#' + el);
+    if(!$('.pop-layer:visible').length) {
+        $("<div/>", {
+            "class": "dimmed",
+        }).appendTo('body').fadeIn(200);
+    }
+    temp.fadeIn(200);
+    $('html').addClass('full');
+
+    $('.dimmed, .pop-close').on('click', function() {
+        temp.fadeOut(200);
+        if($('.dimmed').length) {
+            $('.dimmed').fadeOut(200, function() {
+                $(this).remove();
+            });
+        }
+        $('html').removeClass('full');
+    });
+}

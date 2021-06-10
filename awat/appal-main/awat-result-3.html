@@ -329,7 +329,7 @@
 
             <footer>
                 <div class="btn-wrap">
-                    <button type="button" class="store-btn bg-default-blank lg line-type">
+                    <button type="button" class="store-btn bg-default-blank lg line-type" onclick="openLayer('layerShare');">
                         <i class="ico ico__share"></i>
                         <strong>친구에게 공유하기</strong>
                     </button>
@@ -347,6 +347,32 @@
 
     </div>
 
+    <!-- pop-layer - start
+    ================================================== -->
+    <div class="pop-layer pop-layer--sm" id="layerShare">
+        <div class="pop-layer__wrap">
+            <span class="pop-close"><i class="uil uil-multiply"></i></span>
+    
+            <div class="pop-layer__head">
+                <strong>친구에게 공유하기</strong>
+            </div>
+    
+            <div class="pop-layer__body">
+                <article class="icon-share">
+                    <button type="button" class="btn"><img src="assets/images/icon-kakako@2x.png" alt="kakao"></button>
+                    <button type="button" class="btn"><img src="assets/images/icon-instagram@2x.png"
+                            alt="instagram"></button>
+                    <button type="button" class="btn"><img src="assets/images/icon-facebook@2x.png" alt="facebook"></button>
+                    <button type="button" class="btn"><img src="assets/images/icon-twitter@2x.png" alt="twitter"></button>
+                    <button type="button" class="btn"><img src="assets/images/icon-link@2x.png" alt="링크"></button>
+                </article>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dimmed"></div>
+    <!-- pop-layer - end
+    ================================================== -->
 
 
     <!-- fraimwork - jquery include -->

@@ -336,6 +336,113 @@ input[type="radio"]:checked + span > span:after {
 .store-btn.disabled:hover:after {
   display: none;
 }
+.icon-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-share .btn {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 15px;
+  margin-right: 0.9375rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 15px;
+  margin-left: 0.9375rem;
+  border-radius: 100%;
+  width: 69px;
+  width: 4.3125rem;
+  height: 69px;
+  height: 4.3125rem;
+}
+html.full {
+  overflow: hidden;
+}
+.dimmed {
+  display: none;
+  position: fixed;
+  left: 0px;
+  left: 0rem;
+  top: 0px;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.pop-layer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 30px;
+  border-radius: 1.875rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+.pop-layer--sm {
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 30px;
+  padding-right: 1.875rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 30px;
+  padding-left: 1.875rem;
+  width: 600px;
+  width: 37.5rem;
+  height: 340px;
+  height: 21.25rem;
+}
+.pop-layer__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pop-layer__head {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  height: 6.25rem;
+  padding-top: 10px;
+  padding-top: 0.625rem;
+  border-bottom: 0.0625rem solid #e6e6e6;
+}
+.pop-layer__head > strong {
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-family: 'Jalnan', sans-serif;
+  color: #333333;
+  font-weight: normal;
+}
+.pop-layer__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.pop-layer .pop-close {
+  position: absolute;
+  top: 28px;
+  top: 1.75rem;
+  right: 25px;
+  right: 1.5625rem;
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  z-index: 2;
+  cursor: pointer;
+}
 @media all and (max-width: 991px) {
   .btn-wrap .store-btn.lg {
     padding-top: 15px;
@@ -458,6 +565,32 @@ input[type="radio"]:checked + span > span:after {
   .store-btn.lg strong {
     font-size: 24px;
     font-size: 1.5rem;
+  }
+  .pop-layer--sm {
+    width: 480px;
+    width: 30rem;
+    height: 270px;
+    height: 16.875rem;
+  }
+  .pop-layer__head {
+    height: 80px;
+    height: 5rem;
+  }
+  .pop-layer__head > strong {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  .pop-layer .pop-close {
+    top: 23px;
+    top: 1.4375rem;
+    font-size: 34px;
+    font-size: 2.125rem;
+  }
+}
+@media all and (max-width: 320px) {
+  .pop-layer--sm {
+    width: 440px;
+    width: 27.5rem;
   }
 }
 html,
@@ -736,26 +869,8 @@ html {
   text-transform: uppercase;
 }
 #landing-visual .banner-section > footer .icon-share {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 60px;
   margin-bottom: 3.75rem;
-}
-#landing-visual .banner-section > footer .icon-share .btn {
-  margin-top: 0px;
-  margin-top: 0rem;
-  margin-right: 15px;
-  margin-right: 0.9375rem;
-  margin-bottom: 0px;
-  margin-bottom: 0rem;
-  margin-left: 15px;
-  margin-left: 0.9375rem;
-  border-radius: 100%;
-  width: 69px;
-  width: 4.3125rem;
-  height: 69px;
-  height: 4.3125rem;
 }
 @media all and (max-width: 1440px) {
   #landing-visual .banner-section .mobile-app-banner-1 {
@@ -1385,5 +1500,29 @@ html {
     line-height: 30px;
     line-height: 1.875rem;
     word-break: keep-all;
+  }
+}
+.pop-layer__body .icon-share {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+@media all and (max-width: 720px) {
+  .pop-layer__body .icon-share {
+    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
+  }
+  .pop-layer__body .icon-share .btn {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 12px;
+    margin-right: 0.75rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 12px;
+    margin-left: 0.75rem;
+    width: 56px;
+    width: 3.5rem;
+    height: 56px;
+    height: 3.5rem;
   }
 }
