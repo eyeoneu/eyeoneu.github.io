@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap');
+@import url(_normalize.css);
+@import url(_reset.css);
+
+/* base font */
+html, body 						{font-family:'Noto Sans KR', 'Sans-serif';line-height:1.4;font-weight:300}
+body 							{color:#000;margin:0 auto;}
+table 							{ border-collapse: collapse; border-spacing: 0; width: 100%; }
+caption, legend 				{ width: 0; height: 0; opacity: 0; text-indent: -9999px; line-height: 0; overflow: hidden; }
+
+/* markup guide layout */
+#header .header-wrap,
+#container,
+#footer .footer-wrap 			{padding:0 1.4rem;}
+#header							{position:relative;height:4rem;background-color:#000;}
+#header h1 						{padding:1rem 0;color:#fff;font-size:1.4rem;line-height:2rem;font-weight:400;}
+#header h1 span 				{font-size:1rem;font-weight:300;margin-left:.1rem;}
+#header h1 a,
+#header h1 span 				{color:inherit;}
+#footer{padding:1.2rem 0;border-top:1px solid rgba(208,208,208,1);font-size:.8rem;}
+#footer .footer-wrap{position:relative;}
+#footer p{text-align:center}
+#footer a{color:#ffcd31;}
+#container{max-width:1200px;margin:2rem auto 2.8rem;}
+#container > .section > .section-title {font-size:2.2rem;color:#000;text-align:center;font-weight:700;letter-spacing:-.1rem}
+#container h3{font-size:1.35rem;color:#292929;font-weight:400;}
+#container .section +.section {margin-top:4rem}
+#container .section-title + .table-wrap,
+#container .section-title + .text-wrap,
+#container .text-wrap + h3,
+#container .table-wrap + h3,
+#container .code-wrap + h3 {margin-top:2rem;}
+#container h3 + .text-wrap,
+#container h3 + .table-wrap,
+#container .code-wrap {margin-top:.5rem;}
+
+
+/* table */
+.table-wrap{border-top:2px solid #292929;overflow-x:auto;}
+.data-table{border-bottom:1px solid #292929;/*font-size:14px;*/}
+.data-table thead th{background:#f9f9f9;}
+.data-table th + th,
+.data-table td + td,
+.data-table th + td{border-left:1px solid #e2e2e2;}
+.data-table td.complete{background-color: #33b1d0; color:#fff;}
+.data-table td.undecided{background:#ddd;color:#000;}
+.data-table td.apply{background:#f57f00;color:#fff;}
+.data-table td.validation{background:#f5f5f5;color:#292929;}
+.data-table td.working{background-color: #ffcc00 color: #fff;}
+.data-table td.del{background-color:#999;text-decoration:line-through;}
+.data-table td a{color:inherit;text-decoration:underline;}
+.data-table th,
+.data-table td{padding:.8rem;text-align:center;border-top:1px solid #e2e2e2;}
+
+/* contents */
+.text-wrap ul li:before{content:'-';margin-right:.1rem;}
+.left,
+td.left{text-align:left !important;}
+.small,
+td.small{font-size:smaller;}
+
+.hljs-line-numbers { text-align: right; border-right: 1px solid #ccc; color: #999; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.hljs-ln-code {
+	padding-left: 10px;
+}
+
+/* Mobile Device */
+@media screen and (max-width : 767px) {
+	.data-table.wsg th:first-child,
+	.data-table.wsg td:first-child,
+	.data-table.wsg th.path,
+	.data-table.wsg td.path,
+	.data-table.wsg th.pageid,
+	.data-table.wsg td.pageid{display:none;}
+
+	#container .table-wrap {margin:0 -1.4rem;}
+}
+
+/* Tablet Device */
+@media screen and (min-width : 768px) and (max-width : 991px) {
+
+}
+
+/* Desktop Device */
+@media screen and (min-width : 992px) {
+
+}
+
+.backlines {
+	position: fixed;
+	pointer-events: none;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index:-1;
+}
+.line-vertical {position:absolute;width:1px;height:100%;left:25%;top:0;background:rgb(255, 222, 0, .4);
+	transform-origin: 50% 0%;
+	animation-name: lineH;
+	animation-duration: 1.2s;
+	animation-fill-mode: forwards;
+	animation-iteration-count:1;
+	will-change: transform;
+}
+.line-vertical.v2{left:50%;}
+.line-diagonal {position:absolute;width:1px;height:70.71vw;background:rgb(255, 222, 0, .4);
+	right:0;
+	transform-origin: 50% 0%;
+	animation-name: lineB;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count:1;
+	will-change: transform;
+}
+.line-diagonal.d1{top: 0;animation-delay:1.2s;}
+.line-diagonal.d2{top: 25%;animation-delay:1.7s;}
+.line-diagonal.d3{top: 50%;animation-delay:2.2s;}
+
+@keyframes lineH {
+	0% {transform: scaleY(0);}
+	100%{transform: scaleY(1);}
+}
+@keyframes lineB {
+	0% {transform: scale(0) rotate(45deg);}
+	100%{transform: scale(1) rotate(45deg);}
+}
