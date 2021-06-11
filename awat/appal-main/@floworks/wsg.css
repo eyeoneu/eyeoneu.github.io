@@ -47,7 +47,7 @@ caption, legend 				{ width: 0; height: 0; opacity: 0; text-indent: -9999px; lin
 .data-table td.undecided{background:#ddd;color:#000;}
 .data-table td.apply{background:#f57f00;color:#fff;}
 .data-table td.validation{background:#f5f5f5;color:#292929;}
-.data-table td.working{background-color: #ffcc00 color: #fff;}
+.data-table td.working{background-color: #ffcc00; color: #fff;}
 .data-table td.del{background-color:#999;text-decoration:line-through;}
 .data-table td a{color:inherit;text-decoration:underline;}
 .data-table th,
