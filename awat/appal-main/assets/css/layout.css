@@ -1067,6 +1067,8 @@ html {
   font-size: 4rem;
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
+  line-height: 34px;
+  line-height: 2.125rem;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -1377,6 +1379,8 @@ html {
 #result-visual .visual-wrapper .cont__head > strong.tit {
   font-size: 46px;
   font-size: 2.875rem;
+  font-family: 'Jalnan', sans-serif;
+  font-weight: normal;
   color: #333333;
   margin-bottom: 25px;
   margin-bottom: 1.5625rem;
