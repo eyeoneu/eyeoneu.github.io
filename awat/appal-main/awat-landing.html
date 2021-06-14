@@ -5,6 +5,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- share facebook meta data -->
+    <meta property="og:title" content="AWS 용어 능력고사">
+    <meta property="og:description" content="클라우드 용어 더이상 어렵지 않아요~">
+    <meta property="og:url" content="https://www.fitcloud.co.kr/AWAT">
+    <meta property="og:image" content="assets/images/img-title@2x.png">
+    <meta property="og:type" content="website">
+
+    <!-- share twitter meta data -->
+    <meta name="twitter:title" content="AWS 용어 능력고사">
+    <meta name="twitter:description" content="클라우드 용어 더이상 어렵지 않아요~">
+    <meta name="twitter:url" content="https://www.fitcloud.co.kr/AWAT">
+    <meta name="twitter:image" content="assets/images/img-title@2x.png">
+    <meta name="twitter:card" content="summary">
+
     <title>AWS용어 능력고사</title>
     <link rel="shortcut icon" href="assets/images/logo/saltLogo.ico">
 
@@ -204,7 +218,7 @@
                 
                     <li class="menu-item-has-child">
                         <a href="#mobileapp-submenu" data-toggle="collapse" aria-expanded="false" class="">Program</a>
-                        <ul class="sub-menu list-unstyled collapse" id="mobileapp-submenu" style="">
+                        <ul class="sub-menu list-unstyled collapse" id="mobileapp-submenu">
                             <li>
                                 <a href="/management">Management</a>
                             </li>
@@ -358,11 +372,10 @@
                     <span>테스트 공유하기</span>
                 </p>
                 <article class="icon-share">
-                    <button type="button" class="btn"><img src="assets/images/icon-kakako@2x.png" alt="kakao"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-instagram@2x.png" alt="instagram"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-facebook@2x.png" alt="facebook"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-twitter@2x.png" alt="twitter"></button>
-                    <button type="button" class="btn"><img src="assets/images/icon-link@2x.png" alt="링크"></button>
+                    <button type="button" class="btn kk"><img src="assets/images/icon-kakako@2x.png" alt="kakao"></button>
+                    <button type="button" class="btn fb"><img src="assets/images/icon-facebook@2x.png" alt="facebook"></button>
+                    <button type="button" class="btn twt"><img src="assets/images/icon-twitter@2x.png" alt="twitter"></button>
+                    <button type="button" class="btn url"><img src="assets/images/icon-link@2x.png" alt="링크"></button>
                 </article>
                 <p class="copy">Copyright @ 2021 Saltware all right reserved. Privacy Policy</p>
             </footer>
@@ -407,8 +420,18 @@
     <!-- custom - jquery include -->
     <script src="assets/js/custom.js"></script>
 
+    <!-- custom - share include -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="assets/js/share.js"></script>
+
     <!-- custom - actionScript include -->
     <script src="assets/js/customAction.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            Share.init(shareInit);
+        });
+    </script>
 
 
 </body>

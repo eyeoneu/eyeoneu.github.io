@@ -1,5 +1,16 @@
 $(document).ready(function () {});
 
+var shareInit = {
+    twitterButton: ".twt",
+    kakaotalkButton: ".kk",
+    facebookButton: ".fb",
+    urlcopyButton: ".url",
+
+    kakaoJavascriptID: "d43347af19d611be51bedcf2de4bbf55",
+    url: "https://www.fitcloud.co.kr/AWAT",
+    hashtag: "AWS용어능력고사"
+}
+
 function testStart() {
     var version = Math.floor(Math.random() * 3) + 1;
     location.href = 'awat-stage-' + version + '.html';
