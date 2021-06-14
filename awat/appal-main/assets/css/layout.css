@@ -639,6 +639,11 @@ figure {
   margin: 0;
   padding: 0;
 }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
 h1,
 h2,
 h3,
@@ -713,6 +718,15 @@ button,
   outline: none;
   cursor: pointer;
   line-height: 1;
+}
+caption,
+legend {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  text-indent: -9999px;
+  line-height: 0;
+  overflow: hidden;
 }
 html,
 body {
