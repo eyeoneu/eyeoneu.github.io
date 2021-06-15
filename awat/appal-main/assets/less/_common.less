@@ -196,15 +196,6 @@ input[type="radio"] {
         font-weight: normal;
     }
 
-    &.sm {
-        @height: 30;
-        .height(@height);
-        .border-radius(@height);
-        strong {
-
-        }
-
-    }
     &.md {
         .width(320);
         @height: 80;
@@ -213,7 +204,9 @@ input[type="radio"] {
         .line-height(@height - 2);
 
         strong {
-            .font-size(30);
+            @font-size: 30;
+            .font-size(@font-size);
+            .line-height(@font-size + 2);
         }
     }
     &.lg {
@@ -224,7 +217,9 @@ input[type="radio"] {
         .line-height(@height - 2);
         
         strong {
-            .font-size(30);
+            @font-size: 30;
+            .font-size(@font-size);
+            .line-height(@font-size + 2);
         }
     }
 
@@ -383,7 +378,9 @@ html.full {
         border-bottom: 0.0625rem solid @light-grey-2;
 
         > strong {
-            .font-size(30);
+            @font-size: 30;
+            .font-size(@font-size);
+            .line-height(@font-size + 2);
             font-family: @bold-font;
             color: @light-black;
             font-weight: normal;
@@ -419,7 +416,9 @@ html.full {
                 .padding-all(15);
 
                 strong {
-                    .font-size(24);
+                    @font-size: 24;
+                    .font-size(@font-size);
+                    .line-height(@font-size + 2);
                 }
             }
         }
@@ -481,7 +480,9 @@ html.full {
                 .line-height(66);
                 
                 strong {
-                    .font-size(19);
+                    @font-size: 19;
+                    .font-size(@font-size);
+                    .line-height(@font-size + 2);
                 }
 
                 > i {
@@ -514,7 +515,9 @@ html.full {
             .line-height(@height - 2);
 
             strong {
-                .font-size(24);
+                @font-size: 24;
+                .font-size(@font-size);
+                .line-height(@font-size + 2);
             }
         }
         
@@ -526,7 +529,9 @@ html.full {
             .line-height(@height - 2);
 
             strong {
-                .font-size(24);
+                @font-size: 24;
+                .font-size(@font-size);
+                .line-height(@font-size + 2);
             }
         }
     }
@@ -541,13 +546,17 @@ html.full {
             .height(80);
 
             > strong {
-                .font-size(24);
+                @font-size: 24;
+                .font-size(@font-size);
+                .line-height(@font-size + 2);
             }
         }
 
         .pop-close {
             .top(23);
-            .font-size(34);
+            @font-size: 34;
+            .font-size(@font-size);
+            .line-height(@font-size + 2);
         }
     }
 }

@@ -905,6 +905,8 @@ button {
   .header-section .brand-logo .brand-link {
     width: 100%;
     display: block; }
+  .header-section .brand-logo .brand-link img {
+    max-height: 65px; }
   .header-section .main-menubar > ul > li {
     padding: 14px 0px;
     margin-right: 40px; }

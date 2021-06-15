@@ -67,6 +67,7 @@ html {
 
                 h2 {
                     .width(440);
+                    .height(282);
                     .margin-bottom(20);
 
                     span {
@@ -111,9 +112,13 @@ html {
                         top: unset !important;
                         left: unset !important;
                         position: static;
-                        .width(1925);
+                        .width(1920);
                         .margin-right(-210);
                     }
+                }
+
+                img {
+                    .width(1920);
                 }
             }
         }
@@ -171,13 +176,9 @@ html {
                     transform: translateX(-45%);
 
                     img {
-                        width: 90%;
+                        .width(1720);
                     }
                 }
-            }
-
-            footer {
-                background-color: @light-grey;
             }
         }
     }
@@ -187,10 +188,6 @@ html {
 
     #landing-visual {
         .banner-section {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-
             .container {
                 margin-bottom: 0;
 
@@ -205,11 +202,6 @@ html {
 
                 .banner-content {
                     align-items: center;
-
-                    h2 {
-                        .width(440);
-                        .margin-bottom(15);
-                    }
 
                     p {
                         &.sizeup {
@@ -268,6 +260,7 @@ html {
 
                     h2 {
                         .width(350);
+                        .height(220);
                     }
 
                     p {
@@ -372,13 +365,11 @@ html {
 
                 &__head {
                     position: relative;
-                    .min-height(147);
-                    .padding-all(30);
+                    display: table;
+                    width: 100%;
+                    .height(147);
+                    .padding-all(40);
                     text-align: center;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                     background-color: @yellow;
                     .border-top-left-radius(30);
                     .border-top-right-radius(30);
@@ -398,9 +389,11 @@ html {
 
                     > p {
                         position: relative;
+                        display: table-cell;
                         .font-size(38);
                         .line-height(38);
                         .letter-spacing(-0.95);
+                        vertical-align: middle;
                         color: @light-black;
                         z-index: @z + 2;
 
@@ -411,6 +404,14 @@ html {
 
                         + p {
                             .margin-top(10);
+                        }
+                    }
+
+                    &.lines {
+                        .padding-top(30);
+
+                        > p {
+                            display: block;
                         }
                     }
                 }
@@ -501,7 +502,7 @@ html {
                     .margin-bottom(35);
 
                     &__head {
-                        .min-height(120);
+                        .height(120);
                         .padding-all(20);
 
                         &:before {
