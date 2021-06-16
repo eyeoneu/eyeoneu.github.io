@@ -248,6 +248,32 @@ input[type="radio"] {
         
     }
 
+    &.event-type {
+        display: flex;
+        flex-direction: column;
+
+        &.lg {
+            .width(460);
+            @height: 120;
+            .height(@height);
+            .border-radius(@height);
+            .line-height(@height - 2);
+
+            span {
+                @font-size: 26;
+                .font-size(@font-size);
+                .line-height(@font-size - 2);
+                display: block;
+                font-weight: bold;
+            }
+
+            strong {
+                color: @yellow;
+                .margin-top(10);
+            }
+        }
+    }
+
     > i {
         &.ico {
             .width(46);
@@ -532,6 +558,28 @@ html.full {
                 @font-size: 24;
                 .font-size(@font-size);
                 .line-height(@font-size + 2);
+            }
+        }
+
+        &.event-type {
+            &.lg {
+                .width(360);
+                @height: 95;
+                .height(@height);
+                .border-radius(@height);
+                .line-height(@height - 2);
+
+                span {
+                    @font-size: 21;
+                    .font-size(@font-size);
+                    .line-height(@font-size - 2);
+                }
+
+                strong {
+                    @font-size: 24;
+                    .font-size(@font-size);
+                    .line-height(@font-size + 2);
+                }
             }
         }
     }

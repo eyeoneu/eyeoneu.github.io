@@ -55,7 +55,6 @@ html {
 
         .container {
             .max-width(1280);
-            .margin-bottom(250);
 
             .banner-content {
                 position: relative;
@@ -121,12 +120,29 @@ html {
                     .width(1920);
                 }
             }
+
+            .main-event {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                .padding-top(240);
+
+                &.pc-view {
+                    display: block;
+                }
+
+                &.m-view {
+                    display: none;
+                }
+            }
         }
         
         > footer {
             position: relative;
             z-index: @z + 1;
-            .padding(0,20,40,20);
+            background-color: @light-grey;
+            .padding(25,20,40,20);
 
             p {
                 text-align: center;
@@ -223,13 +239,33 @@ html {
                 .mobile-banner-image {
                     margin-bottom: 0;
                 }
+
+                .main-event {
+                    background-color: @light-grey;
+                    .padding(0,10,0,10);
+
+                    img {
+                        .max-width(720);
+                        width: 100%;
+                    }
+
+                    &.pc-view {
+                        display: none;
+                    }
+                    
+                    &.m-view {
+                        display: block;
+                    }
+                }
             }
 
             .mobile-app-banner-1 {
                 padding-bottom: 0;
             }
+            
 
             footer {
+                .padding-top(0);
                 margin-top: auto;
                 flex: 1;
                 background-color: @light-grey;
@@ -275,7 +311,14 @@ html {
                         }
                     }
                 }
-            }
+
+                .main-event {
+                    img {
+                        max-width: fit-content;
+                        max-width: -webkit-fill-available;
+                    }
+                }
+            } 
 
             .mobile-app-banner-1 {
                 .padding-top(120);
@@ -564,7 +607,6 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
         .padding-top(200);
         .max-width(1280);
         overflow: hidden;
