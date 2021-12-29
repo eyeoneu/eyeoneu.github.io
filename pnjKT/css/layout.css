@@ -781,6 +781,17 @@ html .kt-wrap .content {
   width: 1650px;
   min-width: 1650px;
 }
+#layoutsTable > tbody > tr > td {
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  border: none;
+}
 .dashboard h2 {
   position: relative;
   margin-bottom: 15px;
@@ -789,6 +800,7 @@ html .kt-wrap .content {
   padding-left: 0.9375rem;
   line-height: 22px;
   line-height: 1.375rem;
+  color: #000000;
 }
 .dashboard h2 > strong {
   font-size: 20px;
@@ -890,10 +902,10 @@ html .kt-wrap .content {
   left: 0rem;
   top: 0px;
   top: 0rem;
-  width: 56px;
-  width: 3.5rem;
-  height: 56px;
-  height: 3.5rem;
+  width: 50px;
+  width: 3.125rem;
+  height: 50px;
+  height: 3.125rem;
   color: #ffffff;
   border-radius: 0 0 15px 0;
   background-color: #00ac8e;
@@ -926,10 +938,10 @@ html .kt-wrap .content {
   top: 0rem;
   left: 0px;
   left: 0rem;
-  width: 56px;
-  width: 3.5rem;
-  height: 56px;
-  height: 3.5rem;
+  width: 50px;
+  width: 3.125rem;
+  height: 50px;
+  height: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -942,8 +954,8 @@ html .kt-wrap .content {
   z-index: 2;
 }
 .dashboard .block article.first .icon-wrap > i {
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 25px;
+  font-size: 1.5625rem;
   color: #ffffff;
 }
 .dashboard .block article.first > header {
@@ -951,8 +963,8 @@ html .kt-wrap .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 20px;
-  padding-top: 1.25rem;
+  padding-top: 15px;
+  padding-top: 0.9375rem;
   padding-right: 20px;
   padding-right: 1.25rem;
   padding-bottom: 7px;
@@ -963,8 +975,8 @@ html .kt-wrap .content {
 .dashboard .block article.first > header > strong {
   font-size: 22px;
   font-size: 1.375rem;
-  padding-left: 50px;
-  padding-left: 3.125rem;
+  padding-left: 40px;
+  padding-left: 2.5rem;
 }
 .dashboard .block article.first .cont {
   display: -webkit-box;
@@ -981,8 +993,8 @@ html .kt-wrap .content {
   padding-top: 0rem;
   padding-right: 20px;
   padding-right: 1.25rem;
-  padding-bottom: 13px;
-  padding-bottom: 0.8125rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   padding-left: 20px;
   padding-left: 1.25rem;
 }
@@ -1009,8 +1021,6 @@ html .kt-wrap .content {
       -ms-flex-align: center;
           align-items: center;
   color: #000000;
-  padding-top: 7px;
-  padding-top: 0.4375rem;
 }
 .dashboard .block article.first .cont > ul > li > strong {
   font-size: 32px;
@@ -1120,18 +1130,18 @@ html .kt-wrap .content {
   letter-spacing: -0.1rem;
 }
 .dashboard .block article.second .cont {
-  padding-top: 15px;
-  padding-top: 0.9375rem;
+  padding-top: 10px;
+  padding-top: 0.625rem;
   padding-right: 20px;
   padding-right: 1.25rem;
-  padding-bottom: 15px;
-  padding-bottom: 0.9375rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   padding-left: 35px;
   padding-left: 2.1875rem;
 }
 .dashboard .block article.second .cont > ul > li {
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .dashboard .block article.second .cont > ul > li > span {
   font-weight: 400;
@@ -1184,16 +1194,16 @@ html .kt-wrap .content {
 }
 .dashboard .block article.second .cont > ul > li > strong {
   display: inline-block;
-  padding-top: 3px;
-  padding-top: 0.1875rem;
+  padding-top: 2px;
+  padding-top: 0.125rem;
   padding-right: 5px;
   padding-right: 0.3125rem;
-  padding-bottom: 3px;
-  padding-bottom: 0.1875rem;
+  padding-bottom: 2px;
+  padding-bottom: 0.125rem;
   padding-left: 5px;
   padding-left: 0.3125rem;
-  margin-top: 5px;
-  margin-top: 0.3125rem;
+  margin-top: 3px;
+  margin-top: 0.1875rem;
   margin-right: 13px;
   margin-right: 0.8125rem;
   margin-bottom: 3px;
@@ -1202,10 +1212,6 @@ html .kt-wrap .content {
   margin-left: 0rem;
   color: #ffffff;
   background-color: #4c4c4e;
-}
-.dashboard .block article.third {
-  min-height: 150px;
-  min-height: 9.375rem;
 }
 .dashboard .block article.third > header {
   padding-top: 5px;
@@ -1229,12 +1235,12 @@ html .kt-wrap .content {
 .dashboard .block article.third .cont {
   font-size: 15px;
   font-size: 0.90625rem;
-  padding-top: 13px;
-  padding-top: 0.8125rem;
+  padding-top: 7px;
+  padding-top: 0.4375rem;
   padding-right: 13px;
   padding-right: 0.8125rem;
-  padding-bottom: 13px;
-  padding-bottom: 0.8125rem;
+  padding-bottom: 7px;
+  padding-bottom: 0.4375rem;
   padding-left: 13px;
   padding-left: 0.8125rem;
   background-color: #f5f5f5;

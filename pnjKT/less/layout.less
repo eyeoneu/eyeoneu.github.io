@@ -23,6 +23,24 @@ html {
 }
 
 // --------------------------------------
+// # SharePoint 초기화
+// --------------------------------------
+#layoutsTable {
+
+	> tbody {
+
+		> tr {
+
+			> td {
+				.padding-all(0);
+				border: none;
+			}
+		}
+	}
+}
+
+
+// --------------------------------------
 // # content layout
 // --------------------------------------
 
@@ -38,6 +56,7 @@ html {
     .margin-bottom(15);
     .padding-left(15);
     .line-height(22);
+		color: @black;
     
     > strong {
       .font-size(20);
@@ -133,8 +152,8 @@ html {
           position: absolute;
           .left(0);
           .top(0);
-          .width(56);
-          .height(56);
+          .width(50);
+          .height(50);
           color: @white;
           border-radius: 0 0 15px 0;
           background-color: @normal-mint;
@@ -163,26 +182,26 @@ html {
           position: absolute;
           .top(0);
           .left(0);
-          .width(56);
-          .height(56);
+          .width(50);
+          .height(50);
           display: flex;
           justify-content: center;
           align-items: center;
           z-index: @z + 1;
 
           > i {
-            .font-size(28);
+            .font-size(25);
             color: @white;
           }
         }
 
         > header {
           flex-direction: column;
-          .padding(20,20,7,20);
+          .padding(15,20,7,20);
 
           > strong {
             .font-size(22);
-            .padding-left(50);
+            .padding-left(40);
           }
         }
 
@@ -190,7 +209,7 @@ html {
           display: flex;
           flex-direction: column-reverse;
           justify-content: center;
-          .padding(0,20,13,20);
+          .padding(0,20,10,20);
 
           > ul {
             display: flex;
@@ -203,7 +222,6 @@ html {
               flex-direction: column;
               align-items: center;
               color: @black;
-              .padding-top(7);
 
               > strong {
                 .font-size(32);
@@ -324,12 +342,12 @@ html {
         }
 
         .cont {
-          .padding(15,20,15,35);
+          .padding(10,20,10,35);
 
           > ul {
 
             > li {
-              .font-size(16);
+              .font-size(15);
 
               > span {
                 font-weight: 400;
@@ -374,8 +392,8 @@ html {
 
               > strong {
                 display: inline-block;
-                .padding(3,5,3,5);
-                .margin(5,13,3,0);
+                .padding(2,5,2,5);
+                .margin(3,13,3,0);
                 color: @white;
                 background-color: @dark-grey;
               }
@@ -385,7 +403,6 @@ html {
       }
 
       &.third {
-        .min-height(150);
 
         > header {
           .padding(5,20,5,20);
@@ -400,7 +417,7 @@ html {
 
         .cont {
           .font-size(14.5);
-          .padding-all(13);
+          .padding(7,13,7,13);
           background-color: @very-light-grey;
 
           > ul {
@@ -1158,6 +1175,7 @@ table {
         }
     }
 }
+
 
 
 // --------------------------------------
