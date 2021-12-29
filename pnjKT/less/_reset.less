@@ -1,0 +1,201 @@
+// --------------------------------------
+// # 초기화
+// --------------------------------------
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+strong,
+span,
+small,
+label,
+i {
+    .reset();
+    font-family: inherit;
+    font-weight: 400;
+}
+
+a,
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+ul,
+ol {
+    li {
+        list-style: none;
+    }
+}
+
+figure {
+    .reset();
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-stretch: normal;
+}
+
+// ## 폼 요소 초기화
+button,
+input,
+optgroup,
+select,
+textarea {
+    display: inline-block;
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    //line-height: 1.15; /* 1 */
+    line-height: 1;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+textarea {
+    resize: none;
+}
+
+// ## 입력창 초기화
+input[type=tel],
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=submit],
+input[type=button],
+input[type=reset],
+textarea {
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+select {
+    vertical-align: top;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none;
+        display: hidden;
+    }
+}
+
+fieldset,
+a,
+img {
+    border: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    .reset();
+    border: 0;
+    background: transparent;
+    -webkit-appearance: button;
+    outline: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+caption,
+legend {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    text-indent: -9999px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+
+html, body {
+    font-family: inherit, sans-serif;
+    height: 100%;
+}
+
+.skip-navi a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    .width(1);
+    .height(1);
+    text-align: center;
+    color: @white;
+    z-index: @z + 99;
+}
+
+.skip-navi a:focus,
+.skip-navi a:active {
+    width: 100%;
+    .padding(10,0,10,0);
+    height: auto;
+    background: @black;
+}
+
+.blind {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    margin:-1px;
+    clip: rect(0px, 0px, 0px, 0px);
+    overflow: hidden;
+}

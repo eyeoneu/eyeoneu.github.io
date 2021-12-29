@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 전사 수행 현황</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList = [{
+      "ID": 1,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "계약액": "16,288,200,000",
+      "수행가치액": "13,597,355,280",
+      "진척율": "80.04%",
+      "진척현황": "정상",
+      "착공일": "2021-03-26",
+      "준공일": "2022-03-31",
+      "PM": "송의섭",
+      "계획MM": "25.63",
+      "실적MM": "23.56",
+      "BM": "시설",
+      "수행난이도": "20"
+    }, {
+      "ID": 2,
+      "프로젝트명": "A210145_2021년 도로터널 무선망 구축공사",
+      "계약액": "4,641,307,000",
+      "수행가치액": "2,305,914,524",
+      "진척율": "47.63%",
+      "진척현황": "지연",
+      "착공일": "2021-06-07",
+      "준공일": "2022-06-30",
+      "PM": "김동수",
+      "계획MM": "4.53",
+      "실적MM": "3.96",
+      "BM": "무선",
+      "수행난이도": "16"
+    }, {
+      "ID": 3,
+      "프로젝트명": "A210149_2021년 진천군 스마트그린도시 조성사업",
+      "계약액": "4,572,727,000",
+      "수행가치액": "722,909,043",
+      "진척율": "17.75%",
+      "진척현황": "위험",
+      "착공일": "2021-10-20",
+      "준공일": "2022-12-31",
+      "PM": "이성철",
+      "계획MM": "5.34",
+      "실적MM": "4.32",
+      "BM": "에너지",
+      "수행난이도": "16"
+    }, {
+      "ID": 4,
+      "프로젝트명": "A210080_2021년 전북 스쿨넷 통합망사업",
+      "계약액": "8,827,934,977",
+      "수행가치액": "8,563,074,385",
+      "진척율": "97.22%",
+      "진척현황": "정상",
+      "착공일": "2021-09-10",
+      "준공일": "2022-01-31",
+      "PM": "유명선",
+      "계획MM": "7.35",
+      "실적MM": "6.24",
+      "BM": "kt 협력",
+      "수행난이도": "10"
+    }, {
+      "ID": 5,
+      "프로젝트명": "A210148_2021년 전남 스쿨넷 통합망 사업",
+      "계약액": "7,014,529,321",
+      "수행가치액": "1,473,601,601",
+      "진척율": "18.25%",
+      "진척현황": "지연",
+      "착공일": "2021-08-01",
+      "준공일": "2021-12-31",
+      "PM": "이승호",
+      "계획MM": "5.4",
+      "실적MM": "3.42",
+      "BM": "kt 협력",
+      "수행난이도": "10"
+    }];
+  </script>
+</head>
+
+<body>
+
+  <div class="kt-wrap">
+
+    <!-- ========= content ========= -->
+    <main class="content">
+
+      <!-- dashboard -->
+      <section class="dashboard">
+
+        <div class="form-date mb25">
+          <div class="select-wrap mr10">
+            <label for="aaa1"></label>
+            <select name="" id="aaa1">
+              <option value="">2021년</option>
+            </select>
+          </div>
+          <div class="select-wrap mr10">
+            <label for="aaa2"></label>
+            <select name="" id="aaa2">
+              <option value="">12월</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <label for="aaa3"></label>
+            <select name="" id="aaa3">
+              <option value="">4주차</option>
+            </select>
+          </div>
+          <span class="date-info">(2021-12-21(화) 오전 2:00 기준)</span>
+        </div>
+        <div class="dashboard__area">
+          <div class="block mb35">
+            <div class="wrapper">
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                </div>
+                <header>
+                  <strong>수행가치</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li class="bold">
+                      <strong>2,980<small>억</small></strong>
+                      <span>누적</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong>3,800<small>억</small></strong>
+                      <span>연말</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-file-o"></i>
+                </div>
+                <header>
+                  <strong>수행상태</strong>
+                </header>
+                <div class="cont">
+                  <ul class="no-line">
+                    <li>
+                      <strong>20<small>건</small></strong>
+                      <span>착수</span>
+                    </li>
+                    <li class="bold">
+                      <strong>180<small>건</small></strong>
+                      <span>실행</span>
+                    </li>
+                    <li>
+                      <strong>25<small>건</small></strong>
+                      <span>준공</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-list-alt"></i>
+                </div>
+                <header>
+                  <strong>진척현황</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong class="status-txt status-txt--normal">117<small>건</small></strong>
+                      <span><span class="status-mark status-mark--normal">정상</span></span>
+                    </li>
+                    <li class="bar"></li>
+                    <li class="bold">
+                      <strong class="status-txt status-txt--delay">11<small>건</small></strong>
+                      <span><span class="status-mark status-mark--delay">지연</span></span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="status-txt status-txt--danger">29<small>건</small></strong>
+                      <span><span class="status-mark status-mark--danger">위험</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first wide">
+                <div class="icon-wrap">
+                  <i class="fa fa-users"></i>
+                </div>
+                <header>
+                  <strong>인적가치</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li class="blue">
+                      <strong>3.6<small>억</small></strong>
+                      <span>가치</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li class="bold">
+                      <strong>1,890<small>MM</small></strong>
+                      <span>실적</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong>2,600<small>MM</small></strong>
+                      <span>계획</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="block">
+            <div class="wrapper wide">
+              <article class="second">
+                <header>
+                  <i class="fa fa-cloud"></i>
+                  <strong>네트워크사업본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="point"><span>80건</span></span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">80건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">3건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third mr3">
+                <header>
+                  <strong>무선 BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third mr3 ml3">
+                <header>
+                  <strong>유선 BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third ml3">
+                <header>
+                  <strong>O&M BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-code-fork"></i>
+                  <strong>ICT사업본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">780억</span>
+                      <span class="bar">/</span>
+                      <span>800억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>6건</span>
+                      <span class="point"><span>60건</span></span>
+                      <span>5건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">20건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">5건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">6건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">590MM</span>
+                      <span class="bar">/</span>
+                      <span>700MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third mr3">
+                <header>
+                  <strong>미디어 BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third ml3">
+                <header>
+                  <strong>KT협력 BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-cogs"></i>
+                  <strong>융합사업본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">900억</span>
+                      <span class="bar">/</span>
+                      <span>1,300억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>2건</span>
+                      <span class="point"><span>30건</span></span>
+                      <span>8건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">17건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">4건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">5건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">500MM</span>
+                      <span class="bar">/</span>
+                      <span>900MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third mr3">
+                <header>
+                  <strong>에너지 BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="third ml3">
+                <header>
+                  <strong>시설 BM</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span>1,300억</span>
+                      <span class="bar">/</span>
+                      <span>1,700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>12건</span>
+                      <span class="bar">/</span>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>12건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span>80건</span>
+                      <span class="bar">/</span>
+                      <span>3건</span>
+                      <span class="bar">/</span>
+                      <span>18건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span>800MM</span>
+                      <span class="bar">/</span>
+                      <span>1,000MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__area mt40">
+          <h2><strong>주요 프로젝트 수행 현황 (Top 5)</strong></h2>
+          <div class="tbl-wrap">
+            <div id="mainProject" class="type-ct"></div>
+          </div>
+        </div>
+
+      </section>
+      <!-- // dashboard -->
+
+    </main>
+    <!-- ========= // content ========= -->
+
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+  $("#mainProject").dxDataGrid({
+    dataSource: projectList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 5
+    },
+    columns: [
+      {
+        dataField: "프로젝트명",
+        width: 350,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "계약액", "수행가치액",
+      {
+        dataField: "진척율",
+        cellTemplate: function (container, options) {
+          $("<span class='percent-bar'>")
+            .appendTo(container)
+            .append("<span> " + options.value + " </span>")
+            .appendTo(container)
+        }
+      },
+      {
+        dataField: "진척현황",
+        cellTemplate: function (container, options) {
+          $("<i class='status-dot'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "착공일", "준공일", "PM", "계획MM", "실적MM", "BM", "수행난이도"
+    ]
+  });
+</script>

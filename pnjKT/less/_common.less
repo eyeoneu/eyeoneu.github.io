@@ -1,0 +1,216 @@
+@import  "_reset.less";
+@import  "_fonts.less";
+
+// 기본 zIndex
+@z: 1;
+
+// 이미지 경로
+@img: '../images';
+
+// --------------------------------------
+// # 색상
+// --------------------------------------
+// ## 지정색상
+@white: rgba(255,255,255,1);
+@light-grey: rgba(209,210,212,1);
+@dark-grey: rgba(76,76,78,1);
+@black: rgba(0,0,0,1);
+
+@trans-very-light-red: rgba(249, 191, 190, 0.2);
+@light-red: rgba(249,191,190,1);
+@normal-red: rgb(242, 113, 115);
+@point-red: rgba(255,0,0,1);
+@dark-red: rgba(176,17,22,1);
+
+@trans-very-light-grey: rgba(0,0,0,0.02);
+@trans-light-grey: rgba(0,0,0,0.1);
+@very-light-grey: #f5f5f5;
+@very-light-grey2: #e5e5e5;
+@normal-grey: #A2A2A2;
+
+@very-light-blue: #f1fcff;
+@sky-blue: #00c4ff;
+@dark-blue: #0373c6;
+@strong-blue: #0044cc;
+
+@trans-light-mint: rgba(0, 172, 142, 0.1);
+@normal-mint: #00ac8e;
+
+@trans-light-green: rgba(5, 167, 5, 0.2);
+@normal-green: #05A705;
+
+@normal-yellow: #FFA93C;
+@normal-red: #FF6868;
+@strong-red: #FF0000;
+
+
+
+// --------------------------------------
+// # 폰트
+// --------------------------------------
+@default-font: 'Noto Sans KR', sans-serif;
+
+// --------------------------------------
+// # 여백/사이즈
+// --------------------------------------
+.h100 { .height(100) !important; }
+
+.w100 { .width(100) !important; }
+.w200 { .width(200) !important; }
+
+.pt0 { .padding-top(0) !important;}
+.pt5 { .padding-top(5) !important;}
+.pt10 { .padding-top(10) !important;}
+.pt15 { .padding-top(15) !important;}
+.pt20 { .padding-top(20) !important;}
+.pt25 { .padding-top(25) !important;}
+.pt30 { .padding-top(30) !important;}
+.pt35 { .padding-top(35) !important;}
+.pt40 { .padding-top(40) !important;}
+.pt45 { .padding-top(45) !important;}
+.pt50 { .padding-top(50) !important;}
+
+.pr0 { .padding-right(0) !important;}
+.pr5 { .padding-right(5) !important;}
+.pr10 { .padding-right(10) !important;}
+.pr15 { .padding-right(15) !important;}
+.pr20 { .padding-right(20) !important;}
+.pr25 { .padding-right(25) !important;}
+.pr30 { .padding-right(30) !important;}
+.pr35 { .padding-right(35) !important;}
+.pr40 { .padding-right(40) !important;}
+.pr45 { .padding-right(45) !important;}
+.pr50 { .padding-right(50) !important;}
+
+.pb0 { .padding-bottom(0) !important;}
+.pb5 { .padding-bottom(5) !important;}
+.pb10 { .padding-bottom(10) !important;}
+.pb15 { .padding-bottom(15) !important;}
+.pb20 { .padding-bottom(20) !important;}
+.pb25 { .padding-bottom(25) !important;}
+.pb30 { .padding-bottom(30) !important;}
+.pb35 { .padding-bottom(35) !important;}
+.pb40 { .padding-bottom(40) !important;}
+.pb45 { .padding-bottom(45) !important;}
+.pb50 { .padding-bottom(50) !important;}
+
+.pl0 { .padding-left(0) !important;}
+.pl5 { .padding-left(5) !important;}
+.pl10 { .padding-left(10) !important;}
+.pl15 { .padding-left(15) !important;}
+.pl20 { .padding-left(20) !important;}
+.pl25 { .padding-left(25) !important;}
+.pl30 { .padding-left(30) !important;}
+.pl35 { .padding-left(35) !important;}
+.pl40 { .padding-left(40) !important;}
+.pl45 { .padding-left(45) !important;}
+.pl50 { .padding-left(50) !important;}
+
+.mt0 { .margin-top(0) !important;}
+.mt5 { .margin-top(5) !important;}
+.mt10 { .margin-top(10) !important;}
+.mt15 { .margin-top(15) !important;}
+.mt20 { .margin-top(20) !important;}
+.mt25 { .margin-top(25) !important;}
+.mt30 { .margin-top(30) !important;}
+.mt35 { .margin-top(35) !important;}
+.mt40 { .margin-top(40) !important;}
+.mt45 { .margin-top(45) !important;}
+.mt50 { .margin-top(50) !important;}
+
+.mr0 { .margin-right(0) !important;}
+.mr3 { .margin-right(3) !important;}
+.mr5 { .margin-right(5) !important;}
+.mr10 { .margin-right(10) !important;}
+.mr15 { .margin-right(15) !important;}
+.mr20 { .margin-right(20) !important;}
+.mr25 { .margin-right(25) !important;}
+.mr30 { .margin-right(30) !important;}
+.mr35 { .margin-right(35) !important;}
+.mr40 { .margin-right(40) !important;}
+.mr45 { .margin-right(45) !important;}
+.mr50 { .margin-right(50) !important;}
+
+.mb0 { .margin-bottom(0) !important;}
+.mb5 { .margin-bottom(5) !important;}
+.mb7 { .margin-bottom(7) !important;}
+.mb10 { .margin-bottom(10) !important;}
+.mb15 { .margin-bottom(15) !important;}
+.mb20 { .margin-bottom(20) !important;}
+.mb25 { .margin-bottom(25) !important;}
+.mb30 { .margin-bottom(30) !important;}
+.mb35 { .margin-bottom(35) !important;}
+.mb40 { .margin-bottom(40) !important;}
+.mb45 { .margin-bottom(45) !important;}
+.mb50 { .margin-bottom(50) !important;}
+
+.ml0 { .margin-left(0) !important;}
+.ml3 { .margin-left(3) !important;}
+.ml5 { .margin-left(5) !important;}
+.ml10 { .margin-left(10) !important;}
+.ml15 { .margin-left(15) !important;}
+.ml20 { .margin-left(20) !important;}
+.ml25 { .margin-left(25) !important;}
+.ml30 { .margin-left(30) !important;}
+.ml35 { .margin-left(35) !important;}
+.ml40 { .margin-left(40) !important;}
+.ml45 { .margin-left(45) !important;}
+.ml50 { .margin-left(50) !important;}
+
+.lt0 { .left(0) !important;}
+.lt5 { .left(5) !important;}
+.lt10 { .left(10) !important;}
+.lt15 { .left(15) !important;}
+.lt20 { .left(20) !important;}
+.lt25 { .left(25) !important;}
+.lt30 { .left(30) !important;}
+.lt35 { .left(35) !important;}
+.lt40 { .left(40) !important;}
+.lt45 { .left(45) !important;}
+.lt50 { .left(50) !important;}
+
+.rt0 { .right(0) !important;}
+.rt5 { .right(5) !important;}
+.rt10 { .right(10) !important;}
+.rt15 { .right(15) !important;}
+.rt20 { .right(20) !important;}
+.rt25 { .right(25) !important;}
+.rt30 { .right(30) !important;}
+.rt35 { .right(35) !important;}
+.rt40 { .right(40) !important;}
+.rt45 { .right(45) !important;}
+.rt50 { .right(50) !important;}
+
+// --------------------------------------
+// # 정렬
+// --------------------------------------
+.flex-wrap {display: flex; align-items: center;}
+.flex-ct {display: flex; align-items: center; justify-content: center; height: 100%;}
+.flex-mla {margin-left: auto; flex: none;}
+.flex-mra {margin-right: auto; flex: none;}
+.flex-ma {margin: 0 auto; flex: none;}
+
+.posi-mra {position: absolute !important; left: 0;}
+.posi-mla {position: absolute !important; right: 0;}
+
+.txt-al {text-align: left;}
+.txt-ar {text-align: right;}
+
+// --------------------------------------
+// # 텍스트
+// --------------------------------------
+.txt-ellip {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  &--2 {
+    -webkit-line-clamp: 2;
+  }
+
+  &--3 {
+    -webkit-line-clamp: 3;
+  }
+}

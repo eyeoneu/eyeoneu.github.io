@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 지역 수행 현황</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList = [{
+      "ID": 1,
+      "프로젝트명": "A210218_2021년 부산경남 통신구 소방시설 구축공사(2차)",
+      "계약액": "5,833,099,000",
+      "수행가치액": "4,668,812,440",
+      "진척율": "80.04%",
+      "진척현황": "정상",
+      "착공일": "2021-07-30",
+      "준공일": "2022-06-30",
+      "PM": "권종룡",
+      "계획MM": "35.63",
+      "실적MM": "28.56",
+      "BM": "유선",
+      "수행난이도": "85"
+    }, {
+      "ID": 2,
+      "프로젝트명": "A210101_2021년 광주 스쿨넷 통합망사업",
+      "계약액": "3,013,943,336",
+      "수행가치액": "1,435,541,211",
+      "진척율": "47.63%",
+      "진척현황": "지연",
+      "착공일": "2021-09-01",
+      "준공일": "2021-12-31",
+      "PM": "양진열",
+      "계획MM": "5.53",
+      "실적MM": "3.96",
+      "BM": "Kt협력",
+      "수행난이도": "76"
+    }, {
+      "ID": 3,
+      "프로젝트명": "A210232_2021년 통신구 소방시설 구축공사 (대구) 2차",
+      "계약액": "2,338,119,000",
+      "수행가치액": "415,016,123",
+      "진척율": "17.75%",
+      "진척현황": "위험",
+      "착공일": "2021-08-16",
+      "준공일": "2022-06-30",
+      "PM": "이승주",
+      "계획MM": "6.34",
+      "실적MM": "4.32",
+      "BM": "유선",
+      "수행난이도": "36"
+    }, {
+      "ID": 4,
+      "프로젝트명": "A210205_2021년 무선망 시설공사 총액계약 (서부)",
+      "계약액": "2,284,271,832",
+      "수행가치액": "2,220,769,075",
+      "진척율": "97.22%",
+      "진척현황": "정상",
+      "착공일": "2021-08-12",
+      "준공일": "2022-07-30",
+      "PM": "한재원",
+      "계획MM": "8.35",
+      "실적MM": "6.24",
+      "BM": "무선",
+      "수행난이도": "70"
+    }, {
+      "ID": 5,
+      "프로젝트명": "A210076_2021년신규 지하철 무선망 공사",
+      "계약액": "2,200,000,000",
+      "수행가치액": "401,500,000",
+      "진척율": "18.25%",
+      "진척현황": "지연",
+      "착공일": "2021-06-01",
+      "준공일": "2022-06-30",
+      "PM": "김진범",
+      "계획MM": "4.4",
+      "실적MM": "3.42",
+      "BM": "무선",
+      "수행난이도": "50"
+    },];
+  </script>
+</head>
+
+<body>
+
+  <div class="kt-wrap">
+
+    <!-- ========= content ========= -->
+    <main class="content">
+
+      <!-- dashboard -->
+      <section class="dashboard">
+
+        <div class="form-date mb25">
+          <div class="select-wrap mr10">
+            <label for="aaa1"></label>
+            <select name="" id="aaa1">
+              <option value="">2021년</option>
+            </select>
+          </div>
+          <div class="select-wrap mr10">
+            <label for="aaa2"></label>
+            <select name="" id="aaa2">
+              <option value="">12월</option>
+            </select>
+          </div>
+          <div class="select-wrap mr10">
+            <label for="aaa3"></label>
+            <select name="" id="aaa3">
+              <option value="">4주차</option>
+            </select>
+          </div>
+          <div class="select-wrap w200">
+            <label for="aaa2"></label>
+            <select name="" id="aaa2">
+              <option value="">전체 지역 본부</option>
+            </select>
+          </div>
+          <span class="date-info">(2021-12-21(화) 오전 2:00 기준)</span>
+        </div>
+        <div class="dashboard__area">
+          <div class="block mb35">
+            <div class="wrapper">
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                </div>
+                <header>
+                  <strong>수행가치</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li class="bold">
+                      <strong>1,000<small>억</small></strong>
+                      <span>누적</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong>4,000<small>억</small></strong>
+                      <span>연말</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-file-o"></i>
+                </div>
+                <header>
+                  <strong>수행상태</strong>
+                </header>
+                <div class="cont">
+                  <ul class="no-line">
+                    <li>
+                      <strong>10<small>건</small></strong>
+                      <span>착수</span>
+                    </li>
+                    <li class="bold">
+                      <strong>85<small>건</small></strong>
+                      <span>실행</span>
+                    </li>
+                    <li>
+                      <strong>8<small>건</small></strong>
+                      <span>준공</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-list-alt"></i>
+                </div>
+                <header>
+                  <strong>진척현황</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong class="status-txt status-txt--normal">80<small>건</small></strong>
+                      <span><span class="status-mark status-mark--normal">정상</span></span>
+                    </li>
+                    <li class="bar"></li>
+                    <li class="bold">
+                      <strong class="status-txt status-txt--delay">25<small>건</small></strong>
+                      <span><span class="status-mark status-mark--delay">지연</span></span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="status-txt status-txt--danger">8<small>건</small></strong>
+                      <span><span class="status-mark status-mark--danger">위험</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first wide">
+                <div class="icon-wrap">
+                  <i class="fa fa-users"></i>
+                </div>
+                <header>
+                  <strong>인적가치</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li class="blue">
+                      <strong>3.6<small>억</small></strong>
+                      <span>가치</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li class="bold">
+                      <strong>100<small>MM</small></strong>
+                      <span>실적</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong>1,200<small>MM</small></strong>
+                      <span>계획</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="block mb10">
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-map size-sm"></i>
+                  <strong>강북/강원본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">600억</span>
+                      <span class="bar">/</span>
+                      <span>700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>2건</span>
+                      <span class="point"><span>20건</span></span>
+                      <span>2건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">17건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">3건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">1건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">600MM</span>
+                      <span class="bar">/</span>
+                      <span>800MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-map-o size-sm"></i>
+                  <strong>강남/서부본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">1,000억</span>
+                      <span class="bar">/</span>
+                      <span>1,100억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>3건</span>
+                      <span class="point"><span>20건</span></span>
+                      <span>1건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">15건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">5건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">1건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">850MM</span>
+                      <span class="bar">/</span>
+                      <span>900MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-map size-sm"></i>
+                  <strong>부산/경남본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">500억</span>
+                      <span class="bar">/</span>
+                      <span>650억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>2건</span>
+                      <span class="point"><span>18건</span></span>
+                      <span>2건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">10건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">3건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">2건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">600MM</span>
+                      <span class="bar">/</span>
+                      <span>750MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="block">
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-map-o size-sm"></i>
+                  <strong>대구/경북본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">450억</span>
+                      <span class="bar">/</span>
+                      <span>700억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>1건</span>
+                      <span class="point"><span>10건</span></span>
+                      <span>2건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">10건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">3건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">1건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">650MM</span>
+                      <span class="bar">/</span>
+                      <span>780MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-map size-sm"></i>
+                  <strong>전남/전북본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">550억</span>
+                      <span class="bar">/</span>
+                      <span>850억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>1건</span>
+                      <span class="point"><span>12건</span></span>
+                      <span>1건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">25건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">3건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">1건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">700MM</span>
+                      <span class="bar">/</span>
+                      <span>850MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="wrapper">
+              <article class="second">
+                <header>
+                  <i class="fa fa-map-o size-sm"></i>
+                  <strong>충남/충북본부</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong>수행가치</strong>
+                      <span class="bold">400억</span>
+                      <span class="bar">/</span>
+                      <span>500억</span>
+                    </li>
+                    <li>
+                      <strong>수행상태</strong>
+                      <span>1건</span>
+                      <span class="point"><span>5건</span></span>
+                      <span>0건</span>
+                    </li>
+                    <li>
+                      <strong>진척현황</strong>
+                      <span class="status-mark status-mark--normal">8건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--delay">3건</span>
+                      <span class="bar">/</span>
+                      <span class="status-mark status-mark--danger">1건</span>
+                    </li>
+                    <li>
+                      <strong>인적가치</strong>
+                      <span class="bold mint">200MM</span>
+                      <span class="bar">/</span>
+                      <span>600MM</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__area mt40">
+          <h2><strong>지역 주요 프로젝트 수행 현황 (Top 5)</strong></h2>
+          <div class="tbl-wrap">
+            <div id="mainProject" class="type-ct"></div>
+          </div>
+        </div>
+
+      </section>
+      <!-- // dashboard -->
+
+    </main>
+    <!-- ========= // content ========= -->
+
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+  $("#mainProject").dxDataGrid({
+    dataSource: projectList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 5
+    },
+    columns: [
+      {
+        dataField: "프로젝트명",
+        width: 350,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      {
+        dataField: "계약액",
+        width: 130
+      },
+      {
+        dataField: "수행가치액",
+        width: 130
+      },
+      {
+        dataField: "진척율",
+        cellTemplate: function (container, options) {
+          $("<span class='percent-bar'>")
+            .appendTo(container)
+            .append("<span> " + options.value + " </span>")
+            .appendTo(container)
+        }
+      },
+      {
+        dataField: "진척현황",
+        cellTemplate: function (container, options) {
+          $("<i class='status-dot'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "착공일", "준공일", "PM", "계획MM", "실적MM", "BM", "수행난이도"
+    ]
+  });
+</script>
