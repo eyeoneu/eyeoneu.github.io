@@ -18,7 +18,208 @@ html {
       // .width(1650);
       width: 1650px;
       min-width: 1650px;
+
+      h2 {
+        position: relative;
+        .margin-bottom(15);
+        .padding-left(15);
+        .line-height(22);
+        color: @black;
+        
+        > strong {
+          .font-size(20);
+          font-weight: 500;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          .left(0);
+          .top(0);
+          .width(4);
+          .height(22);
+          background-color: @normal-mint;
+          box-sizing: border-box;
+        }
+      }
     }
+  }
+}
+
+// --------------------------------------
+// # common
+// --------------------------------------
+.percent-bar {
+  display: block;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    .left(0);
+    .bottom(0);
+    .height(3);
+    background-color: @normal-mint;
+    z-index: @z + 1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    .left(0);
+    .bottom(0);
+    .height(3);
+    width: 100%;
+    background-color: @very-light-grey;
+  }
+
+  &.percent-18 {
+    &:before {
+      width: 18%;
+    }
+  }
+  &.percent-47 {
+    &:before {
+      width: 47%;
+    }
+  }
+  &.percent-80 {
+    &:before {
+      width: 80%;
+    }
+  }
+  &.percent-97 {
+    &:before {
+      width: 97%;
+    }
+  }
+}
+
+.status-mark {
+  position: relative;
+  .padding-left(23) !important;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    .left(5);
+    .width(12);
+    .height(12);
+    border-radius: 100%;
+    transform: translateY(-50%);
+  }
+  
+  &--normal {
+    @default-color: @normal-mint;
+    
+    &:before {
+      background-color: @default-color;
+    }
+  }
+  &--delay {
+    @default-color: @normal-yellow;
+    
+    &:before {
+      background-color: @default-color;
+    }
+  }
+  &--danger {
+    @default-color: @strong-red;
+    
+    &:before {
+      background-color: @default-color;
+    }
+  }
+}
+
+.status-dot {
+  position: relative;
+  .padding-left(15) !important;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    .margin-top(-1);
+    .left(0);
+    .width(10);
+    .height(10);
+    border-radius: 100%;
+    transform: translateY(-50%);
+  }
+  
+  &--normal {
+    @default-color: @normal-mint;
+    
+    &:before {
+      background-color: @default-color;
+    }
+  }
+  &--delay {
+    @default-color: @normal-yellow;
+    
+    &:before {
+      background-color: @default-color;
+    }
+  }
+  &--danger {
+    @default-color: @strong-red;
+    
+    &:before {
+      background-color: @default-color;
+    }
+  }
+}
+
+.status-txt {
+  font-weight: 500 !important;
+
+  &--normal {
+    @default-color: @normal-mint;
+    color: @default-color; 
+  }
+  &--delay {
+    @default-color: @normal-yellow;
+    color: @default-color; 
+  }
+  &--danger {
+    @default-color: @strong-red;
+    color: @default-color; 
+  }
+}
+
+.status-bg {
+  color: @white;
+  
+  &--normal {
+    @default-color: @normal-mint;
+    background-color: @default-color;
+  }
+
+  &--normal-before {
+    @default-color: @normal-green;
+    background-color: @default-color;
+  }
+
+  &--delay {
+    @default-color: @light-yellow;
+    background-color: @default-color;
+    color: @black;
+  }
+
+  &--delay-before {
+    @default-color: @normal-orange;
+    background-color: @default-color;
+  }
+
+  &--danger {
+    @default-color: @strong-red;
+    background-color: @default-color;
   }
 }
 
@@ -49,31 +250,6 @@ html {
 
   &__area {
 
-  }
-
-  h2 {
-    position: relative;
-    .margin-bottom(15);
-    .padding-left(15);
-    .line-height(22);
-		color: @black;
-    
-    > strong {
-      .font-size(20);
-      font-weight: 500;
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      .left(0);
-      .top(0);
-      .width(4);
-      .height(22);
-      background-color: @normal-mint;
-      box-sizing: border-box;
-    }
   }
 
   .block {
@@ -227,6 +403,10 @@ html {
                 .font-size(32);
                 font-weight: 300;
                 .margin-bottom(5);
+                
+                &.link {
+                    cursor: pointer;
+                }
 
                 > small {
                   .font-size(22);
@@ -317,10 +497,11 @@ html {
         > header {
           position: relative;
           width: 33%;
-          .padding(60,5,5,5);
+          .padding(55,5,10,5);
           border-bottom: 2px solid @normal-mint;
           justify-content: center;
           box-sizing: border-box;
+          cursor: pointer;
 
           > i {
             position: absolute;
@@ -375,7 +556,7 @@ html {
                     position: absolute;
                     .left(0);
                     .bottom(0);
-                    .height(23);
+                    .height(21);
                     width: 100%;
                     .border-radius(5);
                     background-color: @normal-mint;
@@ -387,6 +568,10 @@ html {
                     z-index: @z + 1;
                     color: @white;
                   }
+                }
+
+                &.link {
+                    cursor: pointer;
                 }
               }
 
@@ -412,6 +597,7 @@ html {
 
           > strong {
             .font-size(18);
+            cursor: pointer;
           }
         }
 
@@ -447,6 +633,10 @@ html {
 
                 &.bold {
                 }
+
+                &.link {
+                    cursor: pointer;
+                }
               }
             }
           }
@@ -454,147 +644,51 @@ html {
       }
     }
   }
+}
 
-  .percent-bar {
-    display: block;
+// ## 계산식
+.calc-wrap {
+  .padding-all(20);
+  border: 1px solid @light-grey;
+  background-color: @trans-light-yellow;
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      .left(0);
-      .bottom(0);
-      .height(3);
-      background-color: @normal-mint;
-      z-index: @z + 1;
-    }
+  .txt-tit {
+    .margin-bottom(10);
 
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      .left(0);
-      .bottom(0);
-      .height(3);
-      width: 100%;
-      background-color: @very-light-grey;
+    > strong {
+      .font-size(20);
+      font-weight: 500;
     }
 
-    &.percent-18 {
-      &:before {
-        width: 18%;
-      }
-    }
-    &.percent-47 {
-      &:before {
-        width: 47%;
-      }
-    }
-    &.percent-80 {
-      &:before {
-        width: 80%;
-      }
-    }
-    &.percent-97 {
-      &:before {
-        width: 97%;
-      }
+    > span {
+
     }
   }
 
-  .status-mark {
-    position: relative;
-    .padding-left(23) !important;
+  .tbl-block {
+    display: flex;
 
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 50%;
-      .left(5);
-      .width(12);
-      .height(12);
-      border-radius: 100%;
-      transform: translateY(-50%);
-    }
-    
-    &--normal {
-      @default-color: @normal-mint;
-      
-      &:before {
-        background-color: @default-color;
-      }
-    }
-    &--delay {
-      @default-color: @normal-yellow;
-      
-      &:before {
-        background-color: @default-color;
-      }
-    }
-    &--danger {
-      @default-color: @strong-red;
-      
-      &:before {
-        background-color: @default-color;
-      }
-    }
-  }
+    .tbl-wrap {
+      flex: 1;
 
-  .status-dot {
-    position: relative;
-    .padding-left(15) !important;
+      > table {
+        height: 100%;
 
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 50%;
-      .margin-top(-1);
-      .left(0);
-      .width(10);
-      .height(10);
-      border-radius: 100%;
-      transform: translateY(-50%);
-    }
-    
-    &--normal {
-      @default-color: @normal-mint;
-      
-      &:before {
-        background-color: @default-color;
-      }
-    }
-    &--delay {
-      @default-color: @normal-yellow;
-      
-      &:before {
-        background-color: @default-color;
-      }
-    }
-    &--danger {
-      @default-color: @strong-red;
-      
-      &:before {
-        background-color: @default-color;
-      }
-    }
-  }
+        thead {
+          background-color: @very-light-grey3;
+        }
 
-  .status-txt {
-    font-weight: 500 !important;
+        tbody {
 
-    &--normal {
-      @default-color: @normal-mint;
-      color: @default-color; 
-    }
-    &--delay {
-      @default-color: @normal-yellow;
-      color: @default-color; 
-    }
-    &--danger {
-      @default-color: @strong-red;
-      color: @default-color; 
+          th {
+            background-color: @very-light-grey;
+          }
+        }
+      }
+
+      + .tbl-wrap {
+        .margin-left(20);
+      }
     }
   }
 }
@@ -1840,8 +1934,8 @@ html.full {
                     .dx-row {
 
                         > td {
-                            .padding-top(10);
-                            .padding-bottom(10);
+                            .padding-top(7);
+                            .padding-bottom(7);
                             font-weight: 500;
                             border-bottom: none;
                             background-color: @very-light-grey;
