@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 본부 수행 현황</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList = [{
+      "ID": 1,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "계약액": "16,288,200,000",
+      "수행가치액": "13,597,355,280",
+      "진척율": "80.04%",
+      "진척현황": "정상",
+      "착공일": "2021-03-26",
+      "준공일": "2022-03-31",
+      "PM": "송의섭",
+      "계획MM": "25.63",
+      "실적MM": "23.56",
+      "BM": "시설",
+      "수행난이도": "20"
+    }, {
+      "ID": 2,
+      "프로젝트명": "A210145_2021년 도로터널 무선망 구축공사",
+      "계약액": "4,641,307,000",
+      "수행가치액": "2,305,914,524",
+      "진척율": "47.63%",
+      "진척현황": "지연",
+      "착공일": "2021-06-07",
+      "준공일": "2022-06-30",
+      "PM": "김동수",
+      "계획MM": "4.53",
+      "실적MM": "3.96",
+      "BM": "무선",
+      "수행난이도": "16"
+    }, {
+      "ID": 3,
+      "프로젝트명": "A210149_2021년 진천군 스마트그린도시 조성사업",
+      "계약액": "4,572,727,000",
+      "수행가치액": "722,909,043",
+      "진척율": "17.75%",
+      "진척현황": "위험",
+      "착공일": "2021-10-20",
+      "준공일": "2022-12-31",
+      "PM": "이성철",
+      "계획MM": "5.34",
+      "실적MM": "4.32",
+      "BM": "에너지",
+      "수행난이도": "16"
+    }, {
+      "ID": 4,
+      "프로젝트명": "A210080_2021년 전북 스쿨넷 통합망사업",
+      "계약액": "8,827,934,977",
+      "수행가치액": "8,563,074,385",
+      "진척율": "97.22%",
+      "진척현황": "정상",
+      "착공일": "2021-09-10",
+      "준공일": "2022-01-31",
+      "PM": "유명선",
+      "계획MM": "7.35",
+      "실적MM": "6.24",
+      "BM": "kt 협력",
+      "수행난이도": "10"
+    }, {
+      "ID": 5,
+      "프로젝트명": "A210148_2021년 전남 스쿨넷 통합망 사업",
+      "계약액": "7,014,529,321",
+      "수행가치액": "1,473,601,601",
+      "진척율": "18.25%",
+      "진척현황": "지연",
+      "착공일": "2021-08-01",
+      "준공일": "2021-12-31",
+      "PM": "이승호",
+      "계획MM": "5.4",
+      "실적MM": "3.42",
+      "BM": "kt 협력",
+      "수행난이도": "10"
+    }];
+  </script>
+</head>
+
+<body>
+
+  <div class="kt-wrap">
+
+    <!-- ========= content ========= -->
+    <main class="content">
+
+      <!-- dashboard -->
+      <section class="dashboard">
+
+        <div class="form-date">
+          <div class="select-wrap mr10">
+            <label for="aaa1"></label>
+            <select name="" id="aaa1">
+              <option value="">2021년</option>
+            </select>
+          </div>
+          <div class="select-wrap mr10">
+            <label for="aaa2"></label>
+            <select name="" id="aaa2">
+              <option value="">12월</option>
+            </select>
+          </div>
+          <div class="select-wrap mr10">
+            <label for="aaa3"></label>
+            <select name="" id="aaa3">
+              <option value="">4주차</option>
+            </select>
+          </div>
+          <div class="select-wrap w200">
+            <label for="aaa3"></label>
+            <select name="" id="aaa3">
+              <option value="">네트워크사업본부</option>
+            </select>
+          </div>
+          <span class="date-info">(2021-12-21(화) 오전 2:00 기준)</span>
+        </div>
+
+        <div class="dashboard__area">
+          <h1>
+            <i class="fa fa-cloud"></i>
+            <strong>네트워크사업본부</strong>
+            <span>현황</span>
+          </h1>
+          <div class="flex-wrap">
+            <div class="flex-25">
+              <article class="project-box bg-grey">
+                <header>
+                  <strong>프로젝트 총 30건</strong>
+                  <span class="ml5">(SAP 진행상태 기준)</span>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong class="link">5<small>건</small></strong>
+                      <span>수주전</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="link">14<small>건</small></strong>
+                      <span>수주/진행</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="link">11<small>건</small></strong>
+                      <span>완료/하자보수</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <h2 class="mt30"><strong>프로젝트 진행현황</strong></h2>
+              <div class="chart-wrap mb20">
+                <img src="../images/temp/chart-bubble1.png">
+                <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Bubble/jQuery/Light/ -->
+              </div>
+              <article class="project-box bg-red">
+                <header>
+                  <strong>프로젝트 확인사항</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong class="status-txt status-txt--danger link">3<small>건</small></strong>
+                      <span>WBS 미등록</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li class="bold">
+                      <strong class="status-txt status-txt--danger link">2<small>건</small></strong>
+                      <span>실적 미등록</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="status-txt status-txt--check link">11<small>건</small></strong>
+                      <span>특이사항</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="flex-75 ml20">
+              <h2><strong>HR 수행부하 전망</strong></h2>
+              <div class="chart-wrap ovf-wrap">
+                <img src="../images/temp/chart-gantt1.png">
+                <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gantt/Overview/jQuery/Light/ -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt40">
+          <h2><strong>주요 프로젝트 수행 현황 (Top 5)</strong></h2>
+          <div class="tbl-wrap">
+            <div id="mainProject" class="type-ct"></div>
+          </div>
+        </div>
+
+      </section>
+      <!-- // dashboard -->
+
+    </main>
+    <!-- ========= // content ========= -->
+
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+  $("#mainProject").dxDataGrid({
+    dataSource: projectList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 5
+    },
+    columns: [
+      {
+        dataField: "프로젝트명",
+        width: 350,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "계약액", "수행가치액",
+      {
+        dataField: "진척율",
+        cellTemplate: function (container, options) {
+          $("<span class='percent-bar'>")
+            .appendTo(container)
+            .append("<span> " + options.value + " </span>")
+            .appendTo(container)
+        }
+      },
+      {
+        dataField: "진척현황",
+        cellTemplate: function (container, options) {
+          $("<i class='status-dot'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "착공일", "준공일", "PM", "계획MM", "실적MM", "BM", "수행난이도"
+    ]
+  });
+</script>
