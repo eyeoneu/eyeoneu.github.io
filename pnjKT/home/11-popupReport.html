@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 프로젝트 보고서</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList = [{
+      "ID": 1,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "계약액": "16,288,200,000",
+      "수행가치액": "13,597,355,280",
+      "진척율": "80.04%",
+      "진척현황": "정상",
+      "착공일": "2021-03-26",
+      "준공일": "2022-03-31",
+      "PM": "송의섭",
+      "계획MM": "25.63",
+      "실적MM": "23.56",
+      "BM": "시설",
+      "수행난이도": "20"
+    }, {
+      "ID": 2,
+      "프로젝트명": "A210145_2021년 도로터널 무선망 구축공사",
+      "계약액": "4,641,307,000",
+      "수행가치액": "2,305,914,524",
+      "진척율": "47.63%",
+      "진척현황": "지연",
+      "착공일": "2021-06-07",
+      "준공일": "2022-06-30",
+      "PM": "김동수",
+      "계획MM": "4.53",
+      "실적MM": "3.96",
+      "BM": "무선",
+      "수행난이도": "16"
+    }, {
+      "ID": 3,
+      "프로젝트명": "A210149_2021년 진천군 스마트그린도시 조성사업",
+      "계약액": "4,572,727,000",
+      "수행가치액": "722,909,043",
+      "진척율": "17.75%",
+      "진척현황": "위험",
+      "착공일": "2021-10-20",
+      "준공일": "2022-12-31",
+      "PM": "이성철",
+      "계획MM": "5.34",
+      "실적MM": "4.32",
+      "BM": "에너지",
+      "수행난이도": "16"
+    }, {
+      "ID": 4,
+      "프로젝트명": "A210080_2021년 전북 스쿨넷 통합망사업",
+      "계약액": "8,827,934,977",
+      "수행가치액": "8,563,074,385",
+      "진척율": "97.22%",
+      "진척현황": "정상",
+      "착공일": "2021-09-10",
+      "준공일": "2022-01-31",
+      "PM": "유명선",
+      "계획MM": "7.35",
+      "실적MM": "6.24",
+      "BM": "kt 협력",
+      "수행난이도": "10"
+    }, {
+      "ID": 5,
+      "프로젝트명": "A210148_2021년 전남 스쿨넷 통합망 사업",
+      "계약액": "7,014,529,321",
+      "수행가치액": "1,473,601,601",
+      "진척율": "18.25%",
+      "진척현황": "지연",
+      "착공일": "2021-08-01",
+      "준공일": "2021-12-31",
+      "PM": "이승호",
+      "계획MM": "5.4",
+      "실적MM": "3.42",
+      "BM": "kt 협력",
+      "수행난이도": "10"
+    }];
+  </script>
+</head>
+
+<body>
+
+  <!-- pop-layer -->
+  <section class="pop-layer">
+
+    <div class="pop-layer__wrap">
+      <header class="status-bg status-bg--delay">
+        <h1>
+          <i class="fa fa-clock-o"></i>
+          <strong>2021년 부산경남 통신구 소방시설 구축공사</strong>
+          <span>(2차)</span>
+        </h1>
+        <span class="status-box">실행 단계</span>
+      </header>
+      <header class="status-bg status-bg--normal">
+        <h1>
+          <i class="fa fa-check-circle"></i>
+          <strong>2021년 부산경남 통신구 소방시설 구축공사</strong>
+          <span>(2차)</span>
+        </h1>
+        <span class="status-box">실행 단계</span>
+      </header>
+      <header class="status-bg status-bg--danger">
+        <h1>
+          <i class="fa fa-exclamation-triangle"></i>
+          <strong>2021년 부산경남 통신구 소방시설 구축공사</strong>
+          <span>(2차)</span>
+        </h1>
+        <span class="status-box">실행 단계</span>
+      </header>
+      <div class="cont-body">
+        <div class="cont-body__wrap">
+          <div class="flex-wrap">
+            <div class="flex-40">
+              <div class="tbl-wrap">
+                <table>
+                  <caption>프로젝트 현황</caption>
+                  <colgroup>
+                    <col width="20%"><col><col width="20%"><col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><strong>프로젝트 코드</strong></th>
+                      <td><span>A210218</span></td>
+                      <th scope="row"><strong>사업규모</strong></th>
+                      <td><span>1,000,000,000원</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>본사본부</strong></th>
+                      <td><span>네트워크사업본부</span></td>
+                      <th scope="row"><strong>지역본부</strong></th>
+                      <td><span>부산/경남본부</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>BM</strong></th>
+                      <td><span>유선BM</span></td>
+                      <th scope="row"><strong>PM</strong></th>
+                      <td><span>정창화</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>발주처명</strong></th>
+                      <td><span>주식회사 케이티</span></td>
+                      <th scope="row"><strong>원청사명</strong></th>
+                      <td><span>주식회사 케이티</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="flex-60">
+              <article class="project-box type-line1">
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <p class="tit"><strong>착공일</strong></p>
+                      <strong>D+10</strong>
+                      <span>2021-12-10</span>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>준공일</strong></p>
+                      <strong>D-24</strong>
+                      <span>2022-01-02</span>
+                    </li>
+                    <li>
+                      <p class="tit point"><strong>진행작업</strong></p>
+                      <strong class="status-txt status-txt--check link bold">3<small>건</small></strong>
+                    </li>
+                    <li>
+                      <p class="tit point"><strong>특이사항</strong></p>
+                      <strong class="status-txt status-txt--check link bold">2<small>건</small></strong>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>수행가치</strong></p>
+                      <strong class="link bold">10<small>백만</small></strong>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="flex-wrap">
+            <div class="flex-40">
+              <div class="tbl-wrap">
+                <table>
+                  <caption>프로젝트 현황</caption>
+                  <colgroup>
+                    <col width="20%"><col><col width="20%"><col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><strong>프로젝트 코드</strong></th>
+                      <td><span>A210218</span></td>
+                      <th scope="row"><strong>사업규모</strong></th>
+                      <td><span>1,000,000,000원</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>본사본부</strong></th>
+                      <td><span>네트워크사업본부</span></td>
+                      <th scope="row"><strong>지역본부</strong></th>
+                      <td><span>부산/경남본부</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>BM</strong></th>
+                      <td><span>유선BM</span></td>
+                      <th scope="row"><strong>PM</strong></th>
+                      <td><span>정창화</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>발주처명</strong></th>
+                      <td><span>주식회사 케이티</span></td>
+                      <th scope="row"><strong>원청사명</strong></th>
+                      <td><span>주식회사 케이티</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="flex-60">
+              <article class="project-box type-line2">
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <p class="tit"><strong>착공일</strong></p>
+                      <div class="sub">
+                        <strong>D+10</strong>
+                        <span>2021-12-10</span>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>준공일</strong></p>
+                      <div class="sub">
+                        <strong>D-24</strong>
+                        <span>2022-01-02</span>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>진행작업</strong></p>
+                      <div class="sub">
+                        <strong class="status-txt status-txt--check link bold">3<small>건</small></strong>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>특이사항</strong></p>
+                      <div class="sub">
+                        <strong class="status-txt status-txt--check link bold">2<small>건</small></strong>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>수행가치</strong></p>
+                      <div class="sub">
+                        <strong class="link bold">10<small>백만</small></strong>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="flex-wrap">
+            <div class="flex-40">
+              <div class="tbl-wrap">
+                <table>
+                  <caption>프로젝트 현황</caption>
+                  <colgroup>
+                    <col width="20%"><col><col width="20%"><col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><strong>프로젝트 코드</strong></th>
+                      <td><span>A210218</span></td>
+                      <th scope="row"><strong>사업규모</strong></th>
+                      <td><span>1,000,000,000원</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>본사본부</strong></th>
+                      <td><span>네트워크사업본부</span></td>
+                      <th scope="row"><strong>지역본부</strong></th>
+                      <td><span>부산/경남본부</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>BM</strong></th>
+                      <td><span>유선BM</span></td>
+                      <th scope="row"><strong>PM</strong></th>
+                      <td><span>정창화</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><strong>발주처명</strong></th>
+                      <td><span>주식회사 케이티</span></td>
+                      <th scope="row"><strong>원청사명</strong></th>
+                      <td><span>주식회사 케이티</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="flex-60">
+              <article class="project-box type-line3">
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <p class="tit"><strong>착공일</strong></p>
+                      <div class="sub">
+                        <strong>D+10</strong>
+                        <span>2021-12-10</span>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>준공일</strong></p>
+                      <div class="sub">
+                        <strong>D-24</strong>
+                        <span>2022-01-02</span>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>진행작업</strong></p>
+                      <div class="sub">
+                        <strong class="status-txt link bold">3<small>건</small></strong>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>특이사항</strong></p>
+                      <div class="sub">
+                        <strong class="status-txt link bold">2<small>건</small></strong>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="tit"><strong>수행가치</strong></p>
+                      <div class="sub">
+                        <strong class="link bold">10<small>백만</small></strong>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="flex-wrap">
+            <div class="flex-30">
+              <article class="project-box bg-grey">
+                <header>
+                  <strong>프로젝트 총 30건</strong>
+                  <span class="ml5">(SAP 진행상태 기준)</span>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li>
+                      <strong class="link">5<small>건</small></strong>
+                      <span>수주전</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="link">14<small>건</small></strong>
+                      <span>수주/진행</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="link">11<small>건</small></strong>
+                      <span>완료/하자보수</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="flex-70">
+              <h2><strong>마일스톤</strong></h2>
+              <div class="chart-wrap" style="border: 1px solid #ddd; box-sizing: border-box;">마일스톤 영역</div>
+            </div>
+          </div>
+          <div class="flex-wrap">
+            <div class="flex-40">
+              <h2><strong>기간별 프로젝트 진행현황</strong></h2>
+              <div class="chart-wrap">
+                <img src="../images/temp/chart-line1.png">
+                <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Spline/jQuery/Light/ -->
+              </div>
+            </div>
+            <div class="flex-25">
+              <h2><strong>공정별 공사비 비율 (실행)</strong></h2>
+              <div class="chart-wrap">
+                <img src="../images/temp/chart-pie1.png">
+                <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Pie/jQuery/Light/ -->
+              </div>
+            </div>
+            <div class="flex-35">
+              <h2><strong>고객의 목소리</strong></h2>
+              <div class="chart-wrap" style="border: 1px solid #ddd; box-sizing: border-box;">고객요청사항/의견 영역</div>
+            </div>
+          </div>
+          <div class="flex-wrap">
+            <div class="">
+              <h2><strong>프로젝트 작업 현황</strong></h2>
+              <div class="tbl-wrap">
+                <div id="mainProject" class="type-ct"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- // pop-layer -->
+
+</body>
+
+</html>
+
+
+<script>
+  $("#mainProject").dxDataGrid({
+    dataSource: projectList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 5
+    },
+    columns: [
+      {
+        dataField: "프로젝트명",
+        width: 350,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "계약액", "수행가치액",
+      {
+        dataField: "진척율",
+        cellTemplate: function (container, options) {
+          $("<span class='percent-bar'>")
+            .appendTo(container)
+            .append("<span> " + options.value + " </span>")
+            .appendTo(container)
+        }
+      },
+      {
+        dataField: "진척현황",
+        cellTemplate: function (container, options) {
+          $("<i class='status-dot'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "착공일", "준공일", "PM", "계획MM", "실적MM", "BM", "수행난이도"
+    ]
+  });
+</script>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 특이사항 상세</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    const simpleProducts = [
+      'item1',
+      'item2'
+    ];
+  </script>
+</head>
+
+<body>
+
+  <!-- pop-layer -->
+  <section class="pop-layer">
+
+    <div class="pop-layer__wrap">
+      <header class="type-normal1">
+        <h1>
+          <strong>특이사항 상세</strong>
+        </h1>
+      </header>
+      <div class="cont-body">
+        <div class="cont-body__wrap">
+          <div class="tbl-wrap">
+            <table>
+              <caption>기본정보</caption>
+              <colgroup>
+                <col width="16%"><col width="16%"><col><col width="16%"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="rowgroup" rowspan="5" class="fst"><strong>기본정보</strong></th>
+                  <th scope="row"><strong>구분</strong></td>
+                  <td>
+                    <span id="select-txt1"></span>
+                  </td>
+                  <th scope="row"><strong>작성자</strong></th>
+                  <td>
+                    <span>정창화</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>프로젝트</strong></td>
+                  <td colspan="3">
+                    <span id="select-txt2"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>제목</strong></td>
+                  <td colspan="3">
+                    <span id="insertTxt1"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>발생일자</strong></td>
+                  <td>
+                    <span id="date1"></span>
+                  </td>
+                  <th scope="row"><strong>조치기한</strong></th>
+                  <td>
+                    <span id="date2"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>담당자</strong></td>
+                  <td>
+                    <span id="insertTxt2"></span>
+                  </td>
+                  <th scope="row"><strong>진행상태</strong></th>
+                  <td>
+                    <span id="select-txt3"></span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl-wrap mt20">
+            <table>
+              <caption>기본정보</caption>
+              <colgroup>
+                <col width="16%"><col width="16%"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="rowgroup" rowspan="5" class="fst"><strong>내용</strong></th>
+                  <th scope="row"><strong>특이사항 내용</strong></td>
+                  <td>
+                    <div id="textarea1"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>담당자 조치 내용</strong></td>
+                  <td>
+                    <div id="textarea2"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl-head mt25">
+            <span id="new1" class="btn btn-md"></span>
+            <span id="new2" class="btn btn-md flex-mla"></span>
+            <span id="new3" class="btn btn-md ml10"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- // pop-layer -->
+
+</body>
+
+</html>
+
+
+<script>
+  $("#new1").dxButton({
+    stylingMode: "contained",
+    text: "삭제",
+    type: "default"
+  });
+  $("#new2").dxButton({
+    stylingMode: "contained",
+    text: "저장",
+    type: "success"
+  });
+  $("#new3").dxButton({
+    stylingMode: "contained",
+    text: "취소",
+    type: "normal"
+  });
+
+  $('#date1').dxDateBox({
+  });
+  $('#date2').dxDateBox({
+  });
+  
+  $('#textarea1').dxTextArea({
+  });
+  $('#textarea2').dxTextArea({
+  });
+
+  $('#insertTxt1').dxTextBox({
+  });
+  $('#insertTxt2').dxTextBox({
+  });
+
+  $('#select-txt1').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt2').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt3').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  
+</script>
