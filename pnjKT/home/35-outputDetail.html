@@ -12,7 +12,7 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <meta property="og:type" content="website">
-  <title>KT engineering - 특이사항 상세</title>
+  <title>KT engineering - 산출물 상세</title>
   <link rel="stylesheet" href="../css/jquery-ui.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/layout.css">
@@ -42,7 +42,7 @@
     <div class="pop-layer__wrap">
       <header class="type-normal1">
         <h1>
-          <strong>특이사항 상세</strong>
+          <strong>산출물 상세 조회</strong>
         </h1>
       </header>
       <div class="cont-body">
@@ -56,14 +56,10 @@
               <tbody>
                 <tr>
                   <th scope="rowgroup" rowspan="5" class="fst"><strong>기본정보</strong></th>
-                  <th scope="row"><strong>구분</strong></td>
-                  <td>
-                    <span id="select-txt1"></span>
-                  </td>
-                  <th scope="row"><strong>작성자</strong></th>
-                  <td>
-                    <span>정창화</span>
-                  </td>
+                  <th scope="row"><strong>등록일자</strong></td>
+                  <td><span>2021-12-18</span></td>
+                  <th scope="row"><strong>등록자</strong></th>
+                  <td><span>정창화</span></td>
                 </tr>
                 <tr>
                   <th scope="row"><strong>프로젝트</strong></td>
@@ -72,29 +68,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row"><strong>제목</strong></td>
+                  <th scope="row"><strong>문서명</strong></td>
                   <td colspan="3">
                     <span id="insertTxt1"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row"><strong>발생일자</strong></td>
-                  <td>
-                    <span id="date1"></span>
-                  </td>
-                  <th scope="row"><strong>조치기한</strong></th>
-                  <td>
-                    <span id="date2"></span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row"><strong>담당자</strong></td>
-                  <td>
-                    <span id="insertTxt2"></span>
-                  </td>
-                  <th scope="row"><strong>진행상태</strong></th>
-                  <td>
-                    <span id="select-txt3"></span>
                   </td>
                 </tr>
               </tbody>
@@ -108,23 +84,17 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <th scope="rowgroup" rowspan="2" class="fst"><strong>내용</strong></th>
-                  <th scope="row"><strong>특이사항 내용</strong></td>
+                  <th scope="rowgroup" class="fst"><strong>파일</strong></th>
+                  <th scope="row"><strong>파일 업로드</strong></td>
                   <td>
-                    <div id="textarea1"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row"><strong>담당자 조치 내용</strong></td>
-                  <td>
-                    <div id="textarea2"></div>
+                    <span id="upload" class="btn btn-sm"></span>
+                    <span class="sub-txt">or Drop file here</span>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="tbl-head mt25">
-            <span id="new1" class="btn btn-md"></span>
             <span id="new2" class="btn btn-md flex-mla"></span>
             <span id="new3" class="btn btn-md ml10"></span>
           </div>
@@ -141,14 +111,14 @@
 
 
 <script>
-  $("#new1").dxButton({
+$("#upload").dxButton({
     stylingMode: "contained",
-    text: "삭제",
-    type: "default"
+    text: "Select file",
+    type: "normal"
   });
   $("#new2").dxButton({
     stylingMode: "contained",
-    text: "저장",
+    text: "등록",
     type: "success"
   });
   $("#new3").dxButton({
@@ -157,32 +127,15 @@
     type: "normal"
   });
 
-  $('#date1').dxDateBox({
-  });
-  $('#date2').dxDateBox({
-  });
-  
-  $('#textarea1').dxTextArea({
-  });
-  $('#textarea2').dxTextArea({
-  });
-
   $('#insertTxt1').dxTextBox({
   });
-  $('#insertTxt2').dxTextBox({
-  });
+ 
 
-  $('#select-txt1').dxSelectBox({
-    placeholder: 'Select a value...',
-    items: simpleProducts
-  });
+ 
   $('#select-txt2').dxSelectBox({
     placeholder: 'Select a value...',
     items: simpleProducts
   });
-  $('#select-txt3').dxSelectBox({
-    placeholder: 'Select a value...',
-    items: simpleProducts
-  });
+
   
 </script>

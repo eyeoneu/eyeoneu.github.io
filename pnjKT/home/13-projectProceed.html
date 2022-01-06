@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 진행작업</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList1 = [{
+      "ID": 1,
+      "No": 1,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "20%",
+      "진척현황": "지연",
+      "초기계획 지연 정보": "1주 이상 지연"
+    }, {
+      "ID": 2,
+      "No": 2,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "50%",
+      "진척현황": "지연",
+      "초기계획 지연 정보": "1주 이상 지연"
+    }, {
+      "ID": 3,
+      "No": 3,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "0%",
+      "진척현황": "위험",
+      "초기계획 지연 정보": "1주 이상 지연"
+    }, {
+      "ID": 4,
+      "No": 4,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "20%",
+      "진척현황": "지연",
+      "초기계획 지연 정보": "1주 이상 지연"
+    }, {
+      "ID": 5,
+      "No": 5,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "20%",
+      "진척현황": "지연",
+      "초기계획 지연 정보": "1주 이상 지연"
+    }];
+    var projectList2 = [{
+      "ID": 1,
+      "No": 1,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "20%",
+      "진척현황": "지연",
+      "작업 시작 정보": "3일 전 시작"
+    }, {
+      "ID": 2,
+      "No": 2,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "0%",
+      "진척현황": "지연",
+      "작업 시작 정보": "2일 전 시작"
+    }, {
+      "ID": 3,
+      "No": 3,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "0%",
+      "진척현황": "정상",
+      "작업 시작 정보": "오늘 시작"
+    }, {
+      "ID": 4,
+      "No": 4,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "0%",
+      "진척현황": "정상",
+      "작업 시작 정보": "3일 뒤 시작"
+    }, {
+      "ID": 5,
+      "No": 5,
+      "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
+      "PM": "송의섭",
+      "작업명": "자동화재탐지설비2",
+      "초기계획 종료일": "2021.12.12",
+      "계획 시작일": "2021.12.12",
+      "계획 종료일": "2021.12.12",
+      "실적진도": "0%",
+      "진척현황": "정상",
+      "작업 시작 정보": "3일 뒤 시작"
+    }];
+  </script>
+</head>
+
+<body>
+
+  <!-- pop-layer -->
+  <section class="pop-layer">
+
+    <div class="pop-layer__wrap">
+      <header class="type-normal1">
+        <h1>
+          <strong>진행작업</strong>
+        </h1>
+      </header>
+      <div class="cont-body">
+        <div class="cont-body__wrap">
+          <div>
+            <h2><strong>지연 작업</strong></h2>
+              <div class="tbl-wrap">
+                <div id="mainProject1" class="type-ct"></div>
+              </div>
+          </div>
+          <div class="mt20">
+            <h2><strong>금주 진행 작업</strong></h2>
+              <div class="tbl-wrap">
+                <div id="mainProject2" class="type-ct"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- // pop-layer -->
+
+</body>
+
+</html>
+
+
+<script>
+$("#mainProject1").dxDataGrid({
+  dataSource: projectList1,
+  searchPanel: {
+    visible: false,
+    highlightCaseSensitive: true
+  },
+  showBorders: true,
+  paging: {
+    pageSize: 5
+  },
+  columns: [
+    {
+      dataField: "No",
+      width: 50
+    },
+    {
+      dataField: "프로젝트명",
+      width: 280
+    },
+    {
+      dataField: "PM",
+      width: 90
+    },
+    {
+      dataField: "작업명",
+      width: 170
+    },
+    "초기계획 종료일", "계획 시작일", "계획 종료일", "실적진도",
+    {
+      dataField: "진척현황",
+      cellTemplate: function (container, options) {
+        $("<i class='status-dot'>")
+          .append(options.value)
+          .appendTo(container);
+      }
+    },
+    "초기계획 지연 정보"
+  ]
+});
+
+$("#mainProject2").dxDataGrid({
+  dataSource: projectList2,
+  searchPanel: {
+    visible: false,
+    highlightCaseSensitive: true
+  },
+  showBorders: true,
+  paging: {
+    pageSize: 5
+  },
+  columns: [
+    {
+      dataField: "No",
+      width: 50
+    },
+    {
+      dataField: "프로젝트명",
+      width: 280
+    },
+    {
+      dataField: "PM",
+      width: 90
+    },
+    {
+      dataField: "작업명",
+      width: 170
+    },
+    "초기계획 종료일", "계획 시작일", "계획 종료일", "실적진도",
+    {
+      dataField: "진척현황",
+      cellTemplate: function (container, options) {
+        $("<i class='status-dot'>")
+          .append(options.value)
+          .appendTo(container);
+      }
+    },
+    "작업 시작 정보"
+  ]
+});
+  
+</script>

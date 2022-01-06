@@ -1867,6 +1867,11 @@ table {
       .link {
         color: @black;
         text-decoration: underline;
+
+        >i {
+          color: @dark-blue;
+          font-weight: 500;
+        }
       }
 
       .icon {
@@ -2456,6 +2461,11 @@ table {
       }
     }
   }
+
+  +.sub-txt {
+    .font-size(12);
+    .margin-left(5);
+  }
 }
 
 .btn-wrap {
@@ -2577,7 +2587,7 @@ table {
       .top(1);
       .width(4);
       .height(20);
-      background-color: @normal-mint;
+      background-color: @dark-blue;
       box-sizing: border-box;
     }
   }

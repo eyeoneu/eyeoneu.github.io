@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 프로젝트 목록</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+		const simpleProducts = [
+      'item1',
+      'item2'
+    ];
+
+    var projectList = [{
+      "ID": 1,
+			"순번": 1,
+			"PJ코드": "A23232",
+			"진행상태": "수주전",
+			"프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+			"WBS": "fa fa-tasks",
+			"BM": "무선BM",
+			"PM": "송상원",
+			"시작일": "2021-09-15",
+			"종료일": "2023-07-11",
+			"업데이트일자": "2021.12.27",
+			"수행상태": "착수",
+			"진행률%": "17.55",
+			"진행현황": "위험"
+    }, {
+      "ID": 2,
+			"순번": 2,
+			"PJ코드": "A23232",
+			"진행상태": "수주전",
+			"프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+			"WBS": "fa fa-tasks",
+			"BM": "무선BM",
+			"PM": "송상원",
+			"시작일": "2021-09-15",
+			"종료일": "2023-07-11",
+			"업데이트일자": "WBS 미등록",
+			"수행상태": "-",
+			"진행률%": "65.55",
+			"진행현황": "-"
+    }, {
+      "ID": 3,
+			"순번": 3,
+			"PJ코드": "A23232",
+			"진행상태": "수주전",
+			"프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+			"WBS": "fa fa-tasks",
+			"BM": "무선BM",
+			"PM": "송상원",
+			"시작일": "2021-09-15",
+			"종료일": "2023-07-11",
+			"업데이트일자": "2021.12.27",
+			"수행상태": "착수",
+			"진행률%": "30.55",
+			"진행현황": "정상"
+    }, {
+			"ID": 4,
+			"순번": 4,
+			"PJ코드": "A23232",
+			"진행상태": "수주전",
+			"프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+			"WBS": "fa fa-tasks",
+			"BM": "무선BM",
+			"PM": "송상원",
+			"시작일": "2021-09-15",
+			"종료일": "2023-07-11",
+			"업데이트일자": "2021.12.27",
+			"수행상태": "착수",
+			"진행률%": "17.55",
+			"진행현황": "위험"
+    }];
+  </script>
+</head>
+
+<body>
+
+  <div class="kt-wrap">
+
+    <!-- ========= content ========= -->
+    <main class="content">
+
+      <section>
+
+        <div class="tbl-wrap">
+					<table>
+						<caption>프로젝트 현황</caption>
+						<colgroup>
+							<col width="10%"><col><col width="10%"><col><col width="10%"><col><col width="10%"><col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><strong>진행상태</strong></th>
+								<td>
+									<span id="select-txt1"></span>
+								</td>
+								<th scope="row"><strong>본부</strong></th>
+								<td>
+									<span id="select-txt2"></span>
+								</td>
+								<th scope="row"><strong>팀</strong></th>
+								<td>
+									<span id="select-txt3"></span>
+								</td>
+								<th scope="row"><strong>BM</strong></th>
+								<td>
+									<span id="select-txt4"></span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"><strong>수행상태</strong></th>
+								<td>
+									<span id="select-txt5"></span>
+								</td>
+								<th scope="row"><strong>진행현황</strong></th>
+								<td>
+									<span id="select-txt6"></span>
+								</td>
+								<th scope="row"><strong>텍스트 검색</strong></th>
+								<td colspan="3">
+									<div class="flex-wrap">
+										<span id="select-search"></span>
+										<span id="insertTxt1" class="tf tf-sm ml5"></span>
+										<span id="btnSearch" class="btn btn-sm ml5"></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tbl-wrap mt20">
+					<div id="mainProject" class="type-ct"></div>
+				</div>
+
+      </section>
+
+    </main>
+    <!-- ========= // content ========= -->
+
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+  $("#mainProject").dxDataGrid({
+    dataSource: projectList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 3
+    },
+    columns: [
+			{
+        dataField: "순번",
+        width: 50
+      },
+			"PJ코드", "진행상태",
+      {
+        dataField: "프로젝트명",
+        width: 350,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+			{
+        dataField: "WBS",
+        width: 60,
+        allowFiltering: false,
+				allowSorting: false,
+				cellTemplate: function (container, options) {
+					$("<a href='#' class='link'>")
+					.append($("<i>", { "class": options.value }))
+					.appendTo(container)
+				}
+      },
+			"BM", "PM", "시작일", "종료일", "업데이트일자", "수행상태",
+      {
+        dataField: "진행률%",
+        cellTemplate: function (container, options) {
+          $("<span class='percent-bar'>")
+            .appendTo(container)
+            .append("<span> " + options.value + " </span>")
+            .appendTo(container)
+        }
+      },
+      {
+        dataField: "진행현황",
+        cellTemplate: function (container, options) {
+          $("<i class='status-dot'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      }
+    ]
+  });
+
+	$("#btnSearch").dxButton({
+    stylingMode: "contained",
+    text: "검색",
+    type: "success"
+  });
+
+  $('#insertTxt1').dxTextBox({
+  });
+
+  $('#select-txt1').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt2').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt3').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt4').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt5').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-txt6').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+  $('#select-search').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts
+  });
+
+</script>
