@@ -32,7 +32,7 @@
       "프로젝트명": "A210083_용산IDC  3층 B상면 서버실 구축공사",
       "계약액": "16,288,200,000",
       "수행가치액": "13,597,355,280",
-      "진척율": "80.04%",
+      "실적 공정률": "80.04%",
       "진척현황": "정상",
       "착공일": "2021-03-26",
       "준공일": "2022-03-31",
@@ -46,7 +46,7 @@
       "프로젝트명": "A210145_2021년 도로터널 무선망 구축공사",
       "계약액": "4,641,307,000",
       "수행가치액": "2,305,914,524",
-      "진척율": "47.63%",
+      "실적 공정률": "47.63%",
       "진척현황": "지연",
       "착공일": "2021-06-07",
       "준공일": "2022-06-30",
@@ -60,7 +60,7 @@
       "프로젝트명": "A210149_2021년 진천군 스마트그린도시 조성사업",
       "계약액": "4,572,727,000",
       "수행가치액": "722,909,043",
-      "진척율": "17.75%",
+      "실적 공정률": "17.75%",
       "진척현황": "위험",
       "착공일": "2021-10-20",
       "준공일": "2022-12-31",
@@ -74,7 +74,7 @@
       "프로젝트명": "A210080_2021년 전북 스쿨넷 통합망사업",
       "계약액": "8,827,934,977",
       "수행가치액": "8,563,074,385",
-      "진척율": "97.22%",
+      "실적 공정률": "97.22%",
       "진척현황": "정상",
       "착공일": "2021-09-10",
       "준공일": "2022-01-31",
@@ -88,7 +88,7 @@
       "프로젝트명": "A210148_2021년 전남 스쿨넷 통합망 사업",
       "계약액": "7,014,529,321",
       "수행가치액": "1,473,601,601",
-      "진척율": "18.25%",
+      "실적 공정률": "18.25%",
       "진척현황": "지연",
       "착공일": "2021-08-01",
       "준공일": "2021-12-31",
@@ -101,7 +101,7 @@
   </script>
 </head>
 
-<body>
+<body class="test-layout">
 
   <div class="kt-wrap">
 
@@ -172,7 +172,7 @@
                 </div>
               </article>
               <h2 class="mt30"><strong>프로젝트 진행현황</strong></h2>
-              <div class="chart-wrap mb20">
+              <div class="chart-wrap h350 mb20">
                 <img src="../images/temp/chart-bubble1.png">
                 <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Bubble/jQuery/Light/ -->
               </div>
@@ -201,8 +201,17 @@
               </article>
             </div>
             <div class="flex-75">
-              <h2><strong>HR 수행부하 전망</strong></h2>
-              <div class="chart-wrap ovf-wrap">
+              <div class="flex-wrap">
+                <h2><strong>인적자원 수행부하 전망</strong></h2>
+                <div class="txt-total flex-mla">
+                  <span class="tit">합계(실적/계획) : </span>
+                  <ul>
+                    <li class="bold"><strong>1,890</strong><small>MM</small></li>
+                    <li><strong>2,600</strong><small>MM</small></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart-wrap h680 ovf-wrap">
                 <img src="../images/temp/chart-gantt1.png">
                 <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gantt/Overview/jQuery/Light/ -->
               </div>
@@ -253,7 +262,7 @@
       },
       "계약액", "수행가치액",
       {
-        dataField: "진척율",
+        dataField: "실적 공정률",
         cellTemplate: function (container, options) {
           $("<span class='percent-bar'>")
             .appendTo(container)

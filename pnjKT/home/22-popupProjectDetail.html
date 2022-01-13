@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 프로젝트 상세정보</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList = [{
+      "ID": 1,
+			"단계": "수주전",
+			"문서유형": "AA010",
+			"산출물유형": "RFI",
+			"등록주체": "영업",
+			"생성유무": "checkbox"
+    }];
+    var reviewList = [{
+      "ID": 1,
+			"심의단계": "VDC-A",
+      "심의 Level": "2",
+      "버전": "1",
+      "심의보고서": "50003434",
+      "첨부": "",
+      "검토결과서": "50003434",
+      "첨부": "",
+      "대면": "fa fa-mobile",
+      "심의결과": "가결",
+      "심의위원장": "승인완료",
+      "심의위원": "",
+      "심의진행상태": "2/2",
+      "심의요청일": "2021.12.09",
+      "의결요청일": "2021.12.09",
+      "심의완료일": "2021.12.09"
+    }];
+    var peopleList = [{
+      "ID": 1,
+      "사원명": "김영석",
+      "본부명": "충남/충북본부",
+      "소속팀명": "충남/충북 NW엔지니어링팀",
+      "역할": "수행PM",
+      "직급": "과장",
+      "투입시작일": "2021.11.13",
+      "종료예정일": "2021.11.13",
+      "투입종료일": "",
+      "투입율(%)": ""
+    }];
+  </script>
+</head>
+
+<body>
+
+  <!-- pop-layer -->
+  <section class="pop-layer">
+
+    <div class="pop-layer__wrap">
+      <header class="status-bg status-bg--danger">
+        <h1>
+          <i class="fa fa-exclamation-triangle"></i>
+          <strong>2021년 부산경남 통신구 소방시설 구축공사</strong>
+          <span>(2차)</span>
+        </h1>
+        <span class="status-box">실행 단계</span>
+      </header>
+      <div class="cont-body">
+        <div class="cont-body__wrap">
+          <div class="flex-wrap">
+            <div class="flex-wrap flex-col flex-70">
+              <h2><strong>심의 관리</strong></h2>
+              <div class="tbl-wrap mb10">
+                <table class="type-ct type-sm">
+                  <caption>심의 관리</caption>
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col"><strong>심의단계</strong></th>
+                      <th scope="col"><strong>심의 Level</strong></th>
+                      <th scope="col"><strong>버전</strong></th>
+                      <th scope="col"><strong>심의보고서</strong></th>
+                      <th scope="col"><strong>첨부</strong></th>
+                      <th scope="col"><strong>검토결과서</strong></th>
+                      <th scope="col"><strong>첨부</strong></th>
+                      <th scope="col"><strong>대면</strong></th>
+                      <th scope="col"><strong>심의결과</strong></th>
+                      <th scope="col"><strong>심의위원장</strong></th>
+                      <th scope="col"><strong>심의위원</strong></th>
+                      <th scope="col"><strong>심의진행상태</strong></th>
+                      <th scope="col"><strong>심의요청일</strong></th>
+                      <th scope="col"><strong>의결요청일</strong></th>
+                      <th scope="col"><strong>심의완료일</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fst"><span>VDC-A</span></td>
+                      <td><span>2</span></td>
+                      <td><span>1</span></td>
+                      <td><a href="#" class="link">50003434</a></td>
+                      <td><span>aa</span></td>
+                      <td><a href="#" class="link">50003434</a></td>
+                      <td><span>aa</span></td>
+                      <td><span><i class="fa fa-mobile"></i></span></td>
+                      <td><a href="#" class="link">가결</a></td>
+                      <td><span>승인완료</span></td>
+                      <td><span></span></td>
+                      <td><a href="#" class="link">2/2</a></td>
+                      <td><span>2021.12.09</span></td>
+                      <td><span>2021.12.09</span></td>
+                      <td><span>2021.12.09</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tbl-wrap mb30 ml0">
+                <div id="reviewManage" class="type-ct"></div>
+              </div>
+              <h2><strong>인력관리</strong></h2>
+              <div class="tbl-wrap mb10">
+                <table class="type-ct type-sm">
+                  <caption>인력관리</caption>
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col"><strong>사원명</strong></th>
+                      <th scope="col"><strong>본부명</strong></th>
+                      <th scope="col"><strong>소속팀명</strong></th>
+                      <th scope="col"><strong>역할</strong></th>
+                      <th scope="col"><strong>직급</strong></th>
+                      <th scope="col"><strong>투입시작일</strong></th>
+                      <th scope="col"><strong>종료예정일</strong></th>
+                      <th scope="col"><strong>투입종료일</strong></th>
+                      <th scope="col"><strong>투입율(%)</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fst"><a href="#" class="link">김영석</a></td>
+                      <td><a href="#" class="link">충남/충북본부</a></td>
+                      <td><span>충남/충북 NW엔지니어링팀</span></td>
+                      <td><span>수행PM</span></td>
+                      <td><span>과장</span></td>
+                      <td><span>2021.11.13</span></td>
+                      <td><span>2021.11.13</span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tbl-wrap mb30 ml0">
+                <div id="peopleManage" class="type-ct"></div>
+              </div>
+              <h2><strong>실행계획 실행 실적(백만원단위)</strong></h2>
+              <div class="tbl-wrap">
+                <table class="type-ct type-sm">
+                  <caption>인력관리</caption>
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col"><strong></strong></th>
+                      <th scope="col"><strong>구분</strong></th>
+                      <th scope="col"><strong></strong></th>
+                      <th scope="col"><strong>퉁화</strong></th>
+                      <th scope="col"><strong>실행계획</strong></th>
+                      <th scope="col"><strong>(%)</strong></th>
+                      <th scope="col"><strong>실적(확정매출)</strong></th>
+                      <th scope="col"><strong>(%)</strong></th>
+                      <th scope="col"><strong>실적(확정+진행)</strong></th>
+                      <th scope="col"><strong>구매요청금액</strong></th>
+                      <th scope="col"><strong>차이금액</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="fst"><strong>매출액</strong></td>
+                      <th><strong></strong></th>
+                      <th><strong></strong></th>
+                      <th><strong>KRW</strong></th>
+                      <td><span>100,000</span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span>100,000</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="rowgroup" rowspan="5" class="fst"><strong>매출원가</strong></td>
+                      <th scope="row"><strong>합계</strong></th>
+                      <th><strong></strong></th>
+                      <th><strong>KRW</strong></th>
+                      <td><span>100,000</span></td>
+                      <td><span>94.20</span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span>100,000</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="4"><strong>영업비용</strong></th>
+                      <th><strong>합계</strong></th>
+                      <th><strong>KRW</strong></th>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                    </tr>
+                    <tr>
+                      <th><strong>사업비</strong></th>
+                      <th><strong>KRW</strong></th>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                    </tr>
+                    <tr>
+                      <th><strong>인건비</strong></th>
+                      <th><strong>KRW</strong></th>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                    </tr>
+                    <tr>
+                      <th><strong>경비</strong></th>
+                      <th><strong>KRW</strong></th>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                      <td><span></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="flex-30">
+              <h2><strong>문서 관리</strong></h2>
+              <div class="tbl-wrap">
+                <table class="type-ct type-sm">
+                  <caption>문서 관리</caption>
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col"><strong>단계</strong></th>
+                      <th scope="col"><strong>문서유형</strong></th>
+                      <th scope="col"><strong>산출물유형</strong></th>
+                      <th scope="col"><strong>등록주체</strong></th>
+                      <th scope="col"><strong>생성유무</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fst"><span>수주전</span></td>
+                      <td><span>AA010</span></td>
+                      <td><span>RFI</span></td>
+                      <td><span>영업</span></td>
+                      <td>
+                        <span class="inp">
+                          <input type="checkbox" name="" id="aa">
+                          <label for="aa" class="pl20"></label>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tbl-wrap mt10">
+                <div id="docManage" class="type-ct"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- // pop-layer -->
+
+</body>
+
+</html>
+
+
+<script>
+  $("#peopleManage").dxDataGrid({
+    dataSource: peopleList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 3
+    },
+    columns: [
+      {
+        dataField: "사원명",
+        width: 80,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      {
+        dataField: "본부명",
+        width: 120,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "소속팀명", "역할", "직급", "투입시작일", "종료예정일", "투입종료일", "투입율(%)",
+    ]
+  });
+  $("#docManage").dxDataGrid({
+    dataSource: projectList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 3
+    },
+    columns: [
+      "단계", "문서유형", "산출물유형", "등록주체", "생성유무"
+    ]
+  });
+  $("#reviewManage").dxDataGrid({
+    dataSource: reviewList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 3
+    },
+    columns: [
+      "심의단계", "심의Level", "버전", 
+      {
+        dataField: "심의보고서",
+        width: 80,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "첨부",
+      {
+        dataField: "검토결과서",
+        width: 80,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "첨부", 
+      {
+        dataField: "대면",
+        width: 60,
+        allowFiltering: false,
+				allowSorting: false,
+				cellTemplate: function (container, options) {
+					$("<span>")
+					.append($("<i>", { "class": options.value }))
+					.appendTo(container)
+				}
+      },
+      {
+        dataField: "심의결과",
+        width: 80,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "심의위원장", "심의위원", 
+      {
+        dataField: "심의진행상태",
+        width: 80,
+        cellTemplate: function (container, options) {
+          $("<a href='#' class='link'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      },
+      "심의요청일", "의결요청일", "심의완료일"
+    ]
+  });
+</script>

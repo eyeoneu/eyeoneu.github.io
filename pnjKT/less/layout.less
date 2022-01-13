@@ -9,6 +9,14 @@ html {
   font-family: @default-font;
   font-weight: 400;
 
+  >body {
+
+    &.test-layout {
+      .margin-top(197);
+      .margin-left(222);
+    }
+  }
+
   .kt-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +58,47 @@ html {
 // --------------------------------------
 // # common
 // --------------------------------------
+.percent-lines {
+  display: flex;
+  flex-direction: column;
+
+  >span {
+    position: relative;
+    flex: 1;
+
+    &.percent-bar {
+      text-align: center;
+
+      >span {
+        position: relative;
+        color: @black;
+        .font-size(11);
+        z-index: @z + 2;
+      }
+
+      &.percent-plan {
+
+        &:before {
+          background-color: @normal-yellow;
+        }
+      }
+
+      &.percent-perform {
+
+        &:before {
+          background-color: @normal-mint;
+        }
+      }
+
+      &:before,
+      &:after {
+        height: 100%;
+        background-color: @very-light-grey3;
+      }
+    }
+  }
+}
+
 .percent-bar {
   display: block;
 
@@ -806,6 +855,76 @@ html {
   }
 }
 
+.txt-total {
+  display: flex;
+  align-items: center;
+
+  .tit {
+    position: relative;
+    .font-size(15);
+    .margin-right(10);
+    .padding-left(10);
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      .left(0);
+      top: 50%;
+      .width(5);
+      .height(5);
+      border-radius: 100%;
+      background-color: @normal-mint;
+      transform: translateY(-50%);
+    }
+  }
+
+  >ul {
+    display: flex;
+
+    >li {
+      position: relative;
+      .padding-right(15);
+      .margin-right(15);
+
+      >strong {
+        .font-size(22);
+      }
+
+      >small {}
+
+      &.bold {
+
+        >strong,
+        >small {
+          font-weight: 700;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        .right(0);
+        .width(1);
+        .height(14);
+        transform: translateY(-50%);
+        background-color: @normal-grey;
+      }
+
+      &:last-child {
+        .padding-right(0);
+        .margin-right(0);
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------------
 // # SharePoint 초기화
 // --------------------------------------
@@ -1082,10 +1201,12 @@ html {
                       display: block;
                       min-width: 90%;
                       color: @white;
-                      .border-radius(10);
+                      .border-radius-all(10);
                       background-color: @normal-mint;
 
-                      >small {}
+                      >small {
+                        color: @white;
+                      }
                     }
 
                     >span {
@@ -1166,7 +1287,7 @@ html {
                       .bottom(0);
                       .height(21);
                       width: 100%;
-                      .border-radius(5);
+                      .border-radius-all(5);
                       background-color: @normal-mint;
                       z-index: @z - 1;
                     }
@@ -1246,6 +1367,23 @@ html {
               }
             }
           }
+
+          &.selected {
+            border-color: @dark-blue;
+
+            >header {
+              background-color: @dark-blue;
+              border-bottom: 1px solid @dark-blue;
+
+              >strong {
+                color: @white;
+              }
+            }
+
+            .cont {
+              background-color: @very-light-blue;
+            }
+          }
         }
       }
     }
@@ -1256,7 +1394,6 @@ html {
 .project-box {
   position: relative;
   align-items: center;
-  flex: 1;
   border: 1px solid @light-grey;
   overflow: hidden;
   box-sizing: border-box;
@@ -1275,8 +1412,9 @@ html {
     border: 1px solid @light-red;
   }
 
-  &.type-line1 {
+  &.type-line {
     display: flex;
+    flex: 1;
 
     .cont {
       height: 100%;
@@ -1307,15 +1445,8 @@ html {
               .font-size(16);
               font-weight: 500;
               color: @white;
-              .border-radius(4);
+              .border-radius-all(4);
               background-color: @dark-grey;
-            }
-
-            &.point {
-
-              strong {
-                background-color: @dark-blue;
-              }
             }
           }
 
@@ -1328,117 +1459,26 @@ html {
     }
   }
 
-  &.type-line2 {
-    display: flex;
+  &.type-inline {
 
     .cont {
-      height: 100%;
-      flex: 1;
-      .padding-all(0);
 
       >ul {
-        height: 100%;
-        display: flex;
 
         >li {
-          height: 100%;
-          flex: 1;
           display: flex;
+          flex-direction: row-reverse;
 
-          &:nth-child(2n) {
-            background-color: @very-light-blue;
+          span {
+            .margin-right(15);
           }
 
-          .tit {
-            .padding-top(15);
-            border-bottom: 1px solid @black;
-
-            strong {
-              .font-size(16);
-            }
-
-            &.point {
-
-              strong {
-                background-color: @dark-blue;
-              }
-            }
+          strong {
+            .margin-bottom(0);
           }
 
-          .sub {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            >strong {
-
-              &.bold {
-                .font-size(45);
-                font-weight: 500;
-              }
-            }
-
-            >span {}
-          }
-        }
-      }
-    }
-  }
-
-  &.type-line3 {
-    display: flex;
-    border: 1px solid @normal-mint;
-
-    .cont {
-      height: 100%;
-      flex: 1;
-      .padding-all(0);
-
-      >ul {
-        height: 100%;
-        display: flex;
-        background-color: @trans-light-mint;
-
-        >li {
-          height: 100%;
-          flex: 1;
-          display: flex;
-
-          .tit {
-            width: 100%;
-            .padding-top(10);
-            .padding-bottom(10);
-            border-bottom: 1px solid @normal-mint;
-
-            strong {
-              .font-size(16);
-            }
-          }
-
-          .sub {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            >strong {
-
-              &.bold {
-                .font-size(45);
-                font-weight: 500;
-              }
-
-              &.status-txt {
-                color: @normal-mint;
-              }
-            }
-
-            >span {
-              color: @normal-grey;
-            }
+          &.bar {
+            .margin-top(5);
           }
         }
       }
@@ -1490,6 +1530,7 @@ html {
           small {
             .font-size(22);
             font-weight: 400;
+            color: @black;
           }
         }
 
@@ -1513,7 +1554,6 @@ html {
 // ## 차트
 .chart-wrap {
   width: 100%;
-  flex: 1;
 
   >img {
     width: 100%;
@@ -1525,6 +1565,360 @@ html {
   }
 }
 
+// ## 고객의목소리
+.item-slider {
+
+  .wrapper {
+    position: relative;
+    .padding(30, 60, 30, 60);
+    .min-height(350);
+    border: 1px solid @light-grey;
+    background-color: @trans-light-yellow;
+    box-sizing: border-box;
+    display: flex;
+
+    >article {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      flex: 1;
+
+      >header {
+        .font-size(24);
+
+        >span {
+
+          &.status-box {
+            .padding(5, 10, 5, 10);
+            .margin-right(10);
+            .border-radius-all(5);
+            .font-size(18);
+            color: @white;
+            font-weight: 500;
+            background-color: @normal-mint;
+            box-sizing: border-box;
+          }
+        }
+
+        >strong {
+          font-weight: 500;
+          border-bottom: 2px solid @normal-mint;
+        }
+      }
+
+      .txt-main {
+        .font-size(36);
+        font-weight: 500;
+
+        >p {
+          word-break: keep-all;
+        }
+      }
+
+      >footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        >div {
+          .font-size(18);
+        }
+      }
+    }
+
+    >button {
+      position: absolute;
+      top: 50%;
+      .font-size(30);
+      color: @light-grey;
+      transform: translateY(-50%);
+      z-index: @z + 1;
+
+      >i {}
+
+      &.arrow-lt {
+        .left(20);
+      }
+
+      &.arrow-rt {
+        .right(20);
+      }
+    }
+  }
+
+  &.type-inner {
+
+    >h2 {
+      .margin-left(20);
+    }
+
+    .wrapper {
+      .padding(0, 60, 20, 60);
+      min-height: initial;
+      border: none;
+      background-color: transparent;
+
+      >article {
+
+        >header {
+          .font-size(18);
+
+          >span {
+
+            &.status-box {
+              .padding(4, 7, 4, 7);
+              .margin-right(5);
+              .border-radius-all(5);
+              .font-size(14);
+            }
+          }
+
+          >strong {}
+        }
+
+        .txt-main {
+          .font-size(26);
+          .margin-top(20);
+          .margin-bottom(20);
+
+          >p {}
+        }
+
+        >footer {
+
+
+          >div {
+            .font-size(14);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ## 진행단계
+.step-wrap {
+
+  &.type-dot {
+
+    >ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      >li {
+        position: relative;
+        cursor: pointer;
+
+        >span {
+          display: block;
+          .width(12);
+          .height(12);
+          border-radius: 100%;
+          border-width: 1px;
+          border-style: solid;
+          border-color: @normal-grey;
+          background-color: @white;
+        }
+
+        &.complete {
+
+          >span {
+            border-color: @normal-mint;
+            background-color: @normal-mint;
+          }
+        }
+
+        +li {
+          .padding-left(10);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            .left(0);
+            .width(10);
+            .height(1);
+            background-color: @normal-grey;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &.type-square {
+
+    >ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      >li {
+        position: relative;
+        cursor: pointer;
+
+        >span {
+          display: block;
+          .width(20);
+          .height(20);
+          .font-size(12);
+          .line-height(20);
+          font-weight: 700;
+          color: @normal-grey;
+          border-width: 1px;
+          border-style: solid;
+          border-color: @normal-grey;
+          background-color: @white;
+        }
+
+        &.complete {
+
+          >span {
+            color: @white;
+            border-color: @normal-mint;
+            background-color: @normal-mint;
+          }
+        }
+
+        +li {
+          .padding-left(10);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            .left(0);
+            .width(10);
+            .height(1);
+            background-color: @normal-grey;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &.type-square-text {
+
+    >ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      >li {
+        position: relative;
+        cursor: pointer;
+
+        >span {
+          display: block;
+          .width(25);
+          .height(25);
+          .font-size(12);
+          .line-height(25);
+          font-weight: 700;
+          color: @normal-grey;
+          border-width: 1px;
+          border-style: solid;
+          border-color: @normal-grey;
+          background-color: @light-grey;
+        }
+
+        &.complete {
+
+          >span {
+            color: @white;
+            border-color: @normal-mint;
+            background-color: @normal-mint;
+          }
+        }
+
+        +li {
+          .padding-left(10);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            .left(0);
+            .width(10);
+            .height(1);
+            background-color: @normal-grey;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &.type-text {
+
+    >ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      >li {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        >span {
+          display: block;
+          .width(8);
+          .height(8);
+          border-radius: 100%;
+          border-width: 1px;
+          border-style: solid;
+          border-color: @normal-grey;
+          background-color: @white;
+        }
+
+        >strong {
+          .margin-bottom(3);
+          .font-size(11);
+        }
+
+        &.complete {
+
+          >span {
+            border-color: @normal-mint;
+            background-color: @normal-mint;
+          }
+        }
+
+        +li {
+          .padding-left(10);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            .bottom(4);
+            .left(-9);
+            .width(28);
+            .height(1);
+            background-color: @normal-grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ## 스크롤 박스
+.scroll-box {
+  position: relative;
+  overflow-y: scroll;
+  border: 1px solid @normal-grey;
+}
 
 // --------------------------------------
 // # 폼
@@ -1580,7 +1974,7 @@ html {
     .padding(8, 10, 8, 10);
     .font-size(14);
     font-weight: inherit;
-    .border-radius(4);
+    .border-radius-all(4);
     border: 1px solid @light-grey;
     box-sizing: border-box;
 
@@ -1604,6 +1998,8 @@ html {
 }
 
 .inp {
+  display: block;
+  .height(20);
 
   input[type="radio"] {
     position: absolute;
@@ -1689,6 +2085,7 @@ html {
       .padding-left(28);
       .font-size(14);
       .line-height(20);
+      .min-height(20);
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
@@ -1763,7 +2160,7 @@ html {
     .font-size(14);
     font-weight: 400;
     line-height: inherit;
-    .border-radius(4);
+    .border-radius-all(4);
     border: 1px solid @light-grey;
     cursor: pointer;
 
@@ -1864,21 +2261,15 @@ table {
         }
       }
 
-      .link {
-        color: @black;
-        text-decoration: underline;
-
-        >i {
-          color: @dark-blue;
-          font-weight: 500;
-        }
-      }
-
       .icon {
 
         >i {
           color: @black;
         }
+      }
+
+      &.td-inner {
+        .padding-all(0);
       }
     }
   }
@@ -1933,25 +2324,7 @@ table {
 
   >p {
 
-    &.txt-noti1 {
-      .font-size(14);
-
-      >strong {
-        display: inline-block;
-        .padding-left(3);
-        .padding-right(3);
-        .margin-left(3);
-        .margin-right(3);
-        .line-height(20);
-        .font-size(16);
-        text-align: center;
-        color: @dark-blue;
-        font-weight: 500;
-        border-bottom: 2px solid @dark-blue;
-      }
-    }
-
-    &.txt-noti2 {
+    &.txt-noti {
       .font-size(14);
 
       >strong {
@@ -1963,31 +2336,12 @@ table {
         text-align: center;
         color: @dark-blue;
         font-weight: 500;
-      }
-    }
-
-    &.txt-noti3 {
-      .font-size(14);
-
-      >strong {
-        display: inline-block;
-        .padding-left(3);
-        .padding-right(3);
-        .margin-left(3);
-        .margin-right(3);
-        .line-height(20);
-        .font-size(16);
-        text-align: center;
-        color: @black;
-        font-weight: 500;
-        background-color: @trans-light-mint;
       }
     }
   }
 }
 
 .tbl-wrap {
-  flex: 1;
   overflow-x: auto;
   background-color: @white;
 
@@ -2482,6 +2836,18 @@ table {
   }
 }
 
+a {
+  &.link {
+    color: @dark-blue;
+    text-decoration: underline;
+
+    >i {
+      color: @dark-blue;
+      font-weight: 500;
+    }
+  }
+}
+
 // --------------------------------------
 // # 아이콘
 // --------------------------------------
@@ -2565,6 +2931,7 @@ table {
 
 // ## 기본 레이어 형태
 .pop-layer {
+  .width(1500);
   .padding-all(20);
 
   h2 {
@@ -2587,7 +2954,7 @@ table {
       .top(1);
       .width(4);
       .height(20);
-      background-color: @dark-blue;
+      background-color: @dark-red;
       box-sizing: border-box;
     }
   }
@@ -2599,9 +2966,64 @@ table {
     >header {
       position: relative;
 
+      .status-box {
+        display: flex;
+        align-items: center;
+        .padding-left(10);
+        .padding-right(10);
+        .margin-left(10);
+        .height(30);
+        .font-size(14);
+        border: 1px solid;
+        .border-radius-all(4);
+        background-color: @trans-light-white;
+        box-sizing: border-box;
+      }
+
+      .info-banner {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        .margin-right(10);
+
+        >a {
+          display: block;
+          .height(30);
+          .line-height(28);
+          .padding-left(15);
+          .padding-right(15);
+          .font-size(14);
+          .border-radius-all(4);
+          color: @white;
+          background-color: @strong-grey;
+          box-sizing: border-box;
+
+          +a {
+            .margin-left(15);
+          }
+
+          &.ver-great {}
+
+          &.ver-project {}
+        }
+      }
+
+      >a {
+        color: inherit;
+        .padding-all(5);
+
+        &.link-external {
+
+          i {
+            .font-size(30);
+          }
+        }
+      }
+
       &.status-bg {
         .padding(12, 20, 12, 20);
         display: flex;
+        align-items: center;
 
         h1 {
           .font-size(24);
@@ -2613,72 +3035,23 @@ table {
         }
       }
 
-      &.type-normal1 {
+      &.type-normal {
 
         h1 {
           .font-size(24);
-          border-bottom: 1px solid @light-grey;
+          border-bottom: 1px solid @light-red;
+          ;
 
           >strong {
             display: inline-block;
             .line-height(40);
-            color: @dark-blue;
+            color: @dark-red;
             font-weight: 500;
-            border-bottom: 3px solid @dark-blue;
+            border-bottom: 3px solid @dark-red;
           }
 
           >span {}
         }
-      }
-
-      &.type-normal2 {
-
-        h1 {
-          .font-size(24);
-          border-bottom: 1px solid @light-grey;
-
-          >strong {
-            display: inline-block;
-            .padding(5, 10, 5, 10);
-            .line-height(40);
-            color: @white;
-            font-weight: 500;
-            background-color: @normal-mint;
-          }
-
-          >span {}
-        }
-      }
-
-      &.type-normal3 {
-
-        h1 {
-          .font-size(24);
-          .padding(5, 0, 5, 15);
-          border: 1px solid @normal-mint;
-          background-color: @trans-light-mint;
-
-          >strong {
-            display: inline-block;
-            .line-height(40);
-            color: @black;
-            font-weight: 500;
-          }
-
-          >span {}
-        }
-      }
-
-      .status-box {
-        display: flex;
-        align-items: center;
-        .padding-left(10);
-        .padding-right(10);
-        .margin-left(10);
-        .font-size(14);
-        border: 1px solid;
-        .border-radius(4);
-        background-color: @trans-light-white;
       }
     }
 
@@ -2743,10 +3116,6 @@ table {
               font-weight: 500;
               border-bottom: none;
               background-color: @very-light-grey;
-
-              &.txt-red {
-                color: @dark-red  !important;
-              }
             }
           }
         }
@@ -2769,10 +3138,6 @@ table {
 
               &.ta-rt {
                 text-align: right !important;
-              }
-
-              &.txt-red {
-                color: @dark-red  !important;
               }
             }
 

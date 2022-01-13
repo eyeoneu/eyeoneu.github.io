@@ -27,9 +27,14 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script defer src="../js/custom.js"></script>
   <script>
-    const simpleProducts = [
-      'item1',
-      'item2'
+    const simpleProducts1 = [
+      '특이사항'
+    ];
+    const simpleProducts2 = [
+      '2021년 하반기 국방광대역통합망 시설관리 상주용역'
+    ];
+    const simpleProducts3 = [
+      '완료'
     ];
   </script>
 </head>
@@ -40,7 +45,7 @@
   <section class="pop-layer">
 
     <div class="pop-layer__wrap">
-      <header class="type-normal1">
+      <header class="type-normal">
         <h1>
           <strong>특이사항 상세</strong>
         </h1>
@@ -111,13 +116,13 @@
                   <th scope="rowgroup" rowspan="2" class="fst"><strong>내용</strong></th>
                   <th scope="row"><strong>특이사항 내용</strong></td>
                   <td>
-                    <div id="textarea1"></div>
+                    <div id="textarea1" class="h150"></div>
                   </td>
                 </tr>
                 <tr>
                   <th scope="row"><strong>담당자 조치 내용</strong></td>
                   <td>
-                    <div id="textarea2"></div>
+                    <div id="textarea2" class="h150"></div>
                   </td>
                 </tr>
               </tbody>
@@ -144,7 +149,7 @@
   $("#new1").dxButton({
     stylingMode: "contained",
     text: "삭제",
-    type: "default"
+    type: "danger"
   });
   $("#new2").dxButton({
     stylingMode: "contained",
@@ -168,21 +173,27 @@
   });
 
   $('#insertTxt1').dxTextBox({
+    value: "서버 납품 일정 연기"
   });
   $('#insertTxt2').dxTextBox({
+    value: "협력사_이름"
   });
 
   $('#select-txt1').dxSelectBox({
     placeholder: 'Select a value...',
-    items: simpleProducts
+    items: simpleProducts1,
+    value: simpleProducts1[0]
   });
   $('#select-txt2').dxSelectBox({
     placeholder: 'Select a value...',
-    items: simpleProducts
+    items: simpleProducts2,
+    value: simpleProducts2[0]
+
   });
   $('#select-txt3').dxSelectBox({
     placeholder: 'Select a value...',
-    items: simpleProducts
+    items: simpleProducts3,
+    value: simpleProducts3[0]
   });
   
 </script>
