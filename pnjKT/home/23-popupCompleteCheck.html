@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 완료 점검</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    var projectList1 = [{
+      "ID": 1,
+      "No": 1,
+      "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+      "문서명": "고객사 전달 사항",
+      "등록자": "정창화",
+      "등록일자": "2021.12.12"
+    }, {
+      "ID": 2,
+      "No": 2,
+      "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+      "문서명": "고객사 전달 사항",
+      "등록자": "정창화",
+      "등록일자": "2021.12.12"
+    }, {
+      "ID": 3,
+      "No": 3,
+      "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+      "문서명": "고객사 전달 사항",
+      "등록자": "정창화",
+      "등록일자": "2021.12.12"
+    }, {
+      "ID": 4,
+      "No": 4,
+      "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+      "문서명": "고객사 전달 사항",
+      "등록자": "정창화",
+      "등록일자": "2021.12.12"
+    }, {
+      "ID": 5,
+      "No": 5,
+      "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+      "문서명": "고객사 전달 사항",
+      "등록자": "정창화",
+      "등록일자": "2021.12.12"
+    }];
+  </script>
+</head>
+
+<body>
+
+  <!-- pop-layer -->
+  <section class="pop-layer">
+
+    <div class="pop-layer__wrap">
+      <header class="type-normal">
+        <h1>
+          <strong>완료 점검</strong>
+        </h1>
+      </header>
+      <div class="cont-body">
+        <div class="cont-body__wrap">
+					<div class="tbl-wrap">
+            <div id="mainProject1" class="type-ct"></div>
+					</div>
+        </div>
+      </div>
+			<footer>
+        <span id="new2" class="btn btn-md flex-mla"></span>
+        <span id="new3" class="btn btn-md ml10"></span>
+      </footer>
+    </div>
+
+  </section>
+  <!-- // pop-layer -->
+
+</body>
+
+</html>
+
+<script>
+	$("#new2").dxButton({
+    stylingMode: "contained",
+    text: "완료 프로젝트 목록으로 이동",
+    type: "success"
+  });
+  $("#new3").dxButton({
+    stylingMode: "contained",
+    text: "취소",
+    type: "normal"
+  });
+$("#mainProject1").dxDataGrid({
+  dataSource: projectList1,
+  searchPanel: {
+    visible: false,
+    highlightCaseSensitive: true
+  },
+  showBorders: true,
+  paging: {
+    pageSize: 3
+  },
+  columns: [
+    {
+      dataField: "No",
+      width: 50
+    },
+    "프로젝트명", 
+		{
+			dataField: "문서명",
+			cellTemplate: function (container, options) {
+				$("<a href='#' class='link'>")
+					.append(options.value)
+					.appendTo(container);
+			}
+		},
+		{
+      dataField: "등록자",
+      width: 150
+    },
+		{
+      dataField: "등록일자",
+      width: 150
+    }
+  ]
+});
+  
+</script>

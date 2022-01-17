@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 전사 수행 현황</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  
+</head>
+
+<body class="test-layout">
+
+  <div class="kt-wrap">
+
+    <!-- ========= content ========= -->
+    <main class="content">
+
+      <!-- dashboard -->
+      <section class="dashboard">
+
+        <div class="form-date">
+          <div class="select-wrap mr10">
+            <label for="aaa1"></label>
+            <select name="" id="aaa1">
+              <option value="">2021년</option>
+            </select>
+          </div>
+          <div class="select-wrap mr10">
+            <label for="aaa2"></label>
+            <select name="" id="aaa2">
+              <option value="">12월</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <label for="aaa3"></label>
+            <select name="" id="aaa3">
+              <option value="">4주차</option>
+            </select>
+          </div>
+          <span class="date-info">(2021-12-21(화) 오전 2:00 기준)</span>
+        </div>
+
+        <div class="dashboard__area">
+          <div class="block mb20">
+            <div class="wrapper">
+              <article class="first sz-sm">
+                <div class="icon-wrap">
+                  <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                </div>
+                <header>
+                  <strong>가동율</strong>
+                </header>
+                <div class="cont pb0 pt5">
+                  <ul>
+                    <li class="bold">
+                      <strong class="mb0 fs-big">73<small>%</small></strong>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first wide">
+                <div class="icon-wrap">
+                  <i class="fa fa-line-chart"></i>
+                </div>
+                <header>
+                  <strong>인당 수행실적(금액)</strong>
+                </header>
+                <div class="cont pb0 pt5">
+                  <ul>
+                    <li class="bold">
+                      <strong class="link fs-big">19.7<small>억 (2,850억 / 145명)</small></strong>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="first">
+                <div class="icon-wrap">
+                  <i class="fa fa-users"></i>
+                </div>
+                <header>
+                  <strong>인적자원운영</strong>
+                </header>
+                <div class="cont">
+                  <ul>
+                    <li class="blue">
+                      <strong>3.6<small>억</small></strong>
+                      <span>가치</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li class="bold">
+                      <strong>1,890<small>MM</small></strong>
+                      <span>실적</span>
+                    </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong>2,600<small>MM</small></strong>
+                      <span>계획</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+				<div class="tbl-wrap">
+					<table class="type-ct">
+						<caption>프로젝트 작업 현황</caption>
+						<colgroup>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><strong>구분</strong></th>
+								<th scope="col"><strong>본사합계</strong></th>
+								<th scope="col"><strong>네트워크</strong></th>
+								<th scope="col"><strong>ICT</strong></th>
+								<th scope="col"><strong>융합사업</strong></th>
+								<th scope="col"><strong>지역합계</strong></th>
+								<th scope="col"><strong>강북/강원</strong></th>
+								<th scope="col"><strong>강남/서부</strong></th>
+								<th scope="col"><strong>부산/경남</strong></th>
+								<th scope="col"><strong>대구/경북</strong></th>
+								<th scope="col"><strong>전남/전북</strong></th>
+								<th scope="col"><strong>충남/충북</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" class="fst"><strong>인원수</strong></th>
+								<td><span>80명</span></td>
+								<td class="blue"><span>30</span></td>
+								<td><span>30</span></td>
+								<td><span>20</span></td>
+								<td class="grey"><span>65명</span></td>
+								<td><span>10</span></td>
+								<td><span>15</span></td>
+								<td><span>10</span></td>
+								<td><span>15</span></td>
+								<td><span>10</span></td>
+								<td><span>5</span></td>
+							</tr>
+							<tr>
+								<th scope="row" class="fst"><strong>수행가치</strong></th>
+								<td><span>1,350억</span></td>
+								<td class="blue"><span>500억</span></td>
+								<td><span>400억</span></td>
+								<td><span>450억</span></td>
+								<td class="grey"><span>1,500억</span></td>
+								<td><span>250억</span></td>
+								<td><span>250억</span></td>
+								<td><span>250억</span></td>
+								<td><span>250억</span></td>
+								<td><span>250억</span></td>
+								<td><span>250억</span></td>
+							</tr>
+							<tr>
+								<th scope="row" class="fst"><strong>인당 수행실적</strong></th>
+								<td><span>17억</span></td>
+								<td class="blue"><span>17억</span></td>
+								<td><span>13억</span></td>
+								<td><span>23억</span></td>
+								<td class="grey"><span>25억</span></td>
+								<td><span>25억</span></td>
+								<td><span>25억</span></td>
+								<td><span>25억</span></td>
+								<td><span>25억</span></td>
+								<td><span>25억</span></td>
+								<td><span>25억</span></td>
+							</tr>
+							<tr class="total">
+								<th scope="row" class="fst"><strong>가동률</strong></th>
+								<td><span>5%</span></td>
+								<td class="blue"><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+								<td><span>5%</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+        <div class="mt40">
+          <h2><strong>인력 투입 현황</strong></h2>
+          <div class="tbl-wrap">
+						간트차트 영역
+          </div>
+        </div>
+
+      </section>
+      <!-- // dashboard -->
+
+    </main>
+    <!-- ========= // content ========= -->
+
+  </div>
+
+</body>
+
+</html>
+

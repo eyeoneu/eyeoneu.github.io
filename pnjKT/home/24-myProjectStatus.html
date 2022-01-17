@@ -12,7 +12,7 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <meta property="og:type" content="website">
-  <title>KT engineering - 본부 수행 현황</title>
+  <title>KT engineering - 내 프로젝트</title>
   <link rel="stylesheet" href="../css/jquery-ui.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/layout.css">
@@ -88,6 +88,57 @@
 			"수행상태": "착수",
       "BM": "무선BM"
     }];
+		var WorkList = [{
+      "ID": 1,
+			"No": 1,
+			"프로젝트명": "2021년 부산경남 통신구 소방시설 구축공사(2차)",
+			"PM": "정창화",
+			"작업명": "자동화재탐지설비",
+			"계획 시작일": "2021.12.25",
+			"계획 종료일": "2022.12.12",
+			"실적진도": "20%",
+			"진척현황": "지연"
+    }, {
+      "ID": 2,
+			"No": 2,
+			"프로젝트명": "2021년 부산경남 통신구 소방시설 구축공사(2차)",
+			"PM": "정창화",
+			"작업명": "자동화재탐지설비",
+			"계획 시작일": "2021.12.25",
+			"계획 종료일": "2022.12.12",
+			"실적진도": "20%",
+			"진척현황": "위험"
+    }, {
+      "ID": 3,
+			"No": 3,
+			"프로젝트명": "2021년 부산경남 통신구 소방시설 구축공사(2차)",
+			"PM": "정창화",
+			"작업명": "자동화재탐지설비",
+			"계획 시작일": "2021.12.25",
+			"계획 종료일": "2022.12.12",
+			"실적진도": "20%",
+			"진척현황": "정상"
+    }, {
+      "ID": 4,
+			"No": 4,
+			"프로젝트명": "2021년 부산경남 통신구 소방시설 구축공사(2차)",
+			"PM": "정창화",
+			"작업명": "자동화재탐지설비",
+			"계획 시작일": "2021.12.25",
+			"계획 종료일": "2022.12.12",
+			"실적진도": "20%",
+			"진척현황": "위험"
+    }, {
+      "ID": 5,
+			"No": 5,
+			"프로젝트명": "2021년 부산경남 통신구 소방시설 구축공사(2차)",
+			"PM": "정창화",
+			"작업명": "자동화재탐지설비",
+			"계획 시작일": "2021.12.25",
+			"계획 종료일": "2022.12.12",
+			"실적진도": "20%",
+			"진척현황": "정상"
+    }];
   </script>
 </head>
 
@@ -102,31 +153,26 @@
       <section class="dashboard">
 
         <div class="dashboard__area">
-          <h1>
-            <i class="fa fa-cloud"></i>
-            <strong>미디어사업팀</strong>
-            <span>현황</span>
-          </h1>
           <div class="flex-wrap">
             <div class="flex-25">
               <article class="project-box bg-grey">
                 <header>
-                  <strong>진행 중 프로젝트 총 <span class="link">10</span>건</strong>
+                  <strong>진행 중 프로젝트 총 <span class="link">6</span>건</strong>
                 </header>
                 <div class="cont">
                   <ul>
                     <li>
-                      <strong class="link">5<small>건</small></strong>
+                      <strong class="link">1<small>건</small></strong>
                       <span>수주전</span>
                     </li>
                     <li class="bar"></li>
                     <li>
-                      <strong class="link">14<small>건</small></strong>
+                      <strong class="link">4<small>건</small></strong>
                       <span>수주/수행</span>
                     </li>
                     <li class="bar"></li>
                     <li>
-                      <strong class="link">11<small>건</small></strong>
+                      <strong class="link">1<small>건</small></strong>
                       <span>완료</span>
                     </li>
                   </ul>
@@ -139,23 +185,23 @@
                 <div class="cont">
                   <ul>
                     <li>
-                      <strong class="status-txt status-txt--danger link">3<small>건</small></strong>
+                      <strong class="status-txt status-txt--danger link">1<small>건</small></strong>
                       <span>WBS 미등록</span>
                     </li>
                     <li class="bar"></li>
                     <li class="bold">
-                      <strong class="status-txt status-txt--danger link">2<small>건</small></strong>
+                      <strong class="status-txt status-txt--danger link">1<small>건</small></strong>
                       <span>WBS 점검</span>
                     </li>
                     <li class="bar"></li>
                     <li>
-                      <strong class="status-txt status-txt--danger link">11<small>건</small></strong>
+                      <strong class="status-txt status-txt--danger link">1<small>건</small></strong>
                       <span>실적 미등록</span>
                     </li>
                   </ul>
                 </div>
               </article>
-              <article class="project-box type-inline bg-grey mt20">
+              <article class="project-box bg-grey mt20">
                 <header>
                   <strong>프로젝트 진행 현황</strong>
                 </header>
@@ -170,22 +216,26 @@
                       <strong class="link">2<small>건</small></strong>
                       <span>특이사항</span>
                     </li>
+                    <li class="bar"></li>
+                    <li>
+                      <strong class="link">3<small>건</small></strong>
+                      <span>산출물</span>
+                    </li>
                   </ul>
                 </div>
                 <section class="item-slider type-inner mt10">
-                  <h2><strong>고객의 목소리</strong></h2>
                   <div class="wrapper">
                     <article>
                       <header>
-                        <span class="status-box mr10">진행</span>
-                        <strong>Freezing 기간 작업 중단</strong>
+			                  <h2><strong>고객의 목소리</strong></h2>
+												<span class="txt-date ml10 mr10">2022-01-12</span>
+                        <span class="status-box sz-sm">진행</span>
                       </header>
-                      <div class="txt-main mt10 mb10">
-                        <p>설 연휴로 인한 Freezing 기간 작업 중단</p>
+                      <div class="txt-main mt20 mb10">
+                        <span class="txt-ellip txt-ellip--2">자동화 재탐지 설비 작업의 계획 완료일정을 조정해야 할 것으로 판단됩니다.</span>
                       </div>
                       <footer>
-                        <div>담당자 : 홍길동</div>
-                        <div>조치기한 : 2022-02-01</div>
+                        <div class="txt-ellip txt-ellip--3">이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 이슈내용 </div>
                       </footer>
                     </article>
                     <button type="button" class="arrow-lt">
@@ -199,20 +249,82 @@
               </article>
             </div>
             <div class="flex-75">
-              <div class="flex-wrap">
-                <h2><strong>인력 투입 현황</strong></h2>
-                <div class="txt-total flex-mla">
-                  <span class="tit">합계(실적/계획) : </span>
-                  <ul>
-                    <li class="bold"><strong>1,890</strong><small>MM</small></li>
-                    <li><strong>2,600</strong><small>MM</small></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="chart-wrap h625 ovf-wrap">
-                <img src="../images/temp/chart-gantt1.png">
-                <!-- https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gantt/Overview/jQuery/Light/ -->
-              </div>
+							<div class="block mb20">
+								<div class="wrapper">
+									<article class="first">
+										<div class="icon-wrap">
+											<i class="fa fa-money" aria-hidden="true"></i>
+										</div>
+										<header>
+											<strong>수행가치</strong>
+										</header>
+										<div class="cont">
+											<ul>
+												<li class="bold">
+													<strong>2,980<small>억</small></strong>
+													<span>누적</span>
+												</li>
+												<li class="bar"></li>
+												<li>
+													<strong>3,800<small>억</small></strong>
+													<span>연말전망</span>
+												</li>
+											</ul>
+										</div>
+									</article>
+									<article class="first ">
+										<div class="icon-wrap">
+											<i class="fa fa-users"></i>
+										</div>
+										<header>
+											<strong>인적자원운영</strong>
+										</header>
+										<div class="cont">
+											<ul>
+												<li class="bold">
+													<strong>1,890<small>MM</small></strong>
+													<span>실적</span>
+												</li>
+												<li class="bar"></li>
+												<li>
+													<strong>2,600<small>MM</small></strong>
+													<span>계획</span>
+												</li>
+											</ul>
+										</div>
+									</article>
+								</div>
+							</div>
+							<h2><strong>작업 진행 현황</strong></h2>
+              <div class="tbl-wrap mb20">
+		            <div id="mainWork" class="type-ct"></div>
+							</div>
+							<div class="btn-list">
+								<button type="button" class="btn-link">
+									<i class="link-icon"></i>
+									<span>KBN Talk</span>
+								</button>
+								<button type="button" class="btn-link">
+									<i class="link-icon"></i>
+									<span>KT Synovation</span>
+								</button>
+								<button type="button" class="btn-link">
+									<i class="link-icon"></i>
+									<span>성과관리</span>
+								</button>
+								<button type="button" class="btn-link">
+									<i class="link-icon"></i>
+									<span>KT그룹 교육포털</span>
+								</button>
+								<button type="button" class="btn-link">
+									<i class="link-icon"></i>
+									<span>제안자료 지식화</span>
+								</button>
+								<button type="button" class="btn-link">
+									<i class="link-icon"></i>
+									<span>설문조사</span>
+								</button>
+							</div>
             </div>
           </div>
         </div>
@@ -374,6 +486,46 @@
         }
       },
       "착공일", "준공일", "수행상태", "BM"
+    ]
+  });
+	$("#mainWork").dxDataGrid({
+    dataSource: WorkList,
+    searchPanel: {
+      visible: false,
+      highlightCaseSensitive: true
+    },
+    showBorders: true,
+    paging: {
+      pageSize: 5
+    },
+    columns: [
+			{
+        dataField: "No",
+        width: 50
+      },
+			{
+        dataField: "프로젝트명",
+        width: 350
+      },
+			"PM", "작업명", "계획 시작일", "계획 종료일",
+			{
+        dataField: "실적진도",
+        width: 200,
+        cellTemplate: function (container, options) {
+          $("<span class='percent-bar'>")
+            .appendTo(container)
+            .append("<span> " + options.value + " </span>")
+            .appendTo(container)
+        }
+      },
+			{
+        dataField: "진척현황",
+        cellTemplate: function (container, options) {
+          $("<i class='status-dot'>")
+            .append(options.value)
+            .appendTo(container);
+        }
+      }
     ]
   });
 </script>

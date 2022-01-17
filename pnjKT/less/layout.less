@@ -30,25 +30,26 @@ html {
       h2 {
         position: relative;
         .margin-bottom(15);
-        .padding-left(15);
         .line-height(22);
         color: @black;
 
         >strong {
+          position: relative;
+          .padding-left(15);
           .font-size(20);
           font-weight: 500;
-        }
 
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          .left(0);
-          .top(0);
-          .width(4);
-          .height(22);
-          background-color: @normal-mint;
-          box-sizing: border-box;
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            .left(0);
+            .top(0);
+            .width(4);
+            .height(22);
+            background-color: @normal-mint;
+            box-sizing: border-box;
+          }
         }
       }
     }
@@ -79,21 +80,21 @@ html {
       &.percent-plan {
 
         &:before {
-          background-color: @normal-yellow;
+          background-color: @normal-yellow  !important;
         }
       }
 
       &.percent-perform {
 
         &:before {
-          background-color: @normal-mint;
+          background-color: @normal-mint  !important;
         }
       }
 
       &:before,
       &:after {
         height: 100%;
-        background-color: @very-light-grey3;
+        background-color: @very-light-grey3  !important;
       }
     }
   }
@@ -109,7 +110,7 @@ html {
     .left(0);
     .bottom(0);
     .height(3);
-    background-color: @normal-mint;
+    background-color: @normal-mint  !important;
     z-index: @z + 1;
   }
 
@@ -121,7 +122,7 @@ html {
     .bottom(0);
     .height(3);
     width: 100%;
-    background-color: @very-light-grey;
+    background-color: @very-light-grey  !important;
   }
 
   &.percent-1 {
@@ -743,26 +744,26 @@ html {
   }
 
   &--normal {
-    @default-color: @normal-mint;
+    @default-color: @normal-mint  !important;
 
     &:before {
-      background-color: @default-color;
+      background-color: @default-color  !important;
     }
   }
 
   &--delay {
-    @default-color: @normal-yellow;
+    @default-color: @normal-yellow  !important;
 
     &:before {
-      background-color: @default-color;
+      background-color: @default-color  !important;
     }
   }
 
   &--danger {
-    @default-color: @strong-red;
+    @default-color: @strong-red  !important;
 
     &:before {
-      background-color: @default-color;
+      background-color: @default-color  !important;
     }
   }
 }
@@ -785,26 +786,26 @@ html {
   }
 
   &--normal {
-    @default-color: @normal-mint;
+    @default-color: @normal-mint  !important;
 
     &:before {
-      background-color: @default-color;
+      background-color: @default-color  !important;
     }
   }
 
   &--delay {
-    @default-color: @normal-yellow;
+    @default-color: @normal-yellow  !important;
 
     &:before {
-      background-color: @default-color;
+      background-color: @default-color  !important;
     }
   }
 
   &--danger {
-    @default-color: @strong-red;
+    @default-color: @strong-red  !important;
 
     &:before {
-      background-color: @default-color;
+      background-color: @default-color  !important;
     }
   }
 }
@@ -813,23 +814,23 @@ html {
   font-weight: 500 !important;
 
   &--normal {
-    @default-color: @normal-mint;
-    color: @default-color;
+    @default-color: @normal-mint  !important;
+    color: @default-color  !important;
   }
 
   &--delay {
-    @default-color: @normal-yellow;
-    color: @default-color;
+    @default-color: @normal-yellow  !important;
+    color: @default-color  !important;
   }
 
   &--danger {
-    @default-color: @strong-red;
-    color: @default-color;
+    @default-color: @strong-red  !important;
+    color: @default-color  !important;
   }
 
   &--check {
-    @default-color: @dark-blue;
-    color: @default-color;
+    @default-color: @dark-blue  !important;
+    color: @default-color  !important;
   }
 }
 
@@ -838,20 +839,20 @@ html {
   border-color: @white;
 
   &--normal {
-    @default-color: @normal-mint;
-    background-color: @default-color;
+    @default-color: @normal-mint  !important;
+    background-color: @default-color  !important;
   }
 
   &--danger {
-    @default-color: @normal-red;
-    background-color: @default-color;
+    @default-color: @normal-red  !important;
+    background-color: @default-color  !important;
   }
 
   &--delay {
-    @default-color: @light-yellow;
-    background-color: @default-color;
-    color: @black;
-    border-color: @black;
+    @default-color: @light-yellow  !important;
+    background-color: @default-color  !important;
+    color: @black  !important;
+    border-color: @black  !important;
   }
 }
 
@@ -1081,6 +1082,11 @@ html {
             z-index: @z - 1;
           }
 
+          &.sz-sm {
+            width: 20%;
+            flex: none;
+          }
+
           &.wide {
             width: 28%;
             flex: none;
@@ -1160,6 +1166,10 @@ html {
 
                     >small {
                       font-weight: 700;
+                    }
+
+                    &.fs-big {
+                      .font-size(40);
                     }
                   }
 
@@ -1519,13 +1529,8 @@ html {
 
         strong {
           .font-size(32);
-          font-weight: 400;
+          font-weight: 500;
           .margin-bottom(5);
-
-          &.link {
-            cursor: pointer;
-            text-decoration: none;
-          }
 
           small {
             .font-size(22);
@@ -1547,6 +1552,17 @@ html {
           background-color: @light-grey;
         }
       }
+    }
+  }
+
+  .link {
+    color: @dark-blue;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.black {
+      color: @black;
     }
   }
 }
@@ -1588,19 +1604,11 @@ html {
       >header {
         .font-size(24);
 
-        >span {
-
-          &.status-box {
-            .padding(5, 10, 5, 10);
-            .margin-right(10);
-            .border-radius-all(5);
-            .font-size(18);
-            color: @white;
-            font-weight: 500;
-            background-color: @normal-mint;
-            box-sizing: border-box;
-          }
+        >h2 {
+          .margin-bottom(0);
         }
+
+        >span {}
 
         >strong {
           font-weight: 500;
@@ -1609,10 +1617,10 @@ html {
       }
 
       .txt-main {
-        .font-size(36);
-        font-weight: 500;
 
         >p {
+          .font-size(36);
+          font-weight: 500;
           word-break: keep-all;
         }
       }
@@ -1646,6 +1654,23 @@ html {
         .right(20);
       }
     }
+
+    .status-box {
+      .padding(5, 10, 5, 10);
+      .border-radius-all(5);
+      .font-size(18);
+      color: @white;
+      font-weight: 500;
+      background-color: @normal-mint;
+      box-sizing: border-box;
+
+      &.sz-sm {
+        .padding(2, 5, 2, 5) !important;
+        .font-size(15);
+        .height(26);
+        .line-height(24);
+      }
+    }
   }
 
   &.type-inner {
@@ -1655,7 +1680,7 @@ html {
     }
 
     .wrapper {
-      .padding(0, 60, 20, 60);
+      .padding-all(0);
       min-height: initial;
       border: none;
       background-color: transparent;
@@ -1663,6 +1688,7 @@ html {
       >article {
 
         >header {
+          display: flex;
           .font-size(18);
 
           >span {
@@ -1679,15 +1705,20 @@ html {
         }
 
         .txt-main {
-          .font-size(26);
-          .margin-top(20);
-          .margin-bottom(20);
+          .padding(10, 55, 10, 55);
 
-          >p {}
+          >p {
+            .font-size(26);
+          }
+
+          >span {
+            .font-size(18);
+          }
         }
 
         >footer {
-
+          .padding(0, 50, 20, 50);
+          box-sizing: border-box;
 
           >div {
             .font-size(14);
@@ -1919,6 +1950,9 @@ html {
   overflow-y: scroll;
   border: 1px solid @normal-grey;
 }
+
+// ## 버튼 리스트
+.btn-list {}
 
 // --------------------------------------
 // # 폼
@@ -2272,6 +2306,19 @@ table {
         .padding-all(0);
       }
     }
+
+    &.total {
+
+      th,
+      td {
+        background-color: @dark-red  !important;
+
+        >strong,
+        >span {
+          color: @white  !important;
+        }
+      }
+    }
   }
 
   thead {
@@ -2296,7 +2343,21 @@ table {
         }
       }
 
-      td {}
+      td {
+
+        &.blue {
+          background-color: @very-light-blue  !important;
+
+          >strong,
+          >span {
+            color: @black  !important;
+          }
+        }
+
+        &.grey {
+          background-color: @trans-very-light-grey2  !important;
+        }
+      }
     }
   }
 
@@ -2325,17 +2386,18 @@ table {
   >p {
 
     &.txt-noti {
-      .font-size(14);
+      .font-size(18);
 
       >strong {
         display: inline-block;
         .padding-left(3);
         .padding-right(3);
         .line-height(20);
-        .font-size(16);
+        .font-size(20);
         text-align: center;
         color: @dark-blue;
         font-weight: 500;
+        cursor: pointer;
       }
     }
   }
@@ -3063,6 +3125,11 @@ a {
         overflow-x: auto;
       }
     }
+
+    >footer {
+      .margin-top(30);
+      display: flex;
+    }
   }
 }
 
@@ -3176,7 +3243,7 @@ a {
 
         &.dx-selection {
           color: @white;
-          background-color: @dark-blue;
+          background-color: @black;
         }
       }
     }
