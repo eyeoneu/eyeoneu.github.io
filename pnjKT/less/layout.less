@@ -1092,6 +1092,23 @@ html {
             flex: none;
           }
 
+          &.type-inline {
+
+            .cont {
+
+              >ul {
+
+                >li {
+                  flex-direction: row-reverse;
+
+                  >strong {
+                    .margin-left(10);
+                  }
+                }
+              }
+            }
+          }
+
           .icon-wrap {
             position: absolute;
             .top(0);
@@ -1166,10 +1183,6 @@ html {
 
                     >small {
                       font-weight: 700;
-                    }
-
-                    &.fs-big {
-                      .font-size(40);
                     }
                   }
 
@@ -1447,12 +1460,12 @@ html {
           }
 
           .tit {
-            .margin-top(20);
-            .margin-bottom(12);
+            .margin-top(12);
+            .margin-bottom(5);
 
             strong {
-              .padding(3, 5, 3, 5);
-              .font-size(16);
+              .padding(5, 7, 5, 7);
+              .font-size(14);
               font-weight: 500;
               color: @white;
               .border-radius-all(4);
@@ -1462,7 +1475,7 @@ html {
 
           .bold {
             .margin-top(2);
-            .font-size(45);
+            .font-size(35);
           }
         }
       }
@@ -1497,10 +1510,10 @@ html {
 
   >header {
     flex-direction: column;
-    .padding(15, 15, 7, 15);
+    .padding(12, 15, 0, 15);
 
     >strong {
-      .font-size(22);
+      .font-size(20);
       font-weight: 500;
     }
 
@@ -1528,9 +1541,8 @@ html {
         color: @black;
 
         strong {
-          .font-size(32);
+          .font-size(28);
           font-weight: 500;
-          .margin-bottom(5);
 
           small {
             .font-size(22);
@@ -1570,6 +1582,7 @@ html {
 // ## 차트
 .chart-wrap {
   width: 100%;
+  overflow: hidden;
 
   >img {
     width: 100%;
@@ -1587,7 +1600,7 @@ html {
   .wrapper {
     position: relative;
     .padding(30, 60, 30, 60);
-    .min-height(350);
+    .min-height(250);
     border: 1px solid @light-grey;
     background-color: @trans-light-yellow;
     box-sizing: border-box;
@@ -1619,7 +1632,7 @@ html {
       .txt-main {
 
         >p {
-          .font-size(36);
+          .font-size(30);
           font-weight: 500;
           word-break: keep-all;
         }
@@ -1708,7 +1721,7 @@ html {
           .padding(10, 55, 10, 55);
 
           >p {
-            .font-size(26);
+            .font-size(22);
           }
 
           >span {
@@ -1717,7 +1730,7 @@ html {
         }
 
         >footer {
-          .padding(0, 50, 20, 50);
+          .padding(0, 50, 10, 50);
           box-sizing: border-box;
 
           >div {
