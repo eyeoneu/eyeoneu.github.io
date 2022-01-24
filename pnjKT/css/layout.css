@@ -253,6 +253,10 @@ body {
   height: 110px !important;
   height: 6.875rem !important;
 }
+.h140 {
+  height: 140px !important;
+  height: 8.75rem !important;
+}
 .h150 {
   height: 150px !important;
   height: 9.375rem !important;
@@ -919,6 +923,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.flex-wrap.flex-btw {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .flex-ct {
   display: -webkit-box;
@@ -2352,12 +2361,12 @@ html .kt-wrap .content h2 > strong:before {
   position: relative;
   padding-top: 30px;
   padding-top: 1.875rem;
-  padding-right: 60px;
-  padding-right: 3.75rem;
+  padding-right: 40px;
+  padding-right: 2.5rem;
   padding-bottom: 30px;
   padding-bottom: 1.875rem;
-  padding-left: 60px;
-  padding-left: 3.75rem;
+  padding-left: 40px;
+  padding-left: 2.5rem;
   min-height: 250px;
   min-height: 15.625rem;
   border: 1px solid #d1d2d4;
@@ -2388,8 +2397,8 @@ html .kt-wrap .content h2 > strong:before {
           flex: 1;
 }
 .item-slider .wrapper > article > header {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 .item-slider .wrapper > article > header > h2 {
   margin-bottom: 0px;
@@ -2399,9 +2408,15 @@ html .kt-wrap .content h2 > strong:before {
   font-weight: 500;
   border-bottom: 2px solid #00ac8e;
 }
+.item-slider .wrapper > article .txt-main {
+  padding-left: 15px;
+  padding-left: 0.9375rem;
+  padding-right: 15px;
+  padding-right: 0.9375rem;
+}
 .item-slider .wrapper > article .txt-main > p {
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 500;
   word-break: keep-all;
 }
@@ -2415,8 +2430,8 @@ html .kt-wrap .content h2 > strong:before {
           justify-content: space-between;
 }
 .item-slider .wrapper > article > footer > div {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .item-slider .wrapper > button {
   position: absolute;
@@ -3374,16 +3389,19 @@ table .msg > span {
   overflow-x: auto;
   background-color: #ffffff;
 }
+.tbl-wrap table.type-xsm th,
+.tbl-wrap table.type-xsm td {
+  padding-top: 3px !important;
+  padding-top: 0.1875rem !important;
+  padding-bottom: 3px !important;
+  padding-bottom: 0.1875rem !important;
+}
 .tbl-wrap table.type-sm th,
 .tbl-wrap table.type-sm td {
   padding-top: 5px !important;
   padding-top: 0.3125rem !important;
-  padding-right: 5px !important;
-  padding-right: 0.3125rem !important;
   padding-bottom: 5px !important;
   padding-bottom: 0.3125rem !important;
-  padding-left: 5px !important;
-  padding-left: 0.3125rem !important;
 }
 .tbl-wrap table.type-ct th,
 .tbl-wrap table.type-ct td {
