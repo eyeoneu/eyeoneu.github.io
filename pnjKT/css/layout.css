@@ -4099,6 +4099,16 @@ a.link > i {
 .dx-widget.dx-button .dx-button-content {
   padding: initial !important;
 }
+.dx-widget.dx-toolbar .dx-button-content {
+  padding-top: 7px !important;
+  padding-top: 0.4375rem !important;
+  padding-right: 18px !important;
+  padding-right: 1.125rem !important;
+  padding-bottom: 8px !important;
+  padding-bottom: 0.5rem !important;
+  padding-left: 18px !important;
+  padding-left: 1.125rem !important;
+}
 .dx-widget.dx-dropdownbutton .dx-button-content {
   padding-top: 5px !important;
   padding-top: 0.3125rem !important;
