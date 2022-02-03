@@ -189,14 +189,14 @@ body {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3Ttw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ubuntu/v19/4iCv6KVjbNBYlgoCjC3Ttw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCxCvTtw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ubuntu/v19/4iCv6KVjbNBYlgoCxCvTtw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Noto Sans KR';
@@ -988,6 +988,71 @@ body {
 .txt-ellip--3 {
   -webkit-line-clamp: 3;
 }
+i.ico {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+i.ico.sz-xsm {
+  width: 30px;
+  width: 1.875rem;
+  height: 30px;
+  height: 1.875rem;
+  background-size: 100% auto;
+}
+i.ico.sz-sm {
+  width: 42px;
+  width: 2.625rem;
+  height: 42px;
+  height: 2.625rem;
+  background-size: 100% auto;
+}
+i.ico.sz-md {
+  width: 50px;
+  width: 3.125rem;
+  height: 50px;
+  height: 3.125rem;
+  background-size: auto 90%;
+}
+i.ico-map1 {
+  background-image: url('../images/ico-map1.svg');
+}
+i.ico-map2 {
+  background-image: url('../images/ico-map2.svg');
+}
+i.ico-map3 {
+  background-image: url('../images/ico-map3.svg');
+}
+i.ico-map4 {
+  background-image: url('../images/ico-map4.svg');
+}
+i.ico-map5 {
+  background-image: url('../images/ico-map5.svg');
+}
+i.ico-map6 {
+  background-image: url('../images/ico-map6.svg');
+}
+i.ico-cloud {
+  background-image: url('../images/ico-cloud.svg');
+}
+i.ico-code {
+  background-image: url('../images/ico-code.svg');
+  background-size: 90% auto !important;
+}
+i.ico-cogs {
+  background-image: url('../images/ico-cogs.svg');
+}
+i.ico-file {
+  background-image: url('../images/ico-file.svg');
+}
+i.ico-list {
+  background-image: url('../images/ico-list.svg');
+}
+i.ico-money {
+  background-image: url('../images/ico-money.svg');
+}
+i.ico-users {
+  background-image: url('../images/ico-users.svg');
+}
 html {
   font-size: 16px;
   font-size: 1rem;
@@ -1638,6 +1703,69 @@ html .kt-wrap .content h2 > strong:before {
 .dashboard__area h1 > strong {
   font-weight: 500;
 }
+.dashboard__area h1.page-tit {
+  position: relative;
+  padding-left: 55px;
+  padding-left: 3.4375rem;
+}
+.dashboard__area h1.page-tit > i {
+  position: absolute;
+  background-color: #ffffff;
+}
+.dashboard__area h1.page-tit > i.ico-cloud-mask {
+  width: 26px;
+  width: 1.625rem;
+  height: 26px;
+  height: 1.625rem;
+  left: 8px;
+  left: 0.5rem;
+  top: 8px;
+  top: 0.5rem;
+  -webkit-mask: url('../images/ico-cloud.svg');
+          mask: url('../images/ico-cloud.svg');
+}
+.dashboard__area h1.page-tit > i.ico-code-mask {
+  width: 26px;
+  width: 1.625rem;
+  height: 21px;
+  height: 1.3125rem;
+  left: 9px;
+  left: 0.5625rem;
+  top: 11px;
+  top: 0.6875rem;
+  -webkit-mask: url('../images/ico-code.svg');
+          mask: url('../images/ico-code.svg');
+}
+.dashboard__area h1.page-tit > i.ico-cogs-mask {
+  width: 26px;
+  width: 1.625rem;
+  height: 26px;
+  height: 1.625rem;
+  left: 10px;
+  left: 0.625rem;
+  top: 9px;
+  top: 0.5625rem;
+  -webkit-mask: url('../images/ico-cogs.svg');
+          mask: url('../images/ico-cogs.svg');
+}
+.dashboard__area h1.page-tit:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0px;
+  left: 0rem;
+  top: 0px;
+  top: 0rem;
+  width: 42px;
+  width: 2.625rem;
+  height: 42px;
+  height: 2.625rem;
+  border-top-left-radius: 4px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 4px;
+  border-top-right-radius: 0.25rem;
+  background-color: #00ac8e;
+}
 .dashboard__area .block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1958,10 +2086,6 @@ html .kt-wrap .content h2 > strong:before {
   color: #00ac8e;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-.dashboard__area .block article.second > header > i.size-sm {
-  font-size: 40px;
-  font-size: 2.5rem;
 }
 .dashboard__area .block article.second > header > strong {
   font-size: 21px;
@@ -2791,6 +2915,101 @@ html .kt-wrap .content h2 > strong:before {
   position: relative;
   overflow-y: scroll;
   border: 1px solid #a2a2a2;
+}
+.btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -5px;
+  margin-left: -0.3125rem;
+  margin-right: -5px;
+  margin-right: -0.3125rem;
+}
+.btn-list .btn-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  margin-top: 5px;
+  margin-top: 0.3125rem;
+  margin-right: 5px;
+  margin-right: 0.3125rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  margin-left: 5px;
+  margin-left: 0.3125rem;
+  border: 1px solid #d1d2d4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.btn-list .btn-link .link-icon {
+  height: 100px;
+  height: 6.25rem;
+  width: 100%;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.btn-list .btn-link .link-icon.type-srm {
+  background-image: url('../images/link-logo-srm.png');
+}
+.btn-list .btn-link .link-icon.type-barcode {
+  background-image: url('../images/link-logo-barcode.png');
+  background-color: #000000;
+}
+.btn-list .btn-link .link-icon.type-semuro {
+  background-image: url('../images/link-logo-semuro.gif');
+}
+.btn-list .btn-link .link-icon.type-total {
+  background-image: url('../images/link-logo-total.png');
+}
+.btn-list .btn-link .link-icon.type-idms {
+  background-image: url('../images/link-logo-idms.png');
+}
+.btn-list .btn-link .link-icon.type-seum {
+  background-image: url('../images/link-logo-seum.gif');
+}
+.btn-list .btn-link .link-icon.type-allbaro {
+  background-image: url('../images/link-logo-allbaro.png');
+}
+.btn-list .btn-link > strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+  background-color: #00ac8e;
 }
 .tf input[type=tel],
 .tf input[type=text],

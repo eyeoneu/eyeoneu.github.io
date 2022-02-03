@@ -987,6 +987,53 @@ html {
       }
 
       >span {}
+
+      &.page-tit {
+        position: relative;
+        .padding-left(55);
+
+        >i {
+          position: absolute;
+          background-color: @white;
+
+          &.ico-cloud-mask {
+            .width(26);
+            .height(26);
+            .left(8);
+            .top(8);
+            mask: url('@{img}/ico-cloud.svg');
+          }
+
+          &.ico-code-mask {
+            .width(26);
+            .height(21);
+            .left(9);
+            .top(11);
+            mask: url('@{img}/ico-code.svg');
+          }
+
+          &.ico-cogs-mask {
+            .width(26);
+            .height(26);
+            .left(10);
+            .top(9);
+            mask: url('@{img}/ico-cogs.svg');
+          }
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          .left(0);
+          .top(0);
+          .width(42);
+          .height(42);
+          .border-top-left-radius(4);
+          .border-top-right-radius(4);
+          background-color: @normal-mint;
+        }
+      }
     }
 
     .block {
@@ -1264,10 +1311,6 @@ html {
               .font-size(46);
               color: @normal-mint;
               transform: translateX(-50%);
-
-              &.size-sm {
-                .font-size(40);
-              }
             }
 
             >strong {
@@ -1967,7 +2010,74 @@ html {
 }
 
 // ## 버튼 리스트
-.btn-list {}
+.btn-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .margin-left(-5);
+  .margin-right(-5);
+
+  .btn-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    .margin-all(5);
+    border: 1px solid @light-grey;
+    box-sizing: border-box;
+
+    .link-icon {
+      .height(100);
+      width: 100%;
+      background-size: 80% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-sizing: border-box;
+
+      &.type-srm {
+        background-image: url('@{img}/link-logo-srm.png');
+      }
+
+      &.type-barcode {
+        background-image: url('@{img}/link-logo-barcode.png');
+        background-color: @black;
+      }
+
+      &.type-semuro {
+        background-image: url('@{img}/link-logo-semuro.gif');
+      }
+
+      &.type-total {
+        background-image: url('@{img}/link-logo-total.png');
+      }
+
+      &.type-idms {
+        background-image: url('@{img}/link-logo-idms.png');
+      }
+
+      &.type-seum {
+        background-image: url('@{img}/link-logo-seum.gif');
+      }
+
+      &.type-allbaro {
+        background-image: url('@{img}/link-logo-allbaro.png');
+      }
+    }
+
+    >strong {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      width: 100%;
+      color: @white;
+      border-top: 1px solid @white;
+      background-color: @normal-mint;
+    }
+  }
+}
 
 // --------------------------------------
 // # 폼
