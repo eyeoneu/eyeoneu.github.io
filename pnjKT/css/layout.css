@@ -2976,7 +2976,6 @@ html .kt-wrap .content h2 > strong:before {
 }
 .btn-list .btn-link .link-icon.type-barcode {
   background-image: url('../images/link-logo-barcode.png');
-  background-color: #000000;
 }
 .btn-list .btn-link .link-icon.type-semuro {
   background-image: url('../images/link-logo-semuro.gif');
