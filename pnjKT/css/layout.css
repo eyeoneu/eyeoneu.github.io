@@ -237,6 +237,17 @@ body {
 .txt-red {
   color: #b01116 !important;
 }
+.txt-red.txt-box {
+  padding-top: 3px;
+  padding-top: 0.1875rem;
+  padding-right: 5px;
+  padding-right: 0.3125rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.1875rem;
+  padding-left: 5px;
+  padding-left: 0.3125rem;
+  border: 1px solid #b01116;
+}
 .h100 {
   height: 100px !important;
   height: 6.25rem !important;

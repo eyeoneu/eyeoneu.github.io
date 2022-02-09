@@ -56,12 +56,17 @@
 
 
 // --------------------------------------
-// # 폰트, 폰트컬러
+// # 폰트, 텍스
 // --------------------------------------
 @default-font: 'Noto Sans KR', sans-serif;
 
 .txt-red {
   color: @dark-red  !important;
+
+  &.txt-box {
+    .padding(3, 5, 3, 5);
+    border: 1px solid @dark-red;
+  }
 }
 
 // --------------------------------------
