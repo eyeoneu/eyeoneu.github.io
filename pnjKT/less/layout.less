@@ -990,34 +990,25 @@ html {
 
       &.page-tit {
         position: relative;
-        .padding-left(55);
+        .padding-left(50);
 
         >i {
           position: absolute;
           background-color: @white;
+          .max-width(32);
+          .left(5);
 
-          &.ico-cloud-mask {
-            .width(26);
-            .height(26);
-            .left(8);
-            .top(8);
-            mask: url('@{img}/ico-cloud.svg');
-          }
+          &.ico-map1,
+          &.ico-map2,
+          &.ico-map3,
+          &.ico-map4,
+          &.ico-map5,
+          &.ico-map6 {
+            .max-width(22);
 
-          &.ico-code-mask {
-            .width(26);
-            .height(21);
-            .left(9);
-            .top(11);
-            mask: url('@{img}/ico-code.svg');
-          }
-
-          &.ico-cogs-mask {
-            .width(26);
-            .height(26);
-            .left(10);
-            .top(9);
-            mask: url('@{img}/ico-cogs.svg');
+            +strong {
+              .margin-left(-10);
+            }
           }
         }
 
@@ -1031,7 +1022,7 @@ html {
           .height(42);
           .border-top-left-radius(4);
           .border-top-right-radius(4);
-          background-color: @normal-mint;
+          background-color: transparent;
         }
       }
     }
@@ -1139,6 +1130,11 @@ html {
             flex: none;
           }
 
+          &.wide-2 {
+            width: 35%;
+            flex: none;
+          }
+
           &.type-inline {
 
             .cont {
@@ -1150,6 +1146,29 @@ html {
 
                   >strong {
                     .margin-left(10);
+                  }
+                }
+              }
+            }
+          }
+
+          &.type-mini {
+            display: flex;
+            justify-content: space-between;
+
+            >header {
+              .padding-top(10);
+            }
+
+            .cont {
+              .padding(7, 10, 0, 0);
+
+              >ul {
+
+                >li {
+
+                  &.bar {
+                    .margin(0, 15, 0, 15);
                   }
                 }
               }
