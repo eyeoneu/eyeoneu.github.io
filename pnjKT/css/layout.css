@@ -292,6 +292,10 @@ body {
   height: 400px !important;
   height: 25rem !important;
 }
+.h425 {
+  height: 425px !important;
+  height: 26.5625rem !important;
+}
 .h500 {
   height: 500px !important;
   height: 31.25rem !important;
@@ -1903,6 +1907,13 @@ html .kt-wrap .content h2 > strong:before {
           justify-content: space-between;
 }
 .dashboard__area .block article.first.type-mini > header {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 10px;
   padding-top: 0.625rem;
 }
@@ -1925,6 +1936,11 @@ html .kt-wrap .content h2 > strong:before {
   margin-bottom: 0rem;
   margin-left: 15px;
   margin-left: 0.9375rem;
+}
+.dashboard__area .block article.first.type-mini.flex-none {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 .dashboard__area .block article.first .icon-wrap {
   position: absolute;
@@ -1971,6 +1987,10 @@ html .kt-wrap .content h2 > strong:before {
   font-size: 1.375rem;
   padding-left: 40px;
   padding-left: 2.5rem;
+}
+.dashboard__area .block article.first > header > span {
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 .dashboard__area .block article.first .cont {
   display: -webkit-box;
@@ -2846,11 +2866,11 @@ html .kt-wrap .content h2 > strong:before {
   width: 1.5625rem;
   height: 25px;
   height: 1.5625rem;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 25px;
   line-height: 1.5625rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #a2a2a2;
   border-width: 1px;
   border-style: solid;
@@ -2858,6 +2878,9 @@ html .kt-wrap .content h2 > strong:before {
   background-color: #d1d2d4;
 }
 .step-wrap.type-square-text > ul > li.complete > span {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: #ffffff;
   border-color: #00ac8e;
   background-color: #00ac8e;
