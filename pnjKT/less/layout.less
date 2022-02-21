@@ -1726,6 +1726,7 @@ html {
     >button {
       position: absolute;
       top: 50%;
+      min-width: initial;
       .font-size(30);
       color: @light-grey;
       transform: translateY(-50%);
@@ -1739,6 +1740,10 @@ html {
 
       &.arrow-rt {
         .right(20);
+      }
+
+      &:hover {
+        background-color: transparent
       }
     }
 

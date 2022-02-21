@@ -2615,6 +2615,7 @@ html .kt-wrap .content h2 > strong:before {
 .item-slider .wrapper > button {
   position: absolute;
   top: 50%;
+  min-width: initial;
   font-size: 30px;
   font-size: 1.875rem;
   color: #d1d2d4;
@@ -2629,6 +2630,9 @@ html .kt-wrap .content h2 > strong:before {
 .item-slider .wrapper > button.arrow-rt {
   right: 20px;
   right: 1.25rem;
+}
+.item-slider .wrapper > button:hover {
+  background-color: transparent;
 }
 .item-slider .wrapper .status-box {
   padding-top: 5px;
