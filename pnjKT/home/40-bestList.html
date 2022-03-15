@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 우수사례</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx.all.js"></script>
+
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    const simpleProducts = [
+      'item1',
+      'item2'
+    ];
+
+    const year = [
+      '2022년',
+      '2021년',
+      '2020년',
+    ];
+    const quarter = [
+      '1분기',
+      '2분기',
+      '3분기',
+      '4분기',
+    ];
+
+    var projectList = [{
+    "ID": 1,
+    "순번": 1,
+    "PJ코드": "A23232",
+    "진행상태": "수주전",
+    "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+    "WBS": "fa fa-tasks",
+    "업데이트일자": "2021.12.27",
+    "공정률% (계획/실적)": "17.55",
+    "진행현황": "위험",
+    "PM": "송상원",
+    "착공일": "2021-09-15",
+    "준공일": "2023-07-11",
+    "수행상태": "착수",
+    "BM": "무선BM"
+    }, {
+    "ID": 2,
+    "순번": 2,
+    "PJ코드": "A23232",
+    "진행상태": "수주전",
+    "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+    "WBS": "fa fa-tasks",
+    "업데이트일자": "WBS 미등록",
+    "공정률% (계획/실적)": "65.55",
+    "진행현황": "-",
+    "PM": "송상원",
+    "착공일": "2021-09-15",
+    "준공일": "2023-07-11",
+    "수행상태": "-",
+    "BM": "무선BM"
+    }, {
+    "ID": 3,
+    "순번": 3,
+    "PJ코드": "A23232",
+    "진행상태": "수주전",
+    "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+    "WBS": "fa fa-tasks",
+    "업데이트일자": "2021.12.27",
+    "공정률% (계획/실적)": "30.55",
+    "진행현황": "정상",
+    "PM": "송상원",
+    "착공일": "2021-09-15",
+    "준공일": "2023-07-11",
+    "수행상태": "착수",
+    "BM": "무선BM"
+    }, {
+    "ID": 4,
+    "순번": 4,
+    "PJ코드": "A23232",
+    "진행상태": "수주전",
+    "프로젝트명": "2021년 전자파강도 측정사업 (전국)",
+    "WBS": "fa fa-tasks",
+    "업데이트일자": "2021.12.27",
+    "공정률% (계획/실적)": "17.55",
+    "진행현황": "위험",
+    "PM": "송상원",
+    "착공일": "2021-09-15",
+    "준공일": "2023-07-11",
+    "수행상태": "착수",
+    "BM": "무선BM"
+    }];
+
+    const employees = [{
+    ID: 1,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'WBS의 구성이 잘 되어있고, 프로젝트의 실적 공정률을 계획 공정률에 맞춰 유지하며 프로젝트를 진행하였습니다. WBS 점검이 계획된 일정에 맞춰 진행되었고, 매주 1회 이상의 실적 등록을 진행하였습니다. ',
+    }, {
+    ID: 2,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'Olivia loves to sell. She has been selling DevAV products since 2012.  Olivia was homecoming queen in high school. She is expecting her first child in 6 months. Good Luck Olivia.',
+    }, {
+    ID: 3,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'Robert was recently voted the CMO of the year by CMO Magazine. He is a proud member of the DevAV Management Team. Robert is a championship BBQ chef, so when you get the chance ask him for his secret recipe.',
+    }, {
+    ID: 4,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: "Greta has been DevAV's HR Manager since 2003. She joined DevAV from Sonee Corp. Greta is currently training for the NYC marathon. Her best marathon time is 4 hours. Go Greta.",
+    }, {
+    ID: 5,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'Brett came to DevAv from Microsoft and has led our IT department since 2012. When he is not working hard for DevAV, he coaches Little League (he was a high school pitcher).',
+    }, {
+    ID: 6,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: "Sandra is a CPA and has been our controller since 2008. She loves to interact with staff so if you've not met her, be certain to say hi. Sandra has 2 daughters both of whom are accomplished gymnasts.",
+    }, {
+    ID: 7,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'Kevin is our hard-working shipping manager and has been helping that department work like clockwork for 18 months. When not in the office, he is usually on the basketball court playing pick-up games.',
+    }, {
+    ID: '8',
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'Cindy joined us in 2008 and has been in the HR department for 2 years.  She was recently awarded employee of the month. Way to go Cindy!',
+    }, {
+    ID: 9,
+    선정기간: '2022년 1분기',
+    프로젝트명: '2021년 KT둔산빌딩 5층 리모델링 공사',
+    PM: '김영석',
+    BM: 'OSP BM',
+    Picture: '../images/temp/01.png',
+    금액: '151만원',
+    산출물: '8',
+    Notes: 'As our ombudsman, Kent is on the front-lines solving customer problems and helping our partners address issues out in the field.    He is a classically trained musician and is a member of the Chamber Orchestra.',
+    }];
+
+  </script>
+</head>
+
+<body class="test-layout">
+
+  <div class="kt-wrap">
+
+    <!-- ========= content ========= -->
+    <main class="content">
+
+      <section>
+
+        <div class="tbl-wrap">
+            <table>
+                <caption>프로젝트 현황</caption>
+                <colgroup>
+                    <col width="10%"><col width="20%"><col width="10%"><col width="12%"><col width="10%"><col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row"><strong>선정기간</strong></th>
+                        <td>
+                            <div class="flex-wrap">
+                                <span id="select-txt1"></span>
+                                <span id="select-txt2" class="ml10"></span>
+                            </div>
+                        </td>
+                        <th scope="row"><strong>BM</strong></th>
+                        <td>
+                            <span id="select-txt3"></span>
+                        </td>
+                        <th scope="row"><strong>텍스트 검색</strong></th>
+                        <td colspan="3">
+                            <div class="flex-wrap">
+                                <span id="select-search"></span>
+                                <span id="insertTxt1" class="tf tf-sm ml5"></span>
+                                <span id="btnSearch" class="btn btn-sm ml5"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tbl-wrap mt20">
+            <div id="gridContainer" class="gridPhoto"></div>
+        </div>
+       
+
+      </section>
+
+    </main>
+    <!-- ========= // content ========= -->
+
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+  $('#select-search').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts,
+    width: 150
+  });
+
+  $("#btnSearch").dxButton({
+    stylingMode: "contained",
+    text: "검색",
+    type: "success"
+  });
+
+  $('#insertTxt1').dxTextBox({
+  });
+
+  $('#select-txt1').dxSelectBox({
+    items: year,
+    value: year[0],
+  });
+  $('#select-txt2').dxSelectBox({
+    items: quarter,
+    value: quarter[0],
+  });
+  $('#select-txt3').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts,
+  });
+
+  const formatDate = new Intl.DateTimeFormat('en-US').format;
+
+  $('#gridContainer').dxDataGrid({
+    dataSource: employees,
+    keyExpr: 'ID',
+    dataRowTemplate(container, item) {
+      const { data } = item;
+      const markup = '<tr class=\'main-row\'>'
+          + `<td rowspan='2'><img src='${data.Picture}' /></td>`
+          + `<td>${data.선정기간}</td>`
+          + `<td><a href='#' class='link'>${data.프로젝트명}</a></td>`
+          + `<td>${data.PM}</td>`
+          + `<td>${data.BM}</td>`
+          + `<td>${data.금액}</td>`
+          + `<td><a href='#' class='link'>${data.산출물}</a>건</td>`
+      + '</tr>'
+      + '<tr class=\'notes-row\'>'
+          + `<td colspan='6'><div>${data.Notes}</div></td>`
+      + '</tr>';
+
+      container.append(markup);
+    },
+    rowAlternationEnabled: true,
+    hoverStateEnabled: true,
+    columnAutoWidth: true,
+    showBorders: true,
+    columns: [{
+      caption: '사진',
+      width: 120,
+      allowFiltering: false,
+      allowSorting: false,
+    }, {
+      caption: '선정기간',
+      width: 120,
+    },
+    '프로젝트명', 'PM', 'BM', '금액', '산출물',
+    ],
+  });
+
+</script>

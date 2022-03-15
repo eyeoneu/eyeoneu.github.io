@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta name="description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:title" content="케이티엔지니어링 웹 KT engineering Web">
+  <meta property="og:description" content="케이티엔지니어링 웹 사이트 입니다.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <title>KT engineering - 우수사례</title>
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <!-- DevExtreme -->
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css">
+  <link rel="stylesheet" href="../css/dx.generic.custom-KTengineeringAdmin.css">
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="../js/custom.js"></script>
+  <script>
+    const simpleProducts = [
+      '아니오',
+      '예'
+    ];
+    const year = [
+      '2022년',
+      '2021년',
+      '2020년',
+    ];
+    const quarter = [
+      '1분기',
+      '2분기',
+      '3분기',
+      '4분기',
+    ];
+  </script>
+</head>
+
+<body>
+
+  <!-- pop-layer -->
+  <section class="pop-layer">
+
+    <div class="pop-layer__wrap">
+      <header class="type-normal">
+        <h1>
+          <strong>우수사례</strong>
+        </h1>
+      </header>
+      <div class="cont-body">
+        <div class="cont-body__wrap">
+          <div class="tbl-wrap">
+            <table>
+              <caption>우수사례</caption>
+              <colgroup>
+                <col width="16%"><col width="16%"><col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="rowgroup" rowspan="5" class="fst"><strong>우수사례 정보</strong></th>
+                  <th scope="row"><strong>프로젝트명</strong></td>
+                  <td><span>2021년 부산경남 통신구 소방시설 구축공사(2차)</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>우수사례 여부</strong></td>
+                  <td>
+                    <span id="select-txt1"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>선정기간</strong></td>
+                  <td>
+                    <div class="flex-wrap">
+                        <span id="select-txt2"></span>
+                        <span id="select-txt3" class="ml10"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>선정사유</strong></td>
+                  <td>
+                    <span id="insertTxt1"></span>
+                  </td>
+                </tr>
+                <tr>
+                    <th scope="row"><strong>사진첨부</strong></td>
+                    <td>
+                        <span id="upload" class="btn btn-sm"></span>
+                        <span class="sub-txt">or Drop file here</span>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+      </div>
+      <footer>
+        <span id="new2" class="btn btn-md flex-mla"></span>
+        <span id="new3" class="btn btn-md ml10"></span>
+      </footer>
+    </div>
+
+  </section>
+  <!-- // pop-layer -->
+
+</body>
+
+</html>
+
+
+<script>
+$("#upload").dxButton({
+    stylingMode: "contained",
+    text: "Select file",
+    type: "normal"
+  });
+  $("#new2").dxButton({
+    stylingMode: "contained",
+    text: "저장",
+    type: "success"
+  });
+  $("#new3").dxButton({
+    stylingMode: "contained",
+    text: "취소",
+    type: "normal"
+  });
+
+  $('#insertTxt1').dxTextBox({
+      value: 'WBS의 구성이 잘 되어있고, 프로젝트의 실적 공정률을 계획 공정률에 맞춰 유지하며 프로젝트를 진행함',
+      disabled: true // 비활성화
+  });
+ 
+  $('#select-txt1').dxSelectBox({
+    placeholder: 'Select a value...',
+    items: simpleProducts,
+    value: simpleProducts[0],
+    width: 200
+  });
+  $('#select-txt2').dxSelectBox({
+    items: year,
+    value: year[0],
+    width: 200,
+    disabled: true // 비활성화
+  });
+  $('#select-txt3').dxSelectBox({
+    items: quarter,
+    value: quarter[0],
+    width: 200,
+    disabled: true // 비활성화
+  });
+
+  
+</script>
