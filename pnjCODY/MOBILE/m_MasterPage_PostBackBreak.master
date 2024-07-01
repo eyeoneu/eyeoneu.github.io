@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="m_MasterPage_PostBackBreak.master.cs" Inherits="m_MasterPage_PostBackBreak" %>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head runat="server">
+    <!--언어셋 설정 -->
+    <meta charset="UTF-8" />
+    <!-- 오페라 미니, 아이팟터치/아이폰 사파리 환경 및 기타 모바일 브라우져용 메타설정 -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" user-scalable="no," target-densitydpi="medium-dpi" />    
+    <!-- 전화번호 형식 자동 링크 제외 (수동 링크시 <a href="tel:010-1234-5678">링크명</a> , 문자: <a href="sms: ) - 2011-11-23 김재영 추가 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 최신 IE 버전의 Standards 모드로 설정  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 주소창 아이콘 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 사이트 타이틀 -->
+    <title>코디서비스</title>
+    <!-- 아이폰 홈스크린 추가시 아이콘 -->
+    <link rel="apple-touch-icon" href="images/m/iOS-114.png" />
+    <!-- 웹폰트 나눔고딕 적용 -->
+    <!--link rel="stylesheet" href="http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb" type='text/css' /-->
+    <!--  IE9 이하 버전에서 HTML5 호환을 위한 스크립트 -->
+    <!--[if lt IE 9]>
+    <script src="Common/Scripts/html5.js"></script>
+    <![endif]-->
+    <!-- CSS 불러오기 -->
+    <link rel="StyleSheet" href="/Common/CSS/mobile_portrait.css" type="text/css" media="screen" id="orient_css" />
+    <style type="text/css">
+        .hidden { display:none; }
+    </style>
+    <!-- 암호화 관련 js 파일 불러오기 - 2011-11-21 정창화 추가 -->
+    <script type="text/javascript" language="javascript" src="/Common/Scripts/Common.js"></script>
+    <script type="text/javascript" language="javascript" src="/SafeWeb/SST/SST.js"></script>    
+    <script type="text/javascript">
+//        // 모바일 디바이스 가로, 세로 변경시 .css변경
+//        function orient() {
+//            switch (window.orientation) {
+//                case 0: document.getElementById("orient_css").href = "/Common/CSS/mobile_portrait.css";
+//                    break;
+//                case -90: document.getElementById("orient_css").href = "/Common/CSS/mobile_landscape.css";
+//                    break;
+//                case 90: document.getElementById("orient_css").href = "/Common/CSS/mobile_landscape.css";
+//                    break;
+//            }
+//        }
+//        window.onload = orient();
+
+        // 모바일 접속시 주소창 자동으로 위로 올리기
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua)) { // 모바일 접속시 아래 스크립트 실행 - 2011-11-23 김재영 추가
+            if (window.attachEvent) {
+                window.attachEvent("onload", function () {
+                    setTimeout(scrollTo, 0, 0, 1);
+                }, false);
+            }
+            else {
+                window.addEventListener("load", function () {
+                    setTimeout(scrollTo, 0, 0, 1);
+                }, false);
+            }
+        }
+        // 텍스트박스 기본값 지정 후 클릭시 사라지면서 스타일 지정하기
+        function change(obj, strValue) {
+            if (obj.value == strValue) {
+                obj.value = "";
+                obj.className = 'i_f_on'
+            }
+            else if (obj.value == "") {
+                obj.value = strValue;
+                obj.className = 'i_f_out2'
+            }
+        }
+        // 메뉴 토글
+        function toggle_display(obj) {
+            var div1 = document.getElementById(obj);
+            if (div1.style.display == 'table') {
+                div1.style.display = 'none';
+            } else {
+                div1.style.display = 'table';
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" defaultbutton="btn_postBackBreak">
+        <asp:Button ID="btn_postBackBreak" runat="server" Style="display: none" OnClientClick="return false" />
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer_top">
+        <p style="word-spacing:0.8em;">
+            <a href="/m_Default.aspx">처음으로</a> | <asp:LinkButton ID="lbtLogOut" 
+                runat="server" onclick="lbtLogOut_Click">로그아웃</asp:LinkButton> | 도움말</p>
+    </div>
+    <footer><p>&#169; CODY SERVICE</p></footer>
+    </form>
+</body>
+</html>
