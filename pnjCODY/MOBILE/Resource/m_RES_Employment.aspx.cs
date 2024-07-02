@@ -27,7 +27,7 @@ public partial class Resource_m_RES_Employment : System.Web.UI.Page
     {
         // 고용형태
         Code code = new Code();
-        DataSet dsRES_WorkType = code.DZICUBE_CODE("G1");
+        DataSet dsRES_WorkType = code.DZICUBE_CODE("WT");
 
         this.ddlRES_WorkType.DataSource = dsRES_WorkType;
         this.ddlRES_WorkType.DataBind();
@@ -39,7 +39,7 @@ public partial class Resource_m_RES_Employment : System.Web.UI.Page
         this.ddlRES_RBS_Lv1.DataBind();
 
         // 직종
-        DataSet dsRES_WorkGroup1 = code.DZICUBE_CODE("G2");
+        DataSet dsRES_WorkGroup1 = code.DZICUBE_CODE_BY_WORKTYPE(this.ddlRES_WorkType.SelectedValue.ToString());
 
         this.ddlRES_WorkGroup1.DataSource = dsRES_WorkGroup1;
         this.ddlRES_WorkGroup1.DataBind();
@@ -69,13 +69,32 @@ public partial class Resource_m_RES_Employment : System.Web.UI.Page
         this.ddlRES_RBS_Lv2.DataBind();
     }
 
+	// 고용형태 변경 시
+	protected void ddlRES_WorkType_SelectedIndexChanged(object sender, EventArgs e)
+	{
+        this.ddlRES_WorkGroup1.Items.Clear();
+
+        Code code = new Code();
+        DataSet ds = code.DZICUBE_CODE_BY_WORKTYPE(this.ddlRES_WorkType.SelectedValue.ToString());
+
+        this.ddlRES_WorkGroup1.DataSource = ds;
+        this.ddlRES_WorkGroup1.DataBind();
+        
+        this.ddlRES_WorkGroup2.Items.Clear();
+
+        DataSet ds1 = code.DZICUBE_CODE_BY_WORKGROUP1(this.ddlRES_WorkGroup1.SelectedValue.ToString());
+
+        this.ddlRES_WorkGroup2.DataSource = ds1;
+        this.ddlRES_WorkGroup2.DataBind();
+	}
+
     // 직급 변경 시
     protected void ddlRES_WorkGroup1_SelectedIndexChanged(object sender, EventArgs e)
     {
         this.ddlRES_WorkGroup2.Items.Clear();
 
         Code code = new Code();
-        DataSet ds = code.DZICUBE_CODE_BY_WORKGROUP1(this.ddlRES_WorkGroup1.SelectedValue.ToString());
+        DataSet ds = code.DZICUBE_CODE_BY_WORKGROUP1_EMPLOYMENT(this.ddlRES_WorkGroup1.SelectedValue.ToString(), this.ddlRES_WorkType.SelectedValue.ToString());
 
         this.ddlRES_WorkGroup2.DataSource = ds;
         this.ddlRES_WorkGroup2.DataBind();

@@ -195,9 +195,8 @@
                 return false;
             }
             
-            
             if (document.getElementById('<%= this.ddlConfirm.ClientID %>').value == "") {
-                alert("승인결과를 선택해 주세요.");
+                alert("승인결과를 선택해 주세요. \n\n(신청기간의 시작일자가 오늘 날짜와 같거나 이전일 경우에만 승인결과 항목을 선택할 수 있습니다.)");
                 document.getElementById('<%= this.ddlConfirm.ClientID %>').focus();
                 return false;
             }
@@ -266,17 +265,24 @@
                 return false;
             }
 
-            // 시청기간이 오늘을 포함하거나 오늘보다 이전 일자를 포함할 경우 지연사유를 반드시 입력한다. (2016-10-06 정창화 수정)
+            // 신청 시작날짜가 오늘을 포함하거나 오늘보다 이전 일자를 포함할 경우 지연사유를 반드시 입력한다. (2016-10-06 정창화 수정)
             var today = getToday();
             var dday = getDiffDay(today, document.getElementById('<%= this.txtATT_REQ_StartDate.ClientID %>').value);
-
-
-            if (dday <= 0 && document.getElementById('<%= this.txtATT_REQ_Delay.ClientID %>').value == "") {
+            
+            // 신청 시작날짜를 기준으로 5일 뒤의 날짜가 오늘보다 이후 일경우에만 지연사유를 입력한다. (2019-06-12 정창화 수정)
+            if (dday > 5 && document.getElementById('<%= this.txtATT_REQ_Delay.ClientID %>').value == "") {
                 alert("지연사유를 입력해 주세요.");
                 document.getElementById('<%= this.txtATT_REQ_Delay.ClientID %>').focus();
                 return false;
             }
-            
+            // 지연사유 항목을 삭제하고 비활성 한다.
+            else if (dday <= 5 && document.getElementById('<%= this.txtATT_REQ_Delay.ClientID %>').value != "")
+            {
+                alert("신청 시작일자를 기준으로 5일이 지나지 않았을 경우 지연사유 항목을 입력하지 않습니다.");
+                document.getElementById('<%= this.txtATT_REQ_Delay.ClientID %>').value = "";
+                return false
+            }
+
             return true;
         }
 

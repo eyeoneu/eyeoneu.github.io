@@ -211,6 +211,151 @@
 					    <HeaderStyle CssClass="mepm_menu_title_bg"/>
                     </asp:GridView>
             </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation100" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 10px 10px 10px 10px; font-size:smaller;">
+                            * 급여지급일 : 매월 11일에 지급한다. 단, 11일이 공휴일인 경우 전일 지급한다.
+                        </td>
+                    </tr>
+                </table>    
+            </div>   
+            <div style="padding: 0;" runat="server" id="dvExplanation110" visible="false">
+                <table>
+                    <tr>    
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 휴직 및 월중 입퇴사를 할 경우 월 만근일수를 기준으로 일할계산 한다. (기본급, 시간외수당)
+                        </td>
+                    </tr>
+                </table>    
+            </div> 
+            <div style="padding: 0;" runat="server" id="dvExplanation101" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 계산방법
+                            <br />&nbsp;&nbsp;&nbsp;- 기본급: 근로계약서에 명시된 금액
+                            <br />&nbsp;&nbsp;&nbsp;- 시간외수당: 근로계약서에 명시된 금액
+                            <br />&nbsp;&nbsp;&nbsp;- 임시조정수당: 별도의 근로계약서를 작성(월 또는 일)의 합계, 또는 재고조사
+                            <br />&nbsp;&nbsp;&nbsp;- 특근수당: 통상시급 * 150% * 휴일근로시간
+                            <br />&nbsp;&nbsp;&nbsp;- 장애수당: 복지카드 소지자에 한해 당사 지급규정에 의한 금액
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation102" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 계산방법
+                            <br />&nbsp;&nbsp;&nbsp;- 기본급: 근로계약서에 명시된 금액
+                            <br />&nbsp;&nbsp;&nbsp;- 임시조정수당: 별도의 근로계약서를 작성(월 또는 일)의 합계, 또는 재고조사
+                            <br />&nbsp;&nbsp;&nbsp;- 특근수당: 통상시급 * 150% * 휴일근로시간
+                            <br />&nbsp;&nbsp;&nbsp;- 유사급여1(년차): 근로계약서에 명시된 금액
+                            <br />&nbsp;&nbsp;&nbsp;- 장애수당: 복지카드 소지자에 한해 당사 지급규정에 의한 금액
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation103" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 계산방법
+                            <br />&nbsp;&nbsp;&nbsp;- 기본급: 근로계약서에 명시된 금액 * 근무일수
+                            <br />&nbsp;&nbsp;&nbsp;- 유사급여1(년차): 근로계약서에 명시된 금액 * 근무일수
+                            <br />&nbsp;&nbsp;&nbsp;- 주휴유급수당: 근로계약서에 명시된 금액 * 근무일수
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation104" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 계산방법
+                            <br />&nbsp;&nbsp;&nbsp;- 기본급: 근로계약서에 명시된 금액 * 근무일수 (복지카드 소지자에 한해 당사 지급규정에 의한 금액은 기본급에 포함)
+                            <br />&nbsp;&nbsp;&nbsp;- 유사급여1(년차): 근로계약서에 명시된 금액 * 근무일수
+                            <br />&nbsp;&nbsp;&nbsp;- 주휴유급수당: 근로계약서에 명시된 금액 * 근무일수
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation105" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 계산방법
+                            <br />&nbsp;&nbsp;&nbsp;- 기본급: 통상시급 * 소정근로일수 * 일 근무시간
+                            <br />&nbsp;&nbsp;&nbsp;- 시간외수당: 통상시급 * 소정근로일수 * 일 근무시간 * 150%
+                            <br />&nbsp;&nbsp;&nbsp;- 특근수당: 통상시급 * 150% * 휴일근로시간
+                            <br />&nbsp;&nbsp;&nbsp;- 주휴유급수당: 통상시급 * 주휴일 * 일 근무시간
+                            <br />&nbsp;&nbsp;&nbsp;- 장애수당: 복지카드 소지자에 한해 당사 지급규정에 의한 금액
+                            <br />&nbsp;&nbsp;&nbsp;- 야간근로수당: (통상시급 * (소정근로일수 * 야간근로시간)) * 50%
+                            <br />&nbsp;&nbsp;&nbsp;- 휴일연장근로수당: 통상시급 * 200% * 휴일근로일수
+                            <br />&nbsp;&nbsp;&nbsp;- 휴일야간근로수당: 통상시급 * 50% * 휴일근무일수 * 야간근로시간
+                        </td>
+                    </tr>
+                </table>
+                <table class="mepm_icon_title">
+                    <tr>
+                        <td style="width: 100%;">
+                            <p>
+                                월 근무일수</p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="mepm_menu_item" style="padding:0;">
+                    <asp:GridView ID="gvAttendanceInfomation" runat="server" CellPadding="0"  Width="100%"  EmptyDataText="데이터가 없습니다." ShowHeaderWhenEmpty="True"
+                             CssClass="table_border" AutoGenerateColumns="false">
+                            <Columns>
+                                <asp:boundfield HeaderText="근태종류" DataField="ATT_TYPE">
+							        <HeaderStyle CssClass="tr_border"/>
+							        <ItemStyle CssClass="tr_border_left"/>
+						        </asp:boundfield>
+                                <asp:boundfield HeaderText="근무일수" DataField="ATT_DAYS">
+							        <HeaderStyle CssClass="tr_border" />
+							        <ItemStyle CssClass="tr_border_right"/>
+						        </asp:boundfield>
+                            </Columns>
+                            <EmptyDataRowStyle Height="100px" HorizontalAlign="Center" CssClass="empty_border" />
+					        <RowStyle CssClass="mepm_menu_item_bg" />
+					        <HeaderStyle CssClass="mepm_menu_title_bg"/>
+                        </asp:GridView>
+                </div>
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 10px 10px 10px 10px; font-size:smaller;">
+                            * 정상근무일수가 해당월의 월~금 까지 일수보다(법정공휴일 제외) 많을 경우 휴일근무 일수로 본다.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation200" visible="false">
+                <table>
+                    <tr>
+                        <td style="width: 100%; padding: 10px 10px 0px 10px; font-size:smaller;">
+                            * 급여지급일 : 매월 11일에 지급한다. 단, 11일이 공휴일인 경우 전일 지급한다.
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td style="width: 100%; padding: 10px 10px 10px 10px; font-size:smaller;">
+                            * 미사용연차는 전년도 연차사용분 미차감 개수 및 직종변경으로 지급완료된 연차 개수(금액)를 반영함
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 0;" runat="server" id="dvExplanation201" visible="false">
+                <table id="Table5">
+                    <tr>
+                        <td style="width: 100%; padding: 0px 10px 10px 10px; font-size:smaller;">
+                            * 계산방법
+                            <br />&nbsp;&nbsp;&nbsp;- 상여: 별도 기준
+                            <br />&nbsp;&nbsp;&nbsp;- 년차: 통상시급 * 미사용연차 * 일 근무시간
+                        </td>
+                    </tr>
+                </table>
+            </div>
             </div>
             <!-- 급여 상세 종료 -->          
         </section>

@@ -110,7 +110,7 @@ public partial class Resource_m_RES_Basic : System.Web.UI.Page
                                                         (this.txtRES_PersonNumber1.Text.ToString() + "-" + this.txtRES_PersonNumber2.Text.ToString());
                 if (rd2.Read())
                 {
-                    Common.scriptAlert(this.Page, "등록이 제한된 주민등록번호 입니다.", "/Resource/m_RES_Basic.aspx");
+                    Common.scriptAlert(this.Page, "입사확인이 필요한 주민등록번호 입니다.", "/Resource/m_RES_Basic.aspx");
                 }
             
                 strRES_ID = resource.EPM_RES_DETAIL_INSERT_BASIC_MOBILE

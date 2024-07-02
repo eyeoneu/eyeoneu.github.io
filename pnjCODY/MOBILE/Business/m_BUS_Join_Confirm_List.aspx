@@ -20,13 +20,13 @@
             <a href="/"><span class="button blue">이전단계</span></a></p>
     </header>
     <div class="title">
-        <h2 class="mepm_title">업무 연락 > 입사확인요청</h2>
+        <h2 class="mepm_title">업무 연락 > 재입사요청</h2>
     </div>
     <article style="padding-bottom: 1em;">
         <section>
             <table class="mepm_icon_title">
                     <tr>
-                        <td style="width:95%;"><p >입사확인요청 목록</p></td>
+                        <td style="width:95%;"><p >재입사요청 목록</p></td>
                         <td align="right" style="width:5%; font-weight:normal; padding-right:0.5em;">
                         </td>
                     </tr>

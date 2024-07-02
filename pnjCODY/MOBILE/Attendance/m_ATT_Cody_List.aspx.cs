@@ -73,7 +73,8 @@ public partial class Attendance_m_ATT_Cody_List : System.Web.UI.Page
             //    btnBatch.Visible = true;
             //else
             //    btnBatch.Visible = false;
-
+			//Response.Write(Session["sRES_RBS_CD"].ToString() + "," + Session["sRES_RBS_AREA_CD"].ToString());
+            
             Attendance attendance = new Attendance();
             DataSet ds = attendance.EPM_ATT_BY_DAY_SELECT_MOBILE(this.hdDate.Value.ToString(), "C", Session["sRES_RBS_CD"].ToString(), Session["sRES_RBS_AREA_CD"].ToString());
 

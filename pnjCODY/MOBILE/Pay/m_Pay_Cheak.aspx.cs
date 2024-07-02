@@ -173,7 +173,96 @@ public partial class MOBILE_Pay_m_Pay_Cheak : System.Web.UI.Page
                 this.lblSum3.Text = "";
             }
         }
+        
+        // 급여 조회
+        if (this.ddlTYPE.SelectedValue == "100")
+        {
+			// 상여 설명 문구 영역 초기화
+			this.dvExplanation200.Visible = false;
+			this.dvExplanation201.Visible = false;
+        
+			this.dvExplanation100.Visible = true;
+			// 코디직=코디직(C)/검수직=기타직(Z)/고정직=고정직(A)/물류직=물류직(N) 에게만 보여야하는 설명 문구
+			if (ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "코디직(C)" || ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "기타직(Z)" || ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "고정직(A)" || ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "물류직(N)")
+			{
+				this.dvExplanation110.Visible = true;
+			}
+			   
+			// 직종에 따른 항목별 상세 내역의 설명 문구 표시
+			if (ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "코디직(C)" || ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "기타직(Z)")
+			{
+				this.dvExplanation101.Visible = true;
+			}
+			if (ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "고정직(A)")
+			{
+				this.dvExplanation102.Visible = true;
+			}
+			if (ds.Tables[0].Rows[0]["WORKGROUP2"].ToString() == "계약직(행사)")
+			{
+				this.dvExplanation103.Visible = true;
+			}
+			if (ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "대체직(D)" || ds.Tables[0].Rows[0]["WORKGROUP2"].ToString() == "계약직(일)")
+			{
+				this.dvExplanation104.Visible = true;
+			}
+			if (ds.Tables[0].Rows[0]["WORKGROUP1"].ToString() == "물류직(N)")
+			{
+				this.dvExplanation105.Visible = true;
+				
+				DataSet dsAttendanceInfomation = null;
+				dsAttendanceInfomation = Select_AttendanceInfomation();
+
+				if (dsAttendanceInfomation.Tables[0].Rows.Count > 0)
+				{
+					//월 근무일수
+					this.gvAttendanceInfomation.DataSource = dsAttendanceInfomation.Tables[0];
+					this.gvAttendanceInfomation.DataBind();
+				}
+			}
+        }
+        // 상여 조회
+        if (this.ddlTYPE.SelectedValue == "200")
+        {
+			// 급여 설명 문구 영역 초기화
+			this.dvExplanation100.Visible = false;
+			this.dvExplanation110.Visible = false;
+			this.dvExplanation101.Visible = false;
+			this.dvExplanation102.Visible = false;
+			this.dvExplanation103.Visible = false;
+			this.dvExplanation104.Visible = false;
+			this.dvExplanation105.Visible = false;
+        
+			this.dvExplanation200.Visible = true;
+			this.dvExplanation201.Visible = true;
+        }
     }
+
+
+    #region 월 근무일수 조회 = 물류직(N) 사용자일 경우
+    private DataSet Select_AttendanceInfomation()
+    {
+        SqlConnection Con = new SqlConnection(ConfigurationManager.AppSettings["SQL_CODY"].ToString());
+        SqlDataAdapter ad = new SqlDataAdapter("EPM_PAY_ATT_INFO_MOBILE", Con);
+        ad.SelectCommand.CommandType = CommandType.StoredProcedure;
+        
+		ad.SelectCommand.Parameters.AddWithValue("@RES_ID", Session["sRES_ID"].ToString());
+		ad.SelectCommand.Parameters.AddWithValue("@SAL_MONTH", this.ddlYYYYMM.SelectedValue.Replace("-",""));
+
+        DataSet ds = new DataSet();
+
+        try
+        {
+            ad.Fill(ds);
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+
+        Con.Close();
+        return ds;
+    }
+    #endregion
 
     #region 목록 조회
     private DataSet Select_List()

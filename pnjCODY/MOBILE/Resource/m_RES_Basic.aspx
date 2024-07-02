@@ -39,22 +39,18 @@
             }
         }
 
-        // 주민등록번호 자리수 및 유효성 확인 (2000년 이후 출생자 가능)
         function CheckSSN() {
-            var first = eval(document.getElementById('<%= this.txtRES_PersonNumber1.ClientID %>'));
-            var second = eval(document.getElementById('<%= this.txtRES_PersonNumber2.ClientID %>'));
-
-            // 주민번호 자릿 수 체크 추가 (주민번호 체크 관련 요구사항 반영, 2018-12-20 정창화)
+            var first = eval(document.getElementById('<%= this.txtRES_PersonNumber1.ClientID %>'));
+            var second = eval(document.getElementById('<%= this.txtRES_PersonNumber2.ClientID %>'));
+            // 주민번호 자릿 수 체크 추가 (주민번호 체크 관련 요구사항 반영, 2018-12-20 정창화)
             if (first.value.toString().length != 6) {
                 alert("올바른 주민등록번호가 아닙니다.");
                 return false;
             }
-
             if (second.value.toString().length != 7) {
                 alert("올바른 주민등록번호가 아닙니다.");
                 return false;
-            }  
-
+            }
             var a = first.value.substring(0, 1)
             var b = first.value.substring(1, 2)
             var c = first.value.substring(2, 3)
@@ -68,64 +64,82 @@
             var k = second.value.substring(4, 5)
             var l = second.value.substring(5, 6)
             var m = second.value.substring(6, 7)
-
-            var curDateObj = new Date(); // 날짜 Object 생성
-            var tmpSSN = document.getElementById('<%= this.txtRES_PersonNumber1.ClientID %>').value; // 주민번호
-            var curDate = ''; // 현재일자
-            var tmpAge = 0; // 임시나이
-            var yy = curDateObj.getFullYear(); // 현재년도
-            var mm = curDateObj.getMonth() + 1; // 현재월
-            if(mm < 10) mm = '0' + mm; // 현재 월이 10보다 작을경우 '0' 문자 합한다
-            var dd = curDateObj.getDate(); // 현재일
-            if(dd < 10) dd = '0' + dd; // 현재 일이 10보다 작을경우 '0' 문자 합한다
+            var curDateObj = new Date(); // 날짜 Object 생성
+            var tmpSSN = document.getElementById('<%= this.txtRES_PersonNumber1.ClientID %>').value; // 주민번호
+            var curDate = ''; // 현재일자
+            var tmpAge = 0; // 임시나이
+            var yy = curDateObj.getFullYear(); // 현재년도
+            var mm = curDateObj.getMonth() + 1; // 현재월
+            if (mm < 10) mm = '0' + mm; // 현재 월이 10보다 작을경우 '0' 문자 합한다
+            var dd = curDateObj.getDate(); // 현재일
+            if (dd < 10) dd = '0' + dd; // 현재 일이 10보다 작을경우 '0' 문자 합한다
             curDate = yy + mm + dd;
-
-            var genType = document.getElementById('<%= this.txtRES_PersonNumber2.ClientID %>').value.substring(0, 1); // 주민번호 성별구분 문자 추출
-
+            var genType = document.getElementById('<%= this.txtRES_PersonNumber2.ClientID %>').value.substring(0, 1); // 주민번호 성별구분 문자 추출
             if (genType <= 2) {
-                tmpAge = yy - (1900 + parseInt(tmpSSN.substring(0, 2))); // 1, 2 일경우
+                tmpAge = yy - (1900 + parseInt(tmpSSN.substring(0, 2))); // 1, 2 일경우
             } else {
-                tmpAge = yy - (2000 + parseInt(tmpSSN.substring(0, 2))); // 그 외의 경우
+                tmpAge = yy - (2000 + parseInt(tmpSSN.substring(0, 2))); // 그 외의 경우
             }
-
-            var tmpBirthday = tmpSSN.substring(2, 6); // 주민번호 4자리 생일문자 추출
-           
-            //if(curDate >= (yy + tmpBirthday)) {
-            //    tmpAge += 1;
+            var tmpBirthday = tmpSSN.substring(2, 6); // 주민번호 4자리 생일문자 추출
+            //if(curDate >= (yy + tmpBirthday)) {
+            //    tmpAge += 1;
             //}
-            //if (tmpAge >= 57) {
-            //    confirm("만 56세 이상입니다. 팀장승인이 되었나요?")
+            //if (tmpAge >= 57) {
+            //    confirm("만 56세 이상입니다. 팀장승인이 되었나요?")
             //}
-
             if (tmpAge >= 59) {
                 confirm((yy - 58) + "년 이전의 생년 입니다. 팀장승인이 되었나요?")
             }
-            
             if (tmpAge.toString().length > 0) {
                 tmpAge += '세';
             }
-
             if (c > 1) {
                 alert("올바른 주민등록번호가 아닙니다.");
                 return false;
             }
-
             if (e > 3) {
                 alert("올바른 주민등록번호가 아닙니다.");
                 return false;
             }
-
             var sum = (a * 2) + (b * 3) + (c * 4) + (d * 5) + (e * 6) + (f * 7) + (g * 8) + (h * 9) + (i * 2) + (j * 3) + (k * 4) + (l * 5)
             var check_num = 11 - (sum % 11)
             if (check_num == 11) { check_num = 1 }
             else if (check_num == 10) { check_num = 0 }
-
-            //alert(check_num);
-            //alert(m);
-
             if (check_num != m) {
                 alert("올바른 주민등록번호가 아닙니다.");
                 return false;
+            }
+            var num1 = document.getElementById("unum1");
+            var num2 = document.getElementById("unum2");
+            var arrNum1 = new Array(); // 주민번호 앞자리숫자 6개를 담을 배열
+            var arrNum2 = new Array(); // 주민번호 뒷자리숫자 7개를 담을 배열
+            // -------------- 주민번호 -------------
+            for (var i = 0; i < num1.value.length; i++) {
+                arrNum1[i] = num1.value.charAt(i);
+            } // 주민번호 앞자리를 배열에 순서대로 담는다.
+            for (var i = 0; i < num2.value.length; i++) {
+                arrNum2[i] = num2.value.charAt(i);
+            } // 주민번호 뒷자리를 배열에 순서대로 담는다.
+            var tempSum = 0;
+            for (var i = 0; i < num1.value.length; i++) {
+                tempSum += arrNum1[i] * (2 + i);
+            } // 주민번호 검사방법을 적용하여 앞 번호를 모두 계산하여 더함
+            for (var i = 0; i < num2.value.length - 1; i++) {
+                if (i >= 2) {
+                    tempSum += arrNum2[i] * i;
+                }
+                else {
+                    tempSum += arrNum2[i] * (8 + i);
+                }
+            } // 같은방식으로 앞 번호 계산한것의 합에 뒷번호 계산한것을 모두 더함
+            if ((11 - (tempSum % 11)) % 10 != arrNum2[6]) {
+                alert("올바른 주민번호가 아닙니다.");
+                num1.value = "";
+                num2.value = "";
+                num1.focus();
+                return false;
+            } else {
+                alert("올바른 주민등록번호 입니다.");
             }
         }
 

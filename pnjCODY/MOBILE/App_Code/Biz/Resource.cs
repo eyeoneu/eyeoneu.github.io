@@ -42,6 +42,22 @@ public class Resource
     }
 
     /// <summary>
+    /// 사원 목록 (생년월일 추가)
+    /// </summary>
+    public DataSet EPM_RES_LIST_MOBILE(string strNAME, string strWORKGROUP1, string strRES_RBS_CD, string strRES_RBS_AREA_CD, string strBIRTH)
+    {
+        SqlParameter[] parameterArr = {
+            new SqlParameter("@NAME", strNAME),
+            new SqlParameter("@WORKGROUP1", strWORKGROUP1),
+            new SqlParameter("@RES_RBS_CD", strRES_RBS_CD),
+            new SqlParameter("@RES_RBS_AREA_CD", strRES_RBS_AREA_CD),
+            new SqlParameter("@BIRTH", strBIRTH)
+        };
+
+        return _agent.GetDataSet("EPM_RES_LIST_MOBILE", "Table", null, parameterArr, CommandType.StoredProcedure);
+    }
+
+    /// <summary>
     /// 매장별 사원 목록
     /// </summary>
     public DataSet EPM_RES_LIST_STORE_MOBILE(int intRES_ASS_StoreID)

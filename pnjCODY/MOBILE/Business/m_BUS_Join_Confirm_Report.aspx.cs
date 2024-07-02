@@ -34,7 +34,7 @@ public partial class m_BUS_Join_Confirm_Report : System.Web.UI.Page
 		Code code = new Code();
 		        
 		// 퇴사 사유
-        DataSet dsReason = code.EPM_CODE("13");
+        DataSet dsReason = code.EPM_CODE("23");
         this.ddlRES_CAR_RETIRE.DataSource = dsReason;
         this.ddlRES_CAR_RETIRE.DataBind();
         

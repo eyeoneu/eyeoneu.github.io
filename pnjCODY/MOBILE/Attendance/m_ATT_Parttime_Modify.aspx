@@ -21,10 +21,19 @@
                 document.getElementById('<%= this.ddlRES_CON_TIME.ClientID %>').focus();
                 return false;
             }
-
+            
             document.getElementById('<%= this.ddlRES_CON_TIME.ClientID %>').disabled = false;
         }
+
+        function getRadioSelectedValue(objectName) {
+            var col = document.getElementsByName(objectName);
+
+        }
     </script>  
+    
+    <input type="hidden" id="hdATT_DAY_Icon" name="hdATT_DAY_Icon" runat="server" />
+    <input type="hidden" id="hdATT_DAY_Code" name="hdATT_DAY_Code" runat="server" />
+    
     <header>
         <h1 class="mepm_lg">
             <a href="/" class="mepm_lga">
@@ -115,23 +124,8 @@
                         <td>
                             <asp:DropDownList ID="ddlRES_CON_TIME" runat="server" CssClass="i_f_out">
                                 <asp:ListItem Text="-선택-" Value=""></asp:ListItem>
+
                                 <asp:ListItem Text="0" Value="0"></asp:ListItem>
-                                <asp:ListItem Text="0.5" Value="0.5"></asp:ListItem>
-                                <asp:ListItem Text="1" Value="1"></asp:ListItem>
-                                <asp:ListItem Text="1.5" Value="1.5"></asp:ListItem>
-                                <asp:ListItem Text="2" Value="2"></asp:ListItem>
-                                <asp:ListItem Text="2.5" Value="2.5"></asp:ListItem>
-                                <asp:ListItem Text="3" Value="3"></asp:ListItem>
-                                <asp:ListItem Text="3.5" Value="3.5"></asp:ListItem>
-                                <asp:ListItem Text="4" Value="4"></asp:ListItem>
-                                <asp:ListItem Text="4.5" Value="4.5"></asp:ListItem>
-                                <asp:ListItem Text="5" Value="5"></asp:ListItem>
-                                <asp:ListItem Text="5.5" Value="5.5"></asp:ListItem>
-                                <asp:ListItem Text="6" Value="6"></asp:ListItem>
-                                <asp:ListItem Text="6.5" Value="6.5"></asp:ListItem>
-                                <asp:ListItem Text="7" Value="7"></asp:ListItem>
-                                <asp:ListItem Text="7.5" Value="7.5"></asp:ListItem>
-                                <asp:ListItem Text="8" Value="8"></asp:ListItem>
                             </asp:DropDownList> 시간
                         </th>
                     </tr>                  
@@ -141,7 +135,7 @@
                 <table>
                     <tr class="mepm_menu_item_bg" style="height:3em;">
                         <th style="width:100%; padding-left:.8em;">
-                            <asp:RadioButtonList ID="rdoATT_DAY_Code" runat="server" RepeatDirection="Vertical" RepeatColumns="2" AutoPostBack="false" Height="230px">
+                            <asp:RadioButtonList ID="rdoATT_DAY_Code"  runat="server" RepeatDirection="Vertical" RepeatColumns="2" AutoPostBack="false" Height="230px">
                             </asp:RadioButtonList>
                         </th>
                     </tr>                   

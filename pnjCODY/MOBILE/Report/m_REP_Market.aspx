@@ -310,7 +310,7 @@
     <header>
         <h1 class="mepm_lg">
             <a href="/" class="mepm_lga">
-                <img src="/images/m/mepm_logo.png" alt="W-HRM" width="24" class="mepm_lgm" /><span class="mepm_lgi">W-HRM<br />MOBILE</span>
+                <img src="/images/m/mepm_logo.png" alt="코디서비스" width="24" height="20" class="mepm_lgm" /><span class="mepm_lgi">CODY<br />SERVICE</span>
             </a>
         </h1>
         <p class="mepm_lg mepm_lgt">

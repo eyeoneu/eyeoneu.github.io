@@ -77,6 +77,26 @@
     </div>
     
     <div id="divSupporter" runat="server">
+    
+        <section>
+            <p class="mepm_icon_title">코디서비스 바로가기</p>
+            <ul class="mepm_icon_ul">
+                <asp:Label ID="txtNotice_Icon" runat="server" Text=""></asp:Label>
+                <%--<li class="mepm_icon_li"><a href="/Notice/m_NOT_List.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp01"></span><span class="mepm_icon_txt">공지사항</span></a></li>--%>
+                <li class="mepm_icon_li"><a href="/Resource/m_RES_Basic.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp06"></span><span class="mepm_icon_txt">사원신규등록</span></a></li>
+                <li class="mepm_icon_li"><a href="/Resource/m_RES_MyList.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp02"></span><span class="mepm_icon_txt">사원관리</span></a></li>
+                <li class="mepm_icon_li"><a href="/Attendance/m_ATT_Information.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp04"></span><span class="mepm_icon_txt">근태정보</span></a></li>
+                
+                <li class="mepm_icon_li"><a href="/Attendance/m_ATT_Closed_Mng.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp03"></span><span class="mepm_icon_txt">휴무신청관리</span></a></li>
+                <%--<li class="mepm_icon_li"><a href="/Pay/m_Pay_Cheak.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp08"></span><span class="mepm_icon_txt">급여확인</span></a></li>--%>
+                <%--<li class="mepm_icon_li"><a href="javascript:alert('서비스 이용이 제한되었습니다.')" class="mepm_icon_a"><span class="mepm_icon_img bp08"></span><span class="mepm_icon_txt">급여확인</span></a></li>--%>
+                <asp:Label ID="txtLeave_Icon" runat="server" Text=""></asp:Label>
+                <li class="mepm_icon_li"><a href="/Business/m_BUS_Expend_Mng.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp08"></span><span class="mepm_icon_txt">지출신청관리</span></a></li>
+                <%--<li class="mepm_icon_li"><a href="/Report/m_REP_Oneday_List.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp07"></span><span class="mepm_icon_txt">일일업무보고</span></a></li>--%>
+                <li class="mepm_icon_li"><a href="/Report/m_REP_Daily_Report_Main.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp07"></span><span class="mepm_icon_txt">일일업무보고</span></a></li>
+            </ul>
+        </section>
+    
         <p class="mepm_icon_title" style="background-color:white;">관리 메뉴</p>
         <article style="padding-bottom: 1em;">
             <!-- 토글 메뉴 시작 -->
@@ -123,24 +143,7 @@
 
             </section>
             <!-- 토글 메뉴 종료 -->
-            <section>
-                <p class="mepm_icon_title">코디서비스 바로가기</p>
-                <ul class="mepm_icon_ul">
-                    <asp:Label ID="txtNotice_Icon" runat="server" Text=""></asp:Label>
-                    <%--<li class="mepm_icon_li"><a href="/Notice/m_NOT_List.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp01"></span><span class="mepm_icon_txt">공지사항</span></a></li>--%>
-                    <li class="mepm_icon_li"><a href="/Resource/m_RES_Basic.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp06"></span><span class="mepm_icon_txt">사원신규등록</span></a></li>
-                    <li class="mepm_icon_li"><a href="/Resource/m_RES_MyList.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp02"></span><span class="mepm_icon_txt">사원관리</span></a></li>
-                    <li class="mepm_icon_li"><a href="/Attendance/m_ATT_Information.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp04"></span><span class="mepm_icon_txt">근태정보</span></a></li>
-                    
-                    <li class="mepm_icon_li"><a href="/Attendance/m_ATT_Closed_Mng.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp03"></span><span class="mepm_icon_txt">휴무신청관리</span></a></li>
-                    <%--<li class="mepm_icon_li"><a href="/Pay/m_Pay_Cheak.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp08"></span><span class="mepm_icon_txt">급여확인</span></a></li>--%>
-                    <%--<li class="mepm_icon_li"><a href="javascript:alert('서비스 이용이 제한되었습니다.')" class="mepm_icon_a"><span class="mepm_icon_img bp08"></span><span class="mepm_icon_txt">급여확인</span></a></li>--%>
-                    <asp:Label ID="txtLeave_Icon" runat="server" Text=""></asp:Label>
-                    <li class="mepm_icon_li"><a href="/Business/m_BUS_Expend_Mng.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp08"></span><span class="mepm_icon_txt">지출신청관리</span></a></li>
-                    <%--<li class="mepm_icon_li"><a href="/Report/m_REP_Oneday_List.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp07"></span><span class="mepm_icon_txt">일일업무보고</span></a></li>--%>
-                    <li class="mepm_icon_li"><a href="/Report/m_REP_Daily_Report_Main.aspx" class="mepm_icon_a"><span class="mepm_icon_img bp07"></span><span class="mepm_icon_txt">일일업무보고</span></a></li>
-                </ul>
-            </section>
+
         </article>
     </div>
     <div id="divUser" runat="server">

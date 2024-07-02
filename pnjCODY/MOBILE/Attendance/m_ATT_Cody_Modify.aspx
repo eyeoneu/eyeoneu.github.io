@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/m_MasterPage_PostBackBreak.master" AutoEventWireup="true" CodeFile="m_ATT_Cody_Modify.aspx.cs" Inherits="Attendance_m_ATT_Cody_Modify" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <input type="hidden" id="hdATT_DAY_Code" name="hdATT_DAY_Code" runat="server" />
     <header>
         <h1 class="mepm_lg">
             <a href="/" class="mepm_lga">

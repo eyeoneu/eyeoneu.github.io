@@ -460,6 +460,7 @@
                                 <asp:ListItem Text="무기일급직" Value="3"></asp:ListItem>
                                 <asp:ListItem Text="기간일급직" Value="4"></asp:ListItem>
                                 <asp:ListItem Text="대체지원직" Value="5"></asp:ListItem>
+                                <asp:ListItem Text="공조월급직" Value="9"></asp:ListItem>
                             </asp:DropDownList>
                         </td>
                     </tr>

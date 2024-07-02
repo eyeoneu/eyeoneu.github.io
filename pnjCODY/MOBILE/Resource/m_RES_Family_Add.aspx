@@ -43,37 +43,48 @@
         function CheckSSN() {
             var first = eval(document.getElementById('<%= this.txtRES_FAM_Pnumber1.ClientID %>'));
             var second = eval(document.getElementById('<%= this.txtRES_FAM_Pnumber2.ClientID %>'));
-            var a = first.value.substring(0, 1)
-            var b = first.value.substring(1, 2)
-            var c = first.value.substring(2, 3)
-            var d = first.value.substring(3, 4)
-            var e = first.value.substring(4, 5)
-            var f = first.value.substring(5, 6)
-            var g = second.value.substring(0, 1)
-            var h = second.value.substring(1, 2)
-            var i = second.value.substring(2, 3)
-            var j = second.value.substring(3, 4)
-            var k = second.value.substring(4, 5)
-            var l = second.value.substring(5, 6)
-            var m = second.value.substring(6, 7)
+            //var a = first.value.substring(0, 1)
+            //var b = first.value.substring(1, 2)
+            //var c = first.value.substring(2, 3)
+            //var d = first.value.substring(3, 4)
+            //var e = first.value.substring(4, 5)
+            //var f = first.value.substring(5, 6)
+            //var g = second.value.substring(0, 1)
+            //var h = second.value.substring(1, 2)
+            //var i = second.value.substring(2, 3)
+            //var j = second.value.substring(3, 4)
+            //var k = second.value.substring(4, 5)
+            //var l = second.value.substring(5, 6)
+            //var m = second.value.substring(6, 7)
 
-            if (c > 1) {
-                alert("올바른 주민등록번호가 아닙니다.");
-                return false;
-            }
-            if (e > 3) {
-                alert("올바른 주민등록번호가 아닙니다.");
-                return false;
-            }
+            //if (c > 1) {
+            //    alert("올바른 주민등록번호가 아닙니다.");
+            //    return false;
+            //}
+            //if (e > 3) {
+            //    alert("올바른 주민등록번호가 아닙니다.");
+            //    return false;
+            //}
 
-            var sum = (a * 2) + (b * 3) + (c * 4) + (d * 5) + (e * 6) + (f * 7) + (g * 8) + (h * 9) + (i * 2) + (j * 3) + (k * 4) + (l * 5)
-            var check_num = 11 - (sum % 11)
-            if (check_num == 11) { check_num = 1 }
-            else if (check_num == 10) { check_num = 0 }
+            //var sum = (a * 2) + (b * 3) + (c * 4) + (d * 5) + (e * 6) + (f * 7) + (g * 8) + (h * 9) + (i * 2) + (j * 3) + (k * 4) + (l * 5)
+            //var check_num = 11 - (sum % 11)
+            //if (check_num == 11) { check_num = 1 }
+            //else if (check_num == 10) { check_num = 0 }
 
-            if (check_num != m) {
-                alert("올바른 주민등록번호가 아닙니다.");
-                return false;
+            //if (check_num != m) {
+            //    alert("올바른 주민등록번호가 아닙니다.");
+            //    return false;
+            //}
+            
+            
+            var strjumin = first + "-" + second;
+
+            // 주민번호 체크: 2020년 10월 이후 출생자는 더이상 이전 주민번호 규칙을 따르지 않아 값의 형식만 체크 (2023-02-14 정창화 수정)
+            var juminRule=/^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-8][0-9]{6}$/;
+
+            if(!juminRule.test(rowID.value)) {
+	            alert("[주민등록번호] 형식에 맞게 입력하세요!");
+	            return false;
             }
         }
 

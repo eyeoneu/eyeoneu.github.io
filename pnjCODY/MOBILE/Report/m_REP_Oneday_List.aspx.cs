@@ -119,7 +119,8 @@ public partial class MOBILE_Report_m_REP_Oneday_List : System.Web.UI.Page
         {
             e.Row.Attributes["onClick"] = "fncDetail('"
                                         + ((DataRowView)e.Row.DataItem)["REP_DLY_ID"].ToString() + "', '"
-                                        + ((DataRowView)e.Row.DataItem)["RES_ID"].ToString()
+                                        + ((DataRowView)e.Row.DataItem)["RES_ID"].ToString() + "', '"
+                                        + ((DataRowView)e.Row.DataItem)["REAL_YYYYMMDD"].ToString()
                                         + "');";
             e.Row.Attributes["style"] = "cursor: pointer;";
 
@@ -131,6 +132,6 @@ public partial class MOBILE_Report_m_REP_Oneday_List : System.Web.UI.Page
     /// </summary>
     protected void btnDetail_Click(object sender, EventArgs e)
     {
-        Response.Redirect("m_REP_Oneday_Report.aspx?REP_DLY_ID=" + this.hdREP_DLY_ID.Value.ToString() + "&RES_ID=" + this.hdRES_ID.Value.ToString());
+        Response.Redirect("m_REP_Oneday_Report.aspx?REP_DLY_ID=" + this.hdREP_DLY_ID.Value.ToString() + "&RES_ID=" + this.hdRES_ID.Value.ToString() + "&VISIT_DATE=" + this.hdREAL_YYYYMMDD.Value);
     }
 }

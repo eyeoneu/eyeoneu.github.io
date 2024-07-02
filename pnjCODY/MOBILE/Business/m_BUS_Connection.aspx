@@ -74,11 +74,11 @@
                 </p>
                 <p style="padding-top: 1em;">
                 <a href="/Business/m_BUS_Approval_List.aspx"><span class="button skyblue mepm_btn" style="width:80%;" runat="server" id="btnApproval">
-                    <asp:Label ID="lblApproval" runat="server" Text="고령자근무승인" Font-Names="NanumGothicWeb, Verdana, Arial, sans-Serif"></asp:Label></span></a>
+                    <asp:Label ID="lblApproval" runat="server" Text="고령자근무요청" Font-Names="NanumGothicWeb, Verdana, Arial, sans-Serif"></asp:Label></span></a>
                 </p>
                 <p style="padding-top: 1em;">
                 <a href="/Business/m_BUS_Join_Confirm_List.aspx"><span class="button skyblue mepm_btn" style="width:80%;" runat="server" id="btnJoinConfirm">
-                    <asp:Label ID="lblJoinConfirm" runat="server" Text="입사확인요청" Font-Names="NanumGothicWeb, Verdana, Arial, sans-Serif"></asp:Label></span></a>
+                    <asp:Label ID="lblJoinConfirm" runat="server" Text="재입사요청" Font-Names="NanumGothicWeb, Verdana, Arial, sans-Serif"></asp:Label></span></a>
                 </p>
                <%-- <p style="padding-top: 1em;">
                 * 이전 2개월 부터 오늘까지 보고된 항목이 숫자로 표시됩니다.

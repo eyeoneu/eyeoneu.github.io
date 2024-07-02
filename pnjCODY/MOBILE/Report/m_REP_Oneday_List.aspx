@@ -109,15 +109,32 @@
             }
         } 
 
-        function fncDetail(strREP_DLY_ID, strRES_ID){
+        function fncDetail(strREP_DLY_ID, strRES_ID, strREAL_YYYYMMDD){
             document.getElementById('<%= this.hdREP_DLY_ID.ClientID %>').value = strREP_DLY_ID;
             document.getElementById('<%= this.hdRES_ID.ClientID %>').value = strRES_ID;
+            document.getElementById('<%= this.hdREAL_YYYYMMDD.ClientID %>').value = strREAL_YYYYMMDD;
 
             <%= Page.GetPostBackEventReference(this.btnDetail) %>    
         }
+
+        function fncInsertNewReport() {
+            var start = document.getElementById('<%= this.txtFROMDATE.ClientID %>').value,
+                end = document.getElementById('<%= this.txtTODATE.ClientID %>').value;
+            
+            if(start != end) {
+                alert("새로운 매장 업무일지 작성은 시작일과 종료일이 같아야 합니다.");
+                return false;
+            }
+
+            // window.location='m_REP_Oneday_Report.aspx';
+
+            window.location='m_REP_Oneday_Report.aspx?VISIT_DATE=' + start;
+        }
+
     </script>
     <input type="hidden" id="hdREP_DLY_ID" name="hdREP_DLY_ID" runat="server" />
     <input type="hidden" id="hdRES_ID" name="hdRES_ID" runat="server" />
+    <input type="hidden" id="hdREAL_YYYYMMDD" name="hdRES_ID" runat="server" />
     <asp:LinkButton ID="btnDetail" runat="server" OnClick="btnDetail_Click"></asp:LinkButton>
     <header>
         <h1 class="mepm_lg">
@@ -191,7 +208,11 @@
             <div style="height:12px"></div> 
              <div class="mepm_btn_div">
                 <asp:Button CssClass="button gray mepm_asp_btn" Text="입력" ID="btnWrite" 
-                    runat="server" OnClientClick="javascript:return window.location='m_REP_Oneday_Report.aspx';" UseSubmitBehavior="False" />
+                    runat="server" OnClientClick="javascript:return fncInsertNewReport();" UseSubmitBehavior="False" />
+
+
+                    <%--  <asp:Button CssClass="button gray mepm_asp_btn" Text="입력" ID="btnWrite" 
+                    runat="server" OnClientClick="javascript:return window.location='m_REP_Oneday_Report.aspx';" UseSubmitBehavior="False" />--%>
                 <asp:Button CssClass="button gray mepm_asp_btn" Text="취소" ID="btnCancel" 
                     runat="server" OnClientClick="javascript:return window.location='m_REP_Daily_Report_Main.aspx';" UseSubmitBehavior="False" />
             </div> 

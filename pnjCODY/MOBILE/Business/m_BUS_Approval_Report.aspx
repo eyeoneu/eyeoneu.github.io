@@ -334,13 +334,13 @@
             <a href="/Resource/m_RES_Register.aspx?RES_ID=<%= Session["sRES_ID"] %>"><span class="button blue">이전단계</span></a></p>
     </header>
     <div class="title">
-        <h2 class="mepm_title">업무 연락 > 고령자근무승인</h2>
+        <h2 class="mepm_title">업무 연락 > 고령자근무요청</h2>
     </div>
     <article style="padding-bottom: 1em;">
         <section>
             <table class="mepm_icon_title">
                 <tr>
-                    <td style="width:95%;"><p >고령자근무승인 요청</p></td>
+                    <td style="width:95%;"><p >고령자근무요청</p></td>
                     <td align="right" style="font-weight:normal; padding-right:0.5em;">
                     </td>
                 </tr>

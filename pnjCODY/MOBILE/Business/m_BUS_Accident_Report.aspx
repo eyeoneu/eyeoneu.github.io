@@ -5,47 +5,47 @@
         function CheckDate() {            
             if (document.getElementById('<%= this.txtAccDate.ClientID %>').value == "YYYYMMDD") {
                 alert("사고일자을 입력해 주세요.");
-            document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
-            return false;
-        }
-
-        var num, year, month, day;
-        num = document.getElementById('<%= this.txtAccDate.ClientID %>').value;
-
-        while (num.search("-") != -1) {
-            num = num.replace("-", "");
-        }
-
-        if (isNaN(num)) {
-            num = "";
-            alert("사고일자은 숫자만 입력 가능합니다.");
-            document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
-            return false;
-        }
-        else {
-
-            if (num != 0 && num.length == 8) {
-                year = num.substring(0, 4);
-                month = num.substring(4, 6);
-                day = num.substring(6);
-
-                if (isValidDay(year, month, day) == false) {
-                    num = "";
-                    alert("유효하지 않은 일자 입니다.");
-                    document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
-                    return false;
-                }
-                num = year + "-" + month + "-" + day;
-            }
-            else {
-                num = "";
-                alert("사고일자 입력 형식은 YYYYMMDD 입니다.");
                 document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
                 return false;
             }
 
-            document.getElementById('<%= this.txtAccDate.ClientID %>').value = num;
-        }
+            var num, year, month, day;
+            num = document.getElementById('<%= this.txtAccDate.ClientID %>').value;
+
+            while (num.search("-") != -1) {
+                num = num.replace("-", "");
+            }
+
+            if (isNaN(num)) {
+                num = "";
+                alert("사고일자은 숫자만 입력 가능합니다.");
+                document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
+                return false;
+            }
+            else {
+
+                if (num != 0 && num.length == 8) {
+                    year = num.substring(0, 4);
+                    month = num.substring(4, 6);
+                    day = num.substring(6);
+
+                    if (isValidDay(year, month, day) == false) {
+                        num = "";
+                        alert("유효하지 않은 일자 입니다.");
+                        document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
+                        return false;
+                    }
+                    num = year + "-" + month + "-" + day;
+                }
+                else {
+                    num = "";
+                    alert("사고일자 입력 형식은 YYYYMMDD 입니다.");
+                    document.getElementById('<%= this.txtAccDate.ClientID %>').focus();
+                    return false;
+                }
+
+                document.getElementById('<%= this.txtAccDate.ClientID %>').value = num;
+            }
         }
 
         // 유효한(존재하는) 일(日) 인지 체크

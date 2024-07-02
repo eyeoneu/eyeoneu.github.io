@@ -72,6 +72,9 @@ public partial class Attendance_m_ATT_Cody_Modify : System.Web.UI.Page
                 this.lblCNT_ALT_HOLIDAY.Text = rd["CNT_ALT_HOLIDAY"].ToString();
                 this.rdoATT_DAY_Code.SelectedValue = rd["ATT_DAY_Code"].ToString();
                 
+                // 이전과 동일한 값일 경우 저장하지 못하도록 처리하기 위하여 히든필드에 이전 값 저장 처리 (2024-06-25 정창화 수정)
+                this.hdATT_DAY_Code.Value = rd["ATT_DAY_Code"].ToString();
+                
                 if (rd["ATT_DAY_Code"].ToString() == "103" || rd["ATT_DAY_Code"].ToString() == "104")
                 {
 					this.rdoATT_DAY_Code.Enabled = false;
@@ -102,15 +105,24 @@ public partial class Attendance_m_ATT_Cody_Modify : System.Web.UI.Page
     {
         try
         {
-            Attendance attendance = new Attendance();
+			// 이전과 동일한 값일 경우 저장하지 못하도록 처리 (2024-06-25 정창화 수정)
+			if (this.rdoATT_DAY_Code.SelectedValue.ToString() != this.hdATT_DAY_Code.Value.ToString())
+			{
+				Attendance attendance = new Attendance();
 
-            attendance.EPM_ATT_BY_DAY_ITEM_UPDATE_MOBILE("C", this.rdoATT_DAY_Code.SelectedValue.ToString(), "", int.Parse(this.Page.Request["ATT_DAY_ID"].ToString()));
+				attendance.EPM_ATT_BY_DAY_ITEM_UPDATE_MOBILE("C", this.rdoATT_DAY_Code.SelectedValue.ToString(), "", int.Parse(this.Page.Request["ATT_DAY_ID"].ToString()));
 
-            //ViewMsgBack("저장되었습니다.");
-            Common.scriptAlert(this.Page, "저장되었습니다.", "/Attendance/m_ATT_Cody_List.aspx?DATE=" + this.Page.Request["DATE"].ToString()
-                            + "&scroll=" + this.Page.Request["scroll"].ToString());
+				//ViewMsgBack("저장되었습니다.");
+				Common.scriptAlert(this.Page, "저장되었습니다.", "/Attendance/m_ATT_Cody_List.aspx?DATE=" + this.Page.Request["DATE"].ToString()
+								+ "&scroll=" + this.Page.Request["scroll"].ToString());
 
-            SetPage();
+			}
+			else
+			{
+				Common.scriptAlert(this.Page, "입력된 값이 이전과 동일할 경우 저장되지 않습니다.", "/Attendance/m_ATT_Cody_List.aspx?DATE=" + this.Page.Request["DATE"].ToString()
+								+ "&scroll=" + this.Page.Request["scroll"].ToString());
+			}
+			SetPage();	
         }
         catch (Exception ex)
         {

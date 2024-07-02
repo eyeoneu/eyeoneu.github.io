@@ -77,8 +77,9 @@
                     <tr class="mepm_menu_item_bg" style="height:3em;">
                         <th style="border-top:1px solid #ccc;">고용형태 :</th>
                         <td style="text-align:left; border-top:1px solid #ccc; padding-right:.8em;" colspan="2">
-                            <asp:DropDownList ID="ddlRES_WorkType" runat="server" CssClass="i_f_out" AutoPostBack="false" 
-                                DataTextField="CTD_NM" DataValueField="CTD_CD" Width="100%">
+                            <asp:DropDownList ID="ddlRES_WorkType" runat="server" CssClass="i_f_out" AutoPostBack="true" 
+                                DataTextField="CTD_NM" DataValueField="CTD_CD" Width="100%" 
+                                OnSelectedIndexChanged="ddlRES_WorkType_SelectedIndexChanged">
                             </asp:DropDownList>
                         </td>
                     </tr>

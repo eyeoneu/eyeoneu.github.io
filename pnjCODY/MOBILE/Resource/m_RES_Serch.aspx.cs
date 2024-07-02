@@ -33,6 +33,7 @@ public partial class Resource_m_RES_Serch : System.Web.UI.Page
         {
             this.dvRES_WORKGROUP1.Visible = true;
             this.dvName.Visible = true;
+            this.dvBirth.Visible = true;
 
             this.dvRES_RBS_Lv1.Visible = false;
             this.dvEPM_CUSTOMER_STORE.Visible = false;
@@ -42,6 +43,7 @@ public partial class Resource_m_RES_Serch : System.Web.UI.Page
         {
             this.dvRES_WORKGROUP1.Visible = false;
             this.dvName.Visible = false;
+            this.dvBirth.Visible = false;
 
             this.dvRES_RBS_Lv1.Visible = true;
             this.dvEPM_CUSTOMER_STORE.Visible = true;
@@ -64,7 +66,9 @@ public partial class Resource_m_RES_Serch : System.Web.UI.Page
                     + "?RES_WORKGROUP1="
                     + this.rdoRES_WORKGROUP1.Text.ToString()
                     + "&NAME="
-                    + this.txtName.Text.ToString());
+                    + this.txtName.Text.ToString()
+                    + "&BIRTH="
+                    + this.txtBirth.Text.ToString());
         }
         else
         {

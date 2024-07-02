@@ -229,8 +229,6 @@ public partial class Resource_m_RES_Contract_New : System.Web.UI.Page
                 this.ddlRES_CON_Type.Enabled = true;
                 this.ddlRES_CON_TIME.Enabled = true;
                 this.txtRES_CON_PAY.Enabled = true;
-                
-
             }
 
             // 선택항목 초기화
@@ -250,6 +248,27 @@ public partial class Resource_m_RES_Contract_New : System.Web.UI.Page
                 this.ddlRES_CON_Type.SelectedValue = "D";
                 this.ddlRES_CON_Type.Enabled = false;
             }
+            
+            // 공조월급직 일 경우: 지원사=공조, 소속=(CH)유통영업부, 계약종류=월 계약, 일근무시간=0, 일/월급여=0 (2024-01-08 정창화 수정)
+            if (ddl.SelectedValue.ToString().Equals("9"))
+			{
+			    this.ddlRES_CON_VENDER_CD.SelectedValue = "015";  
+			    this.ddlRES_CON_VENDER_CD.Enabled = false;
+			    SetddlRES_CON_VEN_AREA_CD();
+			    
+			    this.ddlRES_CON_VEN_AREA_CD.SelectedValue = "011";  
+			    this.ddlRES_CON_VEN_AREA_CD.Enabled = false;
+			    SetddlRES_CON_VEN_OFFICE_CD();
+			    
+			    this.ddlRES_CON_Type.SelectedValue = "M";
+                this.ddlRES_CON_Type.Enabled = false;
+                
+                this.ddlRES_CON_TIME.SelectedValue = "0";
+                this.ddlRES_CON_TIME.Enabled = false;
+                
+				this.txtRES_CON_PAY.Text = "0";
+				this.txtRES_CON_PAY.Enabled = false;
+			}
         }
     }
 

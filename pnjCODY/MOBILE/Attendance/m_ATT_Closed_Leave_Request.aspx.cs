@@ -123,6 +123,17 @@ public partial class Attendance_m_ATT_Closed_Leave_Request : System.Web.UI.Page
                 this.ddlConfirm.SelectedValue = rd["ATT_REQ_ApproveStatus"].ToString();
                 this.txtRejectReason.Text = rd["ATT_REQ_RejectReason"].ToString();
 				
+				DateTime t1 = DateTime.Today; // 오늘 날짜
+                DateTime t2 = DateTime.Parse(this.txtATT_REQ_StartDate.Text); //  신청 시작일자
+                TimeSpan t3 = t2.Subtract(t1);
+                int t4 = t3.Days; // 두 날짜의 차이
+				
+				// 신청 시작일자가 오늘이거나 오늘보다 이전일자일 경우에만 승인결과를 변경할 수 있도록 수정
+				if (t4 > 0)
+				{
+					this.ddlConfirm.Enabled = false;
+				}				
+				
 				// 서포터가 자신의 부서에 소속된 사원의 연창 신청서인 경우 서포터가 직접 승인/반려 처리한다.
 				// (서포터 본인의 연차신청서는 기존 프로세스와 마찬가지로 팀장 및 관리자 승인을 받는다)
 				if (rd["ATT_REQ_Writer_ID"].ToString() == Session["sRES_ID"].ToString())
@@ -256,9 +267,11 @@ public partial class Attendance_m_ATT_Closed_Leave_Request : System.Web.UI.Page
     {
 		DateTime ATT_REQ_StartDate = Convert.ToDateTime(this.txtATT_REQ_StartDate.Text.ToString());
     
-		DateTime t1 = DateTime.Today.AddDays(5); // 오늘 날짜
+		DateTime t1 = DateTime.Today; // 오늘 날짜
 		DateTime t2 = ATT_REQ_StartDate.AddDays(3 - ATT_REQ_StartDate.Day).AddMonths(1); // 기준일자: 
 		TimeSpan t3 = t2.Subtract(t1); // 날짜 차이값 구하기
+		
+		//Response.Write(t1 + " : " + t2 + " : " + t3);
 		
 		
 		// 신청기간의 시작을 기준으로 익월 3일까지만 저장이 가능하도록 처리한다.
@@ -395,7 +408,7 @@ public partial class Attendance_m_ATT_Closed_Leave_Request : System.Web.UI.Page
             newBMP.Dispose();
             oGraphics.Dispose();
 
-            string chgFilename = "_" + DateTime.Today.ToShortDateString() + Path.GetExtension(filename);
+            string chgFilename = "RQ_" + this.lblREQ_RES_ID.Text.ToString() + "_" + DateTime.Today.ToShortDateString() + Path.GetExtension(filename);
 
             strFileName = GetFilePath(directory, chgFilename); // 파일명 중복 확인
             File.Move(directory + filename, directory + strFileName);

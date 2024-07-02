@@ -61,6 +61,19 @@ public partial class MOBILE_Report_m_REP_Oneday_Report : System.Web.UI.Page
                 //일일업무보고 내용
                 SetReportData();
             }
+
+            
+
+            /* 서버 장애로 업무일지 작성을 못했던 기간에 입력 가능하도록 한시적으로 변경 2020-02-14 박병진*/
+
+            DateTime dt = DateTime.Parse(this.txtVISITDATE.Text);
+
+            if(dt <= DateTime.Parse("2020-02-06")) 
+            {
+                Page.Response.Write(dt.ToString());
+
+                this.btnSave.Visible = false;
+            }
         }      
     }
 
@@ -70,7 +83,11 @@ public partial class MOBILE_Report_m_REP_Oneday_Report : System.Web.UI.Page
     private void SetControl()
     {
         //방문일
-        this.txtVISITDATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+        // this.txtVISITDATE.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
+        /* 서버 장애로 업무일지 작성을 못했던 기간에 입력 가능하도록 한시적으로 변경 2020-02-14 박병진*/
+
+        this.txtVISITDATE.Text = Request.QueryString["VISIT_DATE"].ToString();
         txtVISITDATE.Enabled = false;
 
         if (!string.IsNullOrEmpty(Request.QueryString["RES_ID"])) // 수정 모드시 작성자 RES_ID 기준으로..
@@ -115,6 +132,29 @@ public partial class MOBILE_Report_m_REP_Oneday_Report : System.Web.UI.Page
             ddlEPM_CUSTOMER_STORE.Enabled = false;
             txtVISITDATE.Enabled = false;
 
+
+            /* 서버 장애로 업무일지 작성을 못했던 기간에 입력 가능하도록 한시적으로 변경
+                변경시 125~139 라인 삭제 후 142 ~ 169 주석 해제
+             2020-02-14 박병진*/
+            {
+                //본인이 작성한 글이면 수정가능
+                if (Session["sRES_ID"].ToString() == dsData.Tables[0].Rows[0]["RES_ID"].ToString())
+                    this.btnSave.Enabled = true;
+                else
+                    this.btnSave.Enabled = false;
+
+                //관리자는 수정가능
+                if (RES_GB == "A")
+                    this.btnSave.Enabled = true;
+
+                btnSave.Text = "수정";
+                btnSave.OnClientClick = "javascript:return fncChkUpdate();";
+                btnCancel.OnClientClick = "javascript:return window.location='m_REP_Oneday_List.aspx';";
+
+            }
+
+
+    
             ////실적작성은 [당일]만 작성가능 -- 2013.09.23 김재영 수정
             //if (dsData.Tables[0].Rows[0]["REAL_YYYYMMDD"].ToString() == DateTime.Now.ToString("yyyy-MM-dd"))
             // 수정가능 시간 변경 (현재: 당일, 변경: 당일 오전 7시 ~ 익일 오전 7시 까지, 서포터가 자정이 넘어갔을때 업무보고를 수정할 수 없는 현상 해결을 위함) 2016-08-24 정창화 수정
@@ -141,6 +181,7 @@ public partial class MOBILE_Report_m_REP_Oneday_Report : System.Web.UI.Page
                 btnSaveFake.Text = "수정";
                 btnCancel.OnClientClick = "javascript:return window.location='m_REP_Oneday_List.aspx';";
             }
+    
         }
 
         if (dsData.Tables[1].Rows.Count != 0)
@@ -361,7 +402,7 @@ public partial class MOBILE_Report_m_REP_Oneday_Report : System.Web.UI.Page
     {
         string postFileCode = Session["sRES_RBS_NAME"].ToString();
         string orgFileName = string.Empty;
-        string serverRoot = @"C:\EPM_Attatch\Report\{0}\{1}\{2}"; //파일 저장 폴더 위치
+        string serverRoot = @"D:\EPM_Attatch\Report\{0}\{1}\{2}"; //파일 저장 폴더 위치
         string saveFileName = string.Empty;
         string saveFilePath = string.Empty;
         // First we check to see if the user has selected a file

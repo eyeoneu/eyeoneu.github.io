@@ -56,6 +56,15 @@
                         <asp:TextBox ID="txtName" runat="server" style="width:100%;" onfocus="this.className='i_f_on';" onblur="this.className='i_f_out'" class="i_f_out" /></td>
                     </tr>
                 </table>
+            </div> 
+            <div class="mepm_menu_item" runat="server" id="dvBirth" visible="true">
+                <table>
+                    <tr>
+                        <td style="width:85px;"><b style="color:#bbb;">+</b> 생년월일 :</td>
+                        <td style="width:auto; padding-right:.8em;">
+                        <asp:TextBox ID="txtBirth" runat="server" style="width:100%;" onfocus="this.className='i_f_on';" onblur="this.className='i_f_out'" class="i_f_out" /></td>
+                    </tr>
+                </table>
             </div>
             <div class="mepm_menu_item" runat="server" id="dvRES_RBS_Lv1" visible="false">
                 <table>

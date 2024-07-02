@@ -60,14 +60,13 @@ public partial class m_Login_form : System.Web.UI.Page
         //Session["sRES_RBS_AREA_NAME"] = "강북유통1";    //부서 이름
         //Session["sRES_WorkGroup1"] = "008";		       //직종: 서포터직
         //Session["sRES_WorkGroup2"] = "9998";           //직책: 대리
-        //Session["sRES_WorkState"]                     //퇴사여부
+        //Session["sRES_WorkState"] = "002";                    //퇴사여부
 
         //Response.Redirect("/m_Default.aspx");
 
         Login login = new Login();
 
         string retVal = login.EPM_RES_LOGIN_IS_LOGIN(strRES_Number, strRES_Pwd);
-
 
         //로그인 성공
         if (retVal == "1")
@@ -88,7 +87,7 @@ public partial class m_Login_form : System.Web.UI.Page
                 Session["sRES_RBS_AREA_NAME"] = rd["RES_RBS_AREA_NAME"].ToString(); //부서 이름
                 Session["sRES_WorkGroup1"] = rd["RES_WorkGroup1"].ToString();		//직종 코드
                 Session["sRES_WorkGroup2"] = rd["RES_WorkGroup2"].ToString();       //직책 코드
-                Session["sRES_WorkState"] = rd["RES_WorkState"].ToString();       //퇴사여부
+                Session["sRES_WorkState"] = rd["RES_WorkState_Code"].ToString();       //퇴사여부: 공지사항(근로자) 기능을 위해 2019-09-02 추가
             }
 
             rd.Close();

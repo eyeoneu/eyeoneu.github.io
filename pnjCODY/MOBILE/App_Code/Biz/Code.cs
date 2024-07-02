@@ -166,6 +166,18 @@ public class Code
 
         return _agent.GetDataSet("DZICUBE_CODE", "Table", null, parameterArr, CommandType.StoredProcedure);
     }
+    
+    /// <summary>
+    /// DZICUBE_CODE_BY_WORKTYPE 코드
+    /// </summary>
+    public DataSet DZICUBE_CODE_BY_WORKTYPE(string strWORKTYPE)
+    {
+        SqlParameter[] parameterArr = {
+            new SqlParameter("@RES_WORKTYPE", strWORKTYPE)
+        };
+
+        return _agent.GetDataSet("DZICUBE_CODE_BY_WORKTYPE", "Table", null, parameterArr, CommandType.StoredProcedure);
+    }
 
     /// <summary>
     /// DZICUBE 코드
@@ -187,6 +199,19 @@ public class Code
     {
         SqlParameter[] parameterArr = {
             new SqlParameter("@RMK_DC", strWORKGROUP1)
+        };
+
+        return _agent.GetDataSet("DZICUBE_CODE_BY_WORKGROUP1", "Table", null, parameterArr, CommandType.StoredProcedure);
+    }
+    
+    /// <summary>
+    /// DZICUBE 코드
+    /// </summary>
+    public DataSet DZICUBE_CODE_BY_WORKGROUP1_EMPLOYMENT(string strWORKGROUP1, string strWORKTYPE)
+    {
+        SqlParameter[] parameterArr = {
+            new SqlParameter("@RMK_DC", strWORKGROUP1),
+            new SqlParameter("@WORK_TYPE", strWORKTYPE)
         };
 
         return _agent.GetDataSet("DZICUBE_CODE_BY_WORKGROUP1", "Table", null, parameterArr, CommandType.StoredProcedure);

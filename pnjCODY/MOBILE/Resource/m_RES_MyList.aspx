@@ -58,11 +58,11 @@
 							    <HeaderStyle CssClass="tr_border"/>
 							    <ItemStyle HorizontalAlign="Center" CssClass="tr_border"/>
 						    </asp:boundfield>
-						    <asp:boundfield HeaderText="핸드폰번호" DataField="RES_CP">
+						    <asp:boundfield HeaderText="생년월일" DataField="RES_BirthDate">
 							    <HeaderStyle CssClass="tr_border"/>
 							    <ItemStyle HorizontalAlign="Center" CssClass="tr_border"/>
 						    </asp:boundfield>
-                            <asp:boundfield HeaderText="상태" DataField="RES_WorkState">
+                            <asp:boundfield HeaderText="투입매장" DataField="RES_Store">
 							    <HeaderStyle CssClass="tr_border"/>
 							    <ItemStyle HorizontalAlign="Center" CssClass="tr_border"/>
 						    </asp:boundfield>

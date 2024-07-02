@@ -269,7 +269,7 @@
             }
             if (regExp.test(document.getElementById('<%=this.ddlRES_CAR_RETIRE.ClientID %>').value)
                 || document.getElementById('<%=this.ddlRES_CAR_RETIRE.ClientID %>').value == "") {
-                alert("퇴사사유를 선택해주세요.");
+                alert("입사확인 사유를 선택해주세요.");
                 document.getElementById('<%=this.ddlRES_CAR_RETIRE.ClientID %>').focus();
                 return false;
             }
@@ -341,7 +341,7 @@
             <a href="/Resource/m_RES_Register.aspx?RES_ID=<%= Session["sRES_ID"] %>"><span class="button blue">이전단계</span></a></p>
     </header>
     <div class="title">
-        <h2 class="mepm_title">업무 연락 > 입사확인요청</h2>
+        <h2 class="mepm_title">업무 연락 > 재입사요청</h2>
     </div>
     <article style="padding-bottom: 1em;">
         <section>
@@ -410,7 +410,7 @@
             <div class="mepm_menu_item_bg" style="padding:0; border-bottom:1px solid #ccc;">
                 <table>
                     <tr class="mepm_menu_item_bg" style="height:3em;">
-                        <th style="width:110px; text-align:right; padding-right:.8em;">퇴사 사유 :</th>
+                        <th style="width:110px; text-align:right; padding-right:.8em;">입사확인 사유 :</th>
                         <td style="text-align:left; padding-right:.8em;" >
                             <asp:DropDownList ID="ddlRES_CAR_RETIRE" runat="server" CssClass="i_f_out" AutoPostBack="false" DataTextField="COD_Name" DataValueField="COD_CD" Enabled="true" Width="100%">
                             </asp:DropDownList>
